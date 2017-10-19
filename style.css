@@ -1,8 +1,8 @@
-/*All images are here:     http://imgur.com/a/D7UVW       */
+
 
 /*Background*/
  html {
-    background: url("background.JPG") no-repeat center center fixed;
+    background: url("sfBackground.JPG") no-repeat center center fixed;
     background-size: cover;
 }
 body {
@@ -114,3 +114,12 @@ body {
     background-color:transparent;
     border: solid 2px black;
 } */
+
+footer {
+  z-index: 5;
+  position: fixed;
+  height: 70px;
+  bottom:0;
+  width:100%;
+  overflow: auto;
+}

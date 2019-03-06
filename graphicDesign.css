@@ -1,0 +1,99 @@
+body{
+  background-color: #E8E8E8	;
+}
+
+#images{
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+  width:90%;
+}
+
+body {
+    font-family:trebuchet ms;
+    background-size:100%;
+    background-repeat:none;
+    padding:0;
+    margin: 0;
+    overflow-x: :hidden;
+}
+/*Navbar*/
+ #nav {
+    font-size:20px;
+    background-color: #222;
+    margin-bottom:4%;
+}
+#nav-wrapper {
+    margin: 0 auto;
+    text-align: left;
+}
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position:relative;
+}
+#nav ul li {
+    display: inline-block;
+}
+#nav ul li:hover {
+    background-color: #333;
+}
+#nav ul li a, visited {
+    color: #ccc;
+    display:block;
+    padding: 15px;
+    text-decoration:none;
+}
+#nav ul li a: hover {
+    color:#ccc;
+    text-decoration:none;
+}
+#nav ul li:hover ul {
+    display: block;
+}
+#nav ul ul {
+    /*This changes the list font size*/
+    font-size:.8em;
+    display:none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+}
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a, visited {
+    color: #ccc;
+}
+#nav ul ul li a:hover {
+    color: #099;
+}
+/*Profile Picture*/
+ #logo {
+    height:18.750em;
+    width:18.750em;
+    border-radius:50%;
+    margin: 0 auto;
+    margin-bottom:1%;
+    background-image: url("profile2.jpg");
+    text-align:center;
+    float:center;
+    background-size: cover;
+    border: 5px solid #eee;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+.main {
+    text-align:center;
+}
+#welcome {
+    margin: auto 0;
+    font-size:3em;
+    color:white;
+}
+#name {
+    margin: auto 0;
+    margin-top:.5%;
+    font-size:1.3em;
+    color:white;
+}

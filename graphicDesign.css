@@ -8,6 +8,11 @@ body{
   display: inline-block;
   width:90%;
 }
+
+img{
+  height:300px;
+  display: inline-block;
+}
   /* display: grid;
   grid-gap: 1em;
   grid-template-columns: 10fr 1fr 1fr 1fr;
@@ -66,7 +71,7 @@ img{
 
 #footer{
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;

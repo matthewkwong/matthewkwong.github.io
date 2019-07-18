@@ -3,6 +3,11 @@
   src: url('circular.ttf');
 }
 
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('proxima-nova.ttf');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,20 +17,23 @@ body::-webkit-scrollbar {
 }
 
 body {
+  /* background-color: #F8F8F8; */
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light";
   font-weight: 400;}
 
 nav {
   top:0;
   position: fixed;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
   height: 50px;
   background-color: #181818;
+  /* background-color: red; */
   opacity: .9;
   font-family: circular;
   color: white;
+
 }
 
 nav #nav-header {
@@ -62,7 +70,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
   background-color: rgba(0, 0, 0, 0.3);
-  height: 24px;
+  height: 50px;
 }
 
 nav #nav-check {
@@ -70,6 +78,43 @@ nav #nav-check {
 }
 
 
+header{
+  height: 100vh;
+  /* background-color: #f0f0f0; */
+  /* background: url('sfBackground.JPG') no-repeat center; */
+  background: url('images/bg.jpg') no-repeat;
+  background-size: cover;
+}
+
+/* dark opacity filter */
+ #header-wrapper{
+   height: 100vh;
+   /* z-index: 3; */
+   /* background-color: red; */
+   background-color:rgba(0, 0, 4, .3);
+}
+
+header #square-logo{
+  height: 25vh;
+  width: 25vh;
+  border: solid 15px white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header h1{
+  font: 80px/80px 'ProximaNovaExCn-Semibold', Arial;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+}
 
 .wrapper{
   /* So nav bar doesnt cut off content immediately */
@@ -78,6 +123,9 @@ nav #nav-check {
 }
 
 
+/* #portfolio{
+  text-align: center;
+} */
 
 .row {
   text-align: center;
@@ -85,6 +133,14 @@ nav #nav-check {
   flex-wrap: wrap;
 }
 
+.row .column h1{
+  display: block;
+  font: 24px 'ProximaNovaExCn-Semibold', Arial;
+  margin: 0;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
 
 /* Create four equal columns that sits next to each other */
 .column {
@@ -99,11 +155,17 @@ nav #nav-check {
   width: 100%;
 }
 
+.column > p{
+  /* font-size: 20px; */
+  text-transform: uppercase;
+  /* letter-spacing: 0.05em; */
+  font: 20px 'ProximaNovaExCn-Semibold', Arial;
+  /* font-weight: 600; */
+}
 
 .container {
   position: relative;
 }
-
 
 .overlay {
   margin-top: 20px;
@@ -152,12 +214,13 @@ nav #nav-check {
 
 
 .about-me{
-  border: solid 2px red;
+  /* border: solid 2px red; */
 }
 
 
 
 .about-me > #profile{
+  /* border: solid 15px black; */
   border-radius: 50%;
   /* min-width: 100%; */
   max-width:20%;
@@ -172,14 +235,14 @@ nav #nav-check {
 }
 
 .about-me-wrapper{
-  border: solid 2px red;
+  /* border: solid 2px red; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.about-me-wrapper > .about-me-section > .divider{
+.divider{
   width: 15%;
   height: 2px;
   background-color: black;
@@ -189,16 +252,55 @@ nav #nav-check {
 
 .about-me-wrapper > .about-me-section {
   margin: 0 20px;
-  height: 250px;
+  height: 330px;
   padding: 0 20px;
   text-align: center;
-  width: 33.33%;
-  border: solid 2px orange;
+  /* width: 33.33%; */
+  width: 20%;
+  /* border: solid 2px orange; */
+}
+
+#description{
+  font: 30px 'HelveticaNeue_Light', Arial;
+  padding: 0 0 30px 0;
+}
+
+.about-me-wrapper > .about-me-section h1{
+	font: 24px 'ProximaNovaExCn-Semibold', Arial;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.about-me-wrapper > .about-me-section p{
+  letter-spacing: 0.5px;
+  font-size: 17px;
+  color:#333;
 }
 
 
 
 
+#shop{
+  color: #F2D446;
+  /*animation */
+  animation-name: flash;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #F2D446;
+  }
+}
 
 
 
@@ -215,7 +317,7 @@ footer #icons{
   display: flex;
   justify-content: center;
   padding: 0 0 20px 0;
-  margin-top: 7.5%
+  margin-top: 5%
 }
 
 footer #icons a{
@@ -241,14 +343,16 @@ footer img{
 @media screen and (max-width: 1000px) {
 
   .about-me{
-
     flex-direction: column;
   }
 
-  .about-me-wrapper > .about-me-section {
-    height: 20%;
-    width: 90%;
+  .about-me > #profile{
+    max-width: 30%;
+  }
 
+
+  .about-me-wrapper > .about-me-section {
+    height: 575px;
   }
 
   .column {
@@ -272,14 +376,13 @@ footer img{
   }
 
   .about-me-wrapper{
-
     flex-direction: column;
   }
 
   .about-me-wrapper > .about-me-section {
     height: 20%;
     width: 90%;
-
+    margin-bottom:50px;
   }
 
   .column {
@@ -300,35 +403,42 @@ footer img{
       width: 50px;
       height: 50px;
       padding: 13px;
+      transition: all 0.1s ease-in;
     }
 
+    /* 3 squiggle bar hover */
     nav #nav-button label:hover, .nav #nav-check:checked ~ #nav-button label {
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 25px;
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 50px;
+
     }
 
     nav #nav-button label span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
     }
 
     nav .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      text-align: center;
     }
 
     nav .nav-links a {
-    display: block;
-    width: 100%;
+      display: block;
+      width: 100%;
+      height: 50px;
+      color: white;
+      transition: all 0.1s ease-in;
+      text-align: center;
     }
 
     nav #nav-check:not(:checked) ~ .nav-links {

@@ -1,0 +1,51 @@
+
+.top-outline{
+  box-sizing: border-box;
+  padding: 40px 20px 20px 20px;
+}
+
+/* .last{
+  box-sizing: border-box;
+  padding: 40px 20px 20px 20px;
+} */
+
+.banner{
+  background-color: white;
+  height: auto;
+  width: 100%;
+}
+
+/* .blond{
+  width: 100%;
+  display: flex;
+}
+
+.blond > .column {
+  padding: 10px 20px;
+  height: auto;
+  max-width: 50%;
+} */
+
+@media screen and (max-width: 700px) {
+  .top-outline{
+    padding: 20px 15px 0px 15px;
+  }
+
+
+  /* .blond > .column {
+    height: auto;
+    max-width: 50%;
+  }
+  .last{
+    padding: 20px 20px 0px 20px ;
+  }
+
+  .blond{
+    flex-direction: column;
+  }
+
+  .blond > .column {
+    flex: 100%;
+    max-width: 100%;
+  } */
+}

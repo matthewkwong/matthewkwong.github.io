@@ -1,1 +1,8 @@
-!graphicDesign
+#ignore Mac system files
+.DS_store
+
+#ignore test files
+crazyass.html
+crazyass.css
+sadboi.html
+sadboi.css

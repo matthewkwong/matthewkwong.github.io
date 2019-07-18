@@ -20,7 +20,21 @@ body {
   /* background-color: #F8F8F8; */
   margin: 0;
   font-family: "HelveticaNeue-Light";
-  font-weight: 400;}
+  font-weight: 400;
+}
+
+#fade{
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
 
 nav {
   top:0;
@@ -303,20 +317,20 @@ header h1{
 
 
 
+
 footer{
   display: flex;
   justify-content: center;
   text-align: center;
-  bottom: 0;
   width: 100%;
+  flex-direction: column;
 }
 
 footer #icons{
+  justify-content: center;
   /* border: solid 2px red; */
   display: flex;
-  justify-content: center;
-  padding: 0 0 20px 0;
-  margin-top: 5%
+  padding: 40px 0 20px 0;
 }
 
 footer #icons a{
@@ -383,64 +397,65 @@ footer img{
     padding: 0 15px;
     flex: 100%;
     max-width: 100%;
+    margin-top: 50px;
   }
 
-    nav #nav-button {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
+  nav #nav-button {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
 
-    nav #nav-button label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-      transition: all 0.1s ease-in;
-    }
+  nav #nav-button label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    transition: all 0.1s ease-in;
+  }
 
-    /* 3 squiggle bar hover */
-    nav #nav-button label:hover, .nav #nav-check:checked ~ #nav-button label {
-      background-color: rgba(0, 0, 0, 0.3);
-      height: 50px;
+  /* 3 squiggle bar hover */
+  nav #nav-button label:hover, .nav #nav-check:checked ~ #nav-button label {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 50px;
 
-    }
+  }
 
-    nav #nav-button label span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid #eee;
-    }
+  nav #nav-button label span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
 
-    nav .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #333;
-      height: 0px;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-      text-align: center;
-    }
+  nav .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    text-align: center;
+  }
 
-    nav .nav-links a {
-      display: block;
-      width: 100%;
-      height: 50px;
-      color: white;
-      transition: all 0.1s ease-in;
-      text-align: center;
-    }
+  nav .nav-links a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: white;
+    transition: all 0.1s ease-in;
+    text-align: center;
+  }
 
-    nav #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
+  nav #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
 
-    nav  #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    }
+  nav  #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
 }

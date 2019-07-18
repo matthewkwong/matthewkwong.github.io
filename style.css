@@ -43,11 +43,14 @@ nav {
   width: 100%;
   height: 50px;
   background-color: #181818;
-  /* background-color: red; */
   opacity: .9;
   font-family: circular;
   color: white;
 
+
+  transition: top 0.3s;
+  display: block;
+  top: -50px;
 }
 
 nav #nav-header {
@@ -79,7 +82,8 @@ nav .nav-links a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  /* color: #efefef; */
+  color:white
 }
 
 nav .nav-links a:hover {
@@ -122,7 +126,7 @@ header #square-logo{
 header h1{
   font: 80px/80px 'ProximaNovaExCn-Semibold', Arial;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,10 +160,18 @@ header h1{
   letter-spacing: 0.3em;
 }
 
+.row{
+  justify-content: space-around;
+}
+
 /* Create four equal columns that sits next to each other */
 .column {
-  flex: 33.33%;
-  max-width: 33.33%;
+  /* flex: 33.33%;
+  max-width: 33.33%; */
+
+  flex: 30%;
+  max-width: 30%;
+
   padding: 0 20px;
 }
 
@@ -451,7 +463,10 @@ footer img{
   }
 
   nav #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
+    /* height: 0px; */
+    height: calc(100vh - 50px);
+
+    display: none;
   }
 
   nav  #nav-check:checked ~ .nav-links {

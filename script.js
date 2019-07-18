@@ -1,15 +1,20 @@
 console.log("javascript is active!");
 
-$(document).ready(function() {
-  $("#logo").effect("bounce", {
-      times: 1
-  }, 530);
-});
-// background is as big as the screen size
-// document.body.style.height = window.innerHeight;
+
+// Navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
 
 
 $(document).ready(function() {
+
   //scroll feature  - Learn More
   $("#about-nav").click(function(){
     $('html, body').animate({
@@ -17,10 +22,15 @@ $(document).ready(function() {
     }, 1000);
   });
 
-
+  //Goes to portfolio
   $("#portfolio-nav").click(function(){
     $('html, body').animate({
       scrollTop:$("#portfolio").offset().top - 100
     }, 1000);
+  });
+
+
+  $('#nav-button').click(function(){
+    $('#nav-links').slideToggle();
   });
 });

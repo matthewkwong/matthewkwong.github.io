@@ -1,0 +1,17 @@
+
+.top-outline{
+  box-sizing: border-box;
+  padding: 40px 20px 20px 20px;
+}
+
+.banner{
+  background-color: white;
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .top-outline{
+    padding: 20px 15px 0px 15px;
+  }
+}

@@ -12,6 +12,11 @@ function scrollFunction() {
   }
 }
 
+$(document).ready(function () {
+    $("img").on("contextmenu",function(e){
+        return false;
+    });
+});
 
 $(document).ready(function() {
 
@@ -29,7 +34,7 @@ $(document).ready(function() {
     }, 1000);
   });
 
-
+  // navbar slides down on mobile
   $('#nav-button').click(function(){
     $('#nav-links').slideToggle();
   });

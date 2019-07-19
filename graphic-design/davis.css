@@ -55,6 +55,12 @@ footer #icons{
 
 
 @media screen and (max-width: 1600px) {
+  /*MAKES BANNER SAME SIZE AS COLUMNS  */
+  #first{
+    /* border: solid 2px green; */
+    max-width: 45%;
+  }
+
   .two{
     margin: 0;
     padding: 0;

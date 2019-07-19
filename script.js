@@ -18,15 +18,6 @@ $(document).ready(function () {
     });
 });
 
-
-$(function(){
-  $( "img" ).bind( "taphold", tapholdHandler );
-
-  function tapholdHandler( event ){
-    $( event.target ).addClass( "taphold" );
-  }
-});
-
 $(document).ready(function() {
 
   //scroll feature  - Learn More

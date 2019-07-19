@@ -1,0 +1,91 @@
+.row{
+  display: flex;
+}
+
+/* img{
+  margin: 10px;
+  border: solid 2px black;
+  width: 300px;
+} */
+
+#first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 2px red; */
+}
+
+.two{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: solid 2px blue; */
+  padding: 50px;
+  max-width: 60%;
+}
+
+.two > div > img{
+  max-width: 30%;
+  margin: 10px;
+}
+
+.wrapper{
+  /* So nav bar doesnt cut off content immediately */
+  margin-top: 50px;
+  padding: 0 5%;
+  /* border: solid 2px orange; */
+  min-height: calc(95vh - 50px);
+  display: flex;
+  justify-content: center;
+}
+
+
+.row {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer #icons{
+  padding: 0;
+  /* border: solid 2px black; */
+}
+
+
+
+
+@media screen and (max-width: 1600px) {
+  .two{
+    margin: 0;
+    padding: 0;
+  }
+
+  .two > div > img{
+    max-width: 30%;
+    /* margin: 10px; */
+  }
+
+  .two div{
+    margin: 0;
+    padding: 0px;
+    /* border: solid 2px green; */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    margin-top:5%;
+    padding: 0 15px;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .two > div > img{
+    max-width: 100%;
+    margin: 20px 0px;
+  }
+
+  footer #icons{
+    padding: 10px;
+  }
+}

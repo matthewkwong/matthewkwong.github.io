@@ -8,6 +8,16 @@
   width: 300px;
 } */
 
+@keyframes flash {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #BDE4E5;
+  }
+}
+
 #first{
   display: flex;
   justify-content: center;
@@ -33,8 +43,8 @@
   /* So nav bar doesnt cut off content immediately */
   margin-top: 50px;
   padding: 0 5%;
-  /* border: solid 2px orange; */
-  min-height: calc(95vh - 50px);
+  border: solid 2px orange;
+  min-height: calc(95vh - 60px);
   display: flex;
   justify-content: center;
 }
@@ -46,8 +56,12 @@
   flex-wrap: wrap;
 }
 
+footer{
+  border: solid 2px black;
+}
 footer #icons{
-  padding: 0;
+  padding: 10px;
+   margin: 0;
   /* border: solid 2px black; */
 }
 
@@ -92,6 +106,7 @@ footer #icons{
   }
 
   footer #icons{
+    margin-top: 0;
     padding: 10px;
   }
 }

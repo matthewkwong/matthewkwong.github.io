@@ -1,10 +1,10 @@
 #ignore Mac system files
-.DS_store
+!.DS_store
 
 #ignore test files
-crazyass.html
-sadboi.html
-old.html
-crazyass.css
-sadboi.css
-old.css
+!crazyass.html
+!sadboi.html
+!old.html
+!crazyass.css
+!sadboi.css
+!old.css

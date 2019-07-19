@@ -95,6 +95,13 @@ nav #nav-check {
   display: none;
 }
 
+img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 
 header{
   height: 100vh;
@@ -168,7 +175,6 @@ header h1{
 .column {
   /* flex: 33.33%;
   max-width: 33.33%; */
-
   flex: 30%;
   max-width: 30%;
   padding: 0 20px;

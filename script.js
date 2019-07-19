@@ -16,6 +16,12 @@ $(document).ready(function () {
     $("img").on("contextmenu",function(e){
         return false;
     });
+
+    $( "img" ).bind( "taphold", tapholdHandler );
+
+    tapholdHandler( event ){
+      $( event.target ).addClass( "taphold" );
+    }
 });
 
 $(document).ready(function() {

@@ -43,7 +43,7 @@
   /* So nav bar doesnt cut off content immediately */
   margin-top: 50px;
   padding: 0 5%;
-  border: solid 2px orange;
+  /* border: solid 2px orange; */
   min-height: calc(95vh - 60px);
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@
 }
 
 footer{
-  border: solid 2px black;
+  /* border: solid 2px black; */
 }
 footer #icons{
   padding: 10px;

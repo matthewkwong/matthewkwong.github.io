@@ -36,6 +36,6 @@ $(document).ready(function() {
 
   // navbar slides down on mobile
   $('#nav-button').click(function(){
-    $('#nav-links').slideToggle();
+    $('.nav-links').slideToggle();
   });
 });

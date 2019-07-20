@@ -102,7 +102,7 @@ footer #icons{
     width: 100%;
     flex: 100%;
     max-width: 100%;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
   }
 }

@@ -25,7 +25,7 @@
   padding: 0;
   margin: 0;
   flex: 100%;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 
@@ -40,6 +40,7 @@
 }
 
 #text{
+  max-width: 45%;
   margin-bottom: 20px;
 }
 
@@ -80,12 +81,11 @@ a:visited{
 }
 
 footer #icons{
-  padding: 0 0 20px 0;
+  padding: 0;
   /* border: solid 2px black; */
 }
 
 @media screen and (max-width: 1200px) {
-
 
   footer #icons{
     padding: 40px 0 20px 0;
@@ -98,8 +98,12 @@ footer #icons{
     max-width: 100%;
   }
 
+  #text{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
   #spotify {
-    width: 100%;
     flex: 100%;
     max-width: 100%;
     padding: 0 20px;

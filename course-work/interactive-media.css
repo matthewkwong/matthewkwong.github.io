@@ -4,35 +4,43 @@ body{
 
 .wrapper{
   min-height: calc(95vh - 60px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   /* margin-top:0px; */
   /* border: solid 2px red; */
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
 }
 
 .row{
+  /* width: 80%; */
+  /* border: solid 2px red; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  height: 100%;
+  /* justify-content: space-between; */
 }
 
 .column{
-  max-width: 45%;
+  max-width: 40%;
   /* height: 85vh; */
-  /* border: solid 2px red; */
+  /* border: solid 2px orange; */
 }
 
-#image {
+.two{
+  /* border: solid 2px green; */
+  max-width: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
-  flex: 100%;
-  max-width: 50%;
+  flex-direction: column;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
 }
 
+.two > img{
+  max-width: 45%;
+  /* margin-right: 100px; */
+}
 
 .description {
   box-sizing: border-box;
@@ -46,6 +54,10 @@ body{
 
 #text{
   margin-bottom: 20px;
+}
+
+ol{
+  text-align: left;
 }
 
 
@@ -64,17 +76,22 @@ body{
   letter-spacing: 0.15em;
 }
 
-.column > .description > p{
+p{
   padding: 5% 0;
   text-align: left;
   line-height: 40px;
   /* font-size: 20px; */
 }
 
-.column img {
-  margin-top:0;
+#sub-heading{
+  font-size: 15px;
 }
 
+.projects > li> a{
+  text-decoration:  none;
+  font-weight: 900;
+  font-size: 20px;
+}
 
 a{
   color: #333;
@@ -84,10 +101,22 @@ a:visited{
   color: #333;
 }
 
+
+
 footer #icons{
   padding: 0 0 20px 0;
   /* border: solid 2px black; */
 }
+
+
+@media screen and (max-width: 1500px) {
+  .two > img{
+    max-width: 60%;
+    /* margin-right: 100px; */
+  }
+}
+
+
 
 @media screen and (max-width: 1200px) {
   body{
@@ -106,14 +135,28 @@ footer #icons{
     max-width: 100%;
   }
 
-  #image {
-    width: 100%;
-    flex: 100%;
+
+
+  .two > img{
     max-width: 100%;
-    padding: 0;
-    margin: 0;
   }
 }
+
+@media screen and (max-width: 900px) {
+
+  .two{
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .two img{
+    /* border: solid 2px red; */
+    /* margin: 0; */
+    padding-top: 0px;
+    /* margin: 10px; */
+  }
+}
+
 
 @media screen and (max-width:700px) {
   .column {
@@ -123,7 +166,7 @@ footer #icons{
     margin-top: 50px;
   }
 
-  #image{
-    padding: 0 20px;
+  .two{
+    margin: 0;
   }
 }

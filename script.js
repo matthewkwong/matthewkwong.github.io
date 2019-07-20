@@ -21,7 +21,7 @@ $(document).ready(function () {
 $(document).ready(function() {
 
   //scroll feature  - Learn More
-  $("#about-nav").click(function(){
+  $(".about-nav").click(function(){
     $('html, body').animate({
       scrollTop:$("#about").offset().top - 100
     }, 1000);

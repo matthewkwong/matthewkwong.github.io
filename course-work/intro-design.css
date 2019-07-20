@@ -1,59 +1,36 @@
-body{
-  overflow-y: hidden;
-}
 
 .wrapper{
   min-height: calc(95vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* margin-top:0px; */
   /* border: solid 2px red; */
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
 }
 
 .row{
-  /* width: 80%; */
-  /* border: solid 2px red; */
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .column{
   max-width: 40%;
-  /* height: 85vh; */
-  /* border: solid 2px orange; */
+  /* border: solid 2px red; */
 }
 
-/* .column img {
-  margin-top: 10px;
-} */
-
-.two{
-  /* border: solid 2px green; */
-  max-width: 55%;
+#process-book {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-}
-
-.two > a {
-  text-decoration: none;
-}
-
-.two a h2{
-  font-size: 20px;
-  margin-bottom: 0;
   padding: 0;
+  margin: 0;
+  flex: 100%;
+  max-width: 50%;
 }
 
-.two > a >img {
-  max-width: 45%;
-  /* margin-right: 100px; */
+#process-book-image{
+  display: none;
 }
 
 .description {
@@ -70,9 +47,6 @@ body{
   margin-bottom: 20px;
 }
 
-ol{
-  text-align: left;
-}
 
 .column > .description > h1{
   padding-top: 10%;
@@ -89,22 +63,17 @@ ol{
   letter-spacing: 0.15em;
 }
 
-p{
-  padding: 5% 0;
+.column > .description > p{
+  padding: 10% 0;
   text-align: left;
   line-height: 40px;
   /* font-size: 20px; */
 }
 
-#sub-heading{
-  font-size: 15px;
+.column img {
+  margin-top:0;
 }
 
-.projects > li> a{
-  /* text-decoration:  none; */
-  font-weight: 900;
-  font-size: 20px;
-}
 
 a{
   color: #333;
@@ -114,32 +83,26 @@ a:visited{
   color: #333;
 }
 
-
-
 footer #icons{
   padding: 0 0 20px 0;
   /* border: solid 2px black; */
 }
 
 
-@media screen and (max-width: 1500px) {
-  .two > a > img{
-    max-width: 60%;
-    /* margin-right: 100px; */
-  }
+#proces-book-image{
+  display: none;
 }
 
-
-
 @media screen and (max-width: 1200px) {
-  body{
-    overflow-y: scroll;
-  }
 
 
   footer #icons{
     padding: 40px 0 20px 0;
     /* border: solid 2px black; */
+  }
+
+  .wrapper{
+    padding: 20px;
   }
 
   .column {
@@ -148,28 +111,14 @@ footer #icons{
     max-width: 100%;
   }
 
-
-
-  .two > a > img{
+  #process-book {
+    width: 100%;
+    flex: 100%;
     max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-
-  .two{
     padding: 0 20px;
     margin: 0;
   }
-
-  .two img{
-    /* border: solid 2px red; */
-    /* margin: 0; */
-    padding-top: 0px;
-    /* margin: 10px; */
-  }
 }
-
 
 @media screen and (max-width:700px) {
   .column {
@@ -179,7 +128,11 @@ footer #icons{
     margin-top: 50px;
   }
 
-  .two{
-    margin: 0;
+  #process-book-pdf{
+    display: none;
+  }
+
+  #proces-book-image{
+    display: block;
   }
 }

@@ -119,7 +119,8 @@ header{
 
   height: 100vh;
   /* background-color: #8ED1EB; */
-  background: url('images/bg.jpg') no-repeat;
+  /* background: url('images/bg.jpg') no-repeat; */
+  background: url('https://www.shutterfly.com/ideas/wp-content/uploads/2018/03/best-photo-spots-in-SF-pier-7.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -149,8 +150,8 @@ header{
 
 
 header #square-logo{
-  height: 25vh;
-  width: 25vh;
+  height: 200px;
+  width: 200px;
   border: solid 15px white;
   position: absolute;
   top: 50%;
@@ -289,7 +290,8 @@ header h1{
   /* border: solid 15px black; */
   border-radius: 50%;
   /* min-width: 100%; */
-  max-width:20%;
+  /* max-width:20%; */
+  max-width: 250px;
   height: auto;
   display: block;
   margin-left: auto;
@@ -415,10 +417,6 @@ footer img{
     flex-direction: column;
   }
 
-  .about-me > #profile{
-    max-width: 30%;
-  }
-
   .column {
     padding: 0 15px;
     flex: 50%;
@@ -436,11 +434,6 @@ footer img{
 
   header h1{
     font-size: 22px;
-  }
-
-  .about-me > #profile{
-    border-radius: 50%;
-    max-width:50%;
   }
 
   .about-me-wrapper{

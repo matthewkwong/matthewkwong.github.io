@@ -55,6 +55,9 @@ p{
 
 
 @media screen and (max-width: 1000px) {
+  .column > .description > h1{
+    padding-top: 15%;
+  }
 
   #text{
     max-width: 100% !important;

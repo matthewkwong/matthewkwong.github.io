@@ -129,7 +129,8 @@ footer #icons{
   }
 
   #process-book-pdf{
-    display: none;
+    max-width: 100%;
+    /* display: none; */
   }
 
   #proces-book-image{

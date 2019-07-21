@@ -105,17 +105,28 @@ img{
   -webkit-touch-callout:none;
 }
 
+/* dark opacity filter */
+ #header-wrapper{
+   height: 100vh;
+   /* z-index: 3; */
+   /* background-color: red; */
+   background-color:rgba(0, 0, 4, .3);
+}
+
 header{
+
+  /* display: none; */
+
   height: 100vh;
-  /* background-color: #f0f0f0; */
-  /* background: url('sfBackground.JPG') no-repeat center; */
+  /* background-color: #8ED1EB; */
   background: url('images/bg.jpg') no-repeat;
   background-size: cover;
 }
 
 #down-button{
-  transform: translate(0, -100%);
+  margin-top: -50px;
   text-align: center;
+  animation: bounce 1.5s infinite;
 }
 
 
@@ -125,13 +136,17 @@ header{
   /* position: absolute; */
 }
 
-/* dark opacity filter */
- #header-wrapper{
-   height: 100vh;
-   /* z-index: 3; */
-   /* background-color: red; */
-   background-color:rgba(0, 0, 4, .3);
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
+
 
 header #square-logo{
   height: 25vh;
@@ -202,6 +217,7 @@ header h1{
 }
 
 .column > p{
+  /* display: none; */
   /* font-size: 20px; */
   /* text-transform: uppercase; */
   /* letter-spacing: 0.05em; */
@@ -263,6 +279,11 @@ header h1{
 } */
 
 
+#about{
+  padding-top: 50px;
+  /* border: solid 2px red; */
+  height: 80vh;
+}
 
 .about-me > #profile{
   /* border: solid 15px black; */
@@ -288,8 +309,8 @@ header h1{
 
 .divider{
   width: 15%;
-  height: 2px;
-  background-color: black;
+  height: 4px;
+  background-color: #8ed1eb;
   /* Makes the dividers centered  */
   display: inline-block;
 }
@@ -382,6 +403,9 @@ footer img{
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1000px) {
+  #about{
+    height: 100%;
+  }
 
   .about-me{
     flex-direction: column;

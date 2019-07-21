@@ -1,25 +1,4 @@
 
-.wrapper{
-  min-height: calc(95vh - 60px);
-  /* margin-top:0px; */
-  /* border: solid 2px red; */
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
-}
-
-.description {
-  box-sizing: border-box;
-  height: 90%;
-  margin-top: 20px;
-  /* border: solid 2px black; */
-  /* background-color: red; */
-}
-
-.column{
-  max-width: 40%;
-}
-
 #text{
   max-width: 35% !important;
   position: fixed;
@@ -28,31 +7,11 @@
 
 .column > .description > h1{
   padding-top: 40%;
-  font: 24px 'ProximaNovaExCn-Semibold', Arial;
-  letter-spacing: 0.1em;
 }
-
-.column > .description > h2{
-  display: block;
-  font: 12.5px 'ProximaNovaExCn-Semibold', Arial;
-  margin: 0;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-p{
-  padding: 5% 0;
-  text-align: left;
-  line-height: 40px;
-  /* font-size: 20px; */
-}
-
 
 .two > div{
   margin: 20px 0;
 }
-
 
 @media screen and (max-width: 1000px) {
   .column > .description > h1{
@@ -61,7 +20,7 @@ p{
 
   #text{
     max-width: 100% !important;
-    position: relative;
+    position: relative !important;
     margin-bottom: 20px;
   }
 

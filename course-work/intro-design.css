@@ -1,22 +1,7 @@
-
 .wrapper{
-  min-height: calc(95vh - 60px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin-top:0px; */
-  /* border: solid 2px red; */
-}
-
-.row{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.column{
-  max-width: 40%;
-  /* border: solid 2px red; */
 }
 
 #process-book {
@@ -33,60 +18,19 @@
   display: none;
 }
 
-.description {
-  box-sizing: border-box;
-  /* margin-top: 20px; */
-  /* height: 456.38px; */
-  height: 90%;
-  margin-top: 20px;
-  /* border: solid 2px black; */
-  /* background-color: red; */
-}
-
-#text{
-  margin-bottom: 20px;
-}
-
-
 .column > .description > h1{
   padding-top: 10%;
-  font: 24px 'ProximaNovaExCn-Semibold', Arial;
-  letter-spacing: 0.1em;
-}
-
-.column > .description > h2{
-  display: block;
-  font: 12.5px 'ProximaNovaExCn-Semibold', Arial;
-  margin: 0;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-.column > .description > p{
-  padding: 10% 0;
-  text-align: left;
-  line-height: 40px;
-  /* font-size: 20px; */
 }
 
 .column img {
   margin-top:0;
 }
 
-
-a{
-  color: #333;
-}
-
-a:visited{
-  color: #333;
-}
-
 footer #icons{
   padding: 0 0 20px 0;
   /* border: solid 2px black; */
 }
+
 #hidden{
   display: none;
 }
@@ -96,7 +40,6 @@ footer #icons{
 }
 
 @media screen and (max-width: 1200px) {
-
 
   footer #icons{
     padding: 40px 0 20px 0;
@@ -137,7 +80,6 @@ footer #icons{
   #process-book-pdf{
     display: none;
   }
-
 
   #process-book-image{
     display: block;

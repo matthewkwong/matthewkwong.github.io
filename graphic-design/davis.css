@@ -28,9 +28,10 @@
 .two{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   /* border: solid 2px blue; */
-  padding: 50px;
+  padding: 50px 0;
   max-width: 60%;
 }
 

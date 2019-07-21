@@ -87,9 +87,11 @@ footer #icons{
   padding: 0 0 20px 0;
   /* border: solid 2px black; */
 }
+#hidden{
+  display: none;
+}
 
-
-#proces-book-image{
+#process-book-image{
   display: none;
 }
 
@@ -128,12 +130,16 @@ footer #icons{
     margin-top: 50px;
   }
 
-  #process-book-pdf{
-    max-width: 100%;
-    /* display: none; */
+  #hidden{
+    display: block;
   }
 
-  #proces-book-image{
+  #process-book-pdf{
+    display: none;
+  }
+
+
+  #process-book-image{
     display: block;
   }
 }

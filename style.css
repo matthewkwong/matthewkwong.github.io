@@ -431,7 +431,7 @@ footer img{
 @media screen and (max-width: 700px) {
 
   header h1{
-    font: 50px/50px 'ProximaNovaExCn-Semibold', Arial;
+    font-size: 25px;
   }
 
   .about-me > #profile{

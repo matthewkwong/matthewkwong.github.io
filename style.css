@@ -282,7 +282,7 @@ header h1{
 #about{
   padding-top: 50px;
   /* border: solid 2px red; */
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .about-me > #profile{
@@ -403,6 +403,10 @@ footer img{
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1000px) {
+  .about-me-wrapper > .about-me-section {
+    width: 60%;
+  }
+
   #about{
     height: 100%;
   }
@@ -431,7 +435,7 @@ footer img{
 @media screen and (max-width: 700px) {
 
   header h1{
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .about-me > #profile{

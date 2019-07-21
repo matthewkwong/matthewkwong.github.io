@@ -16,7 +16,6 @@
 
 @font-face {
   font-family: 'Helvetica';
-  /* src: url('HelveticaNeue-Light.ttf'); */
   src: url('Helvetica.ttc');
 }
 
@@ -24,7 +23,6 @@
   font-family: 'HelveticaNeue-Medium';
   src: url('HelveticaNeue-Medium.ttf');
 } */
-
 
 
 * {
@@ -143,6 +141,7 @@ header{
   background-size: cover;
 }
 
+
 #down-button{
   margin-top: -50px;
   text-align: center;
@@ -180,6 +179,7 @@ header #square-logo{
 }
 
 header h1{
+  letter-spacing: 5px;
   font: 80px/60px 'ProximaNovaExCn-Semibold', Arial;
   color: white;
   font-size: 30px;

@@ -13,17 +13,10 @@
   src: url('ProximaNovaExCn-Semibold.otf');
 }
 
-
 @font-face {
   font-family: 'Helvetica';
   src: url('Helvetica.ttc');
 }
-
-/* @font-face {
-  font-family: 'HelveticaNeue-Medium';
-  src: url('HelveticaNeue-Medium.ttf');
-} */
-
 
 * {
   box-sizing: border-box;
@@ -34,7 +27,6 @@ body::-webkit-scrollbar {
 }
 
 body {
-  /* background-color: #F8F8F8; */
   margin: 0;
   font-family: "HelveticaNeue-Light";
   font-weight: 400;
@@ -137,7 +129,7 @@ header{
   height: 100vh;
   /* background-color: #8ED1EB; */
   /* background: url('images/bg.jpg') no-repeat; */
-  background: url('https://www.shutterfly.com/ideas/wp-content/uploads/2018/03/best-photo-spots-in-SF-pier-7.jpg') no-repeat center center;
+  background: url('images/sf-bg.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -201,6 +193,18 @@ header h1{
   transform: translate(-50%, -60%);
   text-align: center;
 }
+
+header p{
+  font-family: 'ProximaNovaExCn-Semibold', Arial;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 300%);
+  text-align: center;
+}
+
 
 .wrapper{
   /* So nav bar doesnt cut off content immediately */
@@ -400,7 +404,7 @@ header h1{
 }
 
 
-
+/* Footer */
 
 footer{
   display: flex;

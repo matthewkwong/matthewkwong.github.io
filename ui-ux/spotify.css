@@ -4,6 +4,9 @@
   justify-content: space-between;
 }
 
+.column{
+  max-width: 40%;
+}
 
 #spotify {
   display: flex;
@@ -12,7 +15,7 @@
   padding: 0;
   margin: 0;
   flex: 100%;
-  max-width: 60%;
+  max-width: 55%;
 }
 
 
@@ -28,6 +31,52 @@
   margin-top:0;
 }
 
+/* CHANGE THE MAXIMUM WIDTH OF THE MOCKUP IMAGES */
+#diagram-row{
+  padding-left: 20px;
+  flex-direction: column;
+  /* border: solid 3px red; */
+  /* text-align: left; */
+  margin-bottom: 20px;
+
+}
+
+#diagram-row h1{
+  text-align: center;
+}
+
+#diagram-row h2{
+  text-align: left;
+  /* margin-bottom: .5em; */
+}
+
+#diagram-row p{
+  /* padding-left: 20px; */
+  text-align: left;
+  line-height: 40px;
+  margin-top: 0px;
+  width: 80%;
+  /* border: solid 2px red; */
+}
+
+
+.diagrams-wrapper{
+  background-color: #F5F5F5;
+}
+
+.diagrams-wrapper img{
+  padding: 0px 20px 20px 0px;
+  max-width: 250px;
+  float: left;
+  /* max-width: 30% !important; */
+  box-shadow:none !important;
+}
+
+
+
+iframe{
+  margin: auto;
+}
 
 footer #icons{
   padding: 0 0 20px 0;
@@ -35,7 +84,6 @@ footer #icons{
 }
 
 @media screen and (max-width: 1200px) {
-
 
   footer #icons{
     padding: 40px 0 20px 0;
@@ -58,10 +106,25 @@ footer #icons{
 }
 
 @media screen and (max-width:700px) {
-  .column {
+  .column , #diagram-row{
     padding: 0 15px;
     flex: 100%;
     max-width: 100%;
     margin-top: 50px;
+  }
+
+  iframe{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  #diagram-row img{
+    width: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
   }
 }

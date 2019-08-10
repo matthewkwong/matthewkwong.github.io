@@ -104,7 +104,7 @@ nav #nav-check {
   display: none;
 }
 
-img{
+img, video{
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;

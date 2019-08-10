@@ -159,10 +159,15 @@ footer #icons{
   iframe{
     display: none;
   }
+  .diagrams-wrapper{
+    background-color: white;
+  }
+
 }
 
 
 @media screen and (max-width:500px) {
+
   #diagram-row img{
     width: 100%;
     flex: 100%;

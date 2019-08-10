@@ -13,10 +13,11 @@ function scrollFunction() {
 }
 
 $(document).ready(function () {
-  // Images
-  $("img").on("contextmenu",function(e){
+  // Images and videos
+  $("img, video").on("contextmenu",function(e){
       return false;
   });
+
 
   //scroll feature  - Learn More
   $(".about-nav").click(function(){

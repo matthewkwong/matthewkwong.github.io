@@ -65,9 +65,11 @@
 }
 
 .diagrams-wrapper img{
-  padding: 0px 20px 20px 0px;
+  padding: 20px 20px 20px 20px;
   max-width: 250px;
-  float: left;
+  /* float: center; */
+  /* Allos Room1 with Esther to be leveled */
+  vertical-align: top;
   /* max-width: 30% !important; */
   box-shadow:none !important;
 }

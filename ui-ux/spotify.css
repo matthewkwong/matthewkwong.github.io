@@ -101,24 +101,22 @@ li{
 }
 
 .video{
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  margin: auto;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .video video{
-  margin-top:100px;
-
+  margin-top:90px;
+  margin-left: 40px;
   position:absolute;
-  height:475px !important;
+  max-height:390px !important;
   z-index:1;
 }
 
 .video .iphone{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 400px !important;
+  /* display: flex; */
+
 }
 
 footer #icons{
@@ -162,7 +160,6 @@ footer #icons{
   .diagrams-wrapper{
     background-color: white;
   }
-
 }
 
 
@@ -174,5 +171,13 @@ footer #icons{
     max-width: 100%;
     padding: 10px 0px 10px 0px;
     margin: 0;
+  }
+
+  .video video{
+    margin-top:80px;
+    margin-left: 20px;
+    position:absolute;
+    max-height:420px !important;
+    z-index:1;
   }
 }

@@ -107,6 +107,8 @@ li{
 }
 
 .video video{
+  /* display: flex;
+  justify-content: center; */
   margin-top:90px;
   margin-left: 40px;
   position:absolute;
@@ -157,9 +159,21 @@ footer #icons{
   iframe{
     display: none;
   }
+
   .diagrams-wrapper{
     background-color: white;
   }
+
+  .video video{
+    margin-top:11.5vh;
+    margin-left: 40px;
+    position:absolute;
+    max-height:51% !important;
+    z-index:1;
+  }
+
+
+
 }
 
 
@@ -174,10 +188,10 @@ footer #icons{
   }
 
   .video video{
-    margin-top:80px;
-    margin-left: 20px;
+    margin-top:11vh;
+    margin-left: 21px;
     position:absolute;
-    max-height:420px !important;
+    max-height:53.0% !important;
     z-index:1;
   }
 }

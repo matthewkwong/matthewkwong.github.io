@@ -1,0 +1,183 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: circular !important;
+}
+
+@font-face {
+font-family: "circular";
+src: url("circular.ttf");
+}
+
+.text-wrapper{
+  position: absolute;
+  width: 505px;
+  height: 192px;
+  left: 10%;
+  top: 250px;
+}
+
+
+.description{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  color: #000000;
+}
+
+
+.profile{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 15%;
+
+  background: url(img/IMG_0094.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.button{
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 49px;
+  color:#868686;
+
+  background: #EBEBEB;
+}
+
+
+.background{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  top: 0px;
+
+  z-index: -2;
+  background: url(img/IMG_0411.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/*
+.bottom{
+  z-index: 10;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  right: 0px;
+  bottom: 0;
+  background: #282828;
+} */
+
+
+/* .work{
+  margin-top: 100vh;
+  border: solid 2px red;
+  height: 100vh;
+} */
+
+
+
+
+
+.experience-header{
+  /* border: solid 2px red; */
+
+  position: relative;
+  top: 100vh;
+  left: 10%;
+
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+
+.experience-wrapper{
+  /* border: solid 2px red; */
+  width: 100%;
+  margin-top: 100vh;
+  /* border: solid 2px red; */
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.projects-header{
+  /* border: solid 2px red; */
+  position: relative;
+  left: 10%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.project-wrapper{
+  margin-top: -5vh;
+  /* border: solid 2px red; */
+
+  width: 100%;
+  /* border: solid 2px red; */
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.project-name{
+  font-size: 25px;
+  line-height: 0;
+}
+
+.project{
+  margin: 40px;
+  /* width: 500px;
+  height: 300px; */
+  /* background: #C4C4C4; */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description{
+  width: 500px;
+
+}
+
+
+.project-position{
+  text-decoration: bold;
+  color: #999;
+  display: flex;
+  /* border: solid 2px red; */
+  justify-content: space-between;
+  line-height: 0;
+  width: 100%;
+  margin:0 !important;
+}
+
+.project > img{
+  width: 500px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-description{
+    width: 400px;
+  }
+
+  .project > img{
+    width: 400px;
+    height: auto;
+  }
+}

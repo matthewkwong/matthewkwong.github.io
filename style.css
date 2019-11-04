@@ -562,36 +562,32 @@ footer img{
 }
 
 /* Graphic Design Page */
-
 .image-gallery{
   /* background-color: red; */
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  /* text-align:center; */
-  /* width: 100%; */
 }
 
-.image-gallery > img{
-  /* width: 100%; */
-  /* height: auto; */
-  padding: 20px;
-  width: 600px;
-}
-
-.cities{
+.image-gallery > .cities{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
 }
+
 
 .cities > img{
   width: 450px;
   padding: 20px;
 }
 
-.square > img{
-  width: 450px;
+
+.image-gallery img{
+  max-width: 450px;
+  height: auto;
+  padding: 20px;
 }
 
 .project-body-text > .image-gallery > p{
@@ -697,7 +693,6 @@ footer img{
 }
 
 
-
 @media only screen and (max-width: 1000px) {
 
   /* About Me Page */
@@ -730,8 +725,6 @@ footer img{
   .demo > video{
     margin-bottom: 10%;
   }
-
-
 }
 
 @media only screen and (max-width: 750px) {
@@ -740,22 +733,14 @@ footer img{
   width: 60%; */
     display: none;
   }
-  /* .text-wrapper, .profile, .background{
-  display: none;
-  } */
 
   .profile{
-    /* width: 300px;
-    height: 300px; */
     display: none;
   }
-
-  .image-gallery > img{
-    /* margin-left: 10%;
-    margin-right: 10%; */
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+  /* Graphic Design */
+  .image-gallery img{
+    max-width: 325px;
+    display: block;
   }
 }
 

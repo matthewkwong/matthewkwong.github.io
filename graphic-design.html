@@ -37,7 +37,36 @@
     h2{
       text-align:center;
     }
-  </style>
+
+    /* Graphic Design Page */
+    .image-gallery{
+      /* background-color: red; */
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .image-gallery > .cities{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-gallery img{
+      width: 450px;
+      padding: 20px;
+    }
+
+
+    @media only screen and (max-width: 750px) {
+      .image-gallery img{
+        max-width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+</style>
 
 </head>
   <body>
@@ -140,7 +169,7 @@
 
 
       <h2>Design 16 Project 1: Interior Design</h2>
-      <div class = "image-gallery">
+      <div class = "image-gallery interior">
         <img src = "img/graphic-design/interior/mono.jpg" alt = "interior monochromatic">
         <img src = "img/graphic-design/interior/analogous.jpg" alt = "interior analogous">
         <img src = "img/graphic-design/interior/comp.jpg" alt = "interior complementary">

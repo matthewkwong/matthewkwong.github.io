@@ -561,38 +561,6 @@ footer img{
   background-color: #27b954;
 }
 
-/* Graphic Design Page */
-.image-gallery{
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.image-gallery > .cities{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-.cities > img{
-  width: 450px;
-  padding: 20px;
-}
-
-
-.image-gallery img{
-  width: 450px;
-  padding: 20px;
-}
-
-.project-body-text > .image-gallery > p{
-  font-size: 5px;
-  margin-top:0px;
-}
 
 @media only screen and (min-width: 1500px) {
   .project-description{
@@ -742,22 +710,6 @@ footer img{
     margin-right: 10%;
   }
 
-  .image-gallery img{
-    width: 450px;
-    padding-right: 0px;
-  }
-
-
-  /* Graphic Design */
-  /* .image-gallery {
-    flex-direction: column;
-  }
-
-  .image-gallery img{
-    height: auto;
-    width: 325px;
-    display: block;
-  } */
 }
 
 @media only screen and (max-width: 600px) {

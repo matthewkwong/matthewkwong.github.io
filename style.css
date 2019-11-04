@@ -739,6 +739,7 @@ footer img{
   }
   /* Graphic Design */
   .image-gallery img{
+    height: auto;
     max-width: 325px;
     display: block;
   }

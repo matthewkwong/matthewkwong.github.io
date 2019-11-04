@@ -736,6 +736,12 @@ footer img{
   .profile{
     display: none;
   }
+
+  .project-body-text{
+    margin: 10%;
+  }
+
+
   /* Graphic Design */
   .image-gallery {
     flex-direction: column;

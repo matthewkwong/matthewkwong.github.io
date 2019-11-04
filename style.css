@@ -740,10 +740,10 @@ footer img{
   .image-gallery {
     flex-direction: column;
   }
-  
+
   .image-gallery img{
     height: auto;
-    max-width: 325px;
+    width: 325px;
     display: block;
   }
 }

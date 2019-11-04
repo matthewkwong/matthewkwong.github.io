@@ -580,7 +580,17 @@ footer img{
   width: 600px;
 }
 
+.cities{
+  display: flex;
+  flex-direction: column;
+}
+
 .cities > img{
+  width: 450px;
+  padding: 20px;
+}
+
+.square > img{
   width: 450px;
 }
 

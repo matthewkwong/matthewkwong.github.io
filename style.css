@@ -737,6 +737,10 @@ footer img{
     display: none;
   }
   /* Graphic Design */
+  .image-gallery {
+    flex-direction: column;
+  }
+  
   .image-gallery img{
     height: auto;
     max-width: 325px;

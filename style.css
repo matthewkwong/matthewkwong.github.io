@@ -744,7 +744,7 @@ footer img{
 
 
   /* Graphic Design */
-  .image-gallery {
+  /* .image-gallery {
     flex-direction: column;
   }
 
@@ -752,7 +752,7 @@ footer img{
     height: auto;
     width: 325px;
     display: block;
-  }
+  } */
 }
 
 @media only screen and (max-width: 600px) {

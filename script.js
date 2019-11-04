@@ -1,5 +1,34 @@
-console.log("javascript is active!");
+$(document).ready(function () {
+  //Goes to portfolio
+  $("#portfolio-button").click(function(){
+    $('html, body').animate({
+      scrollTop:$("#portfolio").offset().top - 100
+    }, 1000);
+  });
+});
 
+// Scroll elements fade in
+$(document).on("scroll", function () {
+  var pageTop = $(document).scrollTop()
+  var pageBottom = pageTop + $(window).height()
+  var tags = $(".project")
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i]
+    if ($(tag).position().top < pageBottom) {
+    $(tag).addClass("visible")
+    }
+    else {
+      $(tag).removeClass("visible")
+      }
+  }
+})
+
+$(document).ready(function(){
+  /*Fades in page on load */
+  $('body, .about-me-wrapper').css('display', 'none');
+  $('body, .about-me-wrapper').fadeIn(1000);
+});
 
 // Navbar
 window.onscroll = function() {scrollFunction()};
@@ -12,29 +41,12 @@ function scrollFunction() {
   }
 }
 
+
+
+
+// navbar slides down on mobile
 $(document).ready(function () {
-  // Images and videos
-  $("img, video").on("contextmenu",function(e){
-      return false;
-  });
-
-
-  //scroll feature  - Learn More
-  $(".about-nav").click(function(){
-    $('html, body').animate({
-      scrollTop:$("#about").offset().top - 100
-    }, 1000);
-  });
-
-  //Goes to portfolio
-  $("#portfolio-nav").click(function(){
-    $('html, body').animate({
-      scrollTop:$("#portfolio").offset().top - 100
-    }, 1000);
-  });
-
-  // navbar slides down on mobile
   $('#nav-button').click(function(){
-    $('.nav-links').slideToggle();
+    $('.nav-links').animate({width: 'toggle'}, 300)();
   });
 });

@@ -585,8 +585,7 @@ footer img{
 
 
 .image-gallery img{
-  max-width: 450px;
-  height: auto;
+  width: 450px;
   padding: 20px;
 }
 

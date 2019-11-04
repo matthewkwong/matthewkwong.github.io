@@ -2,27 +2,100 @@
     display: none;
 }
 
-body{
-  overflow-x: hidden;
-  font-family: circular !important;
-}
-
 @font-face {
 font-family: "circular";
 src: url("circular.ttf");
 }
 
+body{
+  overflow-x: hidden;
+  font-family: circular !important;
+}
+
+
+/* Solves error when nav bar is no longer clicked and user expands screen again */
+.back-up{
+  margin-top:-100px;
+  display: block;
+}
+
+
+nav{
+  z-index: 10;
+  /* background-color: red; */
+  text-align: right;
+  /* position: fixed; */
+}
+
+nav {
+  top:0;
+  z-index: 21;
+  width: 100%;
+  height: 100px;
+  font-family: circular;
+}
+
+nav #nav-button {
+  display: none;
+}
+
+nav #nav-check {
+  display: none;
+}
+
+.logo, .logo-white{
+  float: left;
+  /* color:black; */
+  position: absolute;
+  padding-top:10px;
+  left: 20px;
+  height: 70px;
+}
+
+.logo-white{
+  display: none;
+}
+
+
+nav > .nav-links > a{
+  color: #868686;
+  font-size: 17px;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: inline-block;
+  transition: color .3s linear;
+}
+
+nav > .nav-links > .active{
+    color:black;
+}
+
+nav > .nav-links > a:hover{
+  color: black;
+}
+
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  /* color:  #999; */
+  color:black;
+}
+
+
+
 .text-wrapper{
+  /* border: solid 2px red; */
   position: absolute;
   width: 505px;
   height: 192px;
   left: 10%;
-  top: 250px;
+  top:200px;
 }
 
 
 .description{
-  font-style: normal;
   font-weight: bold;
   font-size: 45px;
   color: #000000;
@@ -36,20 +109,28 @@ src: url("circular.ttf");
   left: 50%;
   top: 15%;
 
-  background: url(img/IMG_0094.jpg);
+  background: url(img/profile-picture.JPG);
   background-position: center;
   background-size: cover;
 }
 
 
 .button{
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   width: 220px;
-  height: 49px;
-  color:#868686;
+  height: 50px;
+  color:black;
 
-  background: #EBEBEB;
+  border: black 2px solid;
+
+  /* background-color: #EBEBEB; */
+  transition: 0.3s;
+}
+
+.button:hover{
+  color:white;
+  background-color: black;
 }
 
 
@@ -61,49 +142,16 @@ src: url("circular.ttf");
   top: 0px;
 
   z-index: -2;
-  background: url(img/IMG_0411.jpg);
+  background: url(img/mountains.JPG);
   background-position: center;
   background-size: cover;
-}
-/*
-.bottom{
-  z-index: 10;
-  position: absolute;
-  width: 500px;
-  height: 200px;
-  right: 0px;
-  bottom: 0;
-  background: #282828;
-} */
-
-
-/* .work{
-  margin-top: 100vh;
-  border: solid 2px red;
-  height: 100vh;
-} */
-
-
-
-
-
-.experience-header{
-  /* border: solid 2px red; */
-
-  position: relative;
-  top: 100vh;
-  left: 10%;
-
-  font-family: Circular Std;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
 }
 
 
 .experience-wrapper{
-  /* border: solid 2px red; */
-  width: 100%;
+  box-sizing: border-box;
+  /* border: solid 2px blue; */
+  /* width: 100% !important; */
   margin-top: 100vh;
   /* border: solid 2px red; */
   /* height: 100vh; */
@@ -113,71 +161,711 @@ src: url("circular.ttf");
 }
 
 
-.projects-header{
+.project{
   /* border: solid 2px red; */
-  position: relative;
-  left: 10%;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translate(0, 20px);
+  transition: all 1s;
 }
 
-.project-wrapper{
-  margin-top: -5vh;
-  /* border: solid 2px red; */
 
-  width: 100%;
-  /* border: solid 2px red; */
-  /* height: 100vh; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.project-reverse{
+  flex-direction: row-reverse;
+}
+.project-reverse > .project-description{
+  margin-left:0px;
+  margin-right: 50px;
 }
 
 
 .project-name{
-  font-size: 25px;
-  line-height: 0;
+  font-size: 40px;
 }
 
-.project{
-  margin: 40px;
-  /* width: 500px;
-  height: 300px; */
-  /* background: #C4C4C4; */
-  display: flex;
-  flex-direction: column;
+.project-img{
+  /* border: solid 2px red; */
+  width: 700px;
+  height: auto;
+  box-shadow: 0px 0px 42px 0px rgba(179,179,179,1);
+}
+
+
+.project.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .project-description{
+  /* border: solid 2px red; */
   width: 500px;
-
+  padding: 20px;
+  margin: auto;
+  margin-left: 50px;
+  align-items: center;
+  position: relative;
+  line-height: 1.5;
 }
 
+.project-description p {
+  font-size: 17px;
+}
 
 .project-position{
-  text-decoration: bold;
+  /* font-size: 14px; */
+  font-weight: bold;
   color: #999;
   display: flex;
   /* border: solid 2px red; */
   justify-content: space-between;
-  line-height: 0;
+  line-height: 0!important;
   width: 100%;
   margin:0 !important;
 }
 
-.project > img{
-  width: 500px;
-  height: 300px;
+
+.learn-more{
+  /* position: absolute; */
+  text-align: center;
+  width:200px;
+  /* height: 40px; */
+  color:black;
+  text-transform: uppercase;
+  font-size: 12px;
+  /* padding:4px; */
+  border: black 2px solid;
+  transition: 0.3s;
+  line-height: normal;
 }
 
-@media only screen and (max-width: 600px) {
+.learn-more:hover{
+  color:white;
+  background-color: black;
+}
+
+#include-title{
+  color:#32BC9B;
+}
+
+#include{
+  color: #32BC9B;
+  border: #32BC9B 2px solid;
+}
+
+#include:hover{
+  color:white;
+  background-color:#32BC9B;
+}
+
+#spotify-title{
+  color: #28B955;
+}
+
+#spotify{
+  color: #28B955;
+  border: #28B955 2px solid;
+}
+
+#spotify:hover{
+  color:white;
+  background-color:#28B955;
+}
+
+
+#hack-club-title{
+  color: #E42D44;
+}
+
+#hack-club{
+  color: #E42D44;
+  border: #E42D44 2px solid;
+}
+
+#hack-club:hover{
+  color:white;
+  background-color:#E42D44;
+}
+
+
+
+
+
+/* Footer */
+
+footer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+footer #icons{
+  justify-content: center;
+  /* border: solid 2px red; */
+  display: flex;
+  padding: 0px 0 20px 0;
+}
+
+footer #icons a{
+  transition: 0.2s;
+}
+
+footer #icons:hover > a {
+  opacity: 0.5;
+}
+
+footer #icons:hover > a:hover {
+  opacity: 1.0;
+}
+
+footer img{
+  padding: 0 5px;
+  height: 30px;
+}
+
+
+
+
+
+/* About Page  */
+.about-me-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-right: 10%;
+  margin-left: 10%;
+  /* margin-top:5%; */
+  /* border: solid 2px green;
+  box-sizing: border-box; */
+}
+
+.about-me-text{
+  line-height: 1.5;
+  font-size: 15px;
+  /* left:0; */
+  width: 50%;
+  /* border: solid 2px red; */
+  box-sizing: border-box;
+ /* height: 100vh; */
+}
+
+.about-me-text > h1{
+  font-size: 40px;
+}
+
+.about-me-text > p, ul{
+  color:#999;
+}
+
+.about-me-profile{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* width: 50%; */
+  box-sizing: border-box;
+  /* right: 0; */
+  /* border: solid 2px blue; */
+}
+
+#pic{
+  height: 450px;
+  display: block;
+  margin: auto;
+}
+
+.resume-button{
+  /* text-transform: uppercase; */
+  position: absolute;
+  text-align: center;
+  width: 230px;
+  line-height: normal;
+  color:#2698EC;
+
+  border: solid 2px #2698EC;
+  transition: 0.3s;
+}
+
+.resume-button:hover{
+  background-color: #2698EC;
+  color:white;
+}
+
+
+
+
+
+/* Individual Pages */
+.project-banner{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.include-banner{
+  background-image:url("img/include.png");
+}
+
+.spotify-banner{
+  background-image:url("img/rooms-banner.jpg");
+}
+
+
+.homeless-banner{
+  background-image:url("img/homies-banner.jpg");
+}
+
+.hack-club-banner{
+  background-image:url("img/hack-club.jpg");
+}
+
+.graphic-design-banner{
+  background-image:url("img/design-banner.jpg");
+}
+
+.project-heading{
+  line-height: normal;
+  margin-top:5%;
+  text-align: center;
+}
+
+.project-heading > #include-page {
+  color: #1BBE9C;
+}
+
+.project-heading > #spotify-page {
+  color: #27B954;
+}
+
+.project-heading > #homeless-page {
+  color: black;
+}
+
+.project-heading > #hack-club-page {
+  color: #E42D44;
+}
+
+.project-heading > h1{
+  font-size: 40px;
+  line-height: .5;
+}
+
+.project-heading > h2 > a{
+  color: #2698EC;
+}
+
+.project-heading > h3{
+  color: #B2B2B2;
+}
+
+
+.project-body-text{
+  line-height: 1.5;
+  /* border: solid 2px red; */
+  /* margin-top:5%; */
+  font-size: 18px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 5%;
+}
+
+.project-body-text ul{
+  margin-left: 5%;
+  color: #B3B3B3;
+}
+
+.project-body-text > h2{
+  margin-top:5%;
+}
+
+.project-body-text > p{
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #B3B3B3;
+}
+
+
+.project-body-text > .demo > .demo-text > p{
+  color: #B3B3B3;
+}
+
+.project-body-text > h3{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 100%;
+}
+
+
+.demo-text{
+  flex-direction: column;
+  margin-right: 10%;
+  width: 40%;
+}
+
+
+.demo{
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+
+.image{
+  /* position: relative; */
+  /* text-align: center; */
+  margin-bottom: 5%;
+  text-align: center;
+  color: #B3B3B3;
+}
+
+.image > img{
+  display: block;
+  margin: auto;
+}
+
+.rooms-links-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  vertical-align: center;
+  text-align: center;
+  width: 100%;
+}
+
+.rooms-links-container > .rooms-links{
+  /* position: absolute; */
+  width: 220px;
+  color: #27b954;
+  align-items: center;
+
+  border: #27b954 2px solid;
+
+  /* background-color: #EBEBEB; */
+  transition: 0.3s;
+}
+
+.rooms-links-container > .rooms-links:hover{
+  color:white;
+  background-color: #27b954;
+}
+
+/* Graphic Design Page */
+
+.image-gallery{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* text-align:center; */
+  /* width: 100%; */
+}
+
+.image-gallery > img{
+  /* width: 100%; */
+  /* height: auto; */
+  padding: 20px;
+  width: 600px;
+}
+
+.cities > img{
+  width: 450px;
+}
+
+.project-body-text > .image-gallery > p{
+  font-size: 5px;
+  margin-top:0px;
+}
+
+@media only screen and (min-width: 1500px) {
   .project-description{
-    width: 400px;
+    width: 700px;
   }
 
   .project > img{
-    width: 400px;
+    width: 700px;
+  }
+
+  .about-me-text{
+    font-size: 18px;
+  }
+
+  #pic{
+    display: block;
+    max-height: 550px;
+    /* max-width: auto; */
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .project-position{
+    /* border: solid 2px red; */
+    flex-direction: column;
+  }
+
+    #pic{
+    height: 350px;
+  }
+  .project > img{
+    /* width: 500px; */
+    width: 60%;
     height: auto;
+    margin: auto;
+  }
+  .about-me-wrapper{
+    margin-bottom: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+
+  .name{
+    margin-top:40%;
+    text-align: left;
+    margin-left: 0;
+    width: 160%;
+    /* display: none; */
+  }
+
+  .description{
+    margin-top:0px;
+    font-size:40px;
+  }
+
+  .button{
+    margin-top: 20%;
+    margin-bottom: 40%;
+  }
+
+  .text-wrapper{
+    /* top:40%; */
+    top:10%;
+    width:200px;
+  }
+
+  .experience-header{
+    margin-top: 0px;
+  }
+
+  .experience-wrapper{
+    flex-direction: column;
+  }
+
+
+  .project{
+    width: 100%;
+    /* border: solid 2px blue; */
+    flex-direction: column;
+  }
+
+  .project-description{
+    width: 80%;
+    /* border: solid 2px red; */
+    margin: auto !important;
+  }
+
+  .project > img{
+    /* width: 500px; */
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+  /* About Me Page */
+  .about-me-wrapper{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-me-text{
+    width: 100%;
+  }
+
+
+  #pic{
+    display: flex;
+    justify-content: center;
+    width:400px;
+    height: 400px;
+  }
+
+  /* Spotify Rooms */
+  .demo{
+    flex-direction: column;
+  }
+
+  .demo-text{
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .demo > video{
+    margin-bottom: 10%;
+  }
+
+
+}
+
+@media only screen and (max-width: 750px) {
+  .background{
+  /* right:0;
+  width: 60%; */
+    display: none;
+  }
+  /* .text-wrapper, .profile, .background{
+  display: none;
+  } */
+
+  .profile{
+    /* width: 300px;
+    height: 300px; */
+    display: none;
+  }
+
+  .image-gallery > img{
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .about-me-wrapper{
+    margin-top:10%;
+  }
+
+
+/* Navbar  */
+  .back-up{
+    display: none;
+  }
+
+  .logo-white{
+    display: block;
+  }
+
+
+  .nav-links{
+    z-index: 4;
+  }
+
+  nav #nav-button {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  nav #nav-button label {
+    display: inline-block;
+    padding: 35px;
+    transition: all 0.3s ease-in;
+  }
+
+  /* 3 squiggle bar hover */
+
+  nav #nav-button label span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #999;
+  }
+
+  nav .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    overflow-y: hidden;
+    left: 0px;
+    text-align: left;
+  }
+
+  nav > .nav-links > #portfolio-tab{
+      margin-top: 150px;
+  }
+
+  nav > .nav-links > .active{
+    color:white;
+  }
+
+  nav > .nav-links >  a:hover{
+      color:white;
+  }
+
+  nav .nav-links a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    /* color: white; */
+    transition: all 0.3s ease-in;
+    text-align: left;
+  }
+
+  nav #nav-check:not(:checked) ~ .nav-links {
+    /* height: 0px; */
+    height: 100vh;
+    width: 50%;
+    display: none;
+  }
+
+  nav #nav-check:checked ~ .nav-links {
+    height: 500vh;
+    width: 50%;
+    display: block;
+    overflow-y: auto;
+  }
+
+  .project-name{
+    font-size: 35px;
+  }
+
+/* Individual Pages */
+  .project-heading{
+    width: 100%;
+    /* border:solid 2px red; */
+    /* line-height: normal; */
+    margin-top:10%;
+    margin-bottom:10%;
+  }
+
+  .project-heading > h1{
+    font-size: 30px;
+    width:100%;
+  }
+
+  .project-heading > h2 > a{
+    font-size: 18px;
+  }
+
+  .image > img{
+    width: 100%;
+  }
+
+  .image > p{
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }

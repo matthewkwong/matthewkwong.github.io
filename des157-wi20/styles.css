@@ -1,0 +1,46 @@
+body{
+  font-family: arial;
+}
+
+header{
+  padding: 20px;
+  width: 800px;
+  margin: auto;
+}
+#mySketch{
+  width: 800px;
+  height: 250px;
+  border: solid 2px black;
+}
+
+main{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+article{
+  padding: 20px;
+  width: 25%;
+  /* height: 100%; */
+  background-color: #f7f5f5;
+  display: inline-block;
+}
+
+footer{
+  position: absolute;
+  /* bottom: 0; */
+  background-color: #f7f5f5;
+  text-align: center;
+  width: 100%;
+  /* margin-top: 20px; */
+  bottom: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  main{
+    min-width: 800px;
+  }
+}

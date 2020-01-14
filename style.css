@@ -479,7 +479,7 @@ footer img{
 
 .project-body-text ul{
   margin-left: 5%;
-  color: #B3B3B3;
+  color: #999999;
 }
 
 .project-body-text > h2{
@@ -489,12 +489,12 @@ footer img{
 .project-body-text > p{
   margin-left: 5%;
   margin-right: 5%;
-  color: #B3B3B3;
+  color: #999999;
 }
 
 
 .project-body-text > .demo > .demo-text > p{
-  color: #B3B3B3;
+  color: #999999;
 }
 
 .project-body-text > h3{
@@ -527,7 +527,7 @@ footer img{
   /* text-align: center; */
   margin-bottom: 5%;
   text-align: center;
-  color: #B3B3B3;
+  color: #999999;
 }
 
 .image > img{

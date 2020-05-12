@@ -546,11 +546,14 @@ footer img{
 
 .rooms-links-container > .rooms-links{
   /* position: absolute; */
-  width: 220px;
+  /* width: 220px; */
+  padding: 20px;
+  height: 25px;
   color: #27b954;
   align-items: center;
 
   border: #27b954 2px solid;
+  display: none;
 
   /* background-color: #EBEBEB; */
   transition: 0.3s;
@@ -830,5 +833,14 @@ footer img{
   .image > p{
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  /* Spotify ROoms */
+  .rooms-links-container > .rooms-links{
+    display: block;
+  }
+
+  .rooms-links-container iframe{
+    display: none;
   }
 }

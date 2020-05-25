@@ -175,15 +175,20 @@ a{
   transition: all 1s;
 }
 
+/* Title and Time frame of working */
+.project-position {
+  display: flex;
+  flex-direction: row;
+}
 
 .project-reverse{
   flex-direction: row-reverse;
 }
+
 .project-reverse > .project-description{
   margin-left:0px;
   margin-right: 50px;
 }
-
 
 .project-name{
   font-size: 40px;
@@ -528,12 +533,15 @@ footer img{
   margin-bottom: 5%;
   text-align: center;
   color: #999999;
+  display: flex;
+  justify-content: center;
 }
 
 .image > img{
   display: block;
   margin: auto;
 }
+
 
 .rooms-links-container{
   display: flex;
@@ -581,25 +589,29 @@ footer img{
   #pic{
     display: block;
     max-height: 550px;
-    /* max-width: auto; */
   }
 }
 
-@media only screen and (max-width: 1300px) {
-  .project-position{
-    /* border: solid 2px red; */
+@media only screen and (max-width: 1400px) {
+  .project-position {
+    display: flex;
     flex-direction: column;
   }
+}
+
+  @media only screen and (max-width: 1300px) {
 
     #pic{
     height: 350px;
   }
+
   .project > img{
     /* width: 500px; */
     width: 60%;
     height: auto;
     margin: auto;
   }
+  
   .about-me-wrapper{
     margin-bottom: 100px;
   }
@@ -609,6 +621,7 @@ footer img{
 @media only screen and (max-width: 1200px) {
 
 
+  
   .name{
     margin-top:40%;
     text-align: left;
@@ -641,7 +654,6 @@ footer img{
     flex-direction: column;
   }
 
-
   .project{
     width: 100%;
     /* border: solid 2px blue; */
@@ -650,12 +662,11 @@ footer img{
 
   .project-description{
     width: 80%;
-    /* border: solid 2px red; */
     margin: auto !important;
   }
 
+  /* Project images on index.html */
   .project > img{
-    /* width: 500px; */
     width: 80%;
     height: auto;
     margin: auto;
@@ -720,7 +731,6 @@ footer img{
   .about-me-wrapper{
     margin-top:10%;
   }
-
 
 /* Navbar  */
   .back-up{

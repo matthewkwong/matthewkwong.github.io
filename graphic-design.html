@@ -1,205 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="img/preview.png">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 
   <title>Matthew Kwong | Graphic Design</title>
 
 
   <style>
     body {
-      margin:0;
-      }
+      margin: 0;
+    }
 
-    .project-body-text{
+    .project-body-text {
       margin-left: 10%;
       margin-right: 10%;
       justify-content: center;
     }
 
-    #sticker-description{
-      color: black;
+    #sticker-description {
+      /* color: black; */
       margin-left: 15%;
       margin-right: 15%;
     }
 
-    #sticker-description a{
-      color:#3D98EC;
+    #sticker-description a {
+      color: #3D98EC;
     }
 
-    h2{
-      text-align:center;
+    h2 {
+      text-align: center;
     }
 
     /* Graphic Design Page */
-    .image-gallery{
+    .image-gallery {
       /* background-color: red; */
       display: flex;
+      width: 100%;
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    .image-gallery > .cities{
+    .cities {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
     }
 
-    .image-gallery img{
-      width: 450px;
+    .image-gallery>img,
+    .cities>img {
+      width: 33.33%;
       padding: 20px;
     }
 
 
     @media only screen and (max-width: 750px) {
 
-      .image-gallery{
+      .image-gallery {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
+      .image-gallery>.cities {
+        flex-direction: column;
+      }
 
-      .image-gallery img{
+
+      .image-gallery img {
         width: 100%;
         height: 100%;
         padding-left: 0px;
         padding-right: 0px;
       }
     }
-</style>
+  </style>
 
 </head>
-  <body>
-    <nav id = "navbar">
-      <!-- allows for the navbar to be collapsable in mobile -->
-      <input type="checkbox" id="nav-check">
 
-      <div id="nav-header">
-        <div id="name">
-          <a href = "index.html">
-            <img src = "img/logo.png" height =  "10" alt = "logo" class = "logo">
-          </a>
-        </div>
+<body>
+  <nav id="navbar">
+    <!-- allows for the navbar to be collapsable in mobile -->
+    <input type="checkbox" id="nav-check">
+
+    <div id="nav-header">
+      <div id="name">
+        <a href="index.html">
+          <img src="img/logo.png" height="10" alt="logo" class="logo">
+        </a>
       </div>
-
-      <div id="nav-button">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-
-      <div class="nav-links">
-        <img src = "img/logo-white.png" height =  "10" alt = "logo" class = "logo-white">
-
-        <a href = "index.html" class ="active" id = "portfolio-tab">portfolio</a>
-        <a href = "about.html">about</a>
-        <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-      </div>
-    </nav>
-
-<!-- Duplicate navbar to solve disappearing nav bar on media queries -->
-    <nav class = "back-up">
-      <div class="nav-links">
-        <img src = "img/logo-white.png" height =  "10" alt = "logo" class = "logo-white">
-
-        <a href = "index.html"  class ="active">portfolio</a>
-        <a href = "about.html" >about</a>
-        <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-      </div>
-    </nav>
-
-    <div class = "project-banner graphic-design-banner"> </div>
-
-    <div class = "project-heading">
-      <h1>Graphic Design</h1>
-      <h2>Portfolio</h2>
-      <h3>August 2018 - Current</h3>
     </div>
 
-    <div class = "project-body-text">
+    <div id="nav-button">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
 
-      <p id = "sticker-description">Over the past year, I have self taught myself how to use Adobe Illustrator,
-      Photoshop, and After Effects. To see more and purchase stickers of my work, please
+    <div class="nav-links">
+      <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
+
+      <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
+      <a href="about.html">about</a>
+      <a
+        href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
+    </div>
+  </nav>
+
+
+  <div class="project-banner graphic-design-banner"> </div>
+
+  <div class="project-heading">
+    <h1>Graphic Design</h1>
+    <h2>Portfolio</h2>
+    <h3>August 2018 - Current</h3>
+  </div>
+
+  <div class="project-body-text">
+
+    <p id="sticker-description">From 2018 to 2019, I taught myself how to use Adobe Illustrator,
+      Photoshop, and After Effects. I opened my own online sticker store and have shipped world wide. To see more and
+      purchase stickers of my work, please
       visit:
-      <a href = "https://docs.google.com/forms/d/e/1FAIpQLSezZme9sC37I12b1i4KFmJjJFCtcgXO2a0z1flZkIKTxT1M6w/viewform?usp=sf_link/">
-      stickers.matthewkwong.com</a>
-      </p>
-
-      <h2>Favorite Cities</h2>
-      <div class = "image-gallery">
-        <!-- stickers -->
-
-        <div class = "cities">
-          <img src = "img/graphic-design/cities/ny.jpg" alt = "New York">
-          <img src = "img/graphic-design/cities/ny.gif" alt = "New York">
-        </div>
-
-        <div class = "cities">
-          <img src = "img/graphic-design/cities/sf.jpg" alt = "San Francisco">
-          <img src = "img/graphic-design/cities/sf.gif" alt = "San Francisco">
-        </div>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSezZme9sC37I12b1i4KFmJjJFCtcgXO2a0z1flZkIKTxT1M6w/viewform?usp=sf_link/">
+        stickers.matthewkwong.com</a>
+      . From this entrepreneur business, I've been able to learn skills in marketing and business.
+      I also manage my own social media accounts to help advertise and build my following
+      as a designer.
+    </p>
 
 
-        <div class = "cities">
-          <img src = "img/graphic-design/cities/seattle.jpg" alt = "Seattle">
-          <img src = "img/graphic-design/cities/seattle.gif" alt = "Seattle">
-        </div>
+    <h2>Favorite Cities</h2>
+    <div class="image-gallery">
+      <!-- stickers -->
+
+      <div class="cities">
+        <img src="img/graphic-design/cities/ny.jpg" alt="New York">
+        <img src="img/graphic-design/cities/ny.gif" alt="New York">
       </div>
 
-      <h2>Tyler, The Creator</h2>
-      <div class = "image-gallery">
-        <img src = "img/graphic-design/tyler/flowerboy.jpg" alt = "Flower Boy">
-        <img src = "img/graphic-design/tyler/flog.jpg" alt = "Camp Flog Gnaw">
-        <img src = "img/graphic-design/tyler/igor.jpg" alt = "IGOR">
-      </div>
-
-      <h2>UC Davis</h2>
-      <div class = "image-gallery">
-        <img src = "img/graphic-design/davis/black.jpg" alt = "black cow">
-        <img src = "img/graphic-design/davis/brown.jpg" alt = "brown cow">
-      </div>
-
-      <h2>Superheroes</h2>
-      <div class = "image-gallery">
-        <img src = "img/graphic-design/batman.jpg" alt = "Batman" width = "600">
-        <img src = "img/graphic-design/spider-man.jpg" alt = "Spiderman" width = "600">
+      <div class="cities">
+        <img src="img/graphic-design/cities/sf.jpg" alt="San Francisco">
+        <img src="img/graphic-design/cities/sf.gif" alt="San Francisco">
       </div>
 
 
-      <h2>Design 16 Project 1: Interior Design</h2>
-      <div class = "image-gallery interior">
-        <img src = "img/graphic-design/interior/mono.jpg" alt = "interior monochromatic">
-        <img src = "img/graphic-design/interior/analogous.jpg" alt = "interior analogous">
-        <img src = "img/graphic-design/interior/comp.jpg" alt = "interior complementary">
-        <img src = "img/graphic-design/interior/triadic.jpg" alt = "interior triadic">
-      </div>
-
-      <h2>Design 16 Project 2: Typography Poster </h2>
-      <div class = "image-gallery">
-        <img src = "img/graphic-design/avant-garde.jpg" width = "600" alt = "avant garde poster">
+      <div class="cities">
+        <img src="img/graphic-design/cities/seattle.jpg" alt="Seattle">
+        <img src="img/graphic-design/cities/seattle.gif" alt="Seattle">
       </div>
     </div>
 
-    <footer>
-      <div id = "icons">
-        <a href = "https://www.instagram.com/kwongenterprises" target="_blank"><img src = "img/footer/instagram.svg" alt = "instagram icon"></a>
-        <a href= "https://www.github.com/matthewkwong" target="_blank"> <img src = "img/footer/github.svg" alt = "github icon"></a>
-        <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src = "img/footer/linkedin.svg" alt = "linkedin icon"></a>
-        <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;" target="_blank"> <img src = "img/footer/envelope.svg" alt = "mail icon"></a>
-      </div>
-    </footer>
+    <h2>Tyler, The Creator</h2>
+    <div class="image-gallery">
+      <img src="img/graphic-design/tyler/flowerboy.jpg" alt="Flower Boy">
+      <img src="img/graphic-design/tyler/flog.jpg" alt="Camp Flog Gnaw">
+      <img src="img/graphic-design/tyler/igor.jpg" alt="IGOR">
+    </div>
 
-    <script src="script.js"></script>
-  </body>
+    <h2>UC Davis</h2>
+    <div class="image-gallery">
+      <img src="img/graphic-design/davis/black.jpg" alt="black cow">
+      <img src="img/graphic-design/davis/brown.jpg" alt="brown cow">
+    </div>
+
+    <h2>Superheroes</h2>
+    <div class="image-gallery">
+      <img src="img/graphic-design/batman.jpg" alt="Batman" width="600">
+      <img src="img/graphic-design/spider-man.jpg" alt="Spiderman" width="600">
+    </div>
+
+
+    <h2>Design 16 Project 1: Interior Design</h2>
+    <div class="image-gallery interior">
+      <img src="img/graphic-design/interior/mono.jpg" alt="interior monochromatic">
+      <img src="img/graphic-design/interior/analogous.jpg" alt="interior analogous">
+      <img src="img/graphic-design/interior/comp.jpg" alt="interior complementary">
+      <img src="img/graphic-design/interior/triadic.jpg" alt="interior triadic">
+    </div>
+
+    <h2>Design 16 Project 2: Typography Poster </h2>
+    <div class="image-gallery">
+      <img src="img/graphic-design/avant-garde.jpg" width="600" alt="avant garde poster">
+    </div>
+  </div>
+
+  <footer>
+    <div id="icons">
+      <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="img/footer/instagram.svg"
+          alt="instagram icon"></a>
+      <a href="https://www.github.com/matthewkwong" target="_blank"> <img src="img/footer/github.svg"
+          alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src="img/footer/linkedin.svg"
+          alt="linkedin icon"></a>
+      <a
+        href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+        target="_blank"> <img src="img/footer/envelope.svg" alt="mail icon"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

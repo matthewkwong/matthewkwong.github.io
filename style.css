@@ -1,7 +1,9 @@
 /* Hi there, I see you've come to check on my CSS. 
 Everything was built from scratch, but feel free to 
 check it out */
-
+p{
+  font-size: 17px;
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -18,11 +20,9 @@ body{
 }
 
 nav{
+  /* background-color: white; */
   z-index: 10;
   text-align: right;
-}
-
-nav {
   top:0;
   z-index: 21;
   width: 100%;
@@ -384,16 +384,16 @@ footer img{
 }
 
 .include-banner{
-  background-image:url("img/include.png");
+  background-image:url("img/include/include.png");
 }
 
 .spotify-banner{
-  background-image:url("img/rooms-banner.jpg");
+  background-image:url("img/rooms/rooms-banner.jpg");
 }
 
 
 .homeless-banner{
-  background-image:url("img/homies-banner.jpg");
+  background-image:url("img/homeless/homies-banner.jpg");
 }
 
 .hack-club-banner{
@@ -443,8 +443,8 @@ footer img{
 .project-body-text{
   line-height: 1.5;
   font-size: 18px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-bottom: 5%;
 }
 
@@ -478,7 +478,7 @@ footer img{
 .demo-text{
   flex-direction: column;
   margin-right: 10%;
-  width: 40%;
+  width: 60%;
 }
 
 
@@ -494,6 +494,7 @@ footer img{
 
 .image{
   margin-bottom: 5%;
+  margin-top: 5%;
   text-align: center;
   color: #999999;
   display: flex;
@@ -502,6 +503,7 @@ footer img{
 }
 
 .image > img{
+  max-width: 100%;
   display: block;
   margin: auto;
 }
@@ -676,7 +678,6 @@ footer img{
     margin-left: 10%;
     margin-right: 10%;
   }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -791,6 +792,10 @@ footer img{
   /* Spotify Rooms */
   .rooms-links-container > .rooms-links{
     display: block;
+  }
+
+  #rooms-prototype-label{
+    display: none;
   }
 
   .rooms-links-container iframe{

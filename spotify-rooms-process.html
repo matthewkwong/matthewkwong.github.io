@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,204 +8,210 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 
   <title>Matthew Kwong | Spotify Rooms</title>
 
   <style>
     body {
-      margin:0;
-      }
+      margin: 0;
+    }
+
+    iframe{
+      margin-top: -7%;
+      margin-bottom: -10%;
+    }
 
   </style>
 </head>
-    <body>
-      <nav id = "navbar">
-        <!-- allows for the navbar to be collapsable in mobile -->
-        <input type="checkbox" id="nav-check">
 
-        <div id="nav-header">
-          <div id="name">
-            <a href = "index.html">
-              <img src = "img/logo.png" height =  "10" alt = "logo" class = "logo">
-            </a>
-          </div>
-        </div>
+<body>
+  <nav id="navbar">
+    <!-- allows for the navbar to be collapsable in mobile -->
+    <input type="checkbox" id="nav-check">
 
-        <div id="nav-button">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
+    <div id="nav-header">
+      <div id="name">
+        <a href="index.html">
+          <img src="img/logo.png" height="10" alt="logo" class="logo">
+        </a>
+      </div>
+    </div>
 
-        <div class="nav-links">
-          <img src = "img/logo-white.png" height =  "10" alt = "logo" class = "logo-white">
+    <div id="nav-button">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
 
-          <a href = "index.html" class ="active" id = "portfolio-tab">portfolio</a>
-          <a href = "about.html">about</a>
-          <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-        </div>
-      </nav>
+    <div class="nav-links">
+      <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
 
-  <!-- Duplicate navbar to solve disappearing nav bar on media queries -->
-      <nav class = "back-up">
-        <div class="nav-links">
-          <img src = "img/logo-white.png" height =  "10" alt = "logo" class = "logo-white">
+      <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
+      <a href="about.html">about</a>
+      <a
+        href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
+    </div>
+  </nav>
 
-          <a href = "index.html"  class ="active">portfolio</a>
-          <a href = "about.html">about</a>
-          <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-        </div>
-      </nav>
+  <div class="project-banner spotify-banner">
+    <!-- <img src = "img/include.png"> -->
+  </div>
 
-      <div class = "project-banner spotify-banner">
-        <!-- <img src = "img/include.png"> -->
+  <div class="project-heading">
+    <h1 id="spotify-page">Spotify Rooms</h1>
+    <h2><a href="https://www.matthewkwong.com/spotify-rooms/">matthewkwong.com/spotify-rooms</a></h2>
+    <h2><a href="https://projects.invisionapp.com/share/HSSRA1LG4TY#/screens">Interactive Prototype</a></h2>
+    <h3>July - August 2019</h3>
+  </div>
+
+  <div class="project-body-text">
+    <h2 class="project-subtitle">Background</h2>
+    <p class="project-text">
+      To solve the reocurring problem of terrible listening experiences
+      whenever my friends and I are playing music in the car,
+      I decided to make a prototype feature I would want introduced into the Spotify
+      mobile application called Rooms. Rooms would create a new, fast way of sharing music for any occassion,
+      whether that be in the car or at a party.
+    </p>
+
+    <h2 class="project-subtitle">Problem</h2>
+    <p class="project-text">
+      Every time my friends and I are in the car together, the music listening
+      experience is always terrible. With people arguing for the aux cord,
+      who gets to queue music, and terrible song selection, the list goes on forever.
+      As the driver, this can be extremely distracting and unsafe.</p>
+
+    <p>After thinking about the main problem to this terrible music listening
+      experience, I concluded that the problem was that only one person's music
+      taste was being played.</p>
+
+    <h2 class="project-subtitle">Solution</h2>
+    <p>To fix this problem, I decided that I would design a new feature in the
+      Spotify mobile application that would allow for better group listening through
+      a democracy type experience. This would not only improve car rides, but
+      every group event possible.</p>
+
+
+    <h2 class="project-subtitle">Design Process</h2>
+    <p>While creating the design of this new feature,
+      it was important that the aesthetic was clean and simple while still
+      being able to meet all core features. Through this process I kept in mind
+      that often the best applications require the least amount of steps to use.
+      Additionally, I chose to use Spotify as the main platform as it's my
+      favorite music streaming service and the most popular amongst my friends.
+    </p>
+
+
+    <div class="image">
+      <img src="img/rooms/rooms-layout.png" alt="Spotify Rooms Layout">
+      <p>Storyboard of how the feature works</p>
+    </div>
+
+
+    <div class="demo">
+      <div class="demo-text">
+        <h3>Driver Lobby Menu</h3>
+        <p>Once the driver has created a new room, passengers will enter the 4 digit generated code to join.
+          Passengers can then add songs to the play queue by clicking the "Add Songs" button where they will be
+          introduced to the same song search menu they're familiar to in the Spotify application.</p>
       </div>
 
-      <div class = "project-heading">
-        <h1 id = "spotify-page">Spotify Rooms</h1>
-        <h2><a href = "https://www.matthewkwong.com/spotify-rooms/">matthewkwong.com/spotify-rooms</a></h2>
-        <h2><a href = "https://projects.invisionapp.com/share/HSSRA1LG4TY#/screens">Interactive Prototype</a></h2>
-        <h3>July - August 2019</h3>
-      </div>
+      <video height="500" playsinline autoplay muted loop>
+        <source src="img/rooms/create-room.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
 
-      <div class = "project-body-text">
-        <h2 class = "project-subtitle">Background</h2>
-        <p class = "project-text">
-          To solve the reocurring problem of terrible listening experiences
-          whenever my friends and I are playing music in the car,
-          I decided to make a prototype feature I would want introduced into the Spotify
-           mobile application called Rooms. Rooms would create a new, fast way of sharing music for any occassion,
-            whether that be in the car or at a party.
+
+
+    <div class="demo">
+      <div class="demo-text">
+        <h3>Passenger Menu</h3>
+        <p>Once the driver has created a new room, passengers will enter the 4 digit
+          generated code to join. Passengers can then add songs to the play queue by clicking the "Add Songs"
+          button where they will be introduced to the same song search menu they're familiar on the Spotify application.
         </p>
-
-        <h2 class = "project-subtitle">Problem</h2>
-        <p class = "project-text">
-        Every time my friends and I are in the car together, the music listening
-        experience is always terrible. With people arguing for the aux cord,
-        who gets to queue music, and terrible song selection, the list goes on forever.
-        As the driver, this can be extremely distracting and unsafe.</p>
-
-        <p>After thinking about the main problem to this terrible music listening
-        experience, I concluded that the problem was that only one person's music
-        taste was being played.</p>
-
-        <h2 class = "project-subtitle">Solution</h2>
-        <p>To fix this problem, I decided that I would design a new feature in the
-        Spotify mobile application that would allow for better group listening through
-        a democracy type experience. This would not only improve car rides, but
-        every group event possible.</p>
-
-
-        <h2 class = "project-subtitle">Design Process</h2>
-        <p>While creating the design of this new feature,
-          it was important that the aesthetic was clean and simple while still
-          being able to meet all core features. Through this process I kept in mind
-          that often the best applications require the least amount of steps to use.
-          Additionally, I chose to use Spotify as the main platform as it's my
-          favorite music streaming service and the most popular amongst my friends.
-        </p>
-
-
-        <div class = "image">
-          <img src = "img/rooms-layout.png" alt = "Spotify Rooms Layout" width = "600">
-          <p>Storyboard of how the feature works</p>
-        </div>
-
-
-         <div class = "demo">
-           <div class = "demo-text">
-             <h3>Driver Lobby Menu</h3>
-             <p>Once the driver has created a new room, passengers will enter the 4 digit generated code to join.
-               Passengers can then add songs to the play queue by clicking the "Add Songs" button where they will be
-                introduced to the same song search menu they're familiar to in the Spotify application.</p>
-           </div>
-
-           <video height = "450" playsinline autoplay muted loop>
-            <source src="img/rooms/create-room.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-         </div>
-
-
-
-         <div class = "demo">
-           <div class = "demo-text">
-             <h3>Passenger Menu</h3>
-             <p>Once the driver has created a new room, passengers will enter the 4 digit
-              generated code to join. Passengers can then add songs to the play queue by clicking the "Add Songs"
-             button where they will be introduced to the same song search menu they're familiar on the Spotify application.</p>
-           </div>
-
-           <video height = "450" playsinline autoplay muted loop>
-            <source src="img/rooms/join-room.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-         </div>
-
-
-
-          <div class = "demo">
-            <div class = "demo-text">
-              <h3>Add Songs</h3>
-              <p>To add songs to the queue, I decided that I would keep the same
-              functionality to add songs in playlists.</p>
-            </div>
-
-            <video height = "450" playsinline autoplay muted loop>
-             <source src="img/rooms/add-songs.mp4" type="video/mp4">
-             Your browser does not support HTML5 video.
-           </video>
-          </div>
-
-
-          <div class = "demo">
-            <div class = "demo-text">
-              <h3>Vote to Remove Songs</h3>
-              <p>By introducing a vote kicking functionality, unwanted songs will be removed with a 2/3 majority vote.
-              This would ensure that only the best songs are being played, making the
-            listening experience great for all passengers</p>
-            </div>
-
-            <video height = "450" playsinline autoplay muted loop>
-             <source src="img/rooms/vote.mp4" type="video/mp4">
-             Your browser does not support HTML5 video.
-           </video>
-          </div>
-
-          <div class = "rooms-links-container">
-            <a class = "rooms-links" href = "https://invis.io/HSSRA1LG4TY">View the interactive prototype</a>
-            <iframe  style="transform: scale(0.75)" width="438" height="930" src="//invis.io/58SN7SVMX4N" frameborder="0" allowfullscreen></iframe>
-          </div>
-
-         <h2 class = "project-subtitle">Challenges</h2>
-          <p>Building an entire user interface and experience by yourself is
-             challenging. Some design challenges I faced include:</p>
-             <ul>
-              <li>How can I create the easiest way for users to join a Room?</li>
-              <li>How can the Rooms feature be safe for drivers?</li>
-              <li>How can I reach out and promote my product?</li>
-             </ul>
-
-          <h2 class = "project-subtitle">Takeaways</h2>
-           <p>This project was super motivating for me to increase my skills
-             as a designer and to learn more about the UI/UX field. This was my first
-             ever project focussing on the user interface and experience flow of an application.
-             I am very happy with the work that I put in to this project and the solution I came up
-              with to create a new way to share music at group events.</p>
       </div>
 
-      <footer>
-        <div id = "icons">
-          <a href = "https://www.instagram.com/kwongenterprises" target="_blank"><img src = "img/footer/instagram.svg" alt = "instagram icon"></a>
-          <a href= "https://www.github.com/matthewkwong" target="_blank"> <img src = "img/footer/github.svg" alt = "github icon"></a>
-          <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src = "img/footer/linkedin.svg" alt = "linkedin icon"></a>
-          <a href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;" target="_blank"> <img src = "img/footer/envelope.svg" alt = "mail icon"></a>
-        </div>
-      </footer>
+      <video height="500" playsinline autoplay muted loop>
+        <source src="img/rooms/join-room.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
 
-      <script src="script.js"></script>
-    </body>
-  </html>
+
+
+    <div class="demo">
+      <div class="demo-text">
+        <h3>Add Songs</h3>
+        <p>To add songs to the queue, I decided that I would keep the same
+          functionality to add songs in playlists.</p>
+      </div>
+
+      <video height="500" playsinline autoplay muted loop>
+        <source src="img/rooms/add-songs.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+
+    <div class="demo">
+      <div class="demo-text">
+        <h3>Vote to Remove Songs</h3>
+        <p>By introducing a vote kicking functionality, unwanted songs will be removed with a 2/3 majority vote.
+          This would ensure that only the best songs are being played, making the
+          listening experience great for all passengers</p>
+      </div>
+
+      <video height="500" playsinline autoplay muted loop>
+        <source src="img/rooms/vote.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <h2 id = "rooms-prototype-label">Interactive Prototype</h2>
+    <div class="rooms-links-container">
+      <a class="rooms-links" href="https://invis.io/HSSRA1LG4TY">View the interactive prototype</a>
+      <iframe style="transform: scale(0.75)" width="438" height="930" src="//invis.io/58SN7SVMX4N" frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2 class="project-subtitle">Challenges</h2>
+    <p>Building an entire user interface and experience by yourself is
+      challenging. Some design challenges I faced include:</p>
+    <ul>
+      <li>How can I create the easiest way for users to join a Room?</li>
+      <li>How can the Rooms feature be safe for drivers?</li>
+      <li>How can I reach out and promote my product?</li>
+    </ul>
+
+    <h2 class="project-subtitle">Takeaways</h2>
+    <p>This project was super motivating for me to increase my skills
+      as a designer and to learn more about the UI/UX field. This was my first
+      ever project focussing on the user interface and experience flow of an application.
+      I am very happy with the work that I put in to this project and the solution I came up
+      with to create a new way to share music at group events.</p>
+  </div>
+
+  <footer>
+    <p>100% designed and built from scratch</p>
+    <div id="icons">
+      <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="img/footer/instagram.svg"
+          alt="instagram icon"></a>
+      <a href="https://www.github.com/matthewkwong" target="_blank"> <img src="img/footer/github.svg"
+          alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src="img/footer/linkedin.svg"
+          alt="linkedin icon"></a>
+      <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+        target="_blank"> <img src="img/footer/envelope.svg" alt="mail icon"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -17,6 +17,25 @@
     body {
       margin: 0;
     }
+
+    .iframe-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    #include-mobile-slideshow {
+      display: none;
+    }
+
+    @media only screen and (max-width: 850px) {
+      #include-mobile-slideshow {
+        display: block;
+      }
+
+      #include-desktop-slideshow {
+        display: none;
+      }
+    }
   </style>
 
 </head>
@@ -76,17 +95,36 @@
 
   <div class="project-body-text">
     <h2 class="project-subtitle">Background</h2>
-    <p>
-      Currently, I am the Director of Design for Include, a non-profit
+    <p>Currently, I am the Director of Design for Include, a non-profit
       organization at the University of California Davis that helps build
       websites for local businesses in the area. </p>
 
     <h2 class="project-subtitle">Summary</h2>
+
     <p>As the Director of Design, I’ve learned and improved many skills such as
       leadership, teamwork, communication, organization, and decision making.</p>
 
     <p>My responsiblities include: leading the design team, creating lesson plans and
       marketing material, and leading design workshops.</p>
+
+    <div class="image">
+      <img src="img/include/marketing.png" alt = "include event banners" width="1000">
+      <p>Facebook Event image banners</p>
+    </div>
+
+    <div class="iframe-center">
+      <!-- Mobile Screen -->
+      <iframe id="include-mobile-slideshow"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vT7WU8C5NV5Sme7M3FYfs7uLTW-XaldK38Uq6C2FjGObuU5ACd6aY90Ojrq-Bv1IF6OKh_mO3wXgRr3/embed?start=false&loop=false&delayms=15000"
+        frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true"
+        webkitallowfullscreen="true"></iframe>
+      <!-- Desktop Screen -->
+      <iframe id="include-desktop-slideshow"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vT7WU8C5NV5Sme7M3FYfs7uLTW-XaldK38Uq6C2FjGObuU5ACd6aY90Ojrq-Bv1IF6OKh_mO3wXgRr3/embed?start=false&loop=false&delayms=15000"
+        frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
+        webkitallowfullscreen="true"></iframe>
+    </div>
+
 
     <p>At the start of the school year, I created and lead workshops on
       wireframing and UI/UX using <a href="https://www.figma.com">Figma</a> This was a chance for
@@ -94,7 +132,7 @@
       follow along and learn how to wireframe their own personal websites.</p>
 
     <div class="image">
-      <img src="img/include-presentation.jpg" alt="include presentation" width="500">
+      <img src="img/include/presentation.jpg" alt="include presentation">
     </div>
 
     <p>As a club that builds websites for other non-profit organizations, I’ve met
@@ -107,10 +145,15 @@
       create a collaborative environment where students could create and share their design layout
       iterations and ideas to produce our final design.</p>
 
-    <div class="image" id="include-wireframe">
-      <img src="img/include-wireframes.png" alt="include davis night market wireframes" width="650">
+    <div class="image">
+      <img src="img/include/include-sketch.jpg" alt="include presentation" width = "800">
+      <p>Wireframe sketches before designing in Figma</p>
     </div>
 
+    <div class="image">
+      <img src="img/include/include-wireframes.png" alt="include davis night market wireframes" width="800">
+      <p>Figma wireframe iterations</p>
+    </div>
   </div>
 
 

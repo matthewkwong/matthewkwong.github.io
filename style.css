@@ -1,9 +1,7 @@
 /* Hi there, I see you've come to check on my CSS. 
 Everything was built from scratch, but feel free to 
 check it out */
-p{
-  font-size: 17px;
-}
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -442,7 +440,7 @@ footer img{
 
 .project-body-text{
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 5%;
@@ -478,7 +476,7 @@ footer img{
 .demo-text{
   flex-direction: column;
   margin-right: 10%;
-  width: 60%;
+  width: 40%;
 }
 
 
@@ -533,6 +531,35 @@ footer img{
   background-color: #27b954;
 }
 
+
+
+
+/* Graphic Design */
+.image-gallery {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cities {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-gallery>img,
+.cities>img {
+  /* 2 images per row */
+  /* width: 33.33%; */
+
+  /* 3 images per row */
+  width: 25%;
+  padding: 10px;
+}
 
 @media only screen and (min-width: 1500px) {
   .project-description{
@@ -677,6 +704,31 @@ footer img{
   .project-body-text{
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+
+  /* Graphic Design */
+  .image-gallery {
+    flex-direction: column;
+  }
+
+  .image-gallery>.cities {
+    flex-direction: column;
+  }
+
+  .image-gallery>img,
+  .cities>img {
+    margin-right: auto;
+    /* 2 images per row */
+    /* width: 33.33%; */
+
+    /* 3 images per row */
+    margin-left: auto;
+
+    width: 75%;
+    height: 100%;
+    /* padding-left: 0px; */
+    /* padding-right: 0px; */
   }
 }
 

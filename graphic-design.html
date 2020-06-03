@@ -24,62 +24,12 @@
       justify-content: center;
     }
 
-    #sticker-description {
-      /* color: black; */
-      margin-left: 15%;
-      margin-right: 15%;
-    }
-
-    #sticker-description a {
+    a {
       color: #3D98EC;
     }
 
     h2 {
       text-align: center;
-    }
-
-    /* Graphic Design Page */
-    .image-gallery {
-      /* background-color: red; */
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    .cities {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .image-gallery>img,
-    .cities>img {
-      width: 33.33%;
-      padding: 20px;
-    }
-
-
-    @media only screen and (max-width: 750px) {
-
-      .image-gallery {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .image-gallery>.cities {
-        flex-direction: column;
-      }
-
-
-      .image-gallery img {
-        width: 100%;
-        height: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
-      }
     }
   </style>
 
@@ -112,7 +62,7 @@
       <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
       <a href="about.html">about</a>
       <a
-        href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
+        href=" mailto: &#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
     </div>
   </nav>
 
@@ -127,54 +77,63 @@
 
   <div class="project-body-text">
 
-    <p id="sticker-description">From 2018 to 2019, I taught myself how to use Adobe Illustrator,
-      Photoshop, and After Effects. I opened my own online sticker store and have shipped world wide. To see more and
-      purchase stickers of my work, please
-      visit:
+    <p>In 2018, I taught myself how to use Adobe Illustrator. I created minimalistic renditions
+      of my favorite album at the time and fell in love with the process and art of creating graphic designs. A month
+      later,
+      I printed 10 stickers of my work and posted a listing for them on Facebook Marketplace. The stickers sold out and
+      I received a lot of encouragement to continue making more designs.</p>
+
+    <p>As I began to create new designs, I opened my own online sticker store. I've sold over 1,000 stickers and shipped
+      world wide.
+      To see the designs for sale, please visit:
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSezZme9sC37I12b1i4KFmJjJFCtcgXO2a0z1flZkIKTxT1M6w/viewform?usp=sf_link/">
         stickers.matthewkwong.com</a>
-      . From this entrepreneur business, I've been able to learn skills in marketing and business.
-      I also manage my own social media accounts to help advertise and build my following
+      Through building my own business, I've been able to learn skills in marketing and business.
+      I manage my own <a href="https://www.instagram.com/kwongenterprises">social media accounts</a> to help advertise
+      and build my following
       as a designer.
     </p>
 
+  </div>
 
-    <h2>Favorite Cities</h2>
-    <div class="image-gallery">
-      <!-- stickers -->
+  <!-- <h2>Favorite Cities</h2> -->
+  <div class="image-gallery">
+    <!-- stickers -->
 
-      <div class="cities">
-        <img src="img/graphic-design/cities/ny.jpg" alt="New York">
-        <img src="img/graphic-design/cities/ny.gif" alt="New York">
-      </div>
+    <div class="cities">
+      <img src="img/graphic-design/cities/ny.jpg" alt="New York Sticker">
+      <img src="img/graphic-design/cities/sf.jpg" alt="San Francisco Sticker">
+      <img src="img/graphic-design/cities/seattle.jpg" alt="Seattle Sticker">
 
-      <div class="cities">
-        <img src="img/graphic-design/cities/sf.jpg" alt="San Francisco">
-        <img src="img/graphic-design/cities/sf.gif" alt="San Francisco">
-      </div>
-
-
-      <div class="cities">
-        <img src="img/graphic-design/cities/seattle.jpg" alt="Seattle">
-        <img src="img/graphic-design/cities/seattle.gif" alt="Seattle">
-      </div>
+      <img src="img/graphic-design/cities/sf.gif" alt="San Francisco Animation">
+      <img src="img/graphic-design/cities/ny.gif" alt="New York Animation">
+      <img src="img/graphic-design/cities/seattle.gif" alt="Seattle Animation">
     </div>
+  </div>
 
-    <h2>Tyler, The Creator</h2>
-    <div class="image-gallery">
-      <img src="img/graphic-design/tyler/flowerboy.jpg" alt="Flower Boy">
-      <img src="img/graphic-design/tyler/flog.jpg" alt="Camp Flog Gnaw">
-      <img src="img/graphic-design/tyler/igor.jpg" alt="IGOR">
-    </div>
+  <!-- <h2>Tyler, The Creator</h2> -->
+  <div class="image-gallery">
+    <img src="img/graphic-design/tyler/flowerboy.jpg" alt="Flower Boy Sticker">
+    <img src="img/graphic-design/tyler/flog.jpg" alt="2019 Camp Flog Gnaw Stickers">
+    <img src="img/graphic-design/tyler/igor.jpg" alt="IGOR Stickers">
+  </div>
 
-    <h2>UC Davis</h2>
+
+  <!-- Frank Ocean -->
+  <div class="image-gallery">
+    <img src="img/graphic-design/frank/blond-cutout.png" alt="Blond Cut Out Sticker">
+    <img src="img/graphic-design/frank/nostalgia-ultra.JPG" alt="Nostalia Ultra Sticker">
+    <img src="img/graphic-design/frank/blond.jpg" alt="Blond Sticker">
+  </div>
+
+  <!-- <h2>UC Davis</h2>
     <div class="image-gallery">
       <img src="img/graphic-design/davis/black.jpg" alt="black cow">
       <img src="img/graphic-design/davis/brown.jpg" alt="brown cow">
-    </div>
+    </div> -->
 
-    <h2>Superheroes</h2>
+  <!-- <h2>Superheroes</h2>
     <div class="image-gallery">
       <img src="img/graphic-design/batman.jpg" alt="Batman" width="600">
       <img src="img/graphic-design/spider-man.jpg" alt="Spiderman" width="600">
@@ -192,7 +151,7 @@
     <h2>Design 16 Project 2: Typography Poster </h2>
     <div class="image-gallery">
       <img src="img/graphic-design/avant-garde.jpg" width="600" alt="avant garde poster">
-    </div>
+    </div> -->
   </div>
 
   <footer>

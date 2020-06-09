@@ -20,7 +20,7 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "369e950eef504137aa80cdc2114a3396";
-const redirectUri = "https://meadow-righteous-brook.glitch.me";
+const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
 const scopes = [
   "user-read-email",
   "user-read-private",

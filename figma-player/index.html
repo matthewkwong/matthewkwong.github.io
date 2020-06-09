@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Figma Spotify Player</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"
-    ></script>
+<body>
+    <section id="wrapper">
+        <!--  Home Screen-->
+        <section id="home">
+            <button onclick="login()" id="login">
+                Login
+            </button>
+        </section>
+
+
+        <!-- Login Home-->
+        <section id="login-home">
+            <h2 id="username">Welcome back, </h2>
+
+            <h2>Your Playlists:</h2>
+            <div id="users-playlists-wrapper"></div>
+        </section>
+
+
+
+        <!-- Playlist View-->
+        <section id="playlist-view">
+            <h2>Playlist View:</h2>
+            <h2 id="playlist-title"></h2>
+            <ol id="playlist-songs"></ol>
+        </section>
+
+
+        <!-- Player-->
+        <section id="player">
+            <div id="player-wrapper">
+
+                <h2 id="current-track-name"></h2>
+                <h3 id="current-track-artist"></h3>
+                <div id="current-track-wrapper">
+                    <img id="current-track" />
+                </div>
+
+                <div id="buttons">
+                    <button onclick="back()">Back</button>
+                    <button onclick="playPause()">Pause</button>
+                    <button onclick="forward()">Forward</button>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <!-- Include the Web Playback SDK -->
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
 
     <!-- Include our Javascript -->
     <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+</body>
 
-  <body>
-    <section id="wrapper">
-      <!--  Home Screen-->
-      <section id="home">
-        <button onclick="login()" id="login">
-          Login
-        </button>
-      </section>
-
-      
-      <!-- Login Home-->
-      <section id="login-home">
-        <h2 id = "username">Welcome back, </h2>
-        
-        <h2>Your Playlists:</h2>
-        <div id="users-playlists-wrapper"></div>
-      </section>
-      
-      
-      
-      <!-- Playlist View-->
-      <section id = "playlist-view">
-        <h2>Playlist View:</h2>
-        <h2 id = "playlist-title"></h2>
-        <ol id = "playlist-songs"></ol>
-      </section>
-
-      
-      <!-- Player-->
-      <section id="player">
-        <div id="player-wrapper">
-          
-          <h2 id="current-track-name"></h2>
-          <h3 id="current-track-artist"></h3>
-          <div id = "current-track-wrapper">
-            <img id="current-track" />
-          </div>
-          
-          <div id="buttons">
-            <button onclick="back()">Back</button>
-            <button onclick="playPause()">Pause</button>
-            <button onclick="forward()">Forward</button>
-          </div>
-        </div>
-      </section>
-      
-    </section>
-  </body>
 </html>

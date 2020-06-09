@@ -21,8 +21,7 @@
 
         <!-- Login Home-->
         <section id="login-home">
-            <h2 id="username">Welcome back, </h2>
-
+            <h1 id="username">Welcome back, </h1>
             <h2>Your Playlists:</h2>
             <div id="users-playlists-wrapper"></div>
         </section>
@@ -31,8 +30,10 @@
 
         <!-- Playlist View-->
         <section id="playlist-view">
-            <h2>Playlist View:</h2>
-            <h2 id="playlist-title"></h2>
+            <button class = "back" onclick = "back()">Back</button>
+            <button onclick = "playPlaylist()">Play Playlist</button>
+            
+            <h1 id="playlist-name"></h1>
             <ol id="playlist-songs"></ol>
         </section>
 
@@ -40,7 +41,7 @@
         <!-- Player-->
         <section id="player">
             <div id="player-wrapper">
-                <button onclick = "back()">Back</button>
+                <button class = "back" onclick = "back()">Back</button>
 
                 <h2 id="current-track-name"></h2>
                 <h3 id="current-track-artist"></h3>
@@ -49,7 +50,7 @@
                 </div>
 
                 <div id="buttons">
-                    <button onclick="back()">Back</button>
+                    <button onclick="previous()">Back</button>
                     <button onclick="playPause()">Pause</button>
                     <button onclick="forward()">Forward</button>
                 </div>

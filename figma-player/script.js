@@ -2,15 +2,15 @@ var state = "State: Login Page";
 
 // Get the hash of the url
 const hash = window.location.hash
-  .substring(1)
-  .split("&")
-  .reduce(function(initial, item) {
-    if (item) {
-      var parts = item.split("=");
-      initial[parts[0]] = decodeURIComponent(parts[1]);
-    }
-    return initial;
-  }, {});
+    .substring(1)
+    .split("&")
+    .reduce(function (initial, item) {
+        if (item) {
+            var parts = item.split("=");
+            initial[parts[0]] = decodeURIComponent(parts[1]);
+        }
+        return initial;
+    }, {});
 
 window.location.hash = "";
 
@@ -20,31 +20,33 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "369e950eef504137aa80cdc2114a3396";
-const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
-const scopes = [
-  "user-read-email",
-  "user-read-private",
+// const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
+const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
 
-  "streaming",
-  "user-read-playback-state",
-  "user-library-read",
-  "user-read-recently-played",
-  "user-read-currently-playing",
-  // Modify Previous and Next
-  "user-modify-playback-state",
-  //   Get playlists
-  "playlist-read-private",
-  "playlist-read-collaborative"
+const scopes = [
+    "user-read-email",
+    "user-read-private",
+
+    "streaming",
+    "user-read-playback-state",
+    "user-library-read",
+    "user-read-recently-played",
+    "user-read-currently-playing",
+    // Modify Previous and Next
+    "user-modify-playback-state",
+    //   Get playlists
+    "playlist-read-private",
+    "playlist-read-collaborative"
 ];
 
 // If there is no token, redirect to Spotify authorization
 function login() {
-  if (!_token) {
-    window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-      "%20"
-    )}&response_type=token&show_dialog=true`;
-  }
-  state = "State: loggedin";
+    if (!_token) {
+        window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+            "%20"
+        )}&response_type=token&show_dialog=true`;
+    }
+    state = "State: loggedin";
 }
 console.log(state);
 
@@ -52,216 +54,244 @@ activatePlayer();
 
 // Waits for user to be logged in
 function activatePlayer() {
-  if (_token) {
-    // Set up the Web Playback SDK
-    window.onSpotifyPlayerAPIReady = () => {
-      let player = new Spotify.Player({
-        name: "Web Playback SDK Template",
-        getOAuthToken: cb => {
-          cb(_token);
-        }
-      });
+    if (_token) {
+        // Set up the Web Playback SDK
+        window.onSpotifyPlayerAPIReady = () => {
+            let player = new Spotify.Player({
+                name: "Web Playback SDK Template",
+                getOAuthToken: cb => {
+                    cb(_token);
+                }
+            });
 
-      // Error handling
-      player.on("initialization_error", e => console.error(e));
-      player.on("authentication_error", e => console.error(e));
-      player.on("account_error", e => console.error(e));
-      player.on("playback_error", e => console.error(e));
+            // Error handling
+            player.on("initialization_error", e => console.error(e));
+            player.on("authentication_error", e => console.error(e));
+            player.on("account_error", e => console.error(e));
+            player.on("playback_error", e => console.error(e));
 
-      // Playback status updates
-      player.on("player_state_changed", state => {
+            // Playback status updates
+            player.on("player_state_changed", state => {
+                console.log(state);
+                $("#current-track").attr(
+                    "src",
+                    state.track_window.current_track.album.images[0].url
+                );
+                $("#current-track-name").text(state.track_window.current_track.name);
+                // $("#current-track-artist").text(state.track_window.current_track.artist);
+            });
+
+            player.on("ready", data => {
+                console.log("Ready with Device ID", data.device_id);
+
+                // Play a track using our new device ID
+                // play(data.device_id);
+            });
+
+            // Connect to the player!
+            player.connect();
+        };
+        state = "State: Player connected";
         console.log(state);
-        $("#current-track").attr(
-          "src",
-          state.track_window.current_track.album.images[0].url
-        );
-        $("#current-track-name").text(state.track_window.current_track.name);
-        // $("#current-track-artist").text(state.track_window.current_track.artist);
-      });
-
-      player.on("ready", data => {
-        console.log("Ready with Device ID", data.device_id);
-
-        // Play a track using our new device ID
-        // play(data.device_id);
-      });
-
-      // Connect to the player!
-      player.connect();
-    };
-    state = "State: Player connected";
-    console.log(state);
-  }
+    }
 }
+
+let specificId = 0;
 
 if (state == "State: Player connected") {
-  //Remove Home login screen, display player
-  document.getElementById("home").style.display = "none";
-  // document.getElementById("player").style.display = "block";
-  document.getElementById("login-home").style.display = "block";
+    //Remove Home login screen, display player
+    document.getElementById("home").style.display = "none";
+    // document.getElementById("player").style.display = "block";
+    document.getElementById("login-home").style.display = "block";
 
-  // Welcome message
-  $.ajax({
-    url: "https://api.spotify.com/v1/me",
-    type: "GET",
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + _token);
-    },
-    success: function(user) {
-      let username = document.getElementById("username");
-      username.textContent += user.display_name;
-      state = "State: Got username";
-      console.log(state);
-    }
-  });
+    // Welcome message
+    $.ajax({
+        url: "https://api.spotify.com/v1/me",
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        },
+        success: function (user) {
+            let username = document.getElementById("username");
+            username.textContent += user.display_name;
+            state = "State: Got username";
+            console.log(state);
+        }
+    });
 
-  // Gets user's first 4 playlists
-  let selectedPlaylist = 0;
-  
-  $.ajax({
-    url: "https://api.spotify.com/v1/me/playlists?limit=4",
-    type: "GET",
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + _token);
-    },
-    success: function(data) {
-      // Do something with the returned data
-      //       data.items.map(function(items) {
-      //         // print out the playlist id
-      //         console.log(`Here are each of the playlist IDs: ${items.id}`);
+    // Gets user's first 4 playlists
+    let selectedPlaylist = 0;
 
-      //         let playlistName = $("<a><li>" + items.name + "</li></a>").attr(
-      //           "href",
-      //           `${items.external_urls.spotify}`
-      //         );
-      //         playlistName.appendTo($("#users-playlists"));
-      //       });
-      
+    $.ajax({
+        url: "https://api.spotify.com/v1/me/playlists?limit=4",
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        },
+        success: function (data) {
+            // Do something with the returned data
+            //       data.items.map(function(items) {
+            //         // print out the playlist id
+            //         console.log(`Here are each of the playlist IDs: ${items.id}`);
 
-      let playlist_id_collection = [];
-      let playlist_id = 0;
-      
-      data.items.map(function(playlist) {
-        playlist_id = playlist.id;
-        playlist_id_collection.push(playlist_id);
-        
-        let img = $("<img/>");
-        img.attr("src", playlist.images[0].url);
-        // img.attr("class", "users-playlists");
-        img.appendTo("#users-playlists-wrapper");
-      });
-      
-      console.log(playlist_id_collection);
+            //         let playlistName = $("<a><li>" + items.name + "</li></a>").attr(
+            //           "href",
+            //           `${items.external_urls.spotify}`
+            //         );
+            //         playlistName.appendTo($("#users-playlists"));
+            //       });
 
-      state = "State: Retrieved user's playlists";
-      console.log(state);
 
-      //Index of each playlist
-      $("#users-playlists-wrapper img").click(function(playlist) {
+            let playlist_id_collection = [];
+            let playlist_id = 0;
+            let img = null;
 
-        
-        // Hide login-home and show the tracks of the playlist:                
-        document.getElementById("login-home").style.display = "none";
-        // document.getElementById("player").style.display = "block";
-        document.getElementById("playlist-view").style.display = "block";
-        
-        selectedPlaylist = $("#users-playlists-wrapper img").index(this);
-        console.log(`User selected playlist ${selectedPlaylist}`);
-              
-        let img = $("<img/>");
-        img.attr("src", playlist.images.url);
-        // img.attr("class", "users-playlists");
-        img.appendTo("#playlist-view");
-        
-        state = "User chose playlist";
-        console.log(state);
-      
-      });
-    
-      
-      
-      
+            data.items.map(function (playlist) {
+                playlist_id = playlist.id;
+                playlist_id_collection.push(playlist_id);
 
-    }
-  });
+                img = $("<img/>");
+                img.attr("src", playlist.images[0].url);
+                // img.attr("class", "users-playlists");
+                img.appendTo("#users-playlists-wrapper");
+            });
+
+            console.log(playlist_id_collection);
+
+            state = "State: Retrieved user's playlists";
+            console.log(state);
+
+            //Index of each playlist
+            $("#users-playlists-wrapper img").click(function () {
+
+                // Hide login-home and show the tracks of the playlist:                
+                document.getElementById("login-home").style.display = "none";
+                document.getElementById("playlist-view").style.display = "block";
+
+                // Sets selectedPlaylist equal to the number the user clicked
+                selectedPlaylist = $("#users-playlists-wrapper img").index(this);
+                console.log(`User selected playlist #${selectedPlaylist}`);
+
+
+                // Check which playlist user selected
+                // If selected 1, find 1 in the selectedPlaylist array. 
+
+                // Use the playlist number the user clicked on to get back the 
+                // nth playlist id number from the playlist_id_collection array. 
+                specificId = playlist_id_collection[selectedPlaylist];
+                console.log("playlist_id = " + specificId);
+
+
+
+                state = "Get user playlist data";
+
+                // Second API call that searches for the user's selected playlist
+                // display playlist image
+                // display title of playlist
+                // display list of songs.
+                getPlaylistData(specificId);
+            });
+        }
+    });
 } else {
-  console.log("fail");
+    console.log("fail");
 }
 
-// If user chooses a playlist to listen to:
-if(state == "State: Retrieved user's playlists"){
+function getPlaylistData(specificId){
+    $.ajax({
+        // url: 'https://api.spotify.com/v1/playlists/01Tk0s9YXCMSxphZSSv994/tracks?fields=items(track(name,href))',
+        url: `https://api.spotify.com/v1/playlists/` + specificId + `/tracks?fields=items(track(name,href))`,
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        },
+        success: function (songs) {
+            for(let i = 0; i < songs.items.length; i ++){
+                console.log(songs.items[i].track.name);
 
+                let song = $("<a><li>" + songs.items[i].track.name + "</li></a>").attr(
+                    "href",
+                    `${songs.items[i].track.href}`
+                );
+                song.appendTo($("#playlist-songs"));
+            }
+        }
+    });
 }
 
+// Have a bunch of if else statements to go back to different views depending on what they click. 
+// function back(){
+//     state = "State: back to playlist"
+// }
 
 // Play a specified track on the Web Playback SDK's device ID
 function play(device_id) {
-  $.ajax({
-    url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
-    type: "PUT",
-    data: '{"uris": ["spotify:track:5FEXPoPnzueFJQCPRIrC3c"]}',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + _token);
-    }
-  });
-  state = "State: first song playing";
-  console.log(state);
+    $.ajax({
+        url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
+        type: "PUT",
+        data: '{"uris": ["spotify:track:5FEXPoPnzueFJQCPRIrC3c"]}',
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        }
+    });
+    state = "State: first song playing";
+    console.log(state);
 }
 
 // Pausing playback
 function playPause(device_id) {
-  if (state == "State: first song playing" || state == "State: song resume") {
-    $.ajax({
-      url: "https://api.spotify.com/v1/me/player/pause",
-      type: "PUT",
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader("Authorization", "Bearer " + _token);
-      }
-    });
-    state = "State: song paused";
-    console.log(state);
-  } else if ((state = "State: song paused")) {
-    $.ajax({
-      url: "https://api.spotify.com/v1/me/player/play",
-      type: "PUT",
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader("Authorization", "Bearer " + _token);
-      }
-    });
-    state = "State: song resume";
-    console.log(state);
-  }
+    if (state == "State: first song playing" || state == "State: song resume") {
+        $.ajax({
+            url: "https://api.spotify.com/v1/me/player/pause",
+            type: "PUT",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("Authorization", "Bearer " + _token);
+            }
+        });
+        state = "State: song paused";
+        console.log(state);
+    } else if ((state = "State: song paused")) {
+        $.ajax({
+            url: "https://api.spotify.com/v1/me/player/play",
+            type: "PUT",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("Authorization", "Bearer " + _token);
+            }
+        });
+        state = "State: song resume";
+        console.log(state);
+    }
 }
 
 // Pausing playback
-function resume(device_id) {}
+function resume(device_id) { }
 
 // Previous song
 function back(device_id) {
-  $.ajax({
-    url: "https://api.spotify.com/v1/me/player/previous",
-    type: "POST",
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + _token);
-    },
-    success: function(data) {
-      state = "Previous song";
-      console.log(state);
-    }
-  });
+    $.ajax({
+        url: "https://api.spotify.com/v1/me/player/previous",
+        type: "POST",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        },
+        success: function (data) {
+            state = "Previous song";
+            console.log(state);
+        }
+    });
 }
 
 // Skip to next song
 function forward(device_id) {
-  $.ajax({
-    url: "https://api.spotify.com/v1/me/player/next",
-    type: "POST",
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + _token);
-    },
-    success: function(data) {
-      state = "Next song";
-      console.log(state);
-    }
-  });
+    $.ajax({
+        url: "https://api.spotify.com/v1/me/player/next",
+        type: "POST",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Bearer " + _token);
+        },
+        success: function (data) {
+            state = "Next song";
+            console.log(state);
+        }
+    });
 }

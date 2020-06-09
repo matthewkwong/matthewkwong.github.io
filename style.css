@@ -8,8 +8,15 @@ check it out */
 }
 
 @font-face {
-font-family: "circular";
-src: url("circular.ttf");
+  font-family: "circular";
+  /* src: url("circular.ttf"); */
+  src: url("CircularStd-Book.ttf");
+}
+
+@font-face {
+  font-family: "circular-bold";
+  /* src: url("circular.ttf"); */
+  src: url("CircularStd-Medium.ttf");
 }
 
 body{

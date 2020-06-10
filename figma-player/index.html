@@ -22,7 +22,7 @@
                     <img src="figma.svg" height="100">
                 </div>
                 <div onclick="login()" id="login">
-                    Sign In With <i class="fab fa-spotify"></i>
+                    Login With<i class="fab fa-spotify"> </i>
                 </div>
             </div>
 
@@ -43,7 +43,7 @@
 
         <!-- Playlist View-->
         <section id="playlist-view">
-            <button class="back" onclick="back()">Back to home</button>
+            <i class="back fas fa-home" onclick="back()"></i>
 
             <h2 id="playlist-name"></h2>
 
@@ -59,11 +59,11 @@
 
         <!-- Player-->
         <section id="player">
-            <div id="player-wrapper">
-                <button class="back" onclick="back()">Back to playlist view</button>
+            <i class="back fas fa-arrow-left" onclick="back()"></i>
 
-                <h2 id="current-track-name"></h2>
-                <h4 id="current-track-artist"></h4>
+            <div id="player-wrapper">
+                <h1 id="current-track-name"></h1>
+                <h2 id="current-track-artist"></h2>
 
                 <div id="current-track-wrapper">
                     <div id="record-hole"></div>

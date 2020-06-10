@@ -2,14 +2,73 @@
 <html>
 
 <head>
-    <title>Figma Spotify Player</title>
+    <title>Matthew Kwong | Figma Spotify Plugin</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
+
+    
+    <nav id="navbar">
+        <!-- allows for the navbar to be collapsable in mobile -->
+        <input type="checkbox" id="nav-check">
+
+        <div id="nav-header">
+            <div id="name">
+                <a href="index.html">
+                    <img src="../img/logo.png" height="10" alt="logo" class="logo">
+                </a>
+            </div>
+        </div>
+
+        <div id="nav-button">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <img src="../img/logo-white.png" height="10" alt="logo" class="logo-white">
+
+            <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
+            <a href="about.html">about</a>
+            <a
+                href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
+        </div>
+    </nav>
+
+    <!-- Duplicate navbar to solve disappearing nav bar on media queries -->
+    <!-- <nav class="back-up">
+        <div class="nav-links">
+          <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
+    
+          <a href="index.html" class="active">portfolio</a>
+          <a href="about.html">about</a>
+          <a
+            href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
+        </div>
+      </nav> -->
+
+    <!-- <div class="project-banner plugin-banner">
+    </div> -->
+
+    <iframe src = "https://www.notion.so/matthewkwong/Figma-Spotify-Plugin-e3156eb7afb648aead9efd2a716397a6">
+    </iframe>
+
+    <div class="project-heading">
+        <h1>Figma Spotify Plugin</h1>
+        <h2>CDM 198 Final Project</h2>
+        <h3>April 2020 - Current</h3>
+    </div>
+
+    <div class="project-body-text">
+      
     <section id="wrapper">
         <!--  Home Screen-->
         <section id="home">
@@ -28,7 +87,6 @@
 
         </section>
 
-
         <!-- Login Home-->
         <section id="login-home">
             <!-- <h1 id="username">Welcome back, </h1> -->
@@ -39,23 +97,20 @@
             </div>
         </section>
 
-
-
         <!-- Playlist View-->
         <section id="playlist-view">
             <i class="back fas fa-home" onclick="back()"></i>
 
             <h2 id="playlist-name"></h2>
 
-            <div id = "playlist-image-wrapper"></div>
+            <div id="playlist-image-wrapper"></div>
 
-            <div onclick="playPlaylist()" id = "play-playlist">Play</div>
+            <div onclick="playPlaylist()" id="play-playlist">Play</div>
 
             <h2>Songs:</h2>
             <ul id="playlist-songs">
             </ul>
         </section>
-
 
         <!-- Player-->
         <section id="player">
@@ -67,7 +122,7 @@
 
                 <div id="current-track-wrapper">
                     <div id="record-hole"></div>
-                    <img id="current-track-image"/>
+                    <img id="current-track-image" />
                 </div>
 
                 <div id="buttons">
@@ -79,17 +134,28 @@
         </section>
 
     </section>
+    </div>
 
+    <footer>
+        <div id="icons">
+            <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="../img/footer/instagram.svg"
+                    alt="instagram icon"></a>
+            <a href="https://www.github.com/matthewkwong" target="_blank"> <img src="../img/footer/github.svg"
+                
+                    alt="github icon"></a>
+            <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src="../img/footer/linkedin.svg"
+                    alt="linkedin icon"></a>
+            <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+                target="_blank"> <img src="../img/footer/envelope.svg" alt="mail icon"></a>
+        </div>
+    </footer>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/224e8381ed.js" crossorigin="anonymous"></script>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
     <!-- Include the Web Playback SDK -->
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
-
     <!-- Include our Javascript -->
     <script src="script.js"></script>
 </body>

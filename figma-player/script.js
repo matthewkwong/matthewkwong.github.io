@@ -20,8 +20,8 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "369e950eef504137aa80cdc2114a3396";
-const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
-// const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
+// const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
+const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
 
 const scopes = [
     "user-read-email",
@@ -60,7 +60,7 @@ function activatePlayer() {
         // Set up the Web Playback SDK
         window.onSpotifyPlayerAPIReady = () => {
             let player = new Spotify.Player({
-                name: "Web Playback SDK Template",
+                name: "Figma Spotify Web Player",
                 getOAuthToken: cb => {
                     cb(_token);
                 }
@@ -75,12 +75,14 @@ function activatePlayer() {
             // Playback status updates
             player.on("player_state_changed", state => {
                 console.log(state);
-                $("#current-track").attr(
+                $("#current-track-image").attr(
                     "src",
                     state.track_window.current_track.album.images[0].url
                 );
                 $("#current-track-name").text(state.track_window.current_track.name);
-                // $("#current-track-artist").text(state.track_window.current_track.artist);
+
+                $("#current-track-artist").text(state.track_window.current_track.artists[0].name);
+                // console.log(state.track_window.current_track.artists[0]);
             });
 
             player.on("ready", data => {
@@ -121,6 +123,7 @@ if (state == "State: Player connected") {
 
     // Gets user's first 4 playlists
     let selectedPlaylist = 0;
+    let selectedPlaylistImageUrl = "";
     $.ajax({
         url: "https://api.spotify.com/v1/me/playlists?limit=4",
         type: "GET",
@@ -131,19 +134,34 @@ if (state == "State: Player connected") {
 
             let playlist_id_collection = [];
             let playlist_name_collection = [];
+            let playlist_image_collection = [];
+
             let img = null;
+
+            selectedPlaylistImageUrl = null;
 
             data.items.map(function (playlist) {
                 playlist_id  = playlist.id;
                 let playlistName = playlist.name;
+                let playlistImage = playlist.images[0].url;
 
                 playlist_id_collection.push(playlist_id);
                 playlist_name_collection.push(playlistName);
+                playlist_image_collection.push(playlistImage);
+
+                // In div wrapper - already made. 
+
+                // Create new div 
+                // inside div has image 
+                // inside dive has playlist name
 
                 img = $("<img/>");
+                // img.appendTo(playlist_image_collection);
+                console.log(playlist_image_collection);
+
                 img.attr("src", playlist.images[0].url);
-                // img.attr("class", "users-playlists");
                 img.appendTo("#users-playlists-wrapper");
+                
             });
 
             console.log(playlist_name_collection);
@@ -154,7 +172,6 @@ if (state == "State: Player connected") {
 
 
             // User clicks a playlist
-
             $("#users-playlists-wrapper img").click(function () {
 
                 // Hide login-home and show the tracks of the playlist:                
@@ -165,6 +182,10 @@ if (state == "State: Player connected") {
                 selectedPlaylist = $("#users-playlists-wrapper img").index(this);
                 console.log(`User selected playlist #${selectedPlaylist}`);
 
+                // Get Selected playlist album cover
+                let selectedPlaylistImage = $("<img/>");    
+                selectedPlaylistImage.attr("src", playlist_image_collection[selectedPlaylist]);
+                selectedPlaylistImage.appendTo("#playlist-image-wrapper");
 
                 // Check which playlist user selected
                 // If selected 1, find 1 in the selectedPlaylist array. 
@@ -194,14 +215,13 @@ if (state == "State: Player connected") {
 }
 
 
-let playlist_song_uri = 0;
-let playlist_song_uri_collection = [];
+let song_uri = 0;
+let song_uri_collection = [];
 
 function getPlaylistData(playlist_id) {
-    console.log("Currently in: Playlist " + playlist_id);
+    // console.log("Currently in: Playlist " + playlist_id);
 
     $.ajax({
-        // url: 'https://api.spotify.com/v1/playlists/01Tk0s9YXCMSxphZSSv994/tracks?fields=items(track(name,href))',
         url: `https://api.spotify.com/v1/playlists/` + playlist_id + `/tracks?fields=items(track(name,uri))`,
         type: "GET",
         beforeSend: function (xhr) {
@@ -214,24 +234,21 @@ function getPlaylistData(playlist_id) {
             for (let i = 0; i < songs.items.length; i++) {
 
                 // Add each song to the songID collection 
-                playlist_song_uri = songs.items[i].track.uri;
-                playlist_song_uri_collection.push(playlist_song_uri);
-
+                song_uri = songs.items[i].track.uri;
+                song_uri_collection.push(song_uri);
 
                 // console.log(songs.items[i].track.name);
                 let song = $("<a><li>" + songs.items[i].track.name + "</li></a>")
 
                 song.appendTo($("#playlist-songs"));
             }
-            // Entire song collection 
-            // console.log(playlist_song_uri_collection);
-
+            // console.log(song_uri_collection);
 
             // User selects a song:
             $("#playlist-songs li").click(function () {
                 let selectedSong = $("#playlist-songs li").index(this);
-                playlist_song_uri = playlist_song_uri_collection[selectedSong];
-                console.log("Spotify URI: " + playlist_song_uri);
+                song_uri = song_uri_collection[selectedSong];
+                console.log("Spotify URI: " + song_uri);
 
                 // Hide playlist songs and show player:                
                 document.getElementById("playlist-view").style.display = "none";
@@ -240,14 +257,37 @@ function getPlaylistData(playlist_id) {
                 state = "State: User selected song";
                 console.log(state);
 
-                play(device_id, playlist_song_uri);
+                play(device_id, song_uri);
             });
         }
     });
 
     state = "State: Aquired current playlists songs"
     console.log(state);
+
+
+    // getPlaylistImage();
 }
+
+
+// function getPlaylistImage(){
+//     $.ajax({
+//         url: "https://api.spotify.com/v1/playlists/" + playlist_id + "/images",
+//         type: "GET",
+//         beforeSend: function (xhr) {
+//             xhr.setRequestHeader("Authorization", "Bearer " + _token);
+//         },
+//         success: function (playlist) {
+
+//             // let playlistImage = playlist[0].height;
+//         }
+//     });
+    
+//     state = "State: Added playlist album art";
+//     console.log(state);
+// }
+
+
 
 function playPlaylist() {
     console.log(playlist_id);
@@ -263,29 +303,58 @@ function playPlaylist() {
         }
     });
 
-    state = "State: Song playing";
-    console.log(state);
-
     document.getElementById("player").style.display = "block";
     document.getElementById("playlist-view").style.display = "none";
+
+    state = "State: Song playing";
+    console.log(state);
 }
 
+
 // Play a specified track on the Web Playback SDK's device ID
-function play(device_id, playlist_song_uri) {
-    console.log("Playing: " + playlist_song_uri);
+function play(device_id, song_uri) {
+    console.log("Playing: " + song_uri);
 
     $.ajax({
         url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
         type: "PUT",
-        data: JSON.stringify({ "uris": [playlist_song_uri] }),
+        data: JSON.stringify({ "uris": [song_uri] }),
         beforeSend: function (xhr) {
             xhr.setRequestHeader("Authorization", "Bearer " + _token);
         }
     });
 
+    // currentSong();
+
     state = "State: Song playing";
     console.log(state);
 }
+
+
+
+// // Current Playling Song
+// function currentSong() {
+//     $.ajax({
+//         url: "https://api.spotify.com/v1/me/player/currently-playing",
+//         type: "GET",
+//         beforeSend: function (xhr) {
+//             xhr.setRequestHeader("Authorization", "Bearer " + _token);
+//         },
+//         success: function (song) {
+
+//             // document.getElementById("current-track-image")
+//             console.log(song.item.album.artists[]);
+//             // let songImage = user.item;
+//             // console.log(songImage);
+//             // let songTitle = ;
+//             // let song
+
+//             state = "State: Got song data";
+//             console.log(state);
+//         }
+//     });
+// }
+
 
 
 
@@ -299,18 +368,27 @@ function back() {
     }
 
     // If on the player
-    else if(state == "State: Song playing"){
-        document.getElementById("home").style.display = "none";
-        document.getElementById("login-home").style.display = "none";
+    else if(state == "State: Song playing" || state == "State: Song paused"){
         document.getElementById("player").style.display = "none";
         document.getElementById("playlist-view").style.display = "block";
+        state = "State: returned to playlist view";
+        console.log(state);
+    }
+
+    // Go back to home page:
+    else if(state == "State: returned to playlist view"){
+        document.getElementById("playlist-view").style.display = "none";
+        document.getElementById("login-home").style.display = "block";
+
+        state = "State: returned to home page";
+        console.log(state);
     }
 }
 
+// Play and Pausing playback
+let currentSongImage = document.getElementById("current-track-image");
+currentSongImage.style.animationPlayState = "running";
 
-
-
-// Pausing playback
 function playPause() {
     if (state == "State: Song playing" ){
         $.ajax({
@@ -320,6 +398,7 @@ function playPause() {
                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
             }
         });
+        currentSongImage.style.animationPlayState = "paused";
         state = "State: Song paused";
         console.log(state);
     } 
@@ -331,6 +410,7 @@ function playPause() {
                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
             }
         });
+        currentSongImage.style.animationPlayState = "running";
         state = "State: Song playing";
         console.log(state);
     }
@@ -346,7 +426,7 @@ function previous() {
             xhr.setRequestHeader("Authorization", "Bearer " + _token);
         },
         success: function (data) {
-            state = "Previous song";
+            state = "State: Previous song";
             console.log(state);
         }
     });
@@ -361,7 +441,7 @@ function forward() {
             xhr.setRequestHeader("Authorization", "Bearer " + _token);
         },
         success: function () {
-            state = "Next song";
+            state = "State: Next song";
             console.log(state);
         }
     });

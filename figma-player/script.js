@@ -19,9 +19,9 @@ let _token = hash.access_token;
 const authEndpoint = "https://accounts.spotify.com/authorize";
 
 // Replace with your app's client ID, redirect URI and desired scopes
-const clientId = "369e950eef504137aa80cdc2114a3396";
+// const clientId = "369e950eef504137aa80cdc2114a3396";
 const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
-// const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
+const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
 
 const scopes = [
     "user-read-email",
@@ -123,7 +123,6 @@ if (state == "State: Player connected") {
 
     // Gets user's first 4 playlists
     let selectedPlaylist = 0;
-    let selectedPlaylistImageUrl = "";
     $.ajax({
         url: "https://api.spotify.com/v1/me/playlists?limit=4",
         type: "GET",
@@ -141,7 +140,7 @@ if (state == "State: Player connected") {
             selectedPlaylistImageUrl = null;
 
             data.items.map(function (playlist) {
-                playlist_id  = playlist.id;
+                playlist_id = playlist.id;
                 let playlistName = playlist.name;
                 let playlistImage = playlist.images[0].url;
 
@@ -158,10 +157,9 @@ if (state == "State: Player connected") {
                 img = $("<img/>");
                 // img.appendTo(playlist_image_collection);
                 console.log(playlist_image_collection);
-
                 img.attr("src", playlist.images[0].url);
                 img.appendTo("#users-playlists-wrapper");
-                
+
             });
 
             console.log(playlist_name_collection);
@@ -183,7 +181,7 @@ if (state == "State: Player connected") {
                 console.log(`User selected playlist #${selectedPlaylist}`);
 
                 // Get Selected playlist album cover
-                let selectedPlaylistImage = $("<img/>");    
+                let selectedPlaylistImage = $("<img/>");
                 selectedPlaylistImage.attr("src", playlist_image_collection[selectedPlaylist]);
                 selectedPlaylistImage.appendTo("#playlist-image-wrapper");
 
@@ -282,7 +280,7 @@ function getPlaylistData(playlist_id) {
 //             // let playlistImage = playlist[0].height;
 //         }
 //     });
-    
+
 //     state = "State: Added playlist album art";
 //     console.log(state);
 // }
@@ -323,7 +321,6 @@ function play(device_id, song_uri) {
             xhr.setRequestHeader("Authorization", "Bearer " + _token);
         }
     });
-
     // currentSong();
 
     state = "State: Song playing";
@@ -356,6 +353,7 @@ function play(device_id, song_uri) {
 // }
 
 
+let image = document.getElementById("playlist-image-wrapper");
 
 
 // Have a bunch of if else statements to go back to different views depending on what they click. 
@@ -365,10 +363,26 @@ function back() {
         document.getElementById("home").style.display = "none";
         document.getElementById("playlist-view").style.display = "none";
         document.getElementById("login-home").style.display = "block";
+
+
+        //Removes duplicate cover problem where if user goes back, 
+        // all previous playlists will show
+        while(image.childNodes.length > 0){
+            image.removeChild(image.childNodes[0]);
+        }
+        // image.removeChild(image.childNodes[0]);
+        // image.removeChild(image.childNodes[1]);
+        state = "State: returned to login-home";
+        console.log(state);
+    }
+
+    if(state == "State: returned to login-home"){
+        state = "State: returned to playlist view";
+        console.log(state);
     }
 
     // If on the player
-    else if(state == "State: Song playing" || state == "State: Song paused"){
+    else if (state == "State: Song playing" || state == "State: Song paused") {
         document.getElementById("player").style.display = "none";
         document.getElementById("playlist-view").style.display = "block";
         state = "State: returned to playlist view";
@@ -376,21 +390,51 @@ function back() {
     }
 
     // Go back to home page:
-    else if(state == "State: returned to playlist view"){
+    else if (state == "State: returned to playlist view") {
         document.getElementById("playlist-view").style.display = "none";
         document.getElementById("login-home").style.display = "block";
+
+
+        //Removes duplicate cover problem where if user goes back, 
+        // all previous playlists will show
+        while(image.childNodes.length > 0){
+            image.removeChild(image.childNodes[0]);
+        }
 
         state = "State: returned to home page";
         console.log(state);
     }
 }
 
+
+
+
 // Play and Pausing playback
 let currentSongImage = document.getElementById("current-track-image");
 currentSongImage.style.animationPlayState = "running";
 
+
+// const playPauseButton = document.getElementById("play-pause-song");
+
+
+function playPauseButton(){
+    var x = document.getElementById("play-pause-song");
+    // If "mystyle" exist, overwrite it with "mystyle2"
+    if (x.className === "fas fa-pause-circle") {
+        console.log("Pause");
+      x.className = "fas fa-play-circle";
+    } else {
+        console.log("Playing");
+      x.className = "fas fa-pause-circle";
+    }
+  }
+
 function playPause() {
-    if (state == "State: Song playing" ){
+
+    playPauseButton();
+
+
+    if (state == "State: Song playing") {
         $.ajax({
             url: "https://api.spotify.com/v1/me/player/pause",
             type: "PUT",
@@ -398,10 +442,14 @@ function playPause() {
                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
             }
         });
+        // playPauseButton.className("fa-pause-circle");
+
+        // Change play icon to pause icon
+
         currentSongImage.style.animationPlayState = "paused";
         state = "State: Song paused";
         console.log(state);
-    } 
+    }
     else if ((state = "State: Song paused")) {
         $.ajax({
             url: "https://api.spotify.com/v1/me/player/play",
@@ -410,6 +458,9 @@ function playPause() {
                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
             }
         });
+
+        // playPauseButton.className("fa-play-circle");
+
         currentSongImage.style.animationPlayState = "running";
         state = "State: Song playing";
         console.log(state);

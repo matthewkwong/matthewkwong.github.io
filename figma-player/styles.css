@@ -72,7 +72,7 @@ p{
 }
 
 #login{
-  border-radius: 25px;
+  border-radius: 50px;
   margin: auto;
   margin-top: -10px;
   width: 80%;
@@ -80,17 +80,18 @@ p{
   text-align: center;
   transition: 0.3s;
   color: white;
-  background-color:#1DB954;
+  background-color:#00B053;
   box-shadow: 0px 19px 13px -8px rgba(0,0,0,0.15);
+  box-sizing:border-box;
 }
 
 #login > .fa-spotify{
-  font-size: 15px;
+  padding-left: 5px;
 }
 
 #login:hover{
   color:white;
-  background-color: black;
+  background-color: #00D160;
 }
   
 
@@ -153,7 +154,8 @@ p{
   border-radius: 50%;
   font-size: 50px;
   padding: 5px;
-  color: #C4C4C4;
+  /* color: #C4C4C4; */
+  color:black;
 }
 
 
@@ -163,7 +165,7 @@ p{
   justify-content:center;
   flex-direction: row;
   flex-wrap: wrap;
-  /* padding: 10px; */
+  padding: 20px;
 }
   
 
@@ -172,7 +174,7 @@ p{
   width: 200px;
   height: 200px;
   display: inline-block;
-  margin: 10px;
+  margin: 15px;
   box-shadow: 0px 19px 13px -8px rgba(0,0,0,0.15);
 }
   
@@ -191,6 +193,10 @@ p{
   font-family: "circular-bold";
 }
 
+.fa-home, .fa-arrow-left{
+  font-size: 25px;
+}
+
 #playlist-view > #playlist-name{
   text-align: center;
 }
@@ -201,22 +207,22 @@ p{
 }
 
 #playlist-view > #play-playlist{
-    border-radius: 25px;
-    margin: auto;
-    width: 30%;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    transition: 0.3s;
-    color: white;
-    background-color:#1DB954;
-    box-shadow: 0px 19px 13px -8px rgba(0,0,0,0.15);
-  }
-
+  border-radius: 50px;
+  margin: auto;
+  width: 30%;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  color: white;
+  background-color:#00B053;
+  box-shadow: 0px 19px 13px -8px rgba(0,0,0,0.15);
+  box-sizing:border-box;
+}
 
 #playlist-view > #play-playlist:hover{
   color:white;
-  background-color: black;
+  background-color: #00D160;
 }
 
 
@@ -241,4 +247,14 @@ p{
   margin-top: 10px;
   border-bottom: solid 2px black;
   /* box-shadow: 0px 19px 13px -8px rgba(0,0,0,0.15); */
+}
+
+#current-track-name{
+  margin:0;
+  margin-top: 10%;
+}
+
+#current-track-artist{
+  margin-bottom: 10%;
+  color: #808080;
 }

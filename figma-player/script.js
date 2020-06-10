@@ -21,8 +21,8 @@ const authEndpoint = "https://accounts.spotify.com/authorize";
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = "369e950eef504137aa80cdc2114a3396";
 
-const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
-// const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
+// const redirectUri = "https://www.matthewkwong.com/figma-player/index.html";
+const redirectUri = "http://127.0.0.1:8080/figma-player/index.html";
 
 const scopes = [
     "user-read-email",
@@ -236,7 +236,7 @@ function getPlaylistData(playlist_id) {
                 song_uri = songs.items[i].track.uri;
                 song_uri_collection.push(song_uri);
 
-                // console.log(songs.items[i].track.name);
+                console.log(songs.items[i].track.name);
                 let song = $("<a><li>" + songs.items[i].track.name + "</li></a>")
 
                 song.appendTo($("#playlist-songs"));
@@ -263,29 +263,7 @@ function getPlaylistData(playlist_id) {
 
     state = "State: Aquired current playlists songs"
     console.log(state);
-
-
-    // getPlaylistImage();
 }
-
-
-// function getPlaylistImage(){
-//     $.ajax({
-//         url: "https://api.spotify.com/v1/playlists/" + playlist_id + "/images",
-//         type: "GET",
-//         beforeSend: function (xhr) {
-//             xhr.setRequestHeader("Authorization", "Bearer " + _token);
-//         },
-//         success: function (playlist) {
-
-//             // let playlistImage = playlist[0].height;
-//         }
-//     });
-
-//     state = "State: Added playlist album art";
-//     console.log(state);
-// }
-
 
 
 function playPlaylist() {

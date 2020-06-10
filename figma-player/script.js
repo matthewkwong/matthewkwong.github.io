@@ -367,7 +367,7 @@ function back() {
 
         //Removes duplicate cover problem where if user goes back, 
         // all previous playlists will show
-        while(image.childNodes.length > 0){
+        while (image.childNodes.length > 0) {
             image.removeChild(image.childNodes[0]);
         }
         // image.removeChild(image.childNodes[0]);
@@ -376,7 +376,7 @@ function back() {
         console.log(state);
     }
 
-    if(state == "State: returned to login-home"){
+    if (state == "State: returned to login-home") {
         state = "State: returned to playlist view";
         console.log(state);
     }
@@ -397,7 +397,7 @@ function back() {
 
         //Removes duplicate cover problem where if user goes back, 
         // all previous playlists will show
-        while(image.childNodes.length > 0){
+        while (image.childNodes.length > 0) {
             image.removeChild(image.childNodes[0]);
         }
 
@@ -414,20 +414,19 @@ let currentSongImage = document.getElementById("current-track-image");
 currentSongImage.style.animationPlayState = "running";
 
 
-// const playPauseButton = document.getElementById("play-pause-song");
 
 
-function playPauseButton(){
-    var x = document.getElementById("play-pause-song");
+function playPauseButton() {
+    var playPauseButton = document.getElementById("play-pause-song");
     // If "mystyle" exist, overwrite it with "mystyle2"
-    if (x.className === "fas fa-pause-circle") {
+    if (playPauseButton.className === "fas fa-pause-circle") {
         console.log("Pause");
-      x.className = "fas fa-play-circle";
+        playPauseButton.className = "fas fa-play-circle";
     } else {
         console.log("Playing");
-      x.className = "fas fa-pause-circle";
+        playPauseButton.className = "fas fa-pause-circle";
     }
-  }
+}
 
 function playPause() {
 

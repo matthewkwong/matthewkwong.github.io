@@ -240,6 +240,21 @@ a{
   background-color: black;
 }
 
+
+#findmycovidtest{
+  color: #7988FD;
+  border: #7988FD 2px solid;
+}
+
+#findmycovidtest-title{
+  color: #7988FD;
+}
+
+#findmycovidtest:hover{
+  color: white;
+  background-color:#7988FD;
+}
+
 #include-title{
   color:#32BC9B;
 }

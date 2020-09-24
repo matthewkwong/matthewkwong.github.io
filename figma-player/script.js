@@ -237,7 +237,7 @@ function getPlaylistData(playlist_id) {
                 song_uri_collection.push(song_uri);
 
                 console.log(songs.items[i].track.name);
-                let song = $("<a><li>" + songs.items[i].track.name + "</li></a>")
+                let song = $("<li>" + songs.items[i].track.name + "</li>")
 
                 song.appendTo($("#playlist-songs"));
             }

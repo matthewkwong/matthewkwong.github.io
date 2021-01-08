@@ -350,6 +350,7 @@ footer img{
   width: 50%;
   box-sizing: border-box;
   /* border:solid 2px red; */
+  margin-bottom: 50px;
 }
 
 .about-me-text > h1{
@@ -367,11 +368,12 @@ footer img{
 }
 
 #profile-picture{
-  max-height: 600px;
+  max-height: 375px;
   display: block;
   margin: auto;
   -webkit-box-shadow: 0px 11px 21px 0px #C4C4C4; 
   box-shadow: 0px 11px 21px 0px #C4C4C4;
+  margin-top: 100px;
 }
 
 .resume-button{

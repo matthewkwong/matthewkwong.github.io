@@ -25,213 +25,218 @@
 </head>
 
 <body>
-  <nav id="navbar">
-    <!-- allows for the navbar to be collapsable in mobile -->
-    <input type="checkbox" id="nav-check">
+  <div id = "container">
+    <div id = "main">
 
-    <div id="nav-header">
-      <div id="name">
-        <a href="index.html">
-          <img src="img/logo.png" height="10" alt="logo" class="logo">
-        </a>
-      </div>
-    </div>
+      <nav id="navbar">
+        <!-- allows for the navbar to be collapsable in mobile -->
+        <input type="checkbox" id="nav-check">
 
-    <div id="nav-button">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
+        <div id="nav-header">
+          <div id="name">
+            <a href="index.html">
+              <img src="img/logo.png" height="10" alt="logo" class="logo">
+            </a>
+          </div>
+        </div>
 
-    <div class="nav-links">
-      <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
+        <div id="nav-button">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
 
-      <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
-      <a href="about.html">about</a>
-      <a
-        href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-    </div>
-  </nav>
+        <div class="nav-links">
+          <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
 
-  <div class="project-banner spotify-banner">
-    <!-- <img src = "img/include.png"> -->
-  </div>
+          <a href="index.html" class="active" id="portfolio-tab">portfolio</a>
+          <a href="about.html">about</a>
+          <a
+            href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
+        </div>
+      </nav>
 
-  <div class="project-heading">
-    <h1 id="spotify-page">Spotify Rooms</h1>
-    <h2>UI/UX project using Sketch, InVision, Photoshop, and Illustrator</h2>
-     <!-- <h2><a href="https://www.matthewkwong.com/spotify-rooms/">matthewkwong.com/spotify-rooms</a></h2> -->
-    <h2><a href="#rooms-prototype-label">Interactive Prototype</a></h2>
-    <h3>July - August 2019</h3>
-  </div>
-
-  <div class="project-body-text">
-
-    <!-- Background -->
-    <h2>Background</h2>
-    <p>
-      As an avid Spotify user, I noticed a problem that effected my music listening experience when driving with friends. 
-      In most cases, there's passengers arguing for the aux cord,
-      who gets to queue music, and terrible song selection. 
-      As the driver, this can be extremely distracting and unsafe.</p>
-
-    <p>How can I improve the music listening experience when in group settings?</p>
-
-    <!-- Solution -->
-    <h2>Solution</h2>
-    <p>After thinking about the main problem to this terrible music listening
-      experience, I concluded that the problem was that only one person's music
-      taste was being played.</p>
-
-    <p>To solve this problem, I decided to make a prototype feature I would want introduced into the Spotify
-      mobile application called Rooms. Rooms would allow Spotify users to collaboratively 
-      listen to music together with the abilities to add and vote to remove songs in listening parties.
-    </p>
-
-    <!-- Process -->
-    <h2>Design Process</h2>
-    <p>While creating the design of this new feature,
-      it was important that the aesthetic was clean and simple while still
-      being able to meet all core features. Through this process I kept in mind
-      that often the best applications require the least amount of steps to use.
-      Additionally, I chose to use Spotify as the main platform as it's my
-      favorite music streaming service and the most popular amongst my friends.
-    </p>
-
-    <div class="image">
-      <img src="img/rooms/sketches/sketch.jpg" alt="Spotify Rooms Layout" height="700">
-      <p>Low-fidelity wireframes</p>
-    </div>
-
-    <div class="image">
-      <img src="img/rooms/rooms-layout.png" alt="Spotify Rooms Layout">
-      <p>High-fidelity wireframes</p>
-    </div>
-
-
-    <h2>How It Works</h2>
-    <div class="demo">
-      <div class="demo-text">
-        <h3>Driver Lobby Menu</h3>
-        <p>Once the driver has created a new room, passengers will enter the 4 digit generated code to join.
-          Passengers can then add songs to the play queue by clicking the "Add Songs" button where they will be
-          introduced to the same song search menu they're familiar to in the Spotify application.</p>
+      <div class="project-banner spotify-banner">
+        <!-- <img src = "img/include.png"> -->
       </div>
 
-      <video height="500" playsinline autoplay muted loop>
-        <source src="img/rooms/create-room.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
+      <div class="project-heading">
+        <h1 id="spotify-page">Spotify Rooms</h1>
+        <h2>UI/UX project using Sketch, InVision, Photoshop, and Illustrator</h2>
+        <!-- <h2><a href="https://www.matthewkwong.com/spotify-rooms/">matthewkwong.com/spotify-rooms</a></h2> -->
+        <h2><a href="#rooms-prototype-label">Interactive Prototype</a></h2>
+        <h3>July - August 2019</h3>
+      </div>
 
+      <div class="project-body-text">
 
+        <!-- Background -->
+        <h2>Background</h2>
+        <p>
+          As an avid Spotify user, I noticed a problem that effected my music listening experience when driving with friends. 
+          In most cases, there's passengers arguing for the aux cord,
+          who gets to queue music, and terrible song selection. 
+          As the driver, this can be extremely distracting and unsafe.</p>
 
-    <div class="demo">
-      <div class="demo-text">
-        <h3>Passenger Menu</h3>
-        <p>Once the driver has created a new room, passengers will enter the 4 digit
-          generated code to join. Passengers can then add songs to the play queue by clicking the "Add Songs"
-          button where they will be introduced to the same song search menu they're familiar on the Spotify application.
+        <p>How can I improve the music listening experience when in group settings?</p>
+
+        <!-- Solution -->
+        <h2>Solution</h2>
+        <p>After thinking about the main problem to this terrible music listening
+          experience, I concluded that the problem was that only one person's music
+          taste was being played.</p>
+
+        <p>To solve this problem, I decided to make a prototype feature I would want introduced into the Spotify
+          mobile application called Rooms. Rooms would allow Spotify users to collaboratively 
+          listen to music together with the abilities to add and vote to remove songs in listening parties.
         </p>
+
+        <!-- Process -->
+        <h2>Design Process</h2>
+        <p>While creating the design of this new feature,
+          it was important that the aesthetic was clean and simple while still
+          being able to meet all core features. Through this process I kept in mind
+          that often the best applications require the least amount of steps to use.
+          Additionally, I chose to use Spotify as the main platform as it's my
+          favorite music streaming service and the most popular amongst my friends.
+        </p>
+
+        <div class="image">
+          <img src="img/rooms/sketches/sketch.jpg" alt="Spotify Rooms Layout" height="700">
+          <p>Low-fidelity wireframes</p>
+        </div>
+
+        <div class="image">
+          <img src="img/rooms/rooms-layout.png" alt="Spotify Rooms Layout">
+          <p>High-fidelity wireframes</p>
+        </div>
+
+
+        <h2>How It Works</h2>
+        <div class="demo">
+          <div class="demo-text">
+            <h3>Driver Lobby Menu</h3>
+            <p>Once the driver has created a new room, passengers will enter the 4 digit generated code to join.
+              Passengers can then add songs to the play queue by clicking the "Add Songs" button where they will be
+              introduced to the same song search menu they're familiar to in the Spotify application.</p>
+          </div>
+
+          <video height="500" playsinline autoplay muted loop>
+            <source src="img/rooms/create-room.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+
+
+        <div class="demo">
+          <div class="demo-text">
+            <h3>Passenger Menu</h3>
+            <p>Once the driver has created a new room, passengers will enter the 4 digit
+              generated code to join. Passengers can then add songs to the play queue by clicking the "Add Songs"
+              button where they will be introduced to the same song search menu they're familiar on the Spotify application.
+            </p>
+          </div>
+
+          <video height="500" playsinline autoplay muted loop>
+            <source src="img/rooms/join-room.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+
+
+        <div class="demo">
+          <div class="demo-text">
+            <h3>Add Songs</h3>
+            <p>To add songs to the queue, I decided that I would keep the same
+              functionality to add songs in playlists.</p>
+          </div>
+
+          <video height="500" playsinline autoplay muted loop>
+            <source src="img/rooms/add-songs.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+
+        <div class="demo">
+          <div class="demo-text">
+            <h3>Vote to Remove Songs</h3>
+            <p>By introducing a vote kicking functionality, unwanted songs will be removed with a 2/3 majority vote.
+              This would ensure that only the best songs are being played, making the
+              listening experience great for all passengers</p>
+          </div>
+
+          <video height="500" playsinline autoplay muted loop>
+            <source src="img/rooms/vote.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+        <h2 id="rooms-prototype-label">Interactive Prototype</h2>
+        <div class="rooms-links-container">
+          <a class="rooms-links" href="https://invis.io/HSSRA1LG4TY">View the interactive prototype</a>
+          <iframe style="transform: scale(0.75)" width="438" height="930" src="//invis.io/58SN7SVMX4N" frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h2 >Challenges</h2>
+        <p>Building an entire user interface and experience by yourself is
+          challenging. Some design challenges I faced include:</p>
+        <ul>
+          <li>How can I create the easiest way for users to join a Room?</li>
+          <li>How can the Rooms feature be safe for drivers?</li>
+          <li>How can I reach out and promote my product?</li>
+        </ul>
+
+
+        <h2>Takeaways / Reflection</h2>
+        <p>This project was super motivating for me to increase my skills
+          as a designer and to learn more about the UI/UX field. This was my first
+          ever project focussing on the user interface and experience flow of an application.
+          I am very happy with the work that I put in to this project and the solution I came up
+          with to create a new way to share music at group events.</p>
+
+        <h2>Responses + Moving Forward:</h2>
+        <p>After building this project, I built an <a href="https://www.matthewkwong.com/spotify-rooms/">advertisement
+            website</a> showcasing and selling the idea.
+          Using this site, I reached out to 300+ Product Designers and
+          Product Managers at Spotify for feedback and to potentially receive an internship the
+          upcoming summer. Working at Spotify has been a dream
+          of mine since 2015 as a sophomore in high school. As weeks passed, I soon received
+          feedback from the Spotify employees I had asked for feedback from.
+        </p>
+
+        <p>
+          In October 2019, I drove 2 hours to attend a Spotify internship recruitment panel
+          at the University of California, Berkeley. I had the opportunity to present and
+          demo my project with product managers at the company and pitch my idea and
+          prototype. This was a great learning experience and was a lot of fun getting feedback
+          and learning more about the company.
+        </p>
+
+        <p>Sadly, I did not receive a Product Design internship at Spotify, but hope to continue applying
+          for internship and full time positions in Fall 2020.</p>
+
+        <p>On May 11, 2020, the feature was released in beta according to
+          <a
+            href="https://www.theverge.com/2020/5/11/21254426/spotify-group-sessions-feature-update-beta-premium-subscription">
+            The Verge</a>. I was able to try it out and it was awesome to see that the feature was similar to what I had
+          imagined. It was so awesome to see that the feature I had envisioned was released and that
+          I was on the right thinking path as the Spotify team.
+        </p>
+
       </div>
-
-      <video height="500" playsinline autoplay muted loop>
-        <source src="img/rooms/join-room.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
     </div>
-
-
-
-    <div class="demo">
-      <div class="demo-text">
-        <h3>Add Songs</h3>
-        <p>To add songs to the queue, I decided that I would keep the same
-          functionality to add songs in playlists.</p>
-      </div>
-
-      <video height="500" playsinline autoplay muted loop>
-        <source src="img/rooms/add-songs.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-
-
-    <div class="demo">
-      <div class="demo-text">
-        <h3>Vote to Remove Songs</h3>
-        <p>By introducing a vote kicking functionality, unwanted songs will be removed with a 2/3 majority vote.
-          This would ensure that only the best songs are being played, making the
-          listening experience great for all passengers</p>
-      </div>
-
-      <video height="500" playsinline autoplay muted loop>
-        <source src="img/rooms/vote.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-
-    <h2 id="rooms-prototype-label">Interactive Prototype</h2>
-    <div class="rooms-links-container">
-      <a class="rooms-links" href="https://invis.io/HSSRA1LG4TY">View the interactive prototype</a>
-      <iframe style="transform: scale(0.75)" width="438" height="930" src="//invis.io/58SN7SVMX4N" frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <h2 >Challenges</h2>
-    <p>Building an entire user interface and experience by yourself is
-      challenging. Some design challenges I faced include:</p>
-    <ul>
-      <li>How can I create the easiest way for users to join a Room?</li>
-      <li>How can the Rooms feature be safe for drivers?</li>
-      <li>How can I reach out and promote my product?</li>
-    </ul>
-
-
-    <h2>Takeaways / Reflection</h2>
-    <p>This project was super motivating for me to increase my skills
-      as a designer and to learn more about the UI/UX field. This was my first
-      ever project focussing on the user interface and experience flow of an application.
-      I am very happy with the work that I put in to this project and the solution I came up
-      with to create a new way to share music at group events.</p>
-
-    <h2>Responses + Moving Forward:</h2>
-    <p>After building this project, I built an <a href="https://www.matthewkwong.com/spotify-rooms/">advertisement
-        website</a> showcasing and selling the idea.
-      Using this site, I reached out to 300+ Product Designers and
-      Product Managers at Spotify for feedback and to potentially receive an internship the
-      upcoming summer. Working at Spotify has been a dream
-      of mine since 2015 as a sophomore in high school. As weeks passed, I soon received
-      feedback from the Spotify employees I had asked for feedback from.
-    </p>
-
-    <p>
-      In October 2019, I drove 2 hours to attend a Spotify internship recruitment panel
-      at the University of California, Berkeley. I had the opportunity to present and
-      demo my project with product managers at the company and pitch my idea and
-      prototype. This was a great learning experience and was a lot of fun getting feedback
-      and learning more about the company.
-    </p>
-
-    <p>Sadly, I did not receive a Product Design internship at Spotify, but hope to continue applying
-      for internship and full time positions in Fall 2020.</p>
-
-    <p>On May 11, 2020, the feature was released in beta according to
-      <a
-        href="https://www.theverge.com/2020/5/11/21254426/spotify-group-sessions-feature-update-beta-premium-subscription">
-        The Verge</a>. I was able to try it out and it was awesome to see that the feature was similar to what I had
-      imagined. It was so awesome to see that the feature I had envisioned was released and that
-      I was on the right thinking path as the Spotify team.
-    </p>
 
   </div>
-  </div>
+</div>
 
-
-  <footer>
+  <footer id = "footer">
     <p>100% designed and built from scratch</p>
     <div id="icons">
       <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="img/footer/instagram.svg"

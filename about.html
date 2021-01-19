@@ -30,91 +30,95 @@
   </script> -->
 
 <body>
-  <nav id="navbar">
-    <!-- allows for the navbar to be collapsable in mobile -->
-    <input type="checkbox" id="nav-check">
+  <div id = "container">
+    <div id = "main">
+      <nav id="navbar">
+        <!-- allows for the navbar to be collapsable in mobile -->
+        <input type="checkbox" id="nav-check">
 
-    <div id="nav-header">
-      <div id="name">
-        <a href="index.html">
-          <img src="img/logo.png" height="10" alt="logo" class="logo">
-        </a>
+        <div id="nav-header">
+          <div id="name">
+            <a href="index.html">
+              <img src="img/logo.png" height="10" alt="logo" class="logo">
+            </a>
+          </div>
+        </div>
+
+        <div id="nav-button">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
+
+          <a href="index.html" id="portfolio-tab">portfolio</a>
+          <a href="about.html" class="active">about</a>
+          <a
+            href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
+        </div>
+      </nav>
+
+      <div class="about-me-wrapper">
+
+        <!-- Profile picture on the right -->
+        <div class="about-me-profile">
+          <img src="img/profile2.jpg" alt="Profile picture of me" id="profile-picture">
+        </div>
+
+
+        <!-- About Me Text -->
+        <div class="about-me-text">
+          <h1>Hi, I'm Matthew!</h1>
+
+          <p>I'm a Senior at the University of California Davis studying UI/UX Design and Front-End Web
+            Development.</p>
+          <p>Currently, I am designing and developing 
+            <a href="https://www.matthewkwong.com/findmycovidtest">Find My COVID Test</a>, 
+            a website to help users easily find COIVD-19 testing centers near them and filter them based on their 
+            medical information and personal preferences</p>
+
+          <p>As I approach graduation, I am looking for 2021 opportunities focussing on UI/UX and Product Design.
+          </p>
+
+          <p>My design focus is on UI/UX and Front-End Web Development.
+            My goal is to help build products that will help every day consumers with
+            their daily lives.</p>
+
+          <p>On my free time, I love building with LEGO and riding my Boosted Board
+            around campus.</p>
+
+          <p>If you'd like to reach me or even meet for boba, email me at
+            <a
+              href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">
+
+              &#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a>
+            and add me on <a href="https://www.linkedin.com/in/matthewrkwong/">LinkedIn</a>.
+          </p>
+
+
+          <h2>Fun Facts</h2>
+          <ul>
+            <li>I love making sticker designs, and have a <a
+                href="https://www.etsy.com/shop/KwongEnterpises">shop</a>
+            </li>
+            <li>I can do 360° spins down a mountain while snowboarding</li>
+          </ul>
+
+          <a target=”_blank” href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view?usp=sharing">
+            <div class="resume-button">
+              <p>Download My Resume</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div id="nav-button">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
-
-    <div class="nav-links">
-      <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
-
-      <a href="index.html" id="portfolio-tab">portfolio</a>
-      <a href="about.html" class="active">about</a>
-      <a
-        href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">contact</a>
-    </div>
-  </nav>
-
-  <div class="about-me-wrapper">
-
-    <!-- Profile picture on the right -->
-    <div class="about-me-profile">
-      <img src="img/profile2.jpg" alt="Profile picture of me" id="profile-picture">
-    </div>
-
-
-    <!-- About Me Text -->
-    <div class="about-me-text">
-      <h1>Hi, I'm Matthew!</h1>
-
-      <p>I'm a Senior at the University of California Davis studying UI/UX Design and Front-End Web
-        Development.</p>
-      <p>Currently, I am designing and developing 
-        <a href="https://www.matthewkwong.com/findmycovidtest">Find My COVID Test</a>, 
-        a website to help users easily find COIVD-19 testing centers near them and filter them based on their 
-        medical information and personal preferences</p>
-
-      <p>As I approach graduation, I am looking for 2021 opportunities focussing on UI/UX and Product Design.
-      </p>
-
-      <p>My design focus is on UI/UX and Front-End Web Development.
-        My goal is to help build products that will help every day consumers with
-        their daily lives.</p>
-
-      <p>On my free time, I love building with LEGO and riding my Boosted Board
-        around campus.</p>
-
-      <p>If you'd like to reach me or even meet for boba, email me at
-        <a
-          href="mailto:&#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">
-
-          &#109;&#097;&#116;&#107;&#119;&#111;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a>
-        and add me on <a href="https://www.linkedin.com/in/matthewrkwong/">LinkedIn</a>.
-      </p>
-
-
-      <h2>Fun Facts</h2>
-      <ul>
-        <li>I love making sticker designs, and have a <a
-            href="https://www.etsy.com/shop/KwongEnterpises">shop</a>
-        </li>
-        <li>I can do 360° spins down a mountain while snowboarding</li>
-      </ul>
-
-      <a target=”_blank” href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view?usp=sharing">
-        <div class="resume-button">
-          <p>Download My Resume</p>
-        </div>
-      </a>
-    </div>
-</div>
-
-<footer>
+<footer id = "footer">
   <p>100% designed and built from scratch</p>
   <div id="icons">
     <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="img/footer/instagram.svg"
@@ -127,6 +131,7 @@
       target="_blank"> <img src="img/footer/envelope.svg" alt="mail icon"></a>
   </div>
 </footer>
+
 
   <script src="script.js"></script>
 </body>

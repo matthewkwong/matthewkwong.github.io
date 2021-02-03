@@ -489,8 +489,8 @@ footer img{
 .project-body-text{
   line-height: 1.5;
   font-size: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 5%;
 }
 
@@ -542,9 +542,9 @@ footer img{
 }
 
 .project-body-text > .image > img {
-  -webkit-box-shadow: 0px 0px 35px 6px rgba(0,0,0,0.22);
-  -moz-box-shadow: 0px 0px 35px 6px rgba(0,0,0,0.22);
-  box-shadow: 0px 0px 35px 6px rgba(0,0,0,0.22);
+  box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
+  -webkit-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
+  -moz-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
 }
 
 .demo-text{
@@ -582,6 +582,21 @@ footer img{
 .image > p{
   text-align: center;
   color: #999999;
+}
+
+
+/* Find my COVID Test */
+.covid-split{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.split{
+ width: 50%;
+ padding: 50px;
+ margin: auto;
+ color: #999999;
 }
 
 /* Spotify Rooms Page */
@@ -708,6 +723,15 @@ footer img{
     width: 80%;
     margin: auto !important;
   }
+
+  .covid-split{
+    flex-direction: column;
+  }
+
+  .split{
+    padding:0;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -780,6 +804,7 @@ footer img{
 }
 
 @media only screen and (max-width: 600px) {
+  
 
   .about-me-wrapper{
     margin-top:10%;

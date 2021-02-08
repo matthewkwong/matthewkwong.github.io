@@ -173,8 +173,8 @@ a{
 .project{
   margin-top: 60px;
   margin-bottom: 60px;
-  width: 80%;
-
+  width: 60%;
+  min-width: 50%;
   display: flex;
   justify-content: center;
 
@@ -489,8 +489,8 @@ footer img{
 .project-body-text{
   line-height: 1.5;
   font-size: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 29%;
+  margin-right: 20%;
   margin-bottom: 5%;
 }
 

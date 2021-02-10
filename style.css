@@ -171,67 +171,49 @@ a{
 
 
 .project{
-  margin-top: 60px;
-  margin-bottom: 60px;
-  width: 60%;
-  min-width: 50%;
-  display: flex;
-  justify-content: center;
-
-  opacity: 0;
-  transform: translate(0, 20px);
-  transition: all 1s;
-}
-
-/* Title and Time frame of working */
-.project-position {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 30px;
+  margin-bottom: 100px;
 }
 
-.project-reverse{
+.reverse {
   flex-direction: row-reverse;
 }
 
+.reverse > .project-description{
+  margin-right: 200px;
+}
 
-.project-name{
-  margin-bottom: 15px;
-  font-size: 40px;
+.normal > .project-img{
+  margin-right: 200px;
+}
+
+
+.experience-wrapper > .project{
+  flex: 0 50%;
+}
+
+.project-role{
+  color: grey;
+  width: 100%;
+  /* border: solid 2px red; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-img{
   max-width: 80%;
-  height: auto;
   margin: auto;
   box-shadow: 0px 0px 42px 0px rgba(179,179,179,1);
-}
 
-.project.visible {
-  opacity: 1;
-  transform: translate(0, 0);
 }
 
 .project-description{
-  width: 500px;
-  padding: 20px;
+  width: 1200px;
   margin: auto;
-  /* margin-left: 50px; */  
-  align-items: center;
-  position: relative;
-  line-height: 1.5;
-}
-
-.project-description p {
-  font-size: 17px;
-}
-
-.project-position{
-  font-weight: bold;
-  color: #999;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin:0 !important;
 }
 
 
@@ -654,17 +636,8 @@ footer img{
   padding: 10px;
 }
 
-@media only screen and (min-width: 1500px) {
-  .project-description{
-    width: 700px;
-  }
-}
 
 @media only screen and (max-width: 1400px) {
-  .project-position {
-    display: flex;
-    flex-direction: column;
-  }
   #profile-picture{
     height: 370px;
   }
@@ -706,22 +679,32 @@ footer img{
   }
 
   .experience-wrapper{
-    width: 100%;
     flex-direction: column;
   }
 
   .project{
-    width: 100%;
+    margin: 0;
+    margin-bottom: 30%;
     flex-direction: column;
   }
 
-  .project > img{
+  .project-img{
     width: 100%;
+    margin: auto;
   }
+  
+  .reverse > .project-description{
+    margin: auto;
+  }
+  
+  .normal > .project-img{
+    margin: auto;
+  }
+  
+  
 
   .project-description{
     width: 80%;
-    margin: auto !important;
   }
 
   .covid-split{
@@ -764,6 +747,13 @@ footer img{
 }
 
 @media only screen and (max-width: 750px) {
+
+  .project-role {
+    display: flex;
+    flex-direction: column;
+  }
+
+
   .background{
     display: none;
   }

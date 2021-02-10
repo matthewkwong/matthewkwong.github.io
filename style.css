@@ -636,8 +636,31 @@ footer img{
   padding: 10px;
 }
 
+/* Macbook pro */
+@media only screen and (max-width: 1440px) {
+  .project{
+    width: 91%;
+  }
+  
+  .project-img{
+    width: 60%;
+  }
+  
+  .reverse > .project-description{
+    margin-right: 100px;
+  }
+
+  .normal > .project-img{
+    margin-right: 100px;
+  }
+}
+
 
 @media only screen and (max-width: 1400px) {
+  .project{
+    width: 100%;
+  }
+
   #profile-picture{
     height: 370px;
   }

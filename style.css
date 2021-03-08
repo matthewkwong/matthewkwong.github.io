@@ -183,6 +183,8 @@ a{
   flex-direction: row-reverse;
 }
 
+
+/* Distance between project image and the description */
 .reverse > .project-description{
   margin-right: 200px;
 }
@@ -472,7 +474,7 @@ footer img{
   line-height: 1.5;
   font-size: 20px;
   margin-left: 29%;
-  margin-right: 20%;
+  margin-right: 29%;
   margin-bottom: 5%;
 }
 
@@ -530,9 +532,8 @@ footer img{
 }
 
 .demo-text{
-  flex-direction: column;
   margin-right: 10%;
-  width: 40%;
+  /* width: 40%; */
 }
 
 
@@ -653,10 +654,7 @@ footer img{
   .normal > .project-img{
     margin-right: 100px;
   }
-}
 
-
-@media only screen and (max-width: 1400px) {
   .project{
     width: 100%;
   }
@@ -724,7 +722,6 @@ footer img{
     margin: auto;
   }
   
-  
 
   .project-description{
     width: 80%;
@@ -750,9 +747,6 @@ footer img{
   .about-me-text{
     width: 100%;
   }
-}
-
-@media only screen and (max-width: 1000px) {
 
   /* Spotify Rooms */
   .demo{

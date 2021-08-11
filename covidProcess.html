@@ -16,6 +16,11 @@
     body {
       margin: 0;
     }
+    
+    p{
+      color:grey;
+
+    }
 
     iframe {
       margin-top: -7%;
@@ -59,31 +64,29 @@
     <div id = "main">
       <div class="project-banner covid-banner"></div>
 
-      <div class="project-heading">
-        <h1 id="covid-page">Find My COVID Test</h1>
-
-        <h2 style = "color:Grey">Personal Project, Designer + Developer | July 2020 - Current</h2>
-        <h3 style = "color:Grey">Figma, HTML, CSS, JavaScript, Firebase, Google Maps API</h3>
-        <h2><a href="http://findmycovidtest.com/" target="_blank">findmycovidtest.com</a></h2>
-        
-
-      </div>
+ 
 
       <div class="project-body-text">
-
+      <section>
         <h2>Background</h2>
         <p>Due to the COVID-19 pandemic, millions of people around the world have had to get tested for COVID-19. 
           After a possible exposure in my family, it was unsure if we had been in contact with someone with COVID-19. 
           After struggling to find a testing center near me, 
           I realized that if a 20-year-old is having trouble, others would too. 
         </p>
+      </section>
 
 
-          
+
+      <section> 
         <h2>Solution</h2>
         <p>Create a mobile application that allows users to find COVID-19 testing centers in their local area and be able to filter through the results 
           based on their preferences.</p>
+      </section>
 
+
+
+      <section>
         <h2>Target Audience / Persona</h2>
         <ul>
           <li>Age: 30-50 Year old</li>
@@ -97,15 +100,23 @@
         Kelly does not have strong internet browsing knowledge and relies on her brother in Sacramento, California to surf the internet. 
         Kelly also suffers from COPD, obesity, and does not have insurance. Kelly was recently in contact with someone 
         who was confirmed with COVID-19 and must get tested. Kelly has a car, but is not too familiar driving outside of the city of San Francisco.</i></p>
+      </section>
 
 
+
+      <section>
         <h2>Research</h2>
         <p>To learn more about other people’s experience registering for a COVID-19 testing center, I conducted an online research study surveying 39 past COVID-19 testing patients. 
           From this survey, I found that on average it took users approximately 16 minutes to find a testing center and register for an appointment.
         </p>
-        <p>Additionally, the <i style = "color: black">most difficult part of the process was finding the testing registration site, finding a nearby testing center, and needing a doctor’s referral.</i></p>
+        <p>What I concluded was that, <br> 
+          <h3 style = "color: black; font-style: italic">the most difficult part of the process was finding the testing registration site, finding a nearby testing center, and needing a doctor’s referral.</h3>
+       </p>
+      </section>
 
-      
+
+
+      <section>
         <h2>Features:</h2>
         <p>After analyzing the feedback from the survey, I narrowed the project down to a mobile application that allowed them to:
           <ol>
@@ -114,32 +125,36 @@
             <li>Show all testing centers in their local area</li>
           </ol>
         </p>
+      </section> 
+      
+      
 
+      <section>
         <h2>Mobile Prototype:</h2>
-        <div class = "covid-split"> 
-          <div class="image">
-            <img src="img/covid/mobilePrototype.png" alt="Mobile Prototype">
-          </div>
-
-          <div class = "split">
-            <p>Through my first prototype, I had acknowledged all of the user’s highest requests, 
-              allowing them to schedule and register for a COVID-19 testing appointment within seconds. 
-              I created a simple and easy to use user interface that would satisfy my target audience. </p>
-
-    
-            <p>While this was good, I realized that if I published this prototype to the world, it wouldn’t actually benefit anyone or make a difference.
-              I began to think of ways to develop this prototype into a real application. However, the only way to register a user 
-              to an appointment would require my application to have access to every COVID-19 testing center’s registration database. 
-              I knew this would be highly unlikely. </p>
-    
-            <p>I scrapped the idea and went back to the first step, 
-              acknowledging the problem that:</p>
-
-            <h3 style = "color: black">Finding a COVID-19 testing center that meets 
-              your preferences is difficult.</h3>
-          </div>
+        <div class="image">
+          <img src="img/covid/mobilePrototype.png" alt="Mobile Prototype">
         </div>
 
+          <p>Through my first prototype, I had acknowledged all of the user’s highest requests, 
+            allowing them to schedule and register for a COVID-19 testing appointment within seconds. 
+            I created a simple and easy to use user interface that would satisfy my target audience. </p>
+
+
+          <p>While this was good, I realized that if I published this prototype to the world, it wouldn’t actually benefit anyone or make a difference.
+            I began to think of ways to develop this prototype into a real application. However, the only way to register a user 
+            to an appointment would require my application to have access to every COVID-19 testing center’s registration database. 
+            I knew this would be highly unlikely. </p>
+
+          <p>I scrapped the idea and went back to the first step, 
+            acknowledging the problem that:</p>
+
+          <h3 style = "color: black;   font-style: italic;">"Finding a COVID-19 testing center that meets 
+            your preferences is difficult."</h3>
+      </section>
+
+
+
+      <section>
         <h2>Desktop Iteration 1</h2>
         <div class="image">
           <img src="img/covid/prototype1.png" alt="Desktop Protoype 1">
@@ -147,7 +162,12 @@
         <p>My solution to this problem was to make an interactive webpage
           that allowed users to filter testing centers and be able to view 
           the results on a map. </p>
+      </section>
 
+
+
+
+      <section>
         <h2>Desktop Iteration 2</h2>
         <div class="image">
           <img src="img/covid/prototype2.png" alt="Desktop Protoype 2">
@@ -161,8 +181,11 @@
           have a button that would open the webpage for users to register for 
           their COVID-19 test on a new page.
         </p>
+      </section>
 
 
+
+      <section>
         <h2>Desktop Iteration 3</h2>
         <!-- <div class="image">
           <img src="img/covid/prototype3.png" alt="Desktop Protoype 3">
@@ -173,20 +196,26 @@
         <p>After compiling a list of testing centers in California, I omitted the filtering option of Appointment because
         every testing center required an appointment. Additionally, I added a search bar feature that allows users to help friends or family members find testing centers near them.
         </p>
+      </section>
 
+
+      <section>
         <h2>Branding</h2>
 
         <div class = "covid-split"> 
           <div class="image split">
             <img src="img/covid/branding.png" alt="Branding" width = "700">
           </div>
-          
 
           <p class = "split">To acknowledge that Find My COVID Test was an interactive map based website for COVID-19, I created a unique logo that highlighted both components. 
             Instantly, I knew that this would be the logo that I wanted to create for the site.  
           </p>  
         </div>
+      </section>
 
+
+
+      <section>
         <h2>User Feedback</h2>
         <p>Once finalizing the design and developing the application to Desktop Iteration 3, 
           I began to user test the website with 10 people ages 20-55 to ensure that the product was usable for all ages and demographics. 
@@ -196,8 +225,12 @@
           Another revision that was especially useful was to add zoom in and zoom out buttons on the map for both mobile and desktop users. 
           Additionally, the address of the testing center would be clickable, linking the user directly to Google Maps where they’d be able to find out how far a testing center was to their location.
         </p>
+      </section>
 
-        <h2>Final Product</h2>
+
+
+      <section>
+          <h2>Final Product</h2>
           <video  controls autoplay style = "max-width: 100%;">
             <source src="img/covid/final.mov" type="video/mp4">
               Your browser does not support videos
@@ -209,7 +242,11 @@
         <p>Finally, I created a logo and displayed it on the top left corner where it was most visible to users without distracting them of the product. 
           Additionally, I decided to default to the classic Google Maps red marker color as it was a familiar icon that most users would recognize. 
         </p>
-        
+      </section>
+
+
+
+      <section>
         <h2>Impact</h2>
         <p>At the start of the pandemic, finding a COVID test was a difficult challenge. 
           However, since the release of Find My COVID Test, I have been able to help more than 3,000 people find COVID-19 tests with an average time of 34 seconds. 
@@ -230,13 +267,16 @@
         </p>
         
         <p>If you would like to use Find My COVID Test for yourself, please visit: <a href="http://findmycovidtest.com/" target="_blank">http://findmycovidtest.com/</a></p> 
-      
+      </section>
+
+
+      <section>
         <h2>Thank You</h2>
         <p>Thank you Aileen Yang, Blake Brown, Francis Kong, Hannah McKelson, Jeremy Chang-Yoo, Joli Chien, Kit Nga Chou, 
           Linda Huang, Marcela San Juan, Sam Louderback, Thomas Pham, Thomas Hernandez, and many more for their feedback and support along the way. 
         </p>
+      </section>
     </div>
-  
   </div>
 </div>
 

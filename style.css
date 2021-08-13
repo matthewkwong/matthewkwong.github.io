@@ -25,6 +25,10 @@ body{
   font-family: circular !important;
 }
 
+p {
+  font-size: 1em;
+}
+
 section{
   margin-bottom: 10%;
 }
@@ -42,22 +46,29 @@ html, body{
   margin-right: auto;
 }
 
+
 /* controls the footer position on other pages */
 #main {
   overflow: auto;
   padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 nav{
   /* background-color: white; */
-  z-index: 10;
   text-align: right;
-  top:0;
   z-index: 21;
   width: 100%;
   height: 100px;
   font-family: circular;
+  position: fixed;
 }
+
+body nav{
+  min-height: 100px;
+}
+
 
 nav #nav-button {
   display: none;
@@ -79,7 +90,6 @@ nav #nav-check {
 .logo-white{
   display: none;
 }
-
 
 nav > .nav-links > a{
   font-weight: normal;
@@ -233,7 +243,6 @@ a{
   width:200px;
   color:black;
   text-transform: uppercase;
-  font-size: 12px;
   border: black 2px solid;
   transition: 0.3s;
   line-height: normal;
@@ -306,8 +315,8 @@ a{
 /* Footer */
 #footer{
   position: relative;
-  height: 100px;
-  margin-top: -100px; 
+  height: 110px;
+  margin-top: -110px; 
   clear: both;
 
   display: flex;
@@ -364,7 +373,7 @@ footer img{
 }
 
 .about-me-text{
-  font-size: 18px;
+  /* font-size: 18px; */
   width: 50%;
   box-sizing: border-box;
   /* border:solid 2px red; */
@@ -420,6 +429,9 @@ footer img{
 
 .covid-banner{
   background-image:url("img/covid/covid-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .include-banner{
@@ -444,7 +456,7 @@ footer img{
 
 .project-heading{
   line-height: normal;
-  margin-top:5%;
+  /* margin-top:5%; */
   text-align: center;
 }
 
@@ -503,7 +515,7 @@ footer img{
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-.project-body-text > .iframeContainer > iframe{
+.project-body-text  iframeContainer  iframe{
   position: absolute;
   top: 0;
   left: 0;
@@ -514,7 +526,7 @@ footer img{
   border: 1px solid rgba(0, 0, 0, 0.1)
 }
 
-.project-body-text > .image > img {
+.project-body-text .image img {
   box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
   -webkit-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
   -moz-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);

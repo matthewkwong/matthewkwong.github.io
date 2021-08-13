@@ -24,10 +24,7 @@ check it out  -->
 
   <style>
     body{
-      line-height: normal;
-      margin-left: 10%;
-      margin-right: 10%;
-      
+      line-height: normal;      
     }
 
     p {
@@ -41,6 +38,13 @@ check it out  -->
     .button {
       margin-top: 10%;
     }
+
+    #container{
+      max-width: 100%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+    }
+
   </style>
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -70,9 +74,14 @@ check it out  -->
         <!-- allows for the navbar to be collapsable in mobile -->
         <input type="checkbox" id="nav-check">
 
-        <a href="index.html">
-          <img src="img/logo.png" height="10" alt="logo" class="logo">
-        </a>
+        <div id="nav-header">
+          <div id="name">
+            <a href="index.html">
+              <img src="img/logo.png" height="10" alt="logo" class="logo">
+            </a>
+          </div>
+        </div>
+
         <div id="nav-button">
           <label for="nav-check">
             <span></span>
@@ -84,8 +93,8 @@ check it out  -->
         <div class="nav-links">
           <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
 
-          <a href="#" class="active" id="portfolio-tab">portfolio</a>
-          <a href="about.html">about</a>
+          <a href="#portfolio" id="portfolio-tab" class = "active">portfolio</a>
+          <a href="about.html" >about</a>
           <a
             href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
         </div>
@@ -103,7 +112,7 @@ check it out  -->
         
         <h2 class="description">Designer + Developer</h2>
         <p>Hi! I'm Matthew, a UI/UX Designer and Front-End Web Developer.</p>
-        <p>Recently, designed and developed <a href="https://findmycovidtest.com/">Find My COVID Test</a>.</p>
+        <p>Recently, designed and developed <a href="https://findmycovidtest.com/" style = "font-weight:bold;">Find My COVID Test</a>.</p>
 
         <a href="#portfolio">
           <div class="button" id="portfolio-button">

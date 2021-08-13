@@ -20,6 +20,7 @@ check it out */
 }
 
 body{
+  margin: auto;
   overflow-x: hidden;
   font-family: circular !important;
 }
@@ -34,9 +35,14 @@ html, body{
 
 #container{
   min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* controls the foother position on other pages */
+/* controls the footer position on other pages */
 #main {
   overflow: auto;
   padding-bottom: 100px;
@@ -76,6 +82,7 @@ nav #nav-check {
 
 
 nav > .nav-links > a{
+  font-weight: normal;
   color: #868686;
   font-size: 17px;
   padding: 20px;
@@ -96,7 +103,6 @@ nav > .nav-links > a:hover{
 
 a{
   text-decoration: none;
-  font-weight: bold;
   color:black;
 }
 
@@ -359,19 +365,19 @@ footer img{
 
 .about-me-text{
   font-size: 18px;
-  line-height: 1.5;
   width: 50%;
   box-sizing: border-box;
   /* border:solid 2px red; */
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
-.about-me-text > h1{
+.about-me-text  h1{
   font-size: 40px;
+  color:black;
 }
 
-.about-me-text > p, ul{
-  color:#999;
+.about-me-text {
+  color: grey;
 }
 
 .about-me-profile{
@@ -381,12 +387,11 @@ footer img{
 }
 
 #profile-picture{
-  height: 400px;
+  max-height: 500px;
   display: block;
   margin: auto;
   -webkit-box-shadow: 0px 11px 21px 0px #C4C4C4; 
   box-shadow: 0px 11px 21px 0px #C4C4C4;
-  margin-top: 100px;
 }
 
 .resume-button{
@@ -469,42 +474,27 @@ footer img{
 }
 
 .project-heading > h3{
-  color: #B2B2B2;
+  color:grey;
 }
 
 
 .project-body-text{
   line-height: 1.5;
   font-size: 20px;
-  margin-left: 29%;
-  margin-right: 29%;
+  /* margin-left: 29%;
+  margin-right: 29%; */
   margin-bottom: 5%;
+  color: grey;
 }
 
-.project-body-text ul {
-  /* margin-left: 5%; */
-  color: #999999;
+.project-body-text > h1, h2, h3{
+  color: black;
 }
+
 
 .project-body-text > h2{
   margin-top:5%;
 }
-
-.project-body-text > p{
-  /* margin-left: 5%;
-  margin-right: 5%; */
-  color: #999999;
-}
-
-.project-body-text  ol {
-  color: #999999;
-}
-
-.project-body-text > .demo > .demo-text > p{
-  color: #999999;
-}
-
-
 
 .project-body-text > .iframeContainer{
   position: relative;
@@ -549,13 +539,13 @@ footer img{
 .image{
   margin-bottom: 5%;
   margin-top: 5%;
-  justify-content: center;
+  /* justify-content: center;
   flex-direction: column;
-  display: flex;
+  display: flex; */
 }
 
 .image > img{
-  max-width: 100%;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -576,7 +566,7 @@ footer img{
 
 .split{
  width: 50%;
- padding: 50px;
+ padding: 25px;
  margin: auto;
  color: #999999;
 }
@@ -607,8 +597,6 @@ footer img{
 }
 
 
-
-
 /* Graphic Design */
 .image-gallery {
   /* background-color: red; */
@@ -616,34 +604,21 @@ footer img{
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 120%; */
 }
 
-.cities {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 .image-gallery>img,
 .cities>img {
-  /* 2 images per row */
-  /* width: 33.33%; */
-
-  /* 3 images per row */
-  width: 25%;
+  max-width: 31%;
   padding: 10px;
 }
 
-/* Macbook pro */
+/* MacBook pro */
 @media only screen and (max-width: 1440px) {
-  .project{
-    width: 91%;
-  }
-  
-  .project-img{
-    width: 60%;
+
+  .container{
+    margin:auto;
   }
   
   .reverse > .project-description{
@@ -667,6 +642,12 @@ footer img{
 
   .about-me-wrapper{
     margin-bottom: 100px;
+  }
+
+  .experience-wrapper{
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -696,10 +677,6 @@ footer img{
 
   .experience-header{
     margin-top: 0px;
-  }
-
-  .experience-wrapper{
-    flex-direction: column;
   }
 
   .project{
@@ -747,6 +724,10 @@ footer img{
     width: 100%;
   }
 
+  #profile-picture{
+    margin-bottom:10%;
+  }
+
   /* Spotify Rooms */
   .demo{
     flex-direction: column;
@@ -759,6 +740,11 @@ footer img{
 
   .demo > video{
     margin-bottom: 10%;
+  }
+
+  .project-body-text{
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -777,12 +763,6 @@ footer img{
   .profile{
     display: none;
   }
-
-  .project-body-text{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
 
   /* Graphic Design */
   .image-gallery {

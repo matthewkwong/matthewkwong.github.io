@@ -20,8 +20,13 @@ check it out */
 }
 
 body{
+  margin: auto;
   overflow-x: hidden;
   font-family: circular !important;
+}
+
+p {
+  font-size: 1em;
 }
 
 section{
@@ -34,24 +39,36 @@ html, body{
 
 #container{
   min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* controls the foother position on other pages */
+
+/* controls the footer position on other pages */
 #main {
   overflow: auto;
   padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 nav{
   /* background-color: white; */
-  z-index: 10;
   text-align: right;
-  top:0;
   z-index: 21;
   width: 100%;
   height: 100px;
   font-family: circular;
+  position: fixed;
 }
+
+body nav{
+  min-height: 100px;
+}
+
 
 nav #nav-button {
   display: none;
@@ -74,8 +91,8 @@ nav #nav-check {
   display: none;
 }
 
-
 nav > .nav-links > a{
+  font-weight: normal;
   color: #868686;
   font-size: 17px;
   padding: 20px;
@@ -96,7 +113,6 @@ nav > .nav-links > a:hover{
 
 a{
   text-decoration: none;
-  font-weight: bold;
   color:black;
 }
 
@@ -227,7 +243,6 @@ a{
   width:200px;
   color:black;
   text-transform: uppercase;
-  font-size: 12px;
   border: black 2px solid;
   transition: 0.3s;
   line-height: normal;
@@ -300,8 +315,8 @@ a{
 /* Footer */
 #footer{
   position: relative;
-  height: 100px;
-  margin-top: -100px; 
+  height: 110px;
+  margin-top: -110px; 
   clear: both;
 
   display: flex;
@@ -358,20 +373,20 @@ footer img{
 }
 
 .about-me-text{
-  font-size: 18px;
-  line-height: 1.5;
+  /* font-size: 18px; */
   width: 50%;
   box-sizing: border-box;
   /* border:solid 2px red; */
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
-.about-me-text > h1{
+.about-me-text  h1{
   font-size: 40px;
+  color:black;
 }
 
-.about-me-text > p, ul{
-  color:#999;
+.about-me-text {
+  color: grey;
 }
 
 .about-me-profile{
@@ -381,12 +396,11 @@ footer img{
 }
 
 #profile-picture{
-  height: 400px;
+  max-height: 500px;
   display: block;
   margin: auto;
   -webkit-box-shadow: 0px 11px 21px 0px #C4C4C4; 
   box-shadow: 0px 11px 21px 0px #C4C4C4;
-  margin-top: 100px;
 }
 
 .resume-button{
@@ -415,6 +429,9 @@ footer img{
 
 .covid-banner{
   background-image:url("img/covid/covid-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .include-banner{
@@ -439,7 +456,7 @@ footer img{
 
 .project-heading{
   line-height: normal;
-  margin-top:5%;
+  /* margin-top:5%; */
   text-align: center;
 }
 
@@ -469,42 +486,27 @@ footer img{
 }
 
 .project-heading > h3{
-  color: #B2B2B2;
+  color:grey;
 }
 
 
 .project-body-text{
   line-height: 1.5;
   font-size: 20px;
-  margin-left: 29%;
-  margin-right: 29%;
+  /* margin-left: 29%;
+  margin-right: 29%; */
   margin-bottom: 5%;
+  color: grey;
 }
 
-.project-body-text ul {
-  /* margin-left: 5%; */
-  color: #999999;
+.project-body-text > h1, h2, h3{
+  color: black;
 }
+
 
 .project-body-text > h2{
   margin-top:5%;
 }
-
-.project-body-text > p{
-  /* margin-left: 5%;
-  margin-right: 5%; */
-  color: #999999;
-}
-
-.project-body-text  ol {
-  color: #999999;
-}
-
-.project-body-text > .demo > .demo-text > p{
-  color: #999999;
-}
-
-
 
 .project-body-text > .iframeContainer{
   position: relative;
@@ -513,7 +515,7 @@ footer img{
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-.project-body-text > .iframeContainer > iframe{
+.project-body-text  iframeContainer  iframe{
   position: absolute;
   top: 0;
   left: 0;
@@ -524,7 +526,7 @@ footer img{
   border: 1px solid rgba(0, 0, 0, 0.1)
 }
 
-.project-body-text > .image > img {
+.project-body-text .image img {
   box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
   -webkit-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
   -moz-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
@@ -549,13 +551,13 @@ footer img{
 .image{
   margin-bottom: 5%;
   margin-top: 5%;
-  justify-content: center;
+  /* justify-content: center;
   flex-direction: column;
-  display: flex;
+  display: flex; */
 }
 
 .image > img{
-  max-width: 100%;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -576,7 +578,7 @@ footer img{
 
 .split{
  width: 50%;
- padding: 50px;
+ padding: 25px;
  margin: auto;
  color: #999999;
 }
@@ -607,8 +609,6 @@ footer img{
 }
 
 
-
-
 /* Graphic Design */
 .image-gallery {
   /* background-color: red; */
@@ -616,34 +616,21 @@ footer img{
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 120%; */
 }
 
-.cities {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 .image-gallery>img,
 .cities>img {
-  /* 2 images per row */
-  /* width: 33.33%; */
-
-  /* 3 images per row */
-  width: 25%;
+  max-width: 31%;
   padding: 10px;
 }
 
-/* Macbook pro */
+/* MacBook pro */
 @media only screen and (max-width: 1440px) {
-  .project{
-    width: 91%;
-  }
-  
-  .project-img{
-    width: 60%;
+
+  .container{
+    margin:auto;
   }
   
   .reverse > .project-description{
@@ -667,6 +654,12 @@ footer img{
 
   .about-me-wrapper{
     margin-bottom: 100px;
+  }
+
+  .experience-wrapper{
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -696,10 +689,6 @@ footer img{
 
   .experience-header{
     margin-top: 0px;
-  }
-
-  .experience-wrapper{
-    flex-direction: column;
   }
 
   .project{
@@ -747,6 +736,10 @@ footer img{
     width: 100%;
   }
 
+  #profile-picture{
+    margin-bottom:10%;
+  }
+
   /* Spotify Rooms */
   .demo{
     flex-direction: column;
@@ -759,6 +752,11 @@ footer img{
 
   .demo > video{
     margin-bottom: 10%;
+  }
+
+  .project-body-text{
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -777,12 +775,6 @@ footer img{
   .profile{
     display: none;
   }
-
-  .project-body-text{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
 
   /* Graphic Design */
   .image-gallery {

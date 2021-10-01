@@ -67,16 +67,13 @@ color: black;
     src: url(CircularStd-Bold.ttf);
 }
 
-html{
-    width:100%;
-    overflow-x: hidden;
-}
-
 body::-webkit-scrollbar {
     display: none;
 }  
 
+
 body{
+    scrollbar-width: none;
     background-color: white;
     overflow-x: hidden;
     margin: auto;
@@ -309,6 +306,12 @@ section{
     #title-wrapper{
         gap: 50px;
     }
+    body, html{
+        width:100%;
+        overflow-x: hidden;
+        scrollbar-width: none;
+    }
+    
 }
 
 
@@ -335,10 +338,6 @@ section{
     .section-image{
         /* display: none; */
         height: 60vh;
-    }
-
-    .content-wrapper{
-        gap: 50px;
     }
 
     section{
@@ -410,6 +409,7 @@ section{
         overflow-y: hidden;
         left: 0px;
         text-align: left;
+        overflow-x: hidden;
     }
 
     nav > .nav-links > #portfolio-tab{
@@ -466,7 +466,7 @@ section{
     }
 
     #title-content h1{
-        margin-top: 25%;
+        margin-top: 45%;
         font-size: 48px;
     }
 

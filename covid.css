@@ -1,5 +1,4 @@
 nav{
-    border: solid 2px red;
     font-family: CircularStd-Book;
     display: flex;
     justify-content: space-between;
@@ -10,11 +9,10 @@ nav{
     text-align: right;
     z-index: 4;
     width: 100%;
-    height: 70px;
+    height: 90px;
     
     margin-top:0px;
     box-shadow: 0px 0px 88px -14px rgba(0, 0, 0, 0.25);
-
 } 
 
 nav #nav-button {
@@ -27,9 +25,13 @@ nav #nav-check {
 
 .logo, .logo-white{
     float: left;
-    left: 20px;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
+    margin: auto 0;
+    text-align: center;
+    /* helps center the logo */
+    padding: 10px;
+    padding-left: 20px;
 }
 
 .logo-white{
@@ -65,14 +67,14 @@ color: black;
     src: url(CircularStd-Bold.ttf);
 }
 
-html, body{
+html{
     width:100%;
     overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
     display: none;
-  }  
+}  
 
 body{
     background-color: white;
@@ -362,6 +364,10 @@ section{
 
 /* Navbar */
 @media only screen and (max-width: 600px) {
+    nav{
+        display: inline-block;
+    }
+    
     .logo-white{
         display: block;
     }
@@ -381,13 +387,13 @@ section{
         top: 0px;
     }
 
+    /* 3 squiggle bar */
     nav #nav-button label {
         display: inline-block;
         padding: 35px;
         transition: all 0.3s ease-in;
     }
 
-    /* 3 squiggle bar hover */
     nav #nav-button label span {
         display: block;
         width: 25px;
@@ -434,7 +440,8 @@ section{
     }
 
     nav #nav-check:checked ~ .nav-links {
-        height: 500vh;
+        position: fixed;
+        height: 100vh;
         width: 50%;
         display: block;
         overflow-y: auto;

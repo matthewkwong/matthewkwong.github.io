@@ -17,11 +17,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav id="navbar">
-            <!-- allows for the navbar to be collapsable in mobile -->
+        <nav>
             <input type="checkbox" id="nav-check">
         
-            <!-- logo -->
             <a href="index.html">
                 <img src="img/logo.png" height="10" alt="logo" class="logo">
             </a>
@@ -34,7 +32,7 @@
                 </label>
             </div>
         
-            <div class = "nav-links" id = "poo">
+            <div class = "nav-links">
                 <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
         
                 <a href="#portfolio" id="portfolio-tab" class = "active">portfolio</a>
@@ -44,40 +42,42 @@
             </div>
         </nav>
 
-        <div id = "title">
-            <div id = "title-wrapper">
-                <div id = "title-content" data-aos="fade-right" 
-                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
-                    <h1>Find My <br> COVID Test</h1>
-                    
-                    <p>Find My COVID Test improves the accessibility of finding a COVID-19 testing center 
-                        in California by allowing patients to filter testing locations based on their preferences for distance, insurance coverage, 
-                        testing method, fee, and doctor's referral. </p>
-                    
-                    <div id = "title-details"> 
-                        <div id = "title-role">
-                            <h3>Role:</h3>
-                            <p>Lead UX Designer, Lead UX Developer, Branding</p>
-                        </div>
+        <div id = "t"> 
+            <div id = "title">
+                <div id = "title-content-wrapper">
+                    <div id = "title-content" data-aos="fade-right" 
+                    data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                        <h1>Find My <br> COVID Test</h1>
                         
-                        <div id = "title-duration">
-                            <h3>Duration:</h3>
-                            <p>6 Weeks</p>
+                        <p>Find My COVID Test improves the accessibility of finding a COVID-19 testing center 
+                            in California by allowing patients to filter testing locations based on their preferences for distance, insurance coverage, 
+                            testing method, fee, and doctor's referral. </p>
+                        
+                        <div id = "title-details"> 
+                            <div id = "title-role">
+                                <h3>Role:</h3>
+                                <p>Lead UX Designer, Lead UX Developer, Branding</p>
+                            </div>
+                            
+                            <div id = "title-duration">
+                                <h3>Duration:</h3>
+                                <p>6 Weeks</p>
+                            </div>
                         </div>
+
+                        <a href = "https://findmycovidtest.com"  target="_blank" id = "button">Launch Site</a>
                     </div>
-
-                    <a href = "https://findmycovidtest.com"  target="_blank" id = "button">Launch Site</a>
+                    
+                    <img src = "img/covid/websiteMockup.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
+                    data-aos-mirror="true" data-aos-duration="1250">
                 </div>
-                
-                <img src = "img/covid/websiteMockup.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
-                data-aos-mirror="true" data-aos-duration="1250">
+
+                <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
+
+                <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
             </div>
-
-            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
-            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
-
-            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
-            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
         </div>
 
         <!-- Preview Image -->
@@ -410,7 +410,5 @@
         <script>
             AOS.init();
         </script>
-
-        
     </body>
 </html>

@@ -3,12 +3,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    margin-top: 0;
 
     background-color: white;
     text-align: right;
     z-index: 4;
     width: 100%;
-    height: 90px;
+    height: 80px;
     
     margin-top:0px;
     box-shadow: 0px 0px 88px -14px rgba(0, 0, 0, 0.25);
@@ -24,8 +26,8 @@ nav #nav-check {
 
 .logo, .logo-white{
     float: left;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     margin: auto 0;
     text-align: center;
     /* helps center the logo */
@@ -42,8 +44,7 @@ nav > .nav-links > a{
     color: #868686;
     font-size: 17px;
     padding: 20px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
     display: inline-block;
     transition: color .3s linear;
 }
@@ -66,10 +67,6 @@ color: black;
     src: url(CircularStd-Bold.ttf);
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}  
-
 
 body{
     scrollbar-width: none;
@@ -77,6 +74,8 @@ body{
     overflow-x: hidden;
     margin: auto;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 section{
@@ -96,7 +95,7 @@ h1, h2, h3{
 }
 
 p{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 a{
@@ -106,6 +105,13 @@ a{
 
 a:visited{
     color: #7988FD;
+}
+
+#project-preview {
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    height: 100%;
 }
 
 video{
@@ -154,8 +160,8 @@ section{
     margin-bottom: 100px;
 }
 
-.banner{    overflow-x: hidden;
-
+.banner{    
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,6 +185,15 @@ section{
     align-items: center;
 }
 
+/* #t{
+    position: relative;
+} */
+
+
+body::-webkit-scrollbar {
+    display: none;
+}  
+
 #title{  
     /* remove this line for the right-side circle to overflow */
     position: relative;
@@ -195,7 +210,8 @@ section{
     overflow-y: hidden;
 }
 
-#title-wrapper{
+
+#title-content-wrapper{
     max-width: 80%;
     display: flex;
     justify-content: space-around;
@@ -221,11 +237,18 @@ section{
 
 #title-details{
     color: #595959;
-    max-width: 500px;
+    max-width: 400px;
 
     display: flex;
     flex-direction: row;    
+    justify-content: space-between;
+
+    gap: 100px;
 }
+/* 
+#title-role{
+    width: 150px;
+} */
 
 #title-image{
     z-index: 2;
@@ -252,12 +275,6 @@ section{
     height: 369px;
     left: -150px;
     top: -200px;
-}
-
-#project-preview {
-    z-index: 3;
-    width: 80%;
-    max-width: 1400px;
 }
 
 /* CTA Button */
@@ -302,7 +319,12 @@ section{
         max-height: 40%;
     }
 
-    #title-wrapper{
+    #project-preview{
+        max-height: 40%;
+        width: auto;
+    }
+
+    #title-content-wrapper{
         gap: 50px;
     }
     body, html{
@@ -313,12 +335,23 @@ section{
     
 }
 
+/* Sorcery that makes 100% of the screen size on ALL window sizes */
+/* HEIGHT is less than 900 */
+@media only screen and (max-height: 900px) {
+    #title{
+        height: 100%;
+        padding: 100px 0px;
+    }
+}
 
-
-
+/* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
     #title, #title-details{
         flex-direction: column;
+    }
+
+    #title-details{
+        gap: 0px;
     }
 
     #title-content{
@@ -356,8 +389,6 @@ section{
     img{
         width: 100%;
     }
-
-
 }
 
 /* Navbar */
@@ -388,7 +419,7 @@ section{
     /* 3 squiggle bar */
     nav #nav-button label {
         display: inline-block;
-        padding: 35px;
+        padding: 30px;
         transition: all 0.3s ease-in;
     }
 

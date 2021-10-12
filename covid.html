@@ -6,6 +6,7 @@
         <title>Find My COVID Test Process</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="covid.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
         <!-- Animated On Scroll Library -->
@@ -42,42 +43,40 @@
             </div>
         </nav>
 
-        <div id = "t"> 
-            <div id = "title">
-                <div id = "title-content-wrapper">
-                    <div id = "title-content" data-aos="fade-right" 
-                    data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
-                        <h1>Find My <br> COVID Test</h1>
-                        
-                        <p>Find My COVID Test improves the accessibility of finding a COVID-19 testing center 
-                            in California by allowing patients to filter testing locations based on their preferences for distance, insurance coverage, 
-                            testing method, fee, and doctor's referral. </p>
-                        
-                        <div id = "title-details"> 
-                            <div id = "title-role">
-                                <h3>Role:</h3>
-                                <p>Lead UX Designer, Lead UX Developer, Branding</p>
-                            </div>
-                            
-                            <div id = "title-duration">
-                                <h3>Duration:</h3>
-                                <p>6 Weeks</p>
-                            </div>
-                        </div>
-
-                        <a href = "https://findmycovidtest.com"  target="_blank" id = "button">Launch Site</a>
-                    </div>
+        <div id = "title">
+            <div id = "title-content-wrapper">
+                <div id = "title-content" data-aos="fade-right" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                    <h1>Find My <br> COVID Test</h1>
                     
-                    <img src = "img/covid/websiteMockup.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
-                    data-aos-mirror="true" data-aos-duration="1250">
+                    <p>Find My COVID Test improves the accessibility of finding a COVID-19 testing center 
+                        in California by allowing patients to filter testing locations based on their preferences for distance, insurance coverage, 
+                        testing method, fee, and doctor's referral. </p>
+                    
+                    <div id = "title-details"> 
+                        <div id = "title-role">
+                            <h3>Role:</h3>
+                            <p>Lead UI/UX Designer, Lead Developer, Branding</p>
+                        </div>
+                        
+                        <div id = "title-duration">
+                            <h3>Duration:</h3>
+                            <p>6 Weeks</p>
+                        </div>
+                    </div>
+
+                    <a href = "https://findmycovidtest.com"  target="_blank" id = "button">Launch Site</a>
                 </div>
-
-                <div class = "circle" id = "big-circle"  data-aos="fade-left" 
-                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
-
-                <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
-                data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
+                
+                <img src = "img/covid/websiteMockup.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
+                data-aos-mirror="true" data-aos-duration="1250">
             </div>
+
+            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
+
+            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
         </div>
 
         <!-- Preview Image -->
@@ -106,9 +105,18 @@
                     From this survey, I found that on average it took users approximately 16 minutes to find a testing center and
                      register for an appointment.</p>
 
+                    <p>
+                    Additionally, the most difficult parts of the process were:
+                    <ol>
+                        <li>finding the testing registration website</li>
+                        <li>finding a nearby testing center</li>
+                        <li>needing a doctor’s referral</li>
+                    </ol>
+
+                    <p>Using this infromation, I came up with the research question:</p>
                     <p class = "callout">
-                    Additionally, the most difficult part of the process was finding the testing registration website, 
-                    finding a nearby testing center, and needing a doctor’s referral. </p>
+                        "How can I make finding a COVID-19 test more accessible?"
+                    </p>
                 </div>
             </section>
 
@@ -123,18 +131,19 @@
                     I found that adults of any age with pre-existing health conditions such as asthma, COPD, obesity, 
                     liver disease, or smoke have a higher risk of contracting COVID-19. For these reasons, my target audience was:</p>
                     <ul>
-                        <li>Age: 30-50 Year old</li>
+                        <li>Age: 30-50 Years old</li>
                         <li>Gender: Male/Female</li>
                         <li>High risk to COVID-19</li>
                         <li>No insurance</li>
                         <li>Has car</li>
                         <li>Not tech savvy</li>
                     </ul>
-                    <p class = "callout"><i>Kelly is a 40 year old woman from San Francisco, California who works as a receptionist at an elementary school. 
-                    Kelly does not have strong internet browsing knowledge and relies on her brother in Sacramento, California to surf the internet. 
-                    Kelly also suffers from COPD, obesity, and does not have insurance. Kelly was recently in contact with someone 
-                    who was confirmed with COVID-19 and must get tested. Kelly has a car, 
-                    but is not too familiar driving outside of the city of San Francisco.</i></p>
+                    <p class = "callout"><i>Kelly is a 40 year old woman from San Francisco, California who works as 
+                        a receptionist at an elementary school. She does not have strong internet browsing knowledge and 
+                        relies on her brother to help her use the internet. Additionally, Kelly also suffers from COPD, 
+                        and does not have insurance. Kelly was recently in contact with someone 
+                        confirmed to have COVID-19 and must get tested. Although she has a car, 
+                        she isn't familiar driving outside of her local area.</i></p>
                 </div>
             </section>
         

@@ -1,0 +1,381 @@
+@font-face {
+    font-family: CircularStd-Book;
+    src: url(CircularStd-Book.ttf);
+}
+
+  @font-face {
+    font-family: CircularStd-Bold;
+    src: url(CircularStd-Bold.ttf);
+}
+
+
+body{
+    scrollbar-width: none;
+    background-color: white;
+    overflow-x: hidden;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+h1{
+    font-size: 64px;
+}
+
+
+h1, h2, h3{
+    font-family: CircularStd-Bold;
+}
+
+p{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #1dd05d;
+}
+
+a:visited{
+    color: #1dd05d;
+}
+
+#project-preview {
+    display: flex;
+    align-items: center;
+    max-height: 800px;
+    height: 100%;
+}
+
+video{
+    max-height: 1000px;
+    height: 100%;
+}
+
+.video-wrapper{
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    margin-top:20px;
+    width: 100%;
+    /* max-width:  */
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.right div img {
+    /* border: solid 2px red; */
+    /* padding: 20px; */
+    background-color: #F1F3F4;
+    max-width: 670px;
+}
+
+.left{
+    margin-right: 30px;
+    width: 200px;
+}
+
+.right{
+    width: 670px;
+} 
+
+.right > .left{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right > div:not(:last-child){
+    margin-bottom: 100px;
+}
+
+.banner{    
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.callout{
+    font-size: 24px;
+    color: #FFFFFF;
+    background-color: #1dd05d;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.section-image{
+    background-color: #F1F3F4;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}  
+
+#title{  
+    /* remove this line for the right-side circle to overflow */
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px blue; */
+
+    height: 100vh;
+    width: 100%;
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+#title-content-wrapper{
+    max-width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+#title h1{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+#title-content{
+    z-index: 3;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /* Responsive title text */
+    width: 100%;
+    max-width: 800px;
+}
+
+#title-details{
+    color: #595959;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+
+    gap: 100px;
+}
+/* 
+#title-role{
+    width: 150px;
+} */
+
+#title-image{
+    z-index: 2;
+    max-width: 50%;
+}
+
+/* Circles */
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background: #1dd05d;
+    box-shadow: 0px 0px 100px #1dd05d;
+}
+
+#big-circle{
+    margin: auto;
+    right: -700px;
+    width: 1568px;
+    height: 1568px;
+}
+
+#top-left-circle{
+    width: 369px;
+    height: 369px;
+    left: -150px;
+    top: -200px;
+}
+
+/* CTA Button */
+#button{
+    font-family: CircularStd-Book;
+    margin-top: 18px;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    border: solid 2px black;
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+#button:hover{
+    background-color: white;
+    color: black;
+}
+
+.on-top{
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1440px) {
+    #title-content{
+        width: 35%;
+    }
+
+    #big-circle{
+        right:-1000px;
+    }
+    
+    #title-role{
+        width: 200px;
+    }
+
+    video{
+        max-height: 40%;
+    }
+
+    #project-preview{
+        max-height: 40%;
+        width: auto;
+    }
+
+    #title-content-wrapper{
+        gap: 50px;
+    }
+    body, html{
+        width:100%;
+        overflow-x: hidden;
+        scrollbar-width: none;
+    }
+    
+}
+
+/* Sorcery that makes 100% of the screen size on ALL window sizes */
+/* HEIGHT is less than 900 */
+@media only screen and (max-height: 900px) {
+    #title{
+        height: 100%;
+        padding: 100px 0px;
+    }
+}
+
+/* WIDTH is less than 900 */
+@media only screen and (max-width: 900px) {
+    #title, #title-details{
+        flex-direction: column;
+    }
+
+    #title-details{
+        gap: 0px;
+    }
+
+    #title-content{
+        max-width: 100%;
+        width: 400px;
+    }
+
+    #big-circle{
+        display: none;
+    }
+
+    #title-image {
+        display: none;
+    }
+
+    .section-image{
+        /* display: none; */
+        height: 60vh;
+    }
+
+    section{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .right{
+        width: 400px;
+    }
+
+    .left{
+        margin-right: 0px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 375px) {
+    #title{
+        height: 100%;
+        margin-bottom: 10%;
+    }
+
+    #title img{
+        max-width: 300px;
+    }
+    
+    #title-content{
+        margin:auto;
+        width: 300px;
+    }
+
+    #title-content h1{
+        margin-top: 45%;
+        font-size: 48px;
+    }
+
+    .callout{
+        font-size: 18px;
+    }
+    .content-wrapper{
+        width: 100%;
+    }
+
+    .right{
+        width: 300px;
+        margin: auto;
+    }
+
+    .left{
+        width: 300px;
+        margin: auto;
+    }
+
+    .section-image{
+        margin-bottom: 50px;
+    }
+}

@@ -3,7 +3,7 @@
     src: url(CircularStd-Book.ttf);
 }
 
-  @font-face {
+@font-face {
     font-family: CircularStd-Bold;
     src: url(CircularStd-Bold.ttf);
 }
@@ -135,10 +135,10 @@ section{
     justify-content: center;
     align-items: center;
 }
-
+/* 
 body::-webkit-scrollbar {
     display: none;
-}  
+}   */
 
 #title{  
     /* remove this line for the right-side circle to overflow */
@@ -182,19 +182,11 @@ body::-webkit-scrollbar {
 }
 
 #title-details{
-    color: #595959;
-    max-width: 400px;
-
     display: flex;
-    flex-direction: row;    
+    flex-direction: column;    
     justify-content: space-between;
-
-    gap: 100px;
+    flex-wrap: wrap;
 }
-/* 
-#title-role{
-    width: 150px;
-} */
 
 #title-image{
     z-index: 2;
@@ -220,7 +212,7 @@ body::-webkit-scrollbar {
     width: 369px;
     height: 369px;
     left: -150px;
-    top: -200px;
+    top: -150px;
 }
 
 /* CTA Button */
@@ -249,18 +241,11 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 1440px) {
-    #title-content{
-        width: 35%;
-    }
 
     #big-circle{
         right:-1000px;
     }
     
-    #title-role{
-        width: 200px;
-    }
-
     video{
         max-height: 40%;
     }
@@ -273,6 +258,7 @@ body::-webkit-scrollbar {
     #title-content-wrapper{
         gap: 50px;
     }
+    
     body, html{
         width:100%;
         overflow-x: hidden;
@@ -294,18 +280,6 @@ body::-webkit-scrollbar {
 @media only screen and (max-width: 900px) {
     video{
         width: 300px;
-    }
-    #title, #title-details{
-        flex-direction: column;
-    }
-
-    #title-details{
-        gap: 0px;
-    }
-
-    #title-content{
-        max-width: 100%;
-        width: 400px;
     }
 
     #big-circle{
@@ -341,7 +315,7 @@ body::-webkit-scrollbar {
 }
 
 /* Phones */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
     #title{
         height: 100%;
         margin-bottom: 10%;
@@ -353,7 +327,14 @@ body::-webkit-scrollbar {
     
     #title-content{
         margin:auto;
-        width: 300px;
+        max-width: 300px;
+        height: 100%;
+    }
+
+    #title-details{
+        width: 100%;
+        height: 100%;
+
     }
 
     #title-content h1{

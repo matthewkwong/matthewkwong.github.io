@@ -1,3 +1,8 @@
+html, body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+  
 a{
     text-decoration: none;
     color: #1dd05d;
@@ -17,9 +22,32 @@ a:visited{
     box-shadow: 0px 0px 100px #1dd05d;
 }
 
+#title-content-wrapper{
+    gap:10%;
+}
+
+#project-preview{
+    display: none;
+}
+
+.section-image > video{
+    width: 80%;
+}
+
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
-    video{
-        width: 300px;
+    .section-image > video{
+        display: none;
+    }
+    #project-preview{
+        display: block;
+        max-height: 60%;
+
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    #title-content {
+        width: 100%;
     }
 }

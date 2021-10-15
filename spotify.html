@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="case-study.css">
         <link rel="stylesheet" href="spotify.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
         <!-- Animated On Scroll Library -->
@@ -68,7 +69,7 @@
                     <a href = "https://www.matthewkwong.com/spotify-rooms/"  target="_blank" id = "button">Launch Site</a>
                 </div>
                 
-                <img src = "img/covid/websiteMockup.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
+                <img src = "img/rooms/leave2.png" id = "title-image" alt = "Website Mockup"  data-aos="fade-up" 
                 data-aos-mirror="true" data-aos-duration="1250">
             </div>
 
@@ -80,10 +81,18 @@
         </div>
 
         <!-- Preview Image -->
-        <section class = "section-image" data-aos="fade-up" 
+        <!-- <section class = "section-image" data-aos="fade-up" 
         data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-            <img src = "img/covid/websiteMockup.png" id = "project-preview">
+            <img src = "img/rooms/leave2.png" id = "project-preview" alt = "Spotify Rooms Ad">
         </section>
+ -->
+
+        <section class = "section-image" data-aos="fade-up">
+            <video autoplay muted loop>
+                <source src="img/rooms/banner.mp4" type="video/mp4">
+                Your browser does not support videos
+            </video>
+        </section>   
 
 
         <div class = "content-wrapper">
@@ -116,24 +125,23 @@
                     <p>While creating Spotify Rooms, I kept in mind my target audience of 18-20 year olds and existing Spotify users.</p>
                     <ul>
                         <li>Age: 18-35 Years old</li>
-                        <li>Gender: Male/Female</li>
                         <li>Listens to music with friends</li>
                         <li>Listens to Spotify in the car</li>
                     </ul>
 
-                    <p>Using this information, I created the Persona of: Jean Wong</p>
-                    <p class = "callout"><i>Jean is a 19 year old college student who considers himself to be an avid Spotify user.
-                        He typically listens to music with his friends in group settings- whether it's a party or in the car.
-                        When with his friends, he is the driver of his friend group and has trouble 
-                        concentrating because his passengers argue about who gets to choose the music. Jean wishes that there
-                        was a better solution to improve this listening experience.<i></i>
-                    </i></p>
+                    <p>Using this information, I created the Persona of: Samantha Lee</p>
+                    <p class = "callout"><i>Samantha is a 19 year old college student who considers herself to be 
+                        an avid Spotify user. She typically listens to music with her friends in group settings- 
+                        whether it's a party or in the car. She is typically the driver of her friend group and has 
+                        trouble concentrating because her friends argue about who gets to choose the music. 
+                        Samantha wishes that there was a better solution to improve this listening experience.</i>
+                    </p>
                 </div>
             </section>
         
             <!-- Persona -->
             <section class="banner" data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
-                <img src = "img/covid/persona.png" width="900">
+                <img src = "img/rooms/persona.png" width="900">
             </section>
 
             <!-- <div class = "content-wrapper"> -->
@@ -155,39 +163,59 @@
                 <h2 class = "left">Sketches</h2>
     
                 <div class = "right">            
-                    <p>Using my pre-existing mobile prototype for reference, I went on my iPad and drew some quick sketches of what the desktop website might look like.
-                        Given more screen real estate, I came up with the idea to have a filtering menu on the left side of the page to allow users to quickly and easily 
-                        find a COVID testing center that met their personal needs.
-                    </p>
+                    <p>Using my reserach and conceptual idea, I began to draw quick sketches of potential solutions to this problem.
+                     I created 2 paths of using Spotify Rooms, one for drivers and another for passengers.</p>
                     <img src="img/rooms/sketches/sketch.jpg" alt="Desktop sketches" width="670">
                 </div>
             </section>
 
+            <!-- Low Fidelity -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2 class = "left">Low-Fidelity Concept</h2>
                 
                 <div class = "right">
-                    <img src="img/covid/desktop1.png" alt="Desktop Prototype 1" width="670">
-                    <p>Going into Figma, I made some changes from my sketches, adding a menu on the left that would show a list of COVID testing locations with 
-                        the location name, address, and criteria necessary for an appointment. Ultimately, I ruled against this design as it was too complicated and 
-                        made the application confusing.</p> 
+                    <p>Going into Sketch, I created a low-fidelity mockup based on my original sketches.</p> 
+                    <img src="img/rooms/low-fidelity.png" alt="Low Fidelity Mockups" width="670">
+
+                    <!-- <img src="img/rooms/driver.png" alt="Low Fidelity Mockup for Driver" width="670">
+                    <img src="img/rooms/passenger.png" alt="Low Fidelity Mockup for Driver" width="670"> -->
                 </div>
             </section>
 
+
+
+            <!-- User Feedback -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">User Feedback</h2>
+
+                <div class = "right">
+                    <p>After creating my low-fidelity wireframes, I conducted a very basic user test with some friends to get their input on 
+                        possible improvements to the user-flow and improvements. 
+                    </p>
+
+                    <p>Through user testing, I found that the user-flow I had created was simple and intuitive to use as it used familiar 
+                        interactions they were used to on pre-existing applications.
+                        Additionally, they liked the idea of being able to "vote to skip" songs.</p>
+
+                        <img src="img/rooms/vote-kick.png" alt="Low Fidelity Vote Kick" width="670">
+                </div>
+            </section>            
+
+
+            <!-- High Fidelity -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2 class = "left">High-Fidelity Concept</h2>
 
                 <div class = "right">
                     <p>After finalizing the basic wireframe design of the website I transformed these designs into high-fidelity mock-ups.</p> 
                     <!-- Desktop 3 -->
-                    <img src="img/covid/desktop1.png" alt="Desktop Prototype 1" width="670">
-
+                    <img src="img/rooms/high-fidelity.png" alt="Desktop Prototype 1" width="670">
             </section>
             
 
             <!-- High-Fidelity Banner -->
             <section class="banner" data-aos="fade-right" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
-                <img src = "img/covid/mobilePrototypeBanner.png" width="900">
+                <img src = "img/rooms/mockup-banner.png" width="900">
             </section>
 
             <!-- How It Works -->
@@ -195,7 +223,11 @@
                 <h2 class = "left">How It Works</h2>
 
                 <div class = "right">
-                    <p>Spotify Rooms has 4 main components to it.</p>
+                    <p>Once finalizing my high-fidelity wireframes, I imported the frames to Invision and created an interactive prototype.
+                        While wiring my prototype, I made sure to have fluid transitions that were identical to that of Spotify's mobile app.  
+                    </p>
+                    <p>To use Spotify Rooms, there are 4 main components:</p>
+                    
                     <!-- Host Menu -->
                     <h3 class = "left">Host Menu</h3>
                     <div class = "right">
@@ -205,7 +237,7 @@
                             Once created, a 4 digit join code will be created, allowing members to join the room.
                         </p>
 
-                        <div class = "video-wrapper">
+                        <div class = "video-wrapper" data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="300" style = "overflow-x: hidden;">
                             <video width="400" playsinline autoplay muted loop>
                                 <source src="img/rooms/create-room.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -219,9 +251,9 @@
                         <p>Once the host has created a new room, members must enter the 4 digit generated code to join. 
                         They can then add songs to the play queue by clicking the "Add Songs" button where they will
                         be introduced to the same song search menu they're familiar to in the Spotify application.</p>
-                        <div class = "video-wrapper">
+                        <div class = "video-wrapper" data-aos="fade-right" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="600" style = "overflow-x: hidden;">
                             <video width="400" playsinline autoplay muted loop>
-                                <source src="img/rooms/create-room.mp4" type="video/mp4">
+                                <source src="img/rooms/join-room.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
                             </video>
                         </div>
@@ -232,7 +264,7 @@
                     <h3 class = "left">Add Songs</h3>
                     <div class = "right">
                         <p>To add songs to the queue, I decided that I would keep the same functionality to add songs in playlists.</p>
-                        <div class = "video-wrapper">
+                        <div class = "video-wrapper" data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="600" style = "overflow-x: hidden;">
                             <video width="400" playsinline autoplay muted loop>
                                 <source src="img/rooms/add-songs.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -246,7 +278,7 @@
                         <p>By introducing a vote kicking functionality, unwanted songs will be removed with a 2/3 majority vote. 
                             This would ensure that only the best songs are being played, making the
                              listening experience great for all passengers.</p>
-                        <div class = "video-wrapper">
+                        <div class = "video-wrapper" data-aos="fade-right" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="600" style = "overflow-x: hidden;">
                             <video width="400" playsinline autoplay muted loop>
                                 <source src="img/rooms/vote.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -256,28 +288,8 @@
                 </div>
             </section>
 
-            <!-- User Feedback -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">User Feedback</h2>
-
-                <div class = "right">
-                    <p>Once finalizing the design and developing the application to Desktop Iteration 4, 
-                    I began to user test the prototype with 10 people ages 20-55 to ensure that the product was usable for all ages and demographics. </p>
-        
-                    <p>I received a lot of constructive feedback that helped polish and push Find My COVID Test to its final version. 
-                    
-                    For example:
-                    <ul>
-                        <li>Cost was rewritten to Fee and Test Type to Test Method. </li>
-                        <li>On page load, the filter buttons would be selected to Any, to clearly illustrate that no filters were applied</li>
-                        <li>Zoom-in and zoom-out buttons on the map for both mobile and desktop users. </li>
-                        <li>Testing center address would be clickable, linking the user directly to Google Maps where 
-                        they’d be able to find out how far a testing center was from their current location</li>
-                    </ul>
-                    </p>
-                </div>
-            </section>            
-
+            
+            <!-- Branding -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2 class = "left">Branding</h2>
                 
@@ -285,22 +297,25 @@
                     <p >While creating Spotify Rooms, I kept in mind the pre-existing design guidelines that Spotify uses.
                         It was important to stay consistent to the real Spotify app to create the sense of realism.</p> 
 
-                    <img src="img/covid/styleGuide.png" width = "670" alt="style guide">
+                    <img src="img/rooms/branding.png" width = "670" alt="style guide">
                 </div>
             </section>
 
-            <!-- Final Prototype -->
+
+            <!-- User Feedback -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Final Prototype</h2>
-                <div  class = "right">
-                    <p>Finally, after implementing the feedback I received and completed the wiring and animation transitions
-                        of the prototype, Spotify Rooms was complete. 
-                    </p>
+                <h2 class = "left">User Feedback</h2>
 
-                    <!-- Final Prototype Gif -->
-                    <img src="img/covid/finalPrototype.gif" alt="Final Prototype" width="670">
+                <div class = "right">
+                    <p>During user testing, I found that 3/3 people between the ages of 18-21 felt that Spotify Rooms 
+                        would improve collaborative listening in group settings.</p>
+
+                    <p>However, I did find that some people would want alternative ways of joining a room. As a possibility, I 
+                        tested a version using QR codes, but most users did not like that you would need to give camera access to 
+                        the application. 
+                    </p>
                 </div>
-            </section>
+            </section>            
 
 
             <!-- Interactive Prototype -->
@@ -350,13 +365,15 @@
                         of mine since 2015 as a sophomore in high school. As weeks passed, I soon received
                         feedback from the Spotify employees I had asked for feedback from.
                     </p>
+
+                    <img src = "img/rooms/ad.svg" alt = "Spotify Rooms Ad" width="670">
+
             
                     <p>In October 2019, I drove 2 hours to attend a Spotify internship recruitment panel
                         at the University of California, Berkeley. I had the opportunity to present and
                         demo my project with product managers at the company and pitch my idea and
                         prototype. This was a great learning experience and was a lot of fun getting feedback
                         and learning more about the company. </p>
-                        
                 </div>
             </section>
         </div>

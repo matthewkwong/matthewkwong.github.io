@@ -3,10 +3,11 @@
     src: url(CircularStd-Book.ttf);
 }
 
-  @font-face {
+@font-face {
     font-family: CircularStd-Bold;
     src: url(CircularStd-Bold.ttf);
 }
+
 html{
     overflow-x: initial !important;
 }
@@ -23,7 +24,11 @@ body > div{
     overflow-x: hidden;
 }
 
-.content-wrapper > section {
+.content-wrapper {
+    overflow-y: hidden;
+}
+
+.content-wrapper > section{
     overflow-y: hidden;
 }
 
@@ -72,21 +77,19 @@ video{
     background-color: #FAFAFA;
     display: flex;
     justify-content: center;
-    padding:20px;
+    padding: 20px;
 }
 
 .content-wrapper{
+    margin-top: 100px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 100px;
 
-    margin-top:20px;
-    width: 100%;
-    /* max-width:  */
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    /* border: solid 2px red;
+    box-sizing: border-box; */
 }
 
 .right div img {
@@ -144,10 +147,6 @@ section{
     align-items: center;
 }
 
-/* body::-webkit-scrollbar {
-    display: none;
-}   */
-
 #title{  
     /* remove this line for the right-side circle to overflow */
     position: relative;
@@ -155,7 +154,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: solid 2px blue; */
 
     height: 100vh;
     width: 100%;

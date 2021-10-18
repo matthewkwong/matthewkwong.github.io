@@ -148,15 +148,12 @@ a{
 
 
 .button{
-  /* position: absolute; */
   text-align: center;
   width: 220px;
-  height: 50px;
   color:black;
 
   border: black 2px solid;
 
-  /* background-color: #EBEBEB; */
   transition: 0.3s;
 }
 

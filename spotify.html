@@ -16,7 +16,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav>
@@ -69,7 +69,7 @@
         </div>
 
 
-        <section class = "section-image" data-aos="fade-up">
+        <section class = "section-image preview" data-aos="fade-up">
             <video autoplay muted loop>
                 <source src="img/rooms/banner.mp4" type="video/mp4">
                 Your browser does not support videos
@@ -117,26 +117,30 @@
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2 class = "left">Research</h2>
                 <div class = "right">
-                    <p>To learn more about other people’s experience listening to Spotify, I conducted 5 interviews with avid Spotify users ages 18-20.</p>
-
-                    <p class = "callout">
-                    "The hardest part about listening to music is when I'm in a group"</p>
+                    <p>To learn more about other people’s experience listening to Spotify, I conducted 5 interviews with avid Spotify users ages 18-21. 
+                        I chose to sample this age group because most college students listen to music through Spotify on a daily basis.
+                    </p>
+                   
+                    <h3>Questions</h3>
+                    <p>During the interviews, I asked participants questions regarding their experience using Spotify in group settings. 
+                         For example, how do you typically listen to music with your friends? Do you make a collaborative playlist? Do you pass one phone to 
+                         each person? Does one person control everything?</p>
+                    
+                    <h3>Results</h3>
+                    <p>After analyzing my interview notes, I found that most people disliked the music listening experience with their friends because it
+                        takes too long to create a listening queue or there's an unequal distribution of music liking due to one person being in charge.
+                    </p>
                 </div>
             </section>
 
             <!-- Persona -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Target Audience</h2>
+                <h2 class = "left">Target Audience / Persona</h2>
       
                 <div class = "right">
-                    <p>While creating Spotify Rooms, I kept in mind my target audience of 18-20 year olds and existing Spotify users.</p>
-                    <ul>
-                        <li>Age: 18-35 Years old</li>
-                        <li>Listens to music with friends</li>
-                        <li>Listens to Spotify in the car</li>
-                    </ul>
+                    <p>To encapsulate the people I interviewed, into one person, I created a persona of Samantha Lee. 
+                        This helped me focus on a target audience that generally fits this description.</p>
 
-                    <p>Using this information, I created the Persona of: Samantha Lee</p>
                     <p class = "callout"><i>Samantha is a 19 year old college student who considers herself to be 
                         an avid Spotify user. She typically listens to music with her friends in group settings- 
                         whether it's a party or in the car. She is typically the driver of her friend group and has 
@@ -156,8 +160,9 @@
                 <h2 class="left">Solution</h2>
                 
                 <div class="right">                    
-                    <p>After thinking about the main problem to this terrible music listening experience, 
-                        <b>I concluded that the problem was that only one person's music taste was being played.</b></p>
+                    <p>After thinking about the problems from my research, 
+                        <strong>I concluded that the main problem was that only 
+                            one person's music taste was being played.</strong></p>
 
                     <p> To solve this problem, I decided to make a prototype feature I would want introduced 
                         into the Spotify mobile application called Rooms. Rooms would allow Spotify users to 
@@ -170,9 +175,13 @@
                 <h2 class = "left">Sketches</h2>
     
                 <div class = "right">            
-                    <p>Using my reserach and conceptual idea, I began to draw quick sketches of potential solutions to this problem.
+                    <p>Using my research and conceptual idea, I began to draw quick sketches of potential solutions to this problem.
                      I created 2 paths of using Spotify Rooms, one for drivers and another for passengers.</p>
                     <img src="img/rooms/sketches/sketch.jpg" alt="Desktop sketches" width="670">
+
+                    <p>Additionally, I created a user flow of how the prototype would work</p>
+                    <img src="img/rooms/userflow.png" alt="user flow" width="670">
+
                 </div>
             </section>
 
@@ -181,32 +190,13 @@
                 <h2 class = "left">Low-Fidelity Concept</h2>
                 
                 <div class = "right">
-                    <p>Going into Sketch, I created a low-fidelity mockup based on my original sketches.</p> 
+                    <p>Going into Sketch, I created a low-fidelity mockup based on my original sketches and user flow diagram.</p> 
                     <img src="img/rooms/low-fidelity.png" alt="Low Fidelity Mockups" width="670">
 
                     <!-- <img src="img/rooms/driver.png" alt="Low Fidelity Mockup for Driver" width="670">
                     <img src="img/rooms/passenger.png" alt="Low Fidelity Mockup for Driver" width="670"> -->
                 </div>
             </section>
-
-
-
-            <!-- User Feedback -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">User Feedback</h2>
-
-                <div class = "right">
-                    <p>After creating my low-fidelity wireframes, I conducted a very basic user test with some friends to get their input on 
-                        possible improvements to the user-flow and improvements. 
-                    </p>
-
-                    <p>Through user testing, I found that the user-flow I had created was simple and intuitive to use as it used familiar 
-                        interactions they were used to on pre-existing applications.
-                        Additionally, they liked the idea of being able to "vote to skip" songs.</p>
-
-                        <img src="img/rooms/vote-kick.png" alt="Low Fidelity Vote Kick" width="670">
-                </div>
-            </section>            
 
 
             <!-- High Fidelity -->
@@ -326,7 +316,7 @@
 
 
             <!-- Interactive Prototype -->
-            <section class = "section-image" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">                
+            <section class = "section-image final-prototype" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">                
                 <iframe width="438" height="930" src="//invis.io/58SN7SVMX4N" frameborder="0"
                 allowfullscreen></iframe>
             </section>
@@ -336,8 +326,8 @@
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2 class = "left">Challenges</h2>
                 <div class = "right">
-                    <p>Building an entire user interface and experience by yourself is
-                        challenging. Some design challenges I faced include:</p>
+                    <p>Building an entire user interface and experience was challenging for me.
+                         Some design challenges I faced include:</p>
                       <ul>
                         <li>How can I create the easiest way for users to join a Room?</li>
                         <li>How can the Rooms feature be safe for drivers?</li>
@@ -348,15 +338,22 @@
 
             
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Takeaways / Reflection</h2>
+                <h2 class = "left">Next Steps + Conclusions</h2>
                 
                 <div class = "right">
-                    <p>This project was super motivating for me to increase my skills 
+                    <p>I would like to explore more potential solutions ways of creating the Room lobby or 
+                         ways of ensuring an evenly distributed number of songs selected between contributors.</p>
+
+                    <p>Additionally, I'm curious how the project would have been different if I had interviewed Apple Music or Tidal users
+                        instead of focussing on creating a Spotify based experience?</p>
+                
+                    <p>Overall, this project was super motivating for me to increase my skills 
                         as a designer and to learn more about the UI/UX field. 
-                        This was my first ever project focussing on the user interface 
+                        This was my first ever project focusing on the user interface 
                         and experience flow of an application. I am very happy with the 
                         work that I put in to this project and the solution I came up with to 
                         create a new way to share music at group events.</p>
+    
                 </div>
             </section>
 

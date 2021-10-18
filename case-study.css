@@ -283,7 +283,7 @@ section{
 
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
-    video{
+    video {
         width: 300px;
     }
 

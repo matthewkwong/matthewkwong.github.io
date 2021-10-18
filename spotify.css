@@ -41,12 +41,18 @@ a:visited{
 
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
-    .section-image > video{
+    .preview > video{
         display: none;
     }
     #project-preview{
         display: block;
         max-height: 60%;
 
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .final-prototype{
+        display: none;
     }
 }

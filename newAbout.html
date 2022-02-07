@@ -7,234 +7,12 @@
   <meta property="og:image" content="img/preview.png">
   <link rel="icon" type="image/png" href="img/logo.png">
 
+  <link rel="stylesheet" type="text/css" href="newStyle.css">
   <link rel="stylesheet" type="text/css" href="newNav.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <title>Matthew Kwong | About</title>
-
-  <style>
-
-    body{
-      overflow-x: hidden;
-      margin: auto;
-      font-family:"poppins";
-    }
-
-    h2 {
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 24px;
-    }
-
-    h3, li{
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 28px;
-      margin-bottom: -8px;
-    }
-    
-    a{
-      text-decoration: none;
-    }
-    
-    p{
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 28px;
-    }
-
-    ul {
-      padding-left: 0;
-      list-style: none;
-    }
-
-
-    #heading, #experience-values, #hobbies-polaroids{
-      width: 1040px;
-      margin: auto;
-      margin-bottom: 80px;
-
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-
-    #heading-content-wrapper{
-      width: 480px;
-      display: flex;
-      align-items: center;
-    
-      /* border: solid 2px red;
-      box-sizing:border-box; */
-    }
-
-    img{
-      max-width: 100%;
-      height: auto;
-    }
-
-    #name{
-      color:black;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 32px;
-    }
-    
-    /* Experience */
-    #experience-values #experience {
-      width: 520px;
-    }
-
-    #experience-values #experience .job-title {
-      margin: 24px 0px 0px 0px;
-    }
-
-
-    #experience-values #experience .job-title .company-name{
-      color: #18A0FB;
-    }
-
-    /* Values */
-    #experience-values #values{
-      width: 450px;
-    }
-    
-
-    /* Hobbies and Polaroids */
-    #hobbies-polaroids {
-      margin-top: 144px;
-      position: relative;
-
-      /* border: solid 2px purple;
-      box-sizing: border-box; */
-    }
-
-    /* Hobbies */
-    #hobbies-polaroids #hobbies{
-      width: 356px;
-    }
-
-    #hobbies-polaroids #hobbies ul li{
-      margin: 24px 0;   
-    }
-
-    /* Polaroids */
-    #hobbies-polaroids #polaroids{
-      z-index: 2;
-      position: absolute;
-      right: -359px;
-      top: -28px;
-
-      width: 100%;
-      height: auto;
-
-      /* border: solid 2px red;
-      box-sizing: border-box;  */
-    }
-
-    /* Footer */
-    footer{
-      z-index: 1;
-      background-color: #18A0FB;
-      height: 200px;
-      width: 100%;
-      color: white;
-    }
-
-     #footer-content {
-      display: flex;
-      flex-direction: column;
-      width: 1040px;
-      margin: auto;
-    }
-
-    footer a {
-      text-decoration: none;
-    }
-
-    footer #footer-content{
-      display: flex;
-      flex-direction: column;        
-      gap: 26px;
-    }
-
-    footer  #footer-content p{
-      margin-bottom: 0px;
-    }
-
-    footer #footer-content p:last-child {
-      text-align: center;
-      margin-top: 0px;
-    }
-
-    footer ul{
-      margin: 0px;
-    }
-
-    footer ul li{
-      display: inline-block;
-      list-style: none;
-      margin-left: 20px;
-      height: 20px;
-      width: 20px;
-    }
-
-    footer ul li:first-child{
-      margin-left: 0px;
-    }
-
-    footer #line{
-      margin: auto;
-      text-align: center;
-      background-color: white;
-      max-width: 1040px;
-      height: 1px;
-    }
-
-    @media screen and (max-width: 600px) {
-      #heading, #experience-values, #hobbies-polaroids{
-        flex-direction: column;
-        justify-content: center;
-        width: 300px;
-        gap: 80px;
-      }
-
-      #hobbies-polaroids{
-        margin-top: 0px;
-      }
-
-      #hobbies-polaroids #polaroids{
-        position: relative;
-        right: 0px;
-        top: 0px;
-      }
-
-      #heading-content-wrapper, 
-      #experience-values #experience, 
-      #experience-values #values, 
-      #hobbies-polaroids #hobbies, 
-      #profile-picture, 
-      footer #line{
-        width: 300px;
-      }
-
-      footer{
-        height: 220px;
-      }
-
-      footer #footer-content{
-        text-align: center;
-        width: 300px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -280,25 +58,32 @@
       <h2>Experience</h2>
       <!-- Savage -->
       <div class = "job-title">
-        <h3>UX Designer @ <span class = "company-name">The Savage Bureau</span></h3>
+        <h3>UX Designer @ <a href = "https://www.savagebureau.com/">
+          <span class = "company-name">The Savage Bureau</span></a></h3>
         <p>October 2021 - Present</p>
       </div>
 
       <!-- Fathom -->
       <div class = "job-title">
-        <h3>UX Design Intern @ <span class = "company-name">Fathom</span></h3>
+        <h3>UX Design Intern @ <a href = "https://fathom.company/">
+          <span class = "company-name">Fathom</span></a>
+        </h3>
         <p>March 2021 - July 2021</p>
       </div>
 
       <!-- PlayTest -->
       <div class = "job-title">
-        <h3>Proudct Designer @ <span class = "company-name">PlayTest</span></h3>
+        <h3>Proudct Designer @ 
+          <span class = "company-name">PlayTest</span>
+        </h3>
         <p>March 2021 - June 2021</p>
       </div>
 
       <!-- Find My COVID Test -->
       <div class = "job-title">
-        <h3>Founder @ <span class = "company-name">Find My COVID Test</span></h3>
+        <h3>Founder @ <a href = "https://findmycovidtest.com/">
+          <span class = "company-name">Find My COVID Test</span></a>
+        </h3>
         <p>July 2020 - June 2021</p>
       </div>
 

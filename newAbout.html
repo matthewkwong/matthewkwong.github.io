@@ -7,7 +7,7 @@
   <meta property="og:image" content="img/preview.png">
   <link rel="icon" type="image/png" href="img/logo.png">
 
-  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" type="text/css" href="newNav.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
@@ -36,7 +36,11 @@
       line-height: 28px;
       margin-bottom: -8px;
     }
-
+    
+    a{
+      text-decoration: none;
+    }
+    
     p{
       font-style: normal;
       font-weight: normal;
@@ -207,7 +211,6 @@
       }
 
       #hobbies-polaroids #polaroids{
-        /* z-index: 2; */
         position: relative;
         right: 0px;
         top: 0px;
@@ -235,14 +238,35 @@
 </head>
 
 <body>
+  <nav>
+      <!-- MK Logo -->
+      <img src = "img/logo.png" height = "60" width = "60" id = "logo">
+    
+      <!-- Nav links -->
+      <ul id = "nav-links">
+
+      <!-- Checkbox hack for mobile -->
+      <input type = "checkbox" id = "checkbox_toggle" />
+      <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+
+      <!-- Nav menues -->
+        <div id = "menu">
+          <li><a href="index.html"  class = "active-nav">Work</a></li>
+          <li><a href="newAbout.html" style = "color: #18A0FB; font-weight: 600;">About</a></li>
+          <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" target="_blank">Resume</a></li>
+        </div>
+      </ul>
+  </nav>
+
   <section id = "heading">
     <div id = "heading-content-wrapper">
       <div>
         <p id= "name">Hi, I'm Matthew!</p>
         <p>I’m a Product Designer focused on creating visual, user-centric designs that improve the world.</p>
-        <p>I’ve always had a passion for technology, but it wasn’t until my first coding class in high-school that I found a passion for design. 
-          Progressively developing my own websites taught me both visual design and how to code. This newfound love of connecting design and 
-          development together is how I discovered UI/UX Design. </p>
+        <p>I’ve always had a passion for technology, but it wasn’t until my first web-development class in 
+          high-school that I found a passion for design. Falling in love with creating websites, 
+          taught me both visual design and web development skills. This newfound intersection of 
+          design and development together is how I discovered UI/UX Design.</p>
       </div>
     </div>
   

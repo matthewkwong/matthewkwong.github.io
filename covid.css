@@ -20,3 +20,9 @@ a:visited{
 .preview > video{
     max-width: 1400px;
 }
+
+/* Sets the COVID Test image larger to fill the title screen ~100vh */
+#title-image {
+    padding: 100px 0;
+    /* border: solid 2px orange; */
+}

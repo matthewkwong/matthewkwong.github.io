@@ -9,6 +9,9 @@ nav {
     /* border-bottom: solid 1px #B3B3B3; */
     box-sizing: border-box;
     margin-bottom: 80px;
+
+    top: 0;
+    position: sticky;
 }
 
 nav li{

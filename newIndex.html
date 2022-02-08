@@ -25,16 +25,20 @@
       <ul id = "nav-links">
 
       <!-- Checkbox hack for mobile -->
-      <input type = "checkbox" id = "checkbox_toggle" />
+      <input type = "checkbox" id = "checkbox_toggle" onclick="validate()" />
       <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+      <label for = "checkbox_toggle" id = "close">&#215;</label>
 
-      <!-- Nav menues -->
-        <div id = "menu">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="newAbout.html" class = "active-nav">About</a></li>
-          <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" target="_blank">Resume</a></li>
+
+        <!-- Nav menues -->
+        <div id = "menu-wrapper">
+            <div id = "menu">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="newAbout.html" class = "active-nav">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" target="_blank">Resume</a></li>
+            </div>
         </div>
-      </ul>
+    </ul>
   </nav>
 
   <section id = "heading">
@@ -138,4 +142,20 @@
   <script src="script.js"></script>
 </body>
 
+
+<!-- <script>
+    // function validate() {
+        $(document).ready(function () {
+
+            if($(window).width() <= 600){            
+                if($("#checkbox_toggle").prop('checked') == true){
+                    $('#menu-wrapper').addClass('show');
+                }
+                else{
+                // $("menu-wrapper").fadeOut();
+                }
+            }
+        });
+    // }
+</script> -->
 </html>

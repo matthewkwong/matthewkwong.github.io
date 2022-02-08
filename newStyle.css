@@ -23,6 +23,10 @@ a{
     text-decoration: none;
 }
 
+a:visited{
+    text-decoration: none;
+}
+
 p{
     font-style: normal;
     font-weight: normal;
@@ -40,7 +44,8 @@ img{
     height: auto;
 }
 
-#heading, #experience-values, #hobbies-polaroids{
+/* Generic headers for both Home and About */
+#heading, #case-studies-wrapper, #experience-values, #hobbies-polaroids{
     width: 1040px;
     margin: auto;
     margin-bottom: 80px;
@@ -48,6 +53,10 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#heading{
+    margin-top:80px;
 }
 
 #heading-content-wrapper{
@@ -59,6 +68,18 @@ img{
     box-sizing:border-box; */
 }
 
+#home-name p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+#home-name a{
+    color: black;
+    font-weight: 600;
+}
+
 #name{
     color:black;
     font-style: normal;
@@ -66,6 +87,60 @@ img{
     font-size: 36px;
     line-height: 32px;
 }
+
+#case-studies-wrapper{
+    flex-direction: column;
+}
+
+
+#case-studies-wrapper #case-studies{
+    width: 1040px;
+    margin: auto;
+    margin-bottom: 80px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    /* border: solid 2px red; */
+    /* box-sizing: border-box; */
+}
+
+
+#case-studies-wrapper #case-studies .case-study-card{
+    width: 480px;
+    text-align: center;
+}
+
+#case-studies-wrapper #case-studies .case-study-card img{
+    transition: all .3s ease-out;
+}
+
+#case-studies-wrapper #case-studies .case-study-card img:hover{
+    transform: scale(0.96);
+
+}
+
+
+#case-studies-wrapper #case-studies .case-study-card:nth-child(even) {
+    margin-top: 64px;
+
+    /* border: solid 2px blue; */
+    /* box-sizing: border-box; */
+}   
+
+
+#case-studies-wrapper #case-studies .case-study-card p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #B2B2B2;
+}
+
+
+/* About page */
 
 /* Experience */
 #experience-values #experience {
@@ -197,6 +272,8 @@ footer #line{
     }
 
     #heading-content-wrapper, 
+    #case-studies-wrapper,
+    #case-studies-wrapper #case-studies,
     #experience-values #experience, 
     #experience-values #values, 
     #hobbies-polaroids #hobbies, 

@@ -6,7 +6,7 @@
         <title>Matthew Kwong | Spotify Rooms</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" href="nav.css"> -->
+        <link rel="stylesheet" href="newNav.css">
         <link rel="stylesheet" href="case-study.css">
         <link rel="stylesheet" href="spotify.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
@@ -20,28 +20,23 @@
     </head>
     <body>
         <nav>
-            <input type="checkbox" id="nav-check">
-        
-            <a href="index.html">
-                <img src="img/logo.png" height="10" alt="logo" class="logo">
-            </a>
-        
-            <div id="nav-button">
-                <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        
-            <div class = "nav-links">
-                <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
-        
-                <a href="#portfolio" id="portfolio-tab" class = "active">portfolio</a>
-                <a href="about.html" >about</a>
-                <a
-                href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
-            </div>
+            <!-- MK Logo -->
+            <img src = "img/logo.png" height = "60" width = "60" id = "logo">
+          
+            <!-- Nav links -->
+            <ul id = "nav-links">
+      
+            <!-- Checkbox hack for mobile -->
+            <input type = "checkbox" id = "checkbox_toggle" />
+            <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+      
+            <!-- Nav menues -->
+              <div id = "menu">
+                <li><a href="index.html">Work</a></li>
+                <li><a href="newAbout.html" class = "active-nav">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" target="_blank">Resume</a></li>
+              </div>
+            </ul>
         </nav>
 
         <div id = "title">

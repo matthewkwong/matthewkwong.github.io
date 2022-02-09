@@ -1,5 +1,8 @@
-body{
+html, body{
     overflow-x: hidden;
+}
+
+body{
     margin: auto;
     font-family: Poppins;
 }
@@ -44,28 +47,26 @@ img{
     height: auto;
 }
 
-/* Generic headers for both Home and About */
-#heading, #case-studies-wrapper, #experience-values, #hobbies-polaroids{
-    max-width: 1040px;
+
+#heading-wrapper, #experience-values, #hobbies-polaroids{
+    max-width: 1080px;
     margin: auto;
     margin-bottom: 80px;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     /* border: solid 2px red; */
 }
 
-#heading{
+#heading-wrapper{
     margin-top: 80px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
-#heading-content-wrapper{
+
+#heading{
     width: 480px;
     height: auto;
 
@@ -82,29 +83,27 @@ img{
     height: auto;
 
     /* Matches to 480px = 450px + 30px padding to match the case study pics */
-    padding: 0px 15px;
+    /* padding: 0px 15px; */
 }
 
 
-#heading #heading-content-wrapper #home-name {
+#heading-wrapper #heading #home-name {
     width: 480px;
 }
 
-#heading #heading-content-wrapper #home-name p{
+#heading-wrapper #heading #home-name p{
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 32px;
 }
 
-#heading #heading-content-wrapper #home-name a{
+#heading-wrapper #heading #home-name a{
     color: black;
     font-weight: 600;
 }
 
-
-
-#heading #heading-content-wrapper #home-name #about{
+#heading-wrapper #heading  #home-name #about{
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -114,7 +113,7 @@ img{
 
 
 
-#heading #heading-content-wrapper #name{
+#heading-wrapper #heading #name{
     color:black;
     font-style: normal;
     font-weight: 500;
@@ -122,28 +121,45 @@ img{
     line-height: 32px;
 }
 
-#case-studies-wrapper{
+/* #case-studies-wrapper{
     flex-direction: column;
-}
+} */
 
 
-#case-studies-wrapper #case-studies{
-    height: auto;
+/* #case-studies-wrapper #case-studies{ */
+    /* height: auto;
     max-width: 1040px;
+    margin: auto;
+    margin-bottom: 80px; */
+/* 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    /* Allows for content to be centered */
+    /* justify-content: space-around; */
+    
+    /* border: solid 2px red; */
+    /* box-sizing: border-box; */
+/* } */
+
+
+
+/* Generic headers for both Home and About */
+#case-studies{
+    max-width: 1080px;
     margin: auto;
     margin-bottom: 80px;
 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    /* Allows for content to be centered */
     justify-content: space-around;
-    
-    /* border: solid 2px red; */
-    /* box-sizing: border-box; */
+
+    /* border: solid 2px blue; */
 }
 
-#case-studies-wrapper #case-studies .case-study-card{
+
+
+#case-studies .case-study-card{
     max-width: 480px;
     height: auto;
     width: 100%;
@@ -153,30 +169,28 @@ img{
     /* box-sizing: border-box; */
 }
 
-
-
-#case-studies-wrapper #case-studies .case-study-card img{
+#case-studies .case-study-card img{
     transition: all .3s ease-out;
 }
 
-#case-studies-wrapper #case-studies .case-study-card img:hover{
+#case-studies .case-study-card img:hover{
     transform: scale(0.96);
 }
 
 
-#case-studies-wrapper #case-studies .case-study-card:nth-child(even) {
+ #case-studies .case-study-card:nth-child(even) {
     margin-top: 128px;
 
     /* border: solid 2px blue; */
     /* box-sizing: border-box; */
 }   
 
-#case-studies-wrapper #case-studies .case-study-card a img{
+ #case-studies .case-study-card a img{
     max-width: 100%;
     height: auto;
 }
 
-#case-studies-wrapper #case-studies .case-study-card p{
+ #case-studies .case-study-card p{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -189,7 +203,7 @@ img{
 
 /* Experience */
 #experience-values #experience {
-    width: 520px;
+    width: 480px;
 }
 
 #experience-values #experience .job-title {
@@ -203,8 +217,10 @@ img{
 
 /* Values */
 #experience-values #values{
-    width: 450px;
+    width: 480px;
 }
+
+
 
 
 /* Hobbies and Polaroids */
@@ -218,7 +234,8 @@ img{
 
 /* Hobbies */
 #hobbies-polaroids #hobbies{
-    width: 356px;
+    z-index: 3;
+    width: 480px;
 }
 
 #hobbies-polaroids #hobbies ul li{
@@ -229,14 +246,20 @@ img{
 #hobbies-polaroids #polaroids{
     z-index: 2;
     position: absolute;
-    right: -359px;
-    top: -40px;
+    right: -400px;
+    top: -100px;
 
     width: 100%;
     height: auto;
 
     /* border: solid 2px red;
     box-sizing: border-box;  */
+}
+
+/* Allows for the polaroid effect to cut off and overflow properly :) */
+#hobbies-polaroids #invisible{
+    height: 1px; 
+    width: 480px;
 }
 
 /* Footer */
@@ -248,25 +271,24 @@ footer{
     color: white;
 }
 
-#footer-content {
-    display: flex;
-    flex-direction: column;
-    width: 1040px;
-    margin: auto;
-}
-
 footer a {
     text-decoration: none;
 }
 
-footer #footer-content{
+footer #footer-content {
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
+    max-width: 1080px;
+    margin: auto;
     gap: 26px;
 }
 
 footer  #footer-content p{
     margin-bottom: 0px;
+}
+
+footer  #footer-content p:first-child{
+    margin-top: 25px;
 }
 
 footer #footer-content p:last-child {
@@ -290,16 +312,19 @@ footer ul li:first-child{
     margin-left: 0px;
 }
 
-footer #line{
+#line{
     margin: auto;
     text-align: center;
     background-color: white;
-    max-width: 1040px;
+    
+    /* bc div within div */
+    max-width: 1080px;
+    width: 100%;
     height: 1px;
 }
 
 @media screen and (max-width: 600px) {
-    #heading, #experience-values, #hobbies-polaroids{
+    #heading-wrapper, #experience-values, #hobbies-polaroids{
         flex-direction: column;
         justify-content: center;
         width: 300px;
@@ -311,24 +336,36 @@ footer #line{
     }
 
     #hobbies-polaroids #polaroids{
-        position: relative;
+        /* position: relative; */
+        /* right: 0px; */
+        /* top: 0px; */
+
         right: 0px;
-        top: 0px;
+        top: 500px;
     }
 
-    #heading-content-wrapper, 
-    #case-studies-wrapper,
-    #case-studies-wrapper #case-studies,
+    #heading-wrapper,
+    #heading-wrapper #heading,
+     
+    #case-studies,
+    
+    #profile-picture, 
+
     #experience-values #experience, 
     #experience-values #values, 
-    #hobbies-polaroids #hobbies, 
-    #profile-picture, 
+    
+    #hobbies-polaroids, 
+    #hobbies-polaroids #hobbies,
+    
     footer #line{
         width: 300px;
     }
 
     footer{
         height: 220px;
+    
+        /* So polaroid image doesnt look off */
+        margin-top: 180px;
     }
 
     footer #footer-content{

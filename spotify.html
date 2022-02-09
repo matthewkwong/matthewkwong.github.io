@@ -6,7 +6,7 @@
         <title>Matthew Kwong | Spotify Rooms</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="newNav.css">
+        <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="case-study.css">
         <link rel="stylesheet" href="spotify.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> 
@@ -21,24 +21,31 @@
     <body>
         <nav>
             <!-- MK Logo -->
-            <img src = "img/logo.png" height = "60" width = "60" id = "logo" alt = "logo">
-          
+            <a href = "index.html">
+                <img src = "img/logo.png" height = "60" width = "60" id = "logo">
+            </a>
+    
             <!-- Nav links -->
             <ul id = "nav-links">
       
             <!-- Checkbox hack for mobile -->
-            <input type = "checkbox" id = "checkbox_toggle" />
+            <input type = "checkbox" id = "checkbox_toggle"/>
             <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
-            <!-- <label for = "checkbox_toggle" id = "hamburger"><img src = "img/hamburger.svg" alt = "hamburger menu">&#9776</label> -->
-      
+            <label for = "checkbox_toggle" id = "close">&#215;</label>
+    
             <!-- Nav menues -->
-              <div id = "menu">
-                <li><a href="index.html">work</a></li>
-                <li><a href="newAbout.html" class = "active-nav">about</a></li>
-                <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" target="_blank">resume</a></li>
-              </div>
-            </ul>
-        </nav>
+            <div id = "menu-wrapper">
+                <div id = "menu">
+                    <a href = "index.html">
+                        <img src = "img/logo-white.png" height = "60" width = "60" id = "logo-white">
+                    </a>
+                    <li><a href="index.html" class="middle">Work</a></li>
+                    <li><a href="newAbout.html" class = "active-nav middle" >About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
+                </div>
+            </div>
+        </ul>
+      </nav>
 
         <div id = "title">
             <div id = "title-content-wrapper">

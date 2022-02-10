@@ -18,6 +18,7 @@ footer #footer-content {
     max-width: 1080px;
     margin: auto;
     gap: 26px;
+    padding-left: 40px;
 }
 
 footer  #footer-content p{

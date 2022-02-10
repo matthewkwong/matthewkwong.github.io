@@ -19,6 +19,8 @@ a:visited{
 
 #title-content-wrapper{
     gap:10%;
+    /* Allows for the two items to breathe  */
+    width: 100%;
 }
 
 #project-preview{

@@ -1,0 +1,80 @@
+/* Footer */
+footer{
+    z-index: 1;
+    background-color: #18A0FB;
+    height: 200px;
+    width: 100%;
+    color: white;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer #footer-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: auto;
+    gap: 26px;
+}
+
+footer  #footer-content p{
+    margin-bottom: 0px;
+}
+
+footer  #footer-content p:first-child{
+    margin-top: 25px;
+}
+
+footer #footer-content p:last-child {
+    text-align: center;
+    margin-top: 0px;
+}
+
+footer ul{
+    padding-left: 0px;
+    margin: 0px;
+}
+
+footer ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+footer ul li:first-child{
+    margin-left: 0px;
+}
+
+#line{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    
+    /* bc div within div */
+    max-width: 1080px;
+    width: 100%;
+    height: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    footer #line{
+        width: 300px;
+    }
+
+    footer{
+        height: 220px;
+    
+        /* So polaroid image doesnt look off */
+        margin-top: 180px;
+    }
+
+    footer #footer-content{
+        text-align: center;
+        width: 300px;
+    }
+  }

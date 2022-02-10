@@ -10,14 +10,16 @@ nav {
     /* border-bottom: solid 1px #B3B3B3; */
     /* box-sizing: border-box; */
 
-    top: 0;
     position: sticky;
+    position: -webkit-sticky;
+
+    top: 0;
 }
 
 nav ul {
     padding-left: 0;
     list-style: none;    
-    padding: 40px;
+    padding-right: 40px;
 }
 
 nav li{
@@ -73,7 +75,7 @@ nav li{
 #menu-wrapper #menu {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
 }
 
 #menu-wrapper #menu li a{
@@ -85,9 +87,6 @@ nav li{
     border-radius: 5px;
 }
 
-#menu-wrapper #menu li {
-    padding: 5px 14px;
-}
 
 /* Checkbox hack */
 input[type=checkbox]{

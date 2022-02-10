@@ -78,13 +78,41 @@ img{
     /* box-sizing:border-box; */
 }
 
-#profile-picture{
-    max-width: 100%;
-    height: auto;
+
+.video-wrapper{
+    width: 480px;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    /* border: solid 2px orange; */
+
+}
+
+video{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    margin-top: -250px;
+    /* width: 960px !important; */
+
+    /* border: solid 2px red; */
+    
+
+
+
+    /* For Image */
+    /* max-width: 100%;
+    height: auto; */
 
     /* Matches to 480px = 450px + 30px padding to match the case study pics */
     /* padding: 0px 15px; */
 }
+
+
 
 
 #heading-wrapper #heading #home-name {
@@ -219,7 +247,6 @@ img{
 #experience-values #values{
     width: 480px;
 }
-
 
 
 

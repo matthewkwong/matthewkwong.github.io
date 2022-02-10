@@ -3,149 +3,197 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="img/preview.png">
   <link rel="icon" type="image/png" href="img/logo.png">
+
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="nav.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <title>Matthew Kwong | About</title>
-
-  <style>
-    a {
-      color: #2698EC;
-      font-weight: normal;
-    }
-
-    /* Specifically removes the max-width parameter from this page that is on each case study */
-    #container{
-      max-width: 2000px;
-      /* border:solid 2px red; */
-    } 
-
-    nav{
-      position: relative;
-    }
-    
-
-  </style>
 </head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165839058-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<style>
+  #heading, #case-studies-wrapper, #experience-values, #hobbies-polaroids{
+    justify-content: space-around;
+  }
+/*   
+  #hobbies-polaroids {
+    justify-content: space-between;
+  } */
 
-    gtag('config', 'UA-165839058-1');
-  </script> -->
+</style>
 
 <body>
-  <div id = "container">
-    <div id = "main">
-      
-      <nav id="navbar">
-        <!-- allows for the navbar to be collapsable in mobile -->
-        <input type="checkbox" id="nav-check">
+  <nav>
+    <!-- MK Logo -->
+    <a href = "index.html">
+        <img src = "img/logo.png" height = "60" width = "60" id = "logo">
+    </a>
 
-        <div id="nav-header">
-          <div id="name">
-            <a href="index.html">
-              <img src="img/logo.png" height="10" alt="logo" class="logo">
+    <!-- Nav links -->
+    <ul id = "nav-links">
+
+    <!-- Checkbox hack for mobile -->
+    <input type = "checkbox" id = "checkbox_toggle"/>
+    <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+    <label for = "checkbox_toggle" id = "close">&#215;</label>
+
+    <!-- Nav menues -->
+    <div id = "menu-wrapper">
+        <div id = "menu">
+            <a href = "index.html">
+                <img src = "img/logo-white.png" height = "60" width = "60" id = "logo-white">
             </a>
-          </div>
+            <li><a href="index.html" class="middle">Work</a></li>
+            <li><a href="about.html" class = "active-nav middle" >About</a></li>
+            <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
         </div>
+    </div>
+</ul>
+</nav>
 
-        <div id="nav-button">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-
-        <div class="nav-links">
-          <img src="img/logo-white.png" height="10" alt="logo" class="logo-white">
-
-          <a href="index.html" id="portfolio-tab">portfolio</a>
-          <a href="about.html" class="active">about</a>
-          <a
-            href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">contact</a>
-        </div>
-      </nav>
-
-      <div class="about-me-wrapper">
-
-        <!-- Profile picture on the right -->
-        <div class="about-me-profile">
-          <img src="img/profile2.jpg" alt="Profile picture of me" id="profile-picture">
-        </div>
-
-
-        <!-- About Me Text -->
-        <div class="about-me-text">
-          <section>
-            <h1>Hi, I'm Matthew! 👋 </h1>
-
-            <p>I recently graduated from the University of California, Davis with a Bachelor of Arts degree in Design, specializing in UI/UX Design.</p>
-
-            <p>Currently, I'm looking for full-time UI/UX and Product Design opportunities.</p>
-
-            <p>Most recently, I worked at <a href = "https://www.fathom.company/">Fathom</a>, a digital creative agency in Sacramento, California where
-              I did UX Design and user research for companies such as Aidin, Thrive Global, and celebrity chef, Arnold Myint.</p>
-
-
-            <p>I also created <a href = "https://findmycovidtest.com/">Find My COVID Test</a>, a website that improves the accessibility of finding a COVID-19 test 
-              based on your medical information and personal preferences.</p>
-
-
-            <p>As a personal value, my goal in life is to help build products that will help every day consumers with
-              their daily lives.</p>
-
-            <p>If you'd like to reach me or meet for boba, email me at
-              <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
-
-                &#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>
-              or add me on <a href="https://www.linkedin.com/in/matthewrkwong/">LinkedIn</a>.
-            </p>
-          </section>
-
-          <section>
-            <h2>Fun Facts</h2>
-            <ul>
-              <li>I love making stickers of my designs, and have a <a
-                  href="https://www.etsy.com/shop/KwongEnterpises">shop</a>
-              </li>
-              <li>I love creating practical inventions out of LEGO</li>
-            </ul>
-
-            <a target=”_blank” href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view?usp=sharing">
-              <div class="resume-button">
-                <p>Download My Resume</p>
-              </div>
-            </a>
-          </section>
-        </div>
+  <section id = "heading-wrapper">
+    <div id = "heading">
+      <div>
+        <p id= "name">Hi, I'm Matthew!</p>
+        <p>I’m a Product Designer focused on creating visual, user-centric designs that improve the world.</p>
+        <p style = "margin-top:24px;">I’ve always had a passion for technology, but it wasn’t until my first web-development class in 
+          high-school that I found a passion for design. Falling in love with creating websites, 
+          taught me both visual design and web development skills. This newfound intersection of 
+          design and development together is how I discovered UI/UX Design.</p>
       </div>
     </div>
-  </div>
-
-<footer id = "footer">
-  <p>100% designed and built from scratch</p>
-  <div id="icons">
-    <a href="https://www.instagram.com/kwongenterprises" target="_blank"><img src="img/footer/instagram.svg"
-        alt="instagram icon"></a>
-    <a href="https://www.github.com/matthewkwong" target="_blank"> <img src="img/footer/github.svg"
-        alt="github icon"></a>
-    <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank"><img src="img/footer/linkedin.svg"
-        alt="linkedin icon"></a>
-    <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
-      target="_blank"> <img src="img/footer/envelope.svg" alt="mail icon"></a>
-  </div>
-</footer>
+  
+    <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture"> 
+  </section>
 
 
+  <section id = "experience-values">
+
+    <div id = "experience">
+      <h2>Experience</h2>
+      <!-- Savage -->
+      <div class = "job-title">
+        <h3>UX Designer @ <a href = "https://www.savagebureau.com/">
+          <span class = "company-name">The Savage Bureau</span></a></h3>
+        <p>October 2021 - Present</p>
+      </div>
+
+      <!-- Fathom -->
+      <div class = "job-title">
+        <h3>UX Design Intern @ <a href = "https://fathom.company/">
+          <span class = "company-name">Fathom</span></a>
+        </h3>
+        <p>March 2021 - July 2021</p>
+      </div>
+
+      <!-- PlayTest -->
+      <div class = "job-title">
+        <h3>Proudct Designer @ 
+          <span class = "company-name">PlayTest</span>
+        </h3>
+        <p>March 2021 - June 2021</p>
+      </div>
+
+      <!-- Find My COVID Test -->
+      <div class = "job-title">
+        <h3>Founder @ <a href = "https://findmycovidtest.com/">
+          <span class = "company-name">Find My COVID Test</span></a>
+        </h3>
+        <p>July 2020 - June 2021</p>
+      </div>
+
+      <!-- UC Davis -->
+      <div class = "job-title">
+        <h3>UI/UX Design Tutor @ <span class = "company-name">UC Davis</span></h3>
+        <p>September 2020 - March 2021</p>
+      </div>
+    </div>
+
+    <div id = "values">
+      <h2>My Values</h2>
+      <!-- Compassion -->
+      <div class = "sub-value">
+        <h3>Compassion</h3>
+        <p>We’ve all been there before, where we feel lost or confused. Helping those around you can go along way, 
+          especially when taking the time to understand others perspectives.</p>
+      </div>  
+    
+      <!-- Learning -->
+      <div class = "sub-value">
+        <h3>Learning</h3>
+        <p>I’m a huge believer that you’ll often learn the most by doing.  Whether it be learning a new recipe from TikTok, 
+          or how to code to bring your designs to life, learn to love learning and seek new things to be taught.</p>
+      </div>  
+
+      <!-- Trying -->
+      <div class = "sub-value">
+        <h3>Trying // Failure is Okay</h3>
+        <p>It’s okay to fail, it’s part of learning and at least you tried. Whether that be trying a new food or new experience, 
+          get out of your comfort zone and experience new things. </p>
+      </div>  
+    </div>
+  </section>
+
+  <section id = "hobbies-polaroids">
+    <div id = "hobbies">
+      <h2>Hobbies / Interests</h2>
+      <ul>
+        <li>Building LEGO</li>
+        <li>Bringing designs to life with code</li>
+        <li>Designing new stickers for my shop</li>
+        <li>Snowboarding</li>
+        <li>Playing video games</li>
+        <li>Going to concerts</li>
+        <li>Skateboarding <span style = "font-size: 10px;">(plz teach me how to ollie)</span></li>
+      </ul>
+    </div>
+
+    <div id = "invisible"> </div>
+
+      <img src = "img/polaroids.png" height = "605" width = "972" id = "polaroids">
+
+  </section>
+
+  <footer>
+    <div id = "footer-content">
+      <p>Looking for more? Let's connect!</p>
+      
+      <ul>
+        <li>
+          <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
+          <img src = "img/footer/white/email.svg" alt = "Email" height = "20" width = "20">
+          </a>
+        </li>
+
+        <li>
+          <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank">
+            <img src = "img/footer/white/linkedin.svg" alt = "LinkedIn" height = "20" width = "20">
+          </a> 
+        </li>
+
+        <li>
+          <a href = "https://www.instagram.com/kwongenterprises/?hl=en" target="_blank">
+            <img src = "img/footer/white/instagram.svg" alt = "Instagram" height = "20" width = "20">
+          </a>
+        </li>
+
+        <li>
+          <a href=  "https://www.etsy.com/shop/KwongEnterprises" target="_blank">
+            <img src = "img/footer/white/etsy.svg" alt = "Etsy" height = "20" width = "20">
+          </a>
+        </li>
+      </ul>
+
+      <div id = "line"></div>      
+      
+
+      <p>Designed + Developed by Matthew Kwong • 2022</p>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 

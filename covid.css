@@ -17,10 +17,6 @@ a:visited{
     box-shadow: 0px 0px 100px #E63939;
 }
 
-.preview > video{
-    max-width: 1400px;
-}
-
 /* Sets the COVID Test image larger to fill the title screen ~100vh */
 #title-image {
     padding: 100px 0;

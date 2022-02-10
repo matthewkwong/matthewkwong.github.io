@@ -1,0 +1,47 @@
+a{
+    text-decoration: none;
+    color: #009edb;
+}
+
+a:visited{
+    color: #009edb;
+}
+
+.callout{
+    background-color: #009edb;
+}
+
+/* Circles */
+.circle{
+    background: #009edb;
+    box-shadow: 0px 0px 100px #009edb;
+}
+
+#title-content-wrapper{
+    gap:10%;
+}
+
+
+#project-preview{
+    width: auto;
+    max-height: 80%;
+}
+
+@media only screen and (max-width: 1440px){
+    #title-content {
+        width: 100%;
+    }
+}
+
+/* WIDTH is less than 900 */
+@media only screen and (max-width: 900px) {
+    .preview > video{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .final-prototype{
+        display: none;
+    }
+}

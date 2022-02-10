@@ -1,0 +1,78 @@
+
+a{
+    text-decoration: none;
+    color: #4949A4;
+}
+
+a:visited{
+    color: #4949A4;
+}
+
+.callout{
+    background-color: #373764;
+}
+
+/* Circles */
+.circle{
+    background: #373764;
+    box-shadow: 0px 0px 100px #373764;
+}
+
+#title-content-wrapper{
+    gap:10%;
+}
+
+.full-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 1080px;
+    width: 100%;
+    height: 10vh;
+    color: white;
+    background-color: #373764;
+}
+
+.full-screen h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+
+#project-preview {
+    max-height: 100% !important;
+    height: auto;
+}
+
+.section-image > video{
+    width: 90%;
+}
+
+@media only screen and (max-width: 1440px){
+    #title-content {
+        width: 100%;
+    }
+
+    #project-preview {
+        max-width: 100% !important;
+        height: auto;
+    }    
+}
+
+/* WIDTH is less than 900 */
+@media only screen and (max-width: 900px) {
+    .preview > video{
+        display: none;
+    }
+    /* #project-preview{
+        display: block;
+        max-height: 60%;
+    } */
+}
+
+@media only screen and (max-width: 420px) {
+    .final-prototype{
+        display: none;
+    }
+}

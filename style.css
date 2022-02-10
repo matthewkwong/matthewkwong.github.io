@@ -262,68 +262,17 @@ img{
     width: 480px;
 }
 
-/* Footer */
-footer{
-    z-index: 1;
-    background-color: #18A0FB;
-    height: 200px;
-    width: 100%;
-    color: white;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-footer #footer-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 1080px;
-    margin: auto;
-    gap: 26px;
-}
-
-footer  #footer-content p{
-    margin-bottom: 0px;
-}
-
-footer  #footer-content p:first-child{
-    margin-top: 25px;
-}
-
-footer #footer-content p:last-child {
-    text-align: center;
-    margin-top: 0px;
-}
-
-footer ul{
-    margin: 0px;
-}
-
-footer ul li{
-    display: inline-block;
-    list-style: none;
-    margin-left: 20px;
-    height: 20px;
-    width: 20px;
-}
-
-footer ul li:first-child{
-    margin-left: 0px;
-}
-
-#line{
-    margin: auto;
-    text-align: center;
-    background-color: white;
-    
-    /* bc div within div */
-    max-width: 1080px;
-    width: 100%;
-    height: 1px;
-}
-
 @media screen and (max-width: 600px) {
+
+    #case-studies .case-study-card{
+        margin-bottom: 24px;
+    }
+
+    #case-studies .case-study-card:nth-child(even) {
+        margin-top: 0;
+    }   
+    
+
     #heading-wrapper, #experience-values, #hobbies-polaroids{
         flex-direction: column;
         justify-content: center;
@@ -355,21 +304,7 @@ footer ul li:first-child{
     #experience-values #values, 
     
     #hobbies-polaroids, 
-    #hobbies-polaroids #hobbies,
-    
-    footer #line{
-        width: 300px;
-    }
-
-    footer{
-        height: 220px;
-    
-        /* So polaroid image doesnt look off */
-        margin-top: 180px;
-    }
-
-    footer #footer-content{
-        text-align: center;
+    #hobbies-polaroids #hobbies{
         width: 300px;
     }
   }

@@ -1,146 +1,210 @@
-nav{
-    font-family: CircularStd-Book;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    margin-top: 0;
-
-    background-color: white;
-    text-align: right;
+nav {
     z-index: 4;
-    width: 100%;
-    height: 80px;
     
-    margin-top:0px;
-    box-shadow: 0px 0px 88px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #C4C4C4;
+    height: 90px;
+    /* border-bottom: solid 1px #B3B3B3; */
+    /* box-sizing: border-box; */
+
+    top: 0;
+    position: sticky;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style: none;    
+    padding: 40px;
+}
+
+nav li{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+#logo{
+    padding-left: 40px;
+    max-width: 60px;
+    height: auto;
+}
+
+#nav-links #active{
+    color: #18A0FB !important; 
+    font-weight: 600;
+}
+
+#nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+
+#nav-links a.middle
+{
+    position: relative;
+}
+
+#nav-links a.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  bottom: -5px;
+  background-color: #18A0FB;
+  visibility: hidden;
+  transform: scaleX(0);
+
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-links a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Menu elements - work, about, resume */
+#menu-wrapper #menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#menu-wrapper #menu li a{
+    transition: 0.3s ;
+}
+
+#menu-wrapper #menu  li a:hover {
+    color: #18A0FB;
+    border-radius: 5px;
+}
+
+#menu-wrapper #menu li {
+    padding: 5px 14px;
+}
+
+/* Checkbox hack */
+input[type=checkbox]{
+    display: none;
 } 
 
-nav #nav-button {
+/*Hamburger*/
+#hamburger, #close{
     display: none;
+    font-size: 48px;
+    user-select: none;
 }
 
-nav #nav-check {
+#close{
+    z-index: 5;
     display: none;
+
+    color: white;
+    position: absolute;
+    top: 12px; 
+    right: 44px;
+
+    /* box-sizing: border-box;
+    border: solid 2px blue; */
 }
 
-.logo, .logo-white{
-    float: left;
-    height: 60px;
-    width: 60px;
-    margin: auto 0;
-    text-align: center;
-    /* helps center the logo */
-    padding: 10px;
-    padding-left: 20px;
-}
-
-.logo-white{
+#logo-white{
+    z-index: 6;
     display: none;
-}
-
-nav > .nav-links > a{
-    font-weight: normal;
-    color: #868686;
-    font-size: 17px;
-    padding: 20px;
-
-    display: inline-block;
-    transition: color .3s linear;
-}
-
-nav > .nav-links > .active{
-    color:black;
-}
-
-nav > .nav-links > a:hover{
-color: black;
+    margin-left: 0;
+    position: absolute;
+    
+    top: 15px;
+    left: 0px;
+    padding-left: 40px;
+    max-width: 60px;
+    height: auto;
 }
 
 
-/* Navbar */
-@media only screen and (max-width: 600px) {
-    nav{
-        display: inline-block;
+@media screen and (max-width: 600px) {  
+    #menu-wrapper { 
+        /* hides the content until button is clicked */
+        display: none;
+
+        position: absolute;
+        background-color: #18A0FB;
+        right: 0;
+        left: 0;
+        top:0;
+        text-align: center;
+        /* padding: 20px 0; */
+        /* margin-top: 10px; */
+        height: 100vh;   
+    }
+
+    #menu-wrapper #menu li{
+        padding: 12px;
+    }
+
+    #menu-wrapper #menu li a {
+        color: white;    
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #logo-white{
+        display: block;
+    }
+
+    /* Hides the blue hover on desktop */
+    #nav-links a.middle:before {
+        background-color: #FFF;
     }
     
-    .logo-white{
-        display: block;
+    #menu-wrapper #menu  li a:hover {
+        color: White;
+    }  
+
+
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
     }
 
-    .nav-links{
-        z-index: 4;
-    }    
-
-    nav > img{
-        width: 10%;
+    /* When hamburger clicked */
+    input[type=checkbox]:checked ~ #menu-wrapper {
+        animation: fadeIn linear 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+    }
+    
+    /* Styling for inner content when checkbox is clicked */
+    input[type=checkbox]:checked ~ #menu-wrapper #menu {
+        display: flex;
+        flex-direction: column;
     }
 
-    nav #nav-button {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
 
-    /* 3 squiggle bar */
-    nav #nav-button label {
-        display: inline-block;
-        padding: 30px;
-        transition: all 0.3s ease-in;
-    }
-
-    nav #nav-button label span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid #999;
-    }
-
-    nav .nav-links {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: black;
-        opacity: 0.9;
-        overflow-y: hidden;
-        left: 0px;
-        text-align: left;
-        overflow-x: hidden;
-    }
-
-    nav > .nav-links > #portfolio-tab{
-        margin-top: 150px;
-    }
-
-    nav > .nav-links > .active{
-        color:white;
-    }
-
-    nav > .nav-links >  a:hover{
-        color:white;
-    }
-
-    nav .nav-links a {
-        display: block;
-        width: 100%;
-        height: 50px;
-        /* color: white; */
-        transition: all 0.3s ease-in;
-        text-align: left;
-    }
-
-    nav #nav-check:not(:checked) ~ .nav-links {
-        height: 100vh;
-        width: 50%;
+    /* Brings in the X button menu  */
+    input[type=checkbox]:checked ~ #hamburger{
         display: none;
     }
 
-    nav #nav-check:checked ~ .nav-links {
-        position: fixed;
-        height: 100vh;
-        width: 50%;
+    input[type=checkbox]:checked ~ #close{
         display: block;
-        overflow-y: auto;
+    }
+
+    /* White logo  */
+
+    input[type=checkbox]:checked ~ #logo-white{
+        display: block;
     }
 }
+
+
+

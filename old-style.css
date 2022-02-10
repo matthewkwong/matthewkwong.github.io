@@ -1,0 +1,923 @@
+/* Hi there, I see you've come to check on my CSS. 
+Everything was built from scratch, but feel free to 
+check it out */
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+  font-family: "circular";
+  /* src: url("circular.ttf"); */
+  src: url("fonts/CircularStd-Book.ttf");
+}
+
+@font-face {
+  font-family: "circular-bold";
+  /* src: url("circular.ttf"); */
+  src: url("fonts/CircularStd-Medium.ttf");
+}
+
+body{
+  margin: auto;
+  overflow-x: hidden;
+  font-family: circular !important;
+}
+
+p {
+  font-size: 1em;
+}
+
+section{
+  margin-bottom: 10%;
+}
+
+html, body{ 
+  height: 100%;
+}
+
+#container{
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* controls the footer position on other pages */
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav{
+  /* background-color: white; */
+  text-align: right;
+  z-index: 21;
+  width: 100%;
+  height: 100px;
+  font-family: circular;
+  position: fixed;
+}
+
+body nav{
+  min-height: 100px;
+}
+
+
+nav #nav-button {
+  display: none;
+}
+
+nav #nav-check {
+  display: none;
+}
+
+.logo, .logo-white{
+  float: left;
+  /* color:black; */
+  position: absolute;
+  padding-top:10px;
+  left: 20px;
+  height: 70px;
+}
+
+.logo-white{
+  display: none;
+}
+
+nav > .nav-links > a{
+  font-weight: normal;
+  color: #868686;
+  font-size: 17px;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: inline-block;
+  transition: color .3s linear;
+}
+
+nav > .nav-links > .active{
+    color:black;
+}
+
+nav > .nav-links > a:hover{
+  color: black;
+}
+
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+
+
+.text-wrapper{
+  position: absolute;
+  width: 505px;
+  height: 192px;
+  left: 10%;
+  top:200px;
+}
+
+
+.description{
+  font-weight: bold;
+  font-size: 45px;
+  color: #000000;
+}
+
+
+.profile{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 15%;
+
+  background: url(img/profile-picture.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.button{
+  text-align: center;
+  width: 220px;
+  color:black;
+
+  border: black 2px solid;
+
+  transition: 0.3s;
+}
+
+.button:hover{
+  color:white;
+  background-color: black;
+}
+
+
+.background{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  top: 0px;
+
+  z-index: -2;
+  background: url(img/mountains.JPG);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.experience-wrapper{
+  box-sizing: border-box;
+  margin-top: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.project{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 30px;
+  margin-bottom: 100px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+
+/* Distance between project image and the description */
+.reverse > .project-description{
+  margin-right: 200px;
+}
+
+.normal > .project-img{
+  margin-right: 200px;
+}
+
+
+.experience-wrapper > .project{
+  flex: 0 50%;
+}
+
+.project-role{
+  color: grey;
+  width: 100%;
+  /* border: solid 2px red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-img{
+  max-width: 80%;
+  margin: auto;
+  box-shadow: 0px 0px 42px 0px rgba(179,179,179,1);
+
+}
+
+.project-description{
+  width: 1200px;
+  margin: auto;
+}
+
+
+.learn-more{
+  text-align: center;
+  width:200px;
+  color:black;
+  text-transform: uppercase;
+  border: black 2px solid;
+  transition: 0.3s;
+  line-height: normal;
+}
+
+.learn-more:hover{
+  color:white;
+  background-color: black;
+}
+
+
+#findmycovidtest{
+  color: #7988FD;
+  border: #7988FD 2px solid;
+}
+
+#findmycovidtest-title{
+  color: #7988FD;
+}
+
+#findmycovidtest:hover{
+  color: white;
+  background-color:#7988FD;
+}
+
+#include-title{
+  color:#32BC9B;
+}
+
+#include{
+  color: #32BC9B;
+  border: #32BC9B 2px solid;
+}
+
+#include:hover{
+  color:white;
+  background-color:#32BC9B;
+}
+
+#spotify-title{
+  color: #28B955;
+}
+
+#spotify{
+  color: #28B955;
+  border: #28B955 2px solid;
+}
+
+#spotify:hover{
+  color:white;
+  background-color:#28B955;
+}
+
+
+#hack-club-title{
+  color: #E42D44;
+}
+
+#hack-club{
+  color: #E42D44;
+  border: #E42D44 2px solid;
+}
+
+#hack-club:hover{
+  color:white;
+  background-color:#E42D44;
+}
+
+
+/* Footer */
+#footer{
+  position: relative;
+  height: 110px;
+  margin-top: -110px; 
+  clear: both;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+footer #icons{
+  justify-content: center;
+  display: flex;
+  padding: 0px 0 10px 0;
+}
+
+footer #icons a{
+  transition: 0.2s;
+}
+
+footer #icons:hover > a {
+  opacity: 0.5;
+}
+
+footer #icons:hover > a:hover {
+  opacity: 1.0;
+}
+
+footer img{
+  padding: 0 5px;
+  height: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  footer{
+    position: relative;
+    bottom:0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer{
+    position: absolute;
+    bottom:0px;
+  }
+}
+
+/* About Page  */
+.about-me-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.about-me-text{
+  /* font-size: 18px; */
+  width: 50%;
+  box-sizing: border-box;
+  /* border:solid 2px red; */
+  /* margin-bottom: 50px; */
+}
+
+.about-me-text  h1{
+  font-size: 40px;
+  color:black;
+}
+
+.about-me-text {
+  color: grey;
+}
+
+.about-me-profile{
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#profile-picture{
+  max-height: 500px;
+  display: block;
+  margin: auto;
+  -webkit-box-shadow: 0px 11px 21px 0px #C4C4C4; 
+  box-shadow: 0px 11px 21px 0px #C4C4C4;
+}
+
+.resume-button{
+  text-align: center;
+  width: 230px;
+  line-height: normal;
+  color:#2698EC;
+  border: solid 2px #2698EC;
+  transition: 0.3s;
+}
+
+.resume-button:hover{
+  background-color: #2698EC;
+  color:white;
+}
+
+
+/* Individual Pages */
+.project-banner{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.covid-banner{
+  background-image:url("img/covid/covid-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.include-banner{
+  background-image:url("img/include/include.png");
+}
+
+.spotify-banner{
+  background-image:url("img/rooms/rooms-banner.jpg");
+}
+
+.homeless-banner{
+  background-image:url("img/homeless/homies-banner.jpg");
+}
+
+.hack-club-banner{
+  background-image:url("img/hack-club.jpg");
+}
+
+.graphic-design-banner{
+  background-image:url("img/graphic-design/stickers.jpg");
+}
+
+.project-heading{
+  line-height: normal;
+  /* margin-top:5%; */
+  text-align: center;
+}
+
+.project-heading > #include-page {
+  color: #1BBE9C;
+}
+
+.project-heading > #spotify-page {
+  color: #27B954;
+}
+
+.project-heading > #homeless-page {
+  color: black;
+}
+
+.project-heading > #hack-club-page {
+  color: #E42D44;
+}
+
+.project-heading > h1{
+  font-size: 40px;
+  line-height: .5;
+}
+
+.project-heading > h2 > a{
+  color: #2698EC;
+}
+
+.project-heading > h3{
+  color:grey;
+}
+
+
+.project-body-text{
+  line-height: 1.5;
+  font-size: 20px;
+  /* margin-left: 29%;
+  margin-right: 29%; */
+  margin-bottom: 5%;
+  color: grey;
+}
+
+.project-body-text > h1, h2, h3{
+  color: black;
+}
+
+
+.project-body-text > h2{
+  margin-top:5%;
+}
+
+.project-body-text > .iframeContainer{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.project-body-text  iframeContainer  iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.project-body-text .image img {
+  box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
+  -webkit-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
+  -moz-box-shadow: -1px 6px 18px 3px rgba(215,215,215,0.55);
+}
+
+.demo-text{
+  margin-right: 10%;
+  /* width: 40%; */
+}
+
+
+.demo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+
+.image{
+  margin-bottom: 5%;
+  margin-top: 5%;
+  /* justify-content: center;
+  flex-direction: column;
+  display: flex; */
+}
+
+.image > img{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+.image > p{
+  text-align: center;
+  color: #999999;
+}
+
+
+/* Find my COVID Test */
+.covid-split{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.split{
+ width: 50%;
+ padding: 25px;
+ margin: auto;
+ color: #999999;
+}
+
+/* Spotify Rooms Page */
+.rooms-links-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  vertical-align: center;
+  text-align: center;
+  width: 100%;
+}
+
+.rooms-links-container > .rooms-links{
+  padding: 20px;
+  height: 30px;
+  color: #27b954;
+  align-items: center;
+  border: #27b954 2px solid;
+  display: none;
+  transition: 0.3s;
+}
+
+.rooms-links-container > .rooms-links:hover{
+  color:white;
+  background-color: #27b954;
+}
+
+
+/* Graphic Design */
+.image-gallery {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 120%; */
+}
+
+
+.image-gallery>img,
+.cities>img {
+  max-width: 31%;
+  padding: 10px;
+}
+
+/* MacBook pro */
+@media only screen and (max-width: 1440px) {
+
+  .container{
+    margin:auto;
+  }
+  
+  .reverse > .project-description{
+    margin-right: 100px;
+  }
+
+  .normal > .project-img{
+    margin-right: 100px;
+  }
+
+  .project{
+    width: 100%;
+  }
+
+  #profile-picture{
+    height: 370px;
+  }
+}
+
+  @media only screen and (max-width: 1300px) {
+
+  .about-me-wrapper{
+    margin-bottom: 100px;
+  }
+
+  .experience-wrapper{
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .name{
+    margin-top:40%;
+    text-align: left;
+    margin-left: 0;
+    width: 160%;
+  }
+
+  .description{
+    margin-top:0px;
+    font-size:40px;
+  }
+
+  .button{
+    margin-top: 20%;
+    margin-bottom: 40%;
+  }
+
+  .text-wrapper{
+    top:10%;
+    width:200px;
+  }
+
+  .experience-header{
+    margin-top: 0px;
+  }
+
+  .project{
+    margin: 0;
+    margin-bottom: 30%;
+    flex-direction: column;
+  }
+
+  .project-img{
+    width: 100%;
+    margin: auto;
+  }
+  
+  .reverse > .project-description{
+    margin: auto;
+  }
+  
+  .normal > .project-img{
+    margin: auto;
+  }
+  
+
+  .project-description{
+    width: 80%;
+  }
+
+  .covid-split{
+    flex-direction: column;
+  }
+
+  .split{
+    padding:0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+
+  /* About Me Page */
+  .about-me-wrapper{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about-me-text{
+    width: 100%;
+  }
+
+  #profile-picture{
+    margin-bottom:10%;
+  }
+
+  /* Spotify Rooms */
+  .demo{
+    flex-direction: column;
+  }
+
+  .demo-text{
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .demo > video{
+    margin-bottom: 10%;
+  }
+
+  .project-body-text{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+  .project-role {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .background{
+    display: none;
+  }
+
+  .profile{
+    display: none;
+  }
+
+  /* Graphic Design */
+  .image-gallery {
+    flex-direction: column;
+  }
+
+  .image-gallery>.cities {
+    flex-direction: column;
+  }
+
+  .image-gallery>img,
+  .cities>img {
+    margin-right: auto;
+    /* 2 images per row */
+    /* width: 33.33%; */
+
+    /* 3 images per row */
+    margin-left: auto;
+
+    width: 75%;
+    height: 100%;
+    /* padding-left: 0px; */
+    /* padding-right: 0px; */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+
+  .about-me-wrapper{
+    margin-top:10%;
+  }
+
+  .logo-white{
+    display: block;
+  }
+
+  .nav-links{
+    z-index: 4;
+  }
+
+  nav #nav-button {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  nav #nav-button label {
+    display: inline-block;
+    padding: 35px;
+    transition: all 0.3s ease-in;
+  }
+
+  /* 3 squiggle bar hover */
+  nav #nav-button label span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #999;
+  }
+
+  nav .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    overflow-y: hidden;
+    left: 0px;
+    text-align: left;
+  }
+
+  nav > .nav-links > #portfolio-tab{
+      margin-top: 150px;
+  }
+
+  nav > .nav-links > .active{
+    color:white;
+  }
+
+  nav > .nav-links >  a:hover{
+      color:white;
+  }
+
+  nav .nav-links a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    /* color: white; */
+    transition: all 0.3s ease-in;
+    text-align: left;
+  }
+
+  nav #nav-check:not(:checked) ~ .nav-links {
+    height: 100vh;
+    width: 50%;
+    display: none;
+  }
+
+  nav #nav-check:checked ~ .nav-links {
+    height: 500vh;
+    width: 50%;
+    display: block;
+    overflow-y: auto;
+  }
+
+  .project-name{
+    font-size: 35px;
+  }
+
+/* Individual Pages */
+  .project-heading{
+    width: 100%;
+    margin-top:10%;
+    margin-bottom:10%;
+  }
+
+  .project-heading > h1{
+    font-size: 30px;
+    width:100%;
+  }
+
+  .project-heading > h2 > a{
+    font-size: 18px;
+  }
+
+  .image > img{
+    width: 100%;
+  }
+
+  .image > p{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* Spotify Rooms */
+  .rooms-links-container > .rooms-links{
+    display: block;
+  }
+
+  #rooms-prototype-label{
+    display: none;
+  }
+
+  .rooms-links-container iframe{
+    display: none;
+  }
+}

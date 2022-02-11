@@ -82,14 +82,15 @@ img{
     /* box-sizing:border-box; */
 }
 
-#profile-picture{
-    display: none;
 
+#profile-picture{
     max-width: 100%;
     height: auto; 
     /* Matches to 480px = 450px + 30px padding to match the case study pics */
     /* /* padding: 0px 15px; */
 }
+
+/* DESKTOP */
 
 #video-profile{
     width: 480px;
@@ -97,9 +98,7 @@ img{
     position: relative;
     overflow: hidden;
     display: block;
-
     /* border: solid 2px orange; */
-
 }
 
 #video-profile video{
@@ -113,6 +112,33 @@ img{
 
     /* border: solid 2px red; */
 }
+
+/* MOBILE */
+#video-profile-mobile{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+#video-profile-mobile video{
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    margin-top: -50px;
+
+    max-width: 100%;
+    height: auto;
+    /* width: 960px !important; */
+
+    transform: scale(1.1)    
+    /* border: solid 2px red; */
+
+}
+
 
 
 
@@ -186,7 +212,6 @@ img{
 
     /* border: solid 2px blue; */
 }
-
 
 
 #case-studies .case-study-card{
@@ -299,6 +324,10 @@ img{
     #video-profile{
         display: none;
     }
+    
+    #video-profile-mobile{
+        display: block;
+    }
 
     #case-studies .case-study-card:nth-child(even) {
         margin-top: 0;
@@ -311,6 +340,13 @@ img{
         margin-bottom: 24px;
     }
 
+    /* Mobile profile pic */
+
+
+    /* #video-profile-mobile{
+        max-width: 100%;
+        height: auto;
+    } */
 
     
 

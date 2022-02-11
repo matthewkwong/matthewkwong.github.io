@@ -49,10 +49,13 @@
   <section id = "heading-wrapper">
     <div id = "heading">
         <div id= "home-name">
-            <p>Hey! I’m Matthew, a <span style = "font-weight: 600;">Product Designer</span> based in San Francisco, California.</p>
+            <h1>Hey! I’m Matthew, </h1>
+            <p>a <span style = "font-weight: 600;">Product Designer
+            </span>making a difference through human-centered design.  
+          </p>
             
-            <p>Currently, searching for full-time Product Design roles.</p>
-            <p>Previously, UX Designer at <a href = "https://www.savagebureau.com/"><span>The Savage Bureau</a></span>.</p>
+            <p>Currently, searching for <b>full-time Product Design roles.</b></p>
+            <!-- <p>Previously, a UX Designer at <a href = "https://www.savagebureau.com/"><span>The Savage Bureau</a></span>.</p> -->
 
             <a href = "about.html" id = "about">More about me</a>
         </div>
@@ -61,11 +64,11 @@
     <!-- <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture">  -->
   <div id = "video-profile">
     <video width="480" playsinline autoplay muted loop>
-      <source src="img/profile2.mp4" type="video/mp4">
+      <source src="img/video-profile.mp4" type="video/mp4">
     </video>  
   </div>
 
-    <img src = "img/profile.jpg" height = "480" width = "480" id = "profile-picture"> 
+    <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture"> 
 
   </section>
 
@@ -102,7 +105,7 @@
                 <h2>PlayTest</h2>
                 <p>Gamifying the education learning experience</p>
             </div> -->
-
+            
             <!-- Find My COVID Test -->
             <div class = "case-study-card">
                 <a href = "covid.html"><img src = "img/case-studies/covid.jpg" height = "480" width = "480" alt = "Find My COVID Test"></a>
@@ -116,6 +119,10 @@
                 <h2>Spotify Rooms</h2>
                 <p>Pioneering the future music listening experience</p>
             </div>
+
+            <!-- EMPTY SPACER-->
+            <div class = "case-study-card"></div>
+
         </section>
   <!-- </section> -->
 
@@ -156,6 +163,9 @@
       <p>Designed + Developed by Matthew Kwong • 2022</p>
     </div>
   </footer>
+  <script>
+        document.getElementById('video-profile').play();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

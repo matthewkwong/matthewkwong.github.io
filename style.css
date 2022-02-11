@@ -299,6 +299,10 @@ img{
     #video-profile{
         display: none;
     }
+
+    #case-studies .case-study-card:nth-child(even) {
+        margin-top: 0;
+    }   
 }
 
 @media screen and (max-width: 600px) {
@@ -307,9 +311,7 @@ img{
         margin-bottom: 24px;
     }
 
-    #case-studies .case-study-card:nth-child(even) {
-        margin-top: 0;
-    }   
+
     
 
     #heading-wrapper, #experience-values, #hobbies-polaroids{

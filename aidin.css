@@ -1,0 +1,65 @@
+#title-image{
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+#title-content p {
+    font-size: 24px;
+}
+
+a{
+    text-decoration: none;
+    color: #FE0058;
+}
+
+a:visited{
+    color: #FE0058;
+}
+
+.callout{
+    background-color: #FE0058;
+}
+
+
+/* Background */
+.section-image {
+    background-image: url(img/aidin/research-synopsis.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Circles */
+.circle{
+    background: #FE0058;
+    box-shadow: 0px 0px 100px #FE0058;
+}
+
+#title-content-wrapper{
+    gap:10%;
+}
+
+
+#project-preview{
+    width: auto;
+    max-height: 80%;
+}
+
+@media only screen and (max-width: 1440px){
+    #title-content {
+        width: 100%;
+    }
+}
+
+/* WIDTH is less than 900 */
+@media only screen and (max-width: 900px) {
+    .preview > video{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .final-prototype{
+        display: none;
+    }
+}

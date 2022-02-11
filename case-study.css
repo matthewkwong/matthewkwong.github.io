@@ -210,7 +210,6 @@ section{
     display: flex;
     flex-direction: column;    
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 #title-image{
@@ -264,6 +263,7 @@ section{
     flex-direction: column;
 }
 
+
 @media only screen and (max-width: 1440px) {
 
     #big-circle{
@@ -303,8 +303,20 @@ section{
         display: none;
     }
 
+    #title{
+        height: 100%;
+        margin-bottom: 200px;
+    }
+
+    #title-content-wrapper{
+        flex-direction: column;
+    }
+
     #title-image {
-        display: none;
+        margin-top: 100px;
+        /* display: none; */
+        max-width: 460px;
+        width: 100%;
     }
 
     .section-image{
@@ -371,6 +383,11 @@ section{
     .left{
         width: 300px;
         margin: auto;
+    }
+
+    section{
+        max-width: 480px;
+        width: 100%;
     }
 
     .section-image{

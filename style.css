@@ -78,8 +78,16 @@ img{
     /* box-sizing:border-box; */
 }
 
+#profile-picture{
+    display: none;
 
-.video-wrapper{
+    max-width: 100%;
+    height: auto; 
+    /* Matches to 480px = 450px + 30px padding to match the case study pics */
+    /* /* padding: 0px 15px; */
+}
+
+#video-profile{
     width: 480px;
     height: 480px;
     position: relative;
@@ -90,7 +98,7 @@ img{
 
 }
 
-video{
+#video-profile video{
     margin: auto;
     display: flex;
     align-items: center;
@@ -100,16 +108,6 @@ video{
     /* width: 960px !important; */
 
     /* border: solid 2px red; */
-    
-
-
-
-    /* For Image */
-    /* max-width: 100%;
-    height: auto; */
-
-    /* Matches to 480px = 450px + 30px padding to match the case study pics */
-    /* padding: 0px 15px; */
 }
 
 
@@ -287,6 +285,16 @@ video{
 #hobbies-polaroids #invisible{
     height: 1px; 
     width: 480px;
+}
+
+@media screen and (max-width: 960px) {
+    #profile-picture{
+        display: block;
+    }
+    
+    #video-profile{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {

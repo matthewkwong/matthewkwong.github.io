@@ -1,50 +1,41 @@
-$(document).ready(function () {
-  //Goes to portfolio
-  $("#portfolio-button").click(function(){
-    $('html, body').animate({
-      scrollTop:$("#portfolio").offset().top - 100
-    }, 1000);
-  });
-});
-
-// Scroll elements fade in
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $(".project")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-    if ($(tag).position().top < pageBottom) {
-    $(tag).addClass("visible")
-    }
-    else {
-      $(tag).removeClass("visible")
-      }
-  }
-})
-
 $(document).ready(function(){
   /*Fades in page on load */
   $('body, .about-me-wrapper').css('display', 'none');
   $('body, .about-me-wrapper').fadeIn(1000);
 });
 
-// Navbar
-// window.onscroll = function() {scrollFunction()};
+// Image - Fullscreen on click
+window.onload = () => {
+  let images = document.querySelectorAll(".right img");
+  let fullscreen = document.getElementById("fullscreen");
+ 
+// Clones into fullscreen div
+  if (images.length > 0) { for (let x of images) {
+    x.onclick = () => {
+      let clone = x.cloneNode();
+      clone.className = "";
+      fullscreen.innerHTML = "";
+      fullscreen.appendChild(clone);
+      fullscreen.className = "show";
+    };
+  }}
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-100px";
-//   }
-// }
+  // (C) CLICK TO CLOSE fullscreen
+  fullscreen.onclick = () => {
+    fullscreen.className = "";
+  };
+};
 
 
-// navbar slides down on mobile
-$(document).ready(function () {
-  $('#nav-button').click(function(){
-    $('.nav-links').animate({width: 'toggle'}, 300)();
-  });
-});
+// Fullscreen Video
+var elem = document.querySelector(".vid");
+
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}

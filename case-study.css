@@ -16,7 +16,12 @@ body{
     background-color: white;
     margin: auto;
     font-family: 'Poppins', sans-serif;
+}
 
+.right img, .right video{
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
 }
 
 body > div{
@@ -43,7 +48,7 @@ h1{
 }
 
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: CircularStd-Bold;
     
 }
@@ -164,6 +169,10 @@ section{
     align-items: center;
 }
 
+.section-image video{
+    max-height: 900px;
+}
+
 #title{  
     /* remove this line for the right-side circle to overflow */
     position: relative;
@@ -205,7 +214,7 @@ section{
 
 #title-details{
     /* Hack to prevent it from being in middle in mobile */
-    width: 480px;
+    max-width: 480px;
 
     display: flex;
     flex-direction: column;    
@@ -263,6 +272,35 @@ section{
     flex-direction: column;
 }
 
+
+#fullscreen{
+    position: fixed; 
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+   
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+   
+    transition: opacity ease 0.4s;
+}
+   
+#fullscreen.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+#fullscreen img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
 
 @media only screen and (max-width: 1440px) {
 
@@ -322,6 +360,7 @@ section{
     .section-image{
         /* display: none; */
         height: 60vh;
+        margin: 0;
     }
 
     section{
@@ -360,8 +399,6 @@ section{
         max-width: 300px;
         height: 100%;
     }
-
-
 
     #title-content h1{
         margin-top: 45%;

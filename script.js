@@ -20,7 +20,6 @@ window.onload = () => {
     };
   }}
 
-  // (C) CLICK TO CLOSE fullscreen
   fullscreen.onclick = () => {
     fullscreen.className = "";
   };

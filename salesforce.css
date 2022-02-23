@@ -33,9 +33,6 @@ a:visited{
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
 
-    #title-content-wrapper{
-        padding-top: 200px;
-    }
 
     .preview > video{
         display: none;

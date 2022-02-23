@@ -19,6 +19,7 @@ footer #footer-content {
     margin: auto;
     gap: 26px;
     padding-left: 40px;
+    padding-right: 40px;
 }
 
 footer  #footer-content p{
@@ -68,7 +69,7 @@ footer ul li:first-child{
     }
 
     footer{
-        height: 220px;
+        height: 240px;
     
         /* So polaroid image doesnt look off */
         margin-top: 180px;
@@ -77,5 +78,6 @@ footer ul li:first-child{
     footer #footer-content{
         text-align: center;
         width: 300px;
+        padding: 10px 0;
     }
   }

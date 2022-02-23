@@ -38,3 +38,16 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
+
+
+// Disable Scroll on nav
+function disable(){
+  document.querySelector('body').classList.add('disable-scroll');
+}
+
+function enable(){
+  document.querySelector('body').classList.remove('disable-scroll');
+}
+
+document.querySelector('#hamburger').addEventListener('click', disable);
+document.querySelector('#close').addEventListener('click', enable);

@@ -49,26 +49,11 @@ a:visited{
     width: 90%;
 }
 
-@media only screen and (max-width: 1440px){
-    #title-content {
-        width: 100%;
-    }
-
-    #project-preview {
-        max-width: 100% !important;
-        height: auto;
-    }    
-}
-
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
     .preview > video{
         display: none;
     }
-    /* #project-preview{
-        display: block;
-        max-height: 60%;
-    } */
 }
 
 @media only screen and (max-width: 420px) {

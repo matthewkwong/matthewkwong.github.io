@@ -1,3 +1,11 @@
+.disable-scroll{
+    overflow-y: hidden;
+}
+
+.scrollable{
+    overflow-y: scroll;
+}
+
 nav {
     z-index: 4;
     

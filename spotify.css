@@ -27,30 +27,30 @@ a:visited{
     display: none;
 }
 
+/* .final-prototype{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 675px;
 
-@media only screen and (max-width: 1440px){
-    #title-content {
-        width: 100%;
-    }
-
-    video{
-        max-height: 100%;
-    }
 }
 
-/* WIDTH is less than 900 */
-@media only screen and (max-width: 900px) {
+.final-prototype iframe{
+    transform: scale(0.5);
+} */
+
+
+@media only screen and (max-width: 500px) {
     .preview > video{
         display: none;
     }
+
     #project-preview{
         display: block;
         max-height: 60%;
-
     }
-}
 
-@media only screen and (max-width: 420px) {
     .final-prototype{
         display: none;
     }

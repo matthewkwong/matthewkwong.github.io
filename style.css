@@ -28,6 +28,7 @@ h3, li{
 }
 
 a{
+    color: #18A0FB;
     text-decoration: none;
 }
 
@@ -248,7 +249,11 @@ img{
 }
 
 
-#experience-values #experience .job-title .company-name{
+#experience-values #experience .job-title .company-name {
+    color: #18A0FB;
+}
+
+a:visited{
     color: #18A0FB;
 }
 

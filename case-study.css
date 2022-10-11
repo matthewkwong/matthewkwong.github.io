@@ -48,9 +48,9 @@ section{
 }
 
 
-section  div{
+/* section > div{
     margin: 25px 0px;
-}
+} */
 
  section > div:last-of-type{
     margin: 0px;
@@ -72,7 +72,7 @@ h2{
 
 h3{
     font-size: 20px;
-    line-height: 32px;
+    line-height: 28px;
 }
 
 p{
@@ -92,6 +92,7 @@ a:visited{
 
 img{
     max-width: 100%;
+    max-height: 100%;
     height: auto;
 }
 
@@ -131,7 +132,6 @@ video{
 }
 
 .content-wrapper{
-    /* margin: 0px 150px; */
     margin-top: 100px;
     margin-bottom: 100px;
 
@@ -139,7 +139,7 @@ video{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 75px;
+    gap: 50px;
 
     /* border: solid 2px red;
     box-sizing: border-box; */
@@ -205,6 +205,7 @@ video{
 .section-image video{
     max-height: 90vh;
 }
+
 
 #title{  
     /* remove this line for the right-side circle to overflow */
@@ -336,24 +337,10 @@ video{
     /* width: auto; */
 }
 
-#research div{
-    margin: 20px 0px;
-}
-
 
 
 @media only screen and (max-width: 1024px) {
-
-    /* #big-circle{
-        right:-1000px;
-    } */
-
-
-    /* #project-preview{ */
-        /* max-height: 40%; */
-        /* width: 100%; */
-    /* } */
-
+    
     #title-content-wrapper{
         gap: 50px;
     }
@@ -397,6 +384,10 @@ video{
         margin: 0px 50px;
     }
 
+    h2{
+        line-height: normal;
+        margin: 0px;
+    }
 
     section{
         flex-direction: column;
@@ -417,6 +408,7 @@ video{
 
     .side-by-side{
         flex-direction: column;
+        gap: 25px;
     }
 
     .side-by-side > .left,

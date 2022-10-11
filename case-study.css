@@ -18,7 +18,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.right img, .right video{
+.content-wrapper img {
     cursor: -moz-zoom-in; 
     cursor: -webkit-zoom-in; 
     cursor: zoom-in;
@@ -37,10 +37,23 @@ body > div{
 }
 
 section{
+    max-width: 100%;
+    width: 800px;
+    /* width: 100%; */
     margin: auto;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items:baseline;
+    flex-direction: column;
+}
+
+
+section  div{
+    margin: 25px 0px;
+}
+
+ section > div:last-of-type{
+    margin: 0px;
 }
 
 h1{
@@ -50,11 +63,22 @@ h1{
 
 h1, h2, h3, h4{
     font-family: CircularStd-Bold;
-    
+}
+
+h2{
+    font-size: 36px;
+    line-height: 0px;
+}
+
+h3{
+    font-size: 20px;
+    line-height: 32px;
 }
 
 p{
     font-size: 16px;
+    line-height: 28px;
+    /* margin: 10px 0px; */
 }
 
 a{
@@ -69,6 +93,19 @@ a:visited{
 img{
     max-width: 100%;
     height: auto;
+}
+
+/* #project-details{
+    margin-top: 20px;
+    width: 100%;
+} */
+
+#project-details div{
+    margin-bottom: 50px;
+}
+
+#project-details div:last-of-type {
+    margin-bottom: 0px;
 }
 
 #project-preview {
@@ -94,54 +131,48 @@ video{
 }
 
 .content-wrapper{
+    /* margin: 0px 150px; */
     margin-top: 100px;
     margin-bottom: 100px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 75px;
 
     /* border: solid 2px red;
     box-sizing: border-box; */
 }
 
-.right div img {
-    /* border: solid 2px red; */
-    /* padding: 20px; */
-    background-color: #F1F3F4;
-
-    /* when 900px use 670px, for 1080px wide, use 725 */
-    /* max-width: 670px; */
-    /* max-width: 725px; */
-}
-
-.left{
-    margin-right: 30px;
-    width: 300px;
-}
-
-.right{
-    /* width: 670px; */
-
-    /* when 900px use 670px, for 1080px wide, use 810 */
-    width: 700px;
-} 
-
-.right > .left{
-    width: 100%;
-}
-
-section{
+.side-by-side{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border: solid 2px red; 
+    align-items: center;
+    margin: auto 0;
+    width: 100%;
+
+    /* border: solid 2px orange;
     box-sizing: border-box; */
 }
 
-.right > div:not(:last-child){
-    margin-bottom: 100px;
+.side-by-side > .left{
+    /* border: solid 2px blue; */
+    width: 387.5px;
+    max-height: 100vh;
+}
+
+.side-by-side > .right{
+    /* border: solid 2px red; */
+    width: 387.5px;
+    max-height: 100vh;
+}
+
+.side-by-side > .right > video, 
+.side-by-side > .left > video {
+    display: block;
+    margin: auto;
 }
 
 .banner{    
@@ -151,7 +182,7 @@ section{
     justify-content: center;
 
     /* Not 1080px becuase theres 40px loss due to space-around to make it responsive */
-    max-width: 1040px;
+    /* max-width: 1040px; */
 }
 
 .callout{
@@ -172,7 +203,7 @@ section{
 }
 
 .section-image video{
-    max-height: 900px;
+    max-height: 90vh;
 }
 
 #title{  
@@ -191,7 +222,10 @@ section{
 
 
 #title-content-wrapper{
-    max-width: 1080px;
+    margin:  0px 150px;
+    /* width: 100%; */
+    /* max-width: 1080px; */
+    /* margin: 0px, 150px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -209,30 +243,19 @@ section{
     flex-direction: column;
     justify-content: space-around;
 
+    margin: 50px 0px;
     /* Responsive title text */
-    width: 100%;
-    max-width: 450px;
+    /* width: 50%; */
+    /* max-width: 450px; */
 }
 
-/* #title-details div{
-    width: 100%;
-    max-width: 480px;
-} */
-
-/* #title-details{ */
-    /* Hack to prevent it from being in middle in mobile */
-    /* width: 480px; */
-    
-    /* display: flex;
-    flex-direction: column;    
-    justify-content: space-between; */
-
-    /* border: solid 2px blue; */
-/* } */
 
 #title-image{
     z-index: 2;
-    max-width: 50%;
+    width: 45%;
+    height: auto;
+    /* max-width: 100%; */
+    /* max-height: 60vh; */
 }
 
 /* Circles */
@@ -245,7 +268,7 @@ section{
 
 #big-circle{
     margin: auto;
-    right: -700px;
+    right: -1000px;
     width: 1568px;
     height: 1568px;
 }
@@ -308,14 +331,22 @@ section{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-height: 90%;
+    width: auto;
+    /* width: auto; */
 }
 
-@media only screen and (max-width: 1440px) {
+#research div{
+    margin: 20px 0px;
+}
 
-    #big-circle{
+
+
+@media only screen and (max-width: 1024px) {
+
+    /* #big-circle{
         right:-1000px;
-    }
+    } */
 
 
     /* #project-preview{ */
@@ -343,106 +374,72 @@ section{
 } */
 
 /* WIDTH is less than 900 */
-@media only screen and (max-width: 1030px) {
-
-    #title-content{
-        margin:auto;
-        max-width: 480px;
-        /* height: 100vh; */
-        justify-content: center;
-    }
-
-    .title-details{
-        max-width: 480px !important;
-        width: 100%;    
-    }
-
-    #big-circle{
+@media only screen and (max-width: 834px) {
+    #big-circle, #top-left-circle{
         display: none;
     }
 
-    /* #title{
-        height: 100%;
-        margin-bottom: 200px;
-    } */
-
     #title-content-wrapper{
+        margin: 0px 50px;
         flex-direction: column;
+    }
+
+    #title{
+        height: 100%;
     }
 
     #title-image {
         display: none;
-
-        margin-top: 100px;
-        max-width: 460px;
         width: 100%;
     }
 
-    .section-image{
-        /* display: none; */
-        height: 60vh;
-        margin: 0;
+    .content-wrapper{
+        margin: 0px 50px;
     }
+
 
     section{
         flex-direction: column;
-        /* margin-left: auto;
-        margin-right: auto; */
-        margin: 0px 50px;
-        width: 480px;
     }
-
-    .right{
-        max-width: 480px;
-        width: 100%;
-    }
-
-    /* .left{
-        margin-right: 0px;
-    } */
-
-    img{
-        width: 100%;
-    }
-}
-
-/* Phones */
-@media only screen and (max-width: 500px) {
-    /* #title{
-        margin-bottom: 10%;
-    } */
-
-    #title img{
-        max-width: 300px;
-    }
-
+    
     #title-content h1{
-        /* margin-top: 45%; */
         font-size: 48px;
     }
 
     .callout{
         font-size: 18px;
     }
+    
+
+    img{
+        width: 100%;
+    }
+
+    .side-by-side{
+        flex-direction: column;
+    }
+
+    .side-by-side > .left,
+    .side-by-side > .right{
+        width: 100%;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 500px) {
+    #title-content-wrapper{
+        margin: 0px 20px;
+    }
+
+
     .content-wrapper{
-        width: 100%;
+        margin: 0px 20px;
     }
-
-    .right, #title-content{
-        width: 300px;
-        margin: auto;
-    }
-
-    .left{
-        width: 300px;
-        margin: auto;
-    }
-
-    section{
-        max-width: 480px;
-        width: 100%;
-    }
-
+    
     .section-image{
         margin-bottom: 50px;
     }

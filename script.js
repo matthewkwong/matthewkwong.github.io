@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 // Image - Fullscreen on click
 window.onload = () => {
-  let images = document.querySelectorAll(".right img");
+  let images = document.querySelectorAll("img");
   let fullscreen = document.getElementById("fullscreen");
  
 // Clones into fullscreen div

@@ -83,124 +83,113 @@
         <div class = "content-wrapper">
             <!-- Project Details -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Project Details</h2>
-                <div class = "right">
-                    <!-- <div id = "title-details"> 
-                        <div> -->
+                <h2>Project Details</h2>
+                
+                <div>
+                    <div id = "project-details"> 
+                        <div>
                             <h3>My Role:</h3>
                             <p>Design System Designer</p>
-                        <!-- </div> -->
+                        </div>
                         
-                        <!-- <div> -->
+                        <div>
                             <h3>Tools:</h3>
                             <p>Figma, Google Meet</p>
-                        <!-- </div> -->
+                        </div>
                         
-                        <!-- <div> -->
+                        <div>
                             <h3>Duration:</h3>
                             <p>3 Months </p>
-                        <!-- </div> -->
+                        </div>
 
-                        <!-- <div> -->
+                        <div>
                             <h3>Team:</h3>
                             <p>Salesforce, Savage Bureau</p>
-                        <!-- </div> -->
-                    <!-- </div>         -->
+                        </div>
+                    </div>        
                 </div>                
             </section>
 
             <!-- Overview -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Overview</h2>
-            
-                <div class = "right">
-                    <p>
-                        Salesforce Customer Success teaches (or shows) their customers how to use Salesforce products. Clients can explore a wide array of online events ranging from Q/A chats with an expert in the field to informational webinars.                    </p>                
-                </div>
+                <h2 >Overview</h2>
+                <p>Salesforce Customer Success teaches (or shows) their customers how to use Salesforce products. Clients can explore a wide array of online events ranging from Q/A chats with an expert in the field to informational webinars.                    </p>                
             </section>
 
 
 
             <!-- Problem -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class="left">Problem</h2>
-                
-                <div class="right">                                    
-                    <p>The previous design system did not provide the most recent components being used on the website, which caused confusion and errors for the design team.</p>
-                    <p>To ensure this did not happen again, the new Salesforce Customer Success design system was revised to reduce confusion and maximize efficiency.</p>                
-                    <p>Thus, we asked the question,</p>
-                    <p class = "callout">
-                        “How can we create a more effective design system that is up-to-date and easy to edit ?"
-                    </p>
-                </div>
+                <h2>Problem</h2>
+                <p>The previous design system did not provide the most recent components being used on the website, which caused confusion and errors for the design team.</p>
+                <p>To ensure this did not happen again, the new Salesforce Customer Success design system was revised to reduce confusion and maximize efficiency.</p>                
+                <p>Thus, we asked the question,</p>
+                <p class = "callout">
+                    “How can we create a more effective design system that is up-to-date and easy to edit ?"
+                </p>
             </section>
 
             <!-- Design Process -->        
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Design Process</h2>
+                <h2 >Design Process</h2>
 
-                <div class = "right">
+                <!-- Host Menu -->
+                <div>
+                    <h3 >Capturing the Live Site</h3>
+                    <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
+                    <img src = "img/salesforce/screenshots.jpg" width="6643"data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                </div>                   
+                
+                <!-- Building Components-->
+                <div>
+                    <h3>Building Components</h3>
+                    <p>Although some of the component designs had already been created and could be imported into our new system, many had lacked editability. 
+                        For example, changing the text would require the designer to recreate the component entirely as it would overflow or incorrectly resize the component.
+                    </p>
+
+                    <p>To ensure this would not happen, I created efficient components utilizing a combination of Figma’s auto-layout, constraints, and variants features. Using these techniques helped create flexible components that were both easy to scale and change.</p>
+                </div>  
+
+                <!-- Cards -->
+                <div>
+                    <h3>Cards </h3>
+                    <p>One of the key components that I built into our design system is the 4-column card
+                        Within the component contains sub-components for icons such as the date/time on the top left and the heart on the right that can be swapped 
+                        out through Figma variants.
+                    </p>
+
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/salesforce/responsive-cards-1.mov" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+
+                    <p>Additionally, it contains a variety of auto-layout and hug-contents settings that allow for fast text
+                            revisions without breaking the component entirely as everything stays intact and grows accordingly, based on the changes you make. </p>
                     
-                    <!-- Host Menu -->
-                    <h3 class = "left">Capturing the Live Site</h3>
-                    <div class = "right">
-                        <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
-                        <img src = "img/salesforce/screenshots.jpg" width="6643"data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
-                    </div>                   
-                    
-                    <!-- Building Components-->
-                    <h3 class = "left">Building Components</h3>
-                    <div class = "right">
-                        <p>Although some of the component designs had already been created and could be imported into our new system, many had lacked editability. 
-                            For example, changing the text would require the designer to recreate the component entirely as it would overflow or incorrectly resize the component.
-                        </p>
-
-                        <p>To ensure this would not happen, I created efficient components utilizing a combination of Figma’s auto-layout, constraints, and variants features. Using these techniques helped create flexible components that were both easy to scale and change.</p>
-                    </div>  
-
-                    <!-- Cards -->
-                    <h3 class = "left">Cards </h3>
-                    <div class = "right">
-                        <p>
-                            One of the key components that I built into our design system is the 4-column card
-                            Within the component contains sub-components for icons such as the date/time on the top left and the heart on the right that can be swapped 
-                            out through Figma variants.
-                        </p>
-
-                        <video width="810" playsinline autoplay muted loop>
-                            <source src="img/salesforce/responsive-cards-1.mov" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-
-                        <p>Additionally, it contains a variety of auto-layout and hug-contents settings that allow for fast text
-                             revisions without breaking the component entirely as everything stays intact and grows accordingly, based on the changes you make. </p>
-                        
-                        <video width="810" playsinline autoplay muted loop>
-                            <source src="img/salesforce/responsive-cards-2.mov" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-
-                    <!-- Events Registration Form -->
-                    <h3 class = "left">Events Registration Form </h3>
-                    <div class = "right">
-                        <p>A large component feature I worked on was the Events Registration Form. I created a flexible component that allows the data entries to be changed through Figma component variants. Designs for default, invalid, and valid states are all accounted for and can easily be changed with a few clicks.</p>
-                        <video width="810" playsinline autoplay muted loop>
-                            <source src="img/salesforce/registration-form.mov" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>  
-
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/salesforce/responsive-cards-2.mov" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
                 </div>
+
+                <!-- Events Registration Form -->
+                <div>
+                    <h3>Events Registration Form </h3>
+                    <p>A large component feature I worked on was the Events Registration Form. I created a flexible component that allows the data entries to be changed through Figma component variants. Designs for default, invalid, and valid states are all accounted for and can easily be changed with a few clicks.</p>
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/salesforce/registration-form.mov" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>  
             </section>
 
             
             <!-- Result -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Result</h2>
+                <h2>Result</h2>
                 
 
-                <div class = "right">
+                <div>
                     <p> In the end, we completed an up to date design system for both desktop and mobile devices. 
                         To ensure that the components were easily editable for any updates in the future, 
                         large components such as cards are interlaced with smaller components such as 
@@ -223,15 +212,14 @@
 
             <!-- Implementation -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Implementation</h2>
-                <p class = "right">Once the new components were approved, we recreated the page builds I originally screen-capped. These were then handed off to the development team for production.</p>   
+                <h2>Implementation</h2>
+                <p>Once the new components were approved, we recreated the page builds I originally screen-capped. These were then handed off to the development team for production.</p>   
             </section>
 
             <!-- Challenges -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 class = "left">Challenges</h2>
-
-                <div class = "right">
+                <h2>Challenges</h2>
+                <div>
                     <p>
                         The biggest challenge I had while working on this project was the intimidation of tackling this from ground zero. 
                         Other challenges included the tediousness of screen-capturing every page type and its user flow as it required a lot of attention, 
@@ -243,8 +231,8 @@
 
             <!-- Takeaways -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="bottom-center" data-aos-offset="-400">
-                <h2 class = "left">Takeaways</h2>
-                <div class = "right">       
+                <h2>Takeaways</h2>
+                <div>       
                     <p>Though this was a very large project to take on, I’m extremely proud and happy with the work I’ve contributed to the Salesforce Customer Success Events design system. It allowed me to work on my skills of attention to detail and human-centered design thinking.</p> 
                 </div>
             </section>

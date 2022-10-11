@@ -22,3 +22,18 @@ a:visited{
     padding: 100px 0;
     /* border: solid 2px orange; */
 }
+
+
+.preview img{
+    max-width: 70%;
+}
+
+@media only screen and (max-width: 834px) {
+    .section-image{
+        height: 70vh;
+    }
+
+    .preview img{
+        max-width: 100%;
+    }
+}

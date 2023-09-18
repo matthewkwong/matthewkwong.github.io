@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+    color: #346DFF;
+}
+
+a:visited{
+    color: #346DFF;
+}
+
+.callout{
+    background-color: #346DFF;
+}
+
+#music{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#music video{
+    max-width: 360px;
+    max-height: 360px;
+    height: 100%;
+    width: 100%;
+
+    /* height: 360px;
+    width: 360px; */
+}
+

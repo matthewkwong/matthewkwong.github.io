@@ -96,14 +96,16 @@ img{
     height: auto;
 }
 
-/* #project-details{
-    margin-top: 20px;
+#project-details{
     width: 100%;
-} */
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* 
 #project-details div{
     margin-bottom: 50px;
-}
+} */
 
 #project-details div:last-of-type {
     margin-bottom: 0px;

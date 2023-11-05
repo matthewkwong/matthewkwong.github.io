@@ -189,6 +189,7 @@ video{
 
 .callout{
     font-size: 24px;
+    line-height: normal;
     color: #FFFFFF;
     background-color: #0000;
     box-sizing: border-box;

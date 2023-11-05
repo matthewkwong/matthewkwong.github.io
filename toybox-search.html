@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Matthew Kwong | Toybox Search</title>
+        <meta property="og:image" content="img/meta/toybox.jpg">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="case-study.css">
+        <link rel="stylesheet" href="toybox.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="shortcut icon" href="img/nav/favicon.ico" type="image/x-icon"> 
+        <!-- Animated On Scroll Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
+    <body>
+        <!-- Fullscreen Image -->
+        <div id="fullscreen"></div>
+    
+        <nav>
+            <!-- MK Logo -->
+            <a href = "index.html">
+                <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+            </a>
+    
+            <!-- Nav links -->
+            <ul id = "nav-links">
+      
+            <!-- Checkbox hack for mobile -->
+            <input type = "checkbox" id = "checkbox_toggle"/>
+            <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+            <label for = "checkbox_toggle" id = "close">&#215;</label>
+    
+            <!-- Nav menues -->
+            <div id = "menu-wrapper">
+                <div id = "menu">
+                    <a href = "index.html">
+                        <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
+                    </a>
+                    <li><a href="index.html" class="middle">Work</a></li>
+                    <li><a href="about.html" class = "active-nav middle" >About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
+                </div>
+            </div>
+        </ul>
+      </nav>
+
+        <div id = "title">
+            <div id = "title-content-wrapper">
+                <div id = "title-content" data-aos="fade-right" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                    <h1>Toybox- Better Model Search</h1>
+                    
+                    <p>Designing for a more efficent Toybox search experience.</p>
+                   
+
+                    <a href = "https://cs.salesforce.com/"  target="_blank" id = "button">Launch Site</a>
+                </div>
+                
+                <img src = "img/case-studies/salesforce.gif" id = "title-image" height = "600" width="600" alt = "Salesforce Title Image"  data-aos="fade-up" 
+                data-aos-mirror="true" data-aos-duration="1250">
+            </div>
+
+            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
+
+            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
+        </div>
+
+
+
+        <!-- Preview Image -->
+        <div class="section-image" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-bottom" data-aos-offset="-200">
+            <img src = "img/salesforce/overview.jpg" id  = "project-preview" alt = "Design System Overview">
+        </div>
+
+
+        <div class = "content-wrapper">
+            <!-- Project Details -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Project Details</h2>
+                
+                <div id = "project-details"> 
+                    <div>
+                        <h3>My Role:</h3>
+                        <p>Product Designer</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Tools:</h3>
+                        <p>Figma, Asana</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Duration:</h3>
+                        <p>3 Months </p>
+                    </div>
+
+                    <div>
+                        <h3>Designers:</h3>
+                        <p>Jenn C.</p>
+                    </div>
+
+                    <div>
+                        <h3>Developers:</h3>
+                        <p>Zach O. Kyle M.</p>
+                    </div>
+                </div>        
+            </section>
+
+
+
+            <!-- Problem -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Problem</h2>
+                <p>The existing Toybox search is limited to toy results only and can be overwhelming to process the results.
+                    To improve this experience, the team and I were determined to make the search process as easy and useful as possible 
+                    for Toybox users to find and print a model.</p>
+                <p class = "callout">
+                    "How might we improve the Toybox searching experience to reduce the time it takes for users to print a model?"
+                </p>
+            </section>
+
+            <!-- Design Process -->        
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 >Design Process</h2>
+
+                <!-- Low Fideltiy -->
+                <div>
+                    <h3 >Low Fidelity</h3>
+                    <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
+                    <img src = "img/salesforce/screenshots.jpg" width="6643"data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                </div>                   
+                
+            </section>
+
+
+            <!-- Implementation -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Implementation</h2>
+                <p>Once the design was approved, it was handed off to the development team for production.</p>
+                   
+            </section>
+
+            <!-- Challenges -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Challenges</h2>
+                <div>
+                    <p>The biggest challenges of this project was trying to figure out the best way to display the search filters.</p>
+                    <p>Initially, I had designed the filters to be a drop-down style format similar to what most shopping websites use.
+                         However, due to the large amount of options that we allow for users to select from, we faced a problem where the 
+                         list could possibly become longer than the user’s device height. 
+                         To solve this issue, we decided to use a pop-up with scrolling. </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div id = "footer-content">
+              <p>Let's connect!</p>
+              
+              <ul>
+                <li>
+                  <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
+                  <img src = "img/footer/white/email.svg" alt = "Email" height = "20" width = "20">
+                  </a>
+                </li>
+        
+                <li>
+                  <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank">
+                    <img src = "img/footer/white/linkedin.svg" alt = "LinkedIn" height = "20" width = "20">
+                  </a> 
+                </li>
+        
+                <li>
+                  <a href = "https://www.instagram.com/kwongenterprises/?hl=en" target="_blank">
+                    <img src = "img/footer/white/instagram.svg" alt = "Instagram" height = "20" width = "20">
+                  </a>
+                </li>
+        
+                <li>
+                  <a href=  "https://www.etsy.com/shop/KwongEnterprises" target="_blank">
+                    <img src = "img/footer/white/etsy.svg" alt = "Etsy" height = "20" width = "20">
+                  </a>
+                </li>
+              </ul>
+        
+              <div id = "line"></div>      
+        
+              <p>Designed + Developed by Matthew Kwong • 2022</p>
+            </div>
+          </footer>
+        
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

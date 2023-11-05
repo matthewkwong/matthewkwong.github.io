@@ -50,11 +50,11 @@ a:visited{
 }
 
 /* WIDTH is less than 900 */
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
     .preview > video{
         display: none;
     }
-}
+} */
 
 @media only screen and (max-width: 500px) {
     .final-prototype{
@@ -64,5 +64,16 @@ a:visited{
     .full-screen h1{
         text-align: center;
         font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 834px) {
+    .section-image{
+        height: 50vh;
+    }
+
+    .preview img{
+        max-width: 100%;
     }
 }

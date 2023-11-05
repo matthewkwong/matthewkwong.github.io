@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Matthew Kwong | Toybox</title>
+        <meta property="og:image" content="img/meta/toybox.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="case-study.css">
+        <link rel="stylesheet" href="45fremont.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="shortcut icon" href="img/nav/favicon.ico" type="image/x-icon"> 
+        <!-- Animated On Scroll Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
+    <body>
+        <!-- Fullscreen Image -->
+        <div id="fullscreen"></div>
+
+        <nav>
+            <!-- MK Logo -->
+            <a href = "index.html">
+                <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+            </a>
+    
+            <!-- Nav links -->
+            <ul id = "nav-links">
+                <!-- Checkbox hack for mobile -->
+                <input type = "checkbox" id = "checkbox_toggle"/>
+                <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+                <label for = "checkbox_toggle" id = "close">&#215;</label>
+        
+                <!-- Nav menues -->
+                <div id = "menu-wrapper">
+                    <div id = "menu">
+                        <a href = "index.html">
+                            <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
+                        </a>
+                        <li><a href="index.html" class="middle">Work</a></li>
+                        <li><a href="about.html" class = "active-nav middle" >About</a></li>
+                        <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+  
+        <div id = "title">
+            <div id = "title-content-wrapper">
+                <div id = "title-content" data-aos="fade-right" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                    <h1>Toybox</h1>
+                    
+                    <p>Designing for a kid-friendly 3D printer application at a toy startup.
+                    </p>
+
+                    <a href = "#design-system"><h3>Design System</h3></a>
+                    <a href = "#models-list"><h3>Models List</h3></a>
+                    <a href = "#models-list"><h3>Toybox Plus</h3></a>
+                    <a href = "#mystery-eggs"><h3>Mystery Eggs</h3></a>
+                    <a href = "#search"><h3>Improving Search</h3></a>
+                    <a href = "#cad"><h3>Creating CAD App</h3></a>
+                </div>
+                
+                <img src = "img/case-studies/45fremont.jpg" id = "title-image" height = "600" width="600" alt = "Salesforce Title Image"  data-aos="fade-up" 
+                data-aos-mirror="true" data-aos-duration="1250">
+            </div>
+
+            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
+
+            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
+        </div>
+
+
+        <div class = "content-wrapper">
+            <!-- Project Details -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Project Details</h2>
+
+                <div id = "project-details"> 
+                    <div>
+                        <h3>My Role:</h3>
+                        <p>Product Designer</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Tools:</h3>
+                        <p>Figma, Asana</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Duration:</h3>
+                        <p>March 2022 - Current</p>
+                    </div>
+
+                    <div>
+                        <h3>Team:</h3>
+                        <p>Toybox</p>
+                    </div>
+                </div>        
+            </section>
+
+            <!-- Overview -->
+            <section data-aos="fade-up" id = "sitemap" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Overview</h2>
+                
+                <div class = "right">
+                    <p>Toybox is a kid-friendly 3D printer company located in Oakland, California that inspires young minds to create and print 
+                        their own 3D models </p>
+                
+                    <p>Being a start up of less than 30 people, I've had the opportunity to work in multiple teams such as design and marketing.</p>
+
+                    <p>My role as a Product Designer at Toybox consisted of improving the in-app/website experience, building multiple subscription services, 
+                        a
+                    </p>
+                </div>
+            </section>
+
+            
+            <section class = "full-screen" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200"> 
+                <h1>
+                    Part 1: Design System
+                </h1>
+            </section>
+
+ 
+            <!-- Problem -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class="left">Problem</h2>
+                
+
+                <div class = "right">
+
+                    <p> The previous design system did not provide the most recent components being used on the website, which caused confusion and errors for the design team.
+
+                        To ensure this did not happen again, the new Toybox design system was revised to reduce confusion and maximize efficiency.</p> 
+                    
+                    
+                    <p>This led us to ask the question,</p>
+                    <p class = "callout">
+                        “How can we create a more effective design system that is up-to-date and easy to edit?"
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- Design Thinking -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Design Thinking</h2>
+
+                <div>
+                    <h3>Cards </h3>
+                    <p>One of the key components that I built into our design system is the 4-column card
+                        Within the component contains sub-components for icons such as the date/time on the top left and the heart on the right that can be swapped 
+                        out through Figma variants.
+                    </p>
+
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/salesforce/responsive-cards-1.mov" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+
+                    <p>Additionally, it contains a variety of auto-layout and hug-contents settings that allow for fast text
+                            revisions without breaking the component entirely as everything stays intact and grows accordingly, based on the changes you make. </p>
+                    
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/salesforce/responsive-cards-2.mov" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </section>
+
+
+
+            <div style = "width: 100%; height: 20px; margin-bottom: 10px;"  id = "models-list"></div>
+
+            <!-- PART 2 -->
+            <section class = "full-screen" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center"> 
+                <h1>
+                    Part 2: Models List
+                </h1>
+            </section>
+            
+            <!-- Interactive Building Module -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Overview</h2>
+                
+                <div class = "right">
+                    <p>The most complicated part of the website was creating the interactive building module that allows users to 
+                        view various floor plans of the different available floors to lease from.</p>
+                </div>
+            </section>
+
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <img src = "img/45fremont/ibm-research.jpg" width="1080" alt = "Interactive Building Module References" 
+                data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+            </section>
+
+            <!-- Low-Fidelity -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">                
+                <h2 class = "left">Low Fidelity</h2>
+    
+                <div class = "right">
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/45fremont/ibm-low-fidelity.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </section>
+
+            <!-- High-Fidelity -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">High-Fidelity</h2>
+
+                <div class = "right">
+                    <p>Once we received approval on the branding design, we updated the low-fidelity prototype.</p>
+                    
+
+                    <!-- Video -->
+                    <video width="810" playsinline autoplay muted loop>
+                        <source src="img/45fremont/ibm-high-fidelity.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </section>
+
+            <!-- Wireframes -->
+            <img src = "img/45fremont/ibm-wireframes.jpg" width="800" alt = "Interactive Building Module Wireframes" 
+            data-aos="fade-right" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+    
+
+            <!-- Mobile Challenges -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Mobile Challenges</h2>
+
+    
+                <div class = "right">
+                    <p>The biggest challenge of creating the structure for this module was thinking about how it would work on mobile devices. 
+                        Ultimately, the solution we thought worked best was to hide the building element and only showcase the chart of available floors to lease from. 
+                    </p>
+
+                    <img src = "img/45fremont/ibm-mobile.jpg" width="1080" alt = "Interactive Building Module Mobile" 
+                    data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+                </div>
+            </section>
+
+
+            <!-- Takeaways -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2 class = "left">Takeaways</h2>
+
+                <div class = "right">
+                    <p>A huge takeaway for me was how wide the spectrum can be for real-estate development websites. 
+                        When first working on this project, I thought it would be less complex than it actually was. However, I learned a lot about how to design based on content and context. 
+
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div id = "footer-content">
+            <p>Let's connect!</p>
+            
+            <ul>
+                <li>
+                <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
+                <img src = "img/footer/white/email.svg" alt = "Email" height = "20" width = "20">
+                </a>
+                </li>
+        
+                <li>
+                <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank">
+                    <img src = "img/footer/white/linkedin.svg" alt = "LinkedIn" height = "20" width = "20">
+                </a> 
+                </li>
+        
+                <li>
+                <a href = "https://www.instagram.com/kwongenterprises/?hl=en" target="_blank">
+                    <img src = "img/footer/white/instagram.svg" alt = "Instagram" height = "20" width = "20">
+                </a>
+                </li>
+        
+                <li>
+                <a href=  "https://www.etsy.com/shop/KwongEnterprises" target="_blank">
+                    <img src = "img/footer/white/etsy.svg" alt = "Etsy" height = "20" width = "20">
+                </a>
+                </li>
+            </ul>
+        
+            <div id = "line"></div>      
+        
+            <p>Designed + Developed by Matthew Kwong • 2022</p>
+            </div>
+        </footer>
+          
+          <script src="script.js"></script>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+              AOS.init();
+          </script>
+      </body>
+  </html>

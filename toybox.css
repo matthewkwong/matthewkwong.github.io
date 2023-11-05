@@ -1,0 +1,46 @@
+a{
+    text-decoration: none;
+    color: #FF614C;
+}
+
+a:visited{
+    color: #FF614C;
+}
+
+.callout{
+    background-color: #FF614C;
+}
+
+/* Circles */
+.circle{
+    background: #FF614C;
+    box-shadow: 0px 0px 100px #FF614C;
+}
+
+#title-content-wrapper{
+    gap:10%;
+}
+
+#title-content-wrapper h1{
+    font-size: 40px;
+}
+
+#project-preview{
+    width: auto;
+    max-height: 80%;
+}
+
+/* WIDTH is less than 900 */
+@media only screen and (max-width: 900px) {
+
+
+    .preview > video{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .final-prototype{
+        display: none;
+    }
+}

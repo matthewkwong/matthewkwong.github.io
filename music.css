@@ -45,11 +45,28 @@ h2{
     width: 100%;
 }
 
+/* .music{
+    border: solid 2px blue;
+    box-sizing: content-box;
+}
+
+.music > img {
+    max-height: 390px;
+    border: solid 2px red;
+    box-sizing: border-box;
+} */
+
 /* Full width videos */
 .music > div > .full{
     max-width: 100%;
     /* width: 1920px; */
     max-height: 100%;
+}
+
+/* Section Description */
+.project-description, .project-description > p{
+    /* border : solid 2px red;  */
+    max-width: 100% !important;
 }
 
 /* Project descriptions */

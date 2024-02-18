@@ -51,3 +51,7 @@ function enable(){
 
 document.querySelector('#hamburger').addEventListener('click', disable);
 document.querySelector('#close').addEventListener('click', enable);
+
+// Display year at bottom of nav
+const year = new Date().getFullYear();
+document.getElementById("year").innerHTML = year;

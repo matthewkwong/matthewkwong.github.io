@@ -8,6 +8,11 @@
     src: url(fonts/CircularStd-Bold.ttf);
 }
 
+@font-face {
+    font-family: Playfiar-Display;
+    src: url(fonts/PlayfairDisplay-Medium.ttf);
+}
+
 html{
     overflow-x: initial !important;
 }
@@ -39,6 +44,7 @@ body > div{
 section{
     max-width: 100%;
     width: 800px;
+    /* gap: 50px; */
     /* width: 100%; */
     margin: auto;
     display: flex;
@@ -48,37 +54,62 @@ section{
 }
 
 
-/* section > div{
-    margin: 25px 0px;
-} */
-
  section > div:last-of-type{
     margin: 0px;
 }
+
+.section-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.section-content > p{
+    margin:0px;  
+}
+
 
 h1{
     font-size: 64px;
 }
 
-
-h1, h2, h3, h4{
+#title h1{
     font-family: CircularStd-Bold;
 }
 
 h2{
+    font-family: Playfair-Display;
+    font-family: "swear-display", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-family: Poppins; */
+}
+
+h3, h4{
+    font-family: CircularStd-Book;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h2{
     font-size: 36px;
-    line-height: 0px;
+    margin: 20px 0px;
 }
 
 h3{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h4{
     font-size: 20px;
-    line-height: 28px;
+    line-height: 0px;
 }
 
 p{
     font-size: 16px;
     line-height: 28px;
-    /* margin: 10px 0px; */
 }
 
 a{
@@ -101,6 +132,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px;
 }
 /* 
 #project-details div{
@@ -151,12 +183,13 @@ video{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* align-items: flex-start; */
     align-items: center;
     margin: auto 0;
     width: 100%;
-
-    /* border: solid 2px orange;
-    box-sizing: border-box; */
+    /* border: solid 2px orange; */
+    box-sizing: border-box;
+    /* padding: 50px 0px;  */
 }
 
 .side-by-side > .left{
@@ -197,7 +230,7 @@ video{
 }
 
 .section-image{
-    background-color: #F1F3F4;
+    background-color: #f4f4f4;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -383,9 +416,9 @@ video{
         width: 100%;
     }
 
-    .content-wrapper{
+    /* .content-wrapper{
         margin: 0px 50px;
-    }
+    } */
 
     h2{
         line-height: normal;
@@ -430,9 +463,10 @@ video{
         margin: 0px 20px;
     }
 
-
     .content-wrapper{
-        margin: 0px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
     
     .section-image{

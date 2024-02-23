@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="footer.css">
         <link rel="shortcut icon" href="img/nav/favicon.ico" type="image/x-icon"> 
+        
         <!-- Animated On Scroll Library -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- JQuery -->
@@ -51,36 +52,38 @@
 
         <div id = "title">
             <div id = "title-content-wrapper">
-                <div id = "title-content" data-aos="fade-right" 
+                <div id = "title-content" data-aos="fade-up" 
                 data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
                     <h1>Toybox- Better Model Search</h1>
                     
                     <p>Designing for a more efficent Toybox search experience.</p>
-                   
-
-                    <a href = "https://cs.salesforce.com/"  target="_blank" id = "button">Launch Site</a>
                 </div>
                 
-                <img src = "img/case-studies/salesforce.gif" id = "title-image" height = "600" width="600" alt = "Salesforce Title Image"  data-aos="fade-up" 
+                <img src = "img/case-studies/toybox-search.jpg" id = "title-image" height = "600" width="600" alt = "Toybox Search Image"  data-aos="fade-up" 
                 data-aos-mirror="true" data-aos-duration="1250">
             </div>
 
-            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+            <div class = "circle" id = "big-circle"  data-aos="fade-up" 
             data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
 
-            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+            <div class = "circle" id = "top-left-circle"  data-aos="fade-up" 
             data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
         </div>
 
 
 
         <!-- Preview Image -->
-        <div class="section-image" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-bottom" data-aos-offset="-200">
-            <img src = "img/salesforce/overview.jpg" id  = "project-preview" alt = "Design System Overview">
-        </div>
+        <!-- <div class="section-image" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-bottom" data-aos-offset="-200"> -->
+            <!-- <video width="810" playsinline autoplay muted loop>
+                <source src="img/toybox/search/implemented/filters.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video> -->
+            <img src = "img/toybox/search/v3-deliverables/overview-banner.jpeg" id  = "project-preview" alt = "Design System Overview">
+        <!-- </div> -->
 
 
         <div class = "content-wrapper">
+
             <!-- Project Details -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2>Project Details</h2>
@@ -108,7 +111,7 @@
 
                     <div>
                         <h3>Developers:</h3>
-                        <p>Zach O. Kyle M.</p>
+                        <p>Zach O., Kyle M.</p>
                     </div>
                 </div>        
             </section>
@@ -126,38 +129,193 @@
                 </p>
             </section>
 
-            <!-- Design Process -->        
+            <!-- Research -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2 >Design Process</h2>
+                <h2>Research</h2>
+                <p>To get a better understanding of how other popular 3D printing websites use filters and sorting methods, 
+                    I researched websites like Thingiverse, Cults3D, and Printables.</p>
+                  
+                <!-- <div class = "side-by-side research-callout"  data-aos-mirror="true" data-aos-anchor-placement="top-center" style = "overflow-x: hidden;"> -->
+                    <div class = "left">
+                        <h3>Thingiverse</h3>
+                        <img src = "img/toybox/search/research/thingiverse.jpg" width="1000" style = "overflow-x: hidden;">
+                        <p>Too many categories to choose from that makes the user even more stressed out when trying to figure out what they want to print</p>
+                    </div>
 
-                <!-- Low Fideltiy -->
-                <div>
-                    <h3 >Low Fidelity</h3>
-                    <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
-                    <img src = "img/salesforce/screenshots.jpg" width="6643"data-aos="fade-left" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
-                </div>                   
+                    <div class = "right">
+                        <h3>Cults3D</h3>
+                        <img src = "img/toybox/search/research/cults3d.jpg" width="1000">
+                        <p>The top navbar is overwhelming and hard to know what you should be looking at. There are many different deisgn categories and filters being shown, but really lacks order + organization.</p>
+                    </div>
+                <!-- </div>     -->
+            </section>
+
+
+            <!-- Low Fideltiy -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Low Fidelity</h2>
+
+                <div class = "section-content">
+                    <!-- Main Gif -->
+                    <div>
+                        <h3>Searching</h3>
+                        <img src = "img/toybox/search/low-fidelity-v1/search.gif" width="800">                
+                    </div>
                 
+                    <!-- Trending -->
+                    <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <h4>Trending Searches</h4>
+                        <img src = "img/toybox/search/low-fidelity-v1/search/1-no-input-trending-search.jpg" width="800">                
+                    </div>
+
+                    <!-- Recent Searches -->
+                    <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <h4>Search History </h4>
+                        <img src = "img/toybox/search/low-fidelity-v1/search/2-no-input-recent-searches.jpg" width="800">                
+                    </div>
+
+                    <!-- Suggested Search -->
+                    <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <h4>Suggested Search</h4>
+                        <img src = "img/toybox/search/low-fidelity-v1/search/3-suggested-search.jpg" width="800" >                
+                    </div>
+                  
+                    <!-- Suggested Search + Categories -->
+                    <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <h4>Suggested Search + Categories</h4>
+                        <img src = "img/toybox/search/low-fidelity-v1/search/4-suggested-search-filter-tabs.jpg" width="800" >                
+                    </div>
+        
+                    <!-- Search result filters -->
+                    <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <h3>Search Result Filters</h3>
+                        <img src = "img/toybox/search/low-fidelity-v1/sort-filter.gif" width="800">                
+                    </div>
+                </div>
+            </section>          
+
+
+
+            <!-- Search Result Filters -->
+            <section class = "section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                
+                <!-- Data-Driven Designs -->
+                <div>
+                    <h2>Low Fidelity Revisions</h2>
+
+                    <!-- Search Result Filters<-->
+                    <h3>Search Result Filters</h3>
+                    <p>After presenting my low fidelity designs to the team, I continued to iterate and explore different ways to sort/filter search results.</p>
+                    <p>The first draft was very simple, but lacked organizational hiearachy. Additionally, we wanted to add a time duration filter that would help users
+                        find models that were within their desired print time.
+                    </p>
+                </div>
+
+                <img src = "img/toybox/search/low-fidelity-v2/filters/filters-v2.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
+                <p>However, while looking at this iteration, it had become very overwhelming + 
+                    unnecessary for the print duration to take up so much space.</p>  
+
+                <div class = "side-by-side reverse">
+                    <div class = "left">
+                        <h3>Data-Driven Decisions</h3>
+                        <p>By analyzing the print time data for the models on our platform, I was able to determine what time increments to use for our print duration filter.</p>
+                        <p>This helped with the final version of the design as we were able to narrow down the print duration into 3 categories: quick, medium, slow.</p>
+                    </div>
+
+                    <div class = "right">
+                        <video width="600" playsinline autoplay muted loop>
+                            <source src="img/toybox/search/low-fidelity-v1/toy-data-spreadsheet.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video. This is a video of spreadsheet data.
+                        </video>
+                    </div>
+                </div>
+
+
+            </section>  
+
+
+            <!-- Creator Profiles: Toybox Status/Tiers -->
+
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Final Designs</h2>
+
+                <div class = "section-content">
+                    <!-- Filters -->
+                    <div>
+                        <h3>Filters</h3>                    
+                        <video autoplay muted loop>
+                            <source src="img/toybox/search/v3-deliverables/filters.mov" type="video/mp4">
+                            Your browser does not support videos
+
+                            <!-- <img src="img/covid/title-image.png" alt="Final Image"> -->
+                        </video>
+                    </div>
+
+
+                    <!-- Search Suggestions -->
+                    <div>
+                        <h3>Search Suggestions</h3>                    
+                        <img src = "img/toybox/search/v3-deliverables/suggested-search.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
+                    </div>
+
+
+                    <!-- Creators -->
+                    <div>
+                        <h3>Creators</h3>
+                        
+                        <img src = "img/toybox/search/v3-deliverables/creators.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
+
+                        <p>Additionally, to ease the process of modifying these cards, I created a card component that utilizes Figma’s auto layout and properties.</p>
+                        <p>These features include handling username text-overflow, the ability to easily switch between mobile and desktop cards, and changing the user’s account status.</p>
+
+                        <img src = "img/toybox/search/v3-deliverables/creator-cards.gif" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                    </div>
+                </div>
+            </section>          
+        
+
+            <!-- Challenges -->
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <h2>Challenges</h2>
+                <div class = "section-content">
+
+                    <p>The biggest challenge of this project was trying to figure out the best way to display the search filters.</p>
+                    <p>Initially, I had designed the filters to be a drop-down menu. However, due to the large amount of options that we allow users to select from, we faced a problem where the 
+                        list could possibly become longer than the user’s device height. 
+                        To solve this issue, we decided to use a modal with scrolling. </p>
+                        <!-- <img src = "img/toybox/search/challenges/drop-down-modal.jpg" width="2339"> -->
+
+                        <div>
+                            <h4>Original Deliverable</h4>
+                            <!-- <p>Sections were collapsable; but contained a lot of content that was difficult to see on various screen</p> -->
+                            <img src = "img/toybox/search/v3-deliverables/results-search-filters.jpg" width="1224">
+                        </div>
+
+                        <div>
+                            <h4>Revised Modal</h4>
+                            <img src = "img/toybox/search/v3-deliverables/results-search-filters-new.jpg" width="1224">
+                        </div>
+
+
+                </div>
             </section>
 
 
             <!-- Implementation -->
             <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2>Implementation</h2>
-                <p>Once the design was approved, it was handed off to the development team for production.</p>
-                   
+                <p>Once the design was approved, it was handed off to the development team for production.</p>      
             </section>
 
-            <!-- Challenges -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2>Challenges</h2>
-                <div>
-                    <p>The biggest challenges of this project was trying to figure out the best way to display the search filters.</p>
-                    <p>Initially, I had designed the filters to be a drop-down style format similar to what most shopping websites use.
-                         However, due to the large amount of options that we allow for users to select from, we faced a problem where the 
-                         list could possibly become longer than the user’s device height. 
-                         To solve this issue, we decided to use a pop-up with scrolling. </p>
-                </div>
-            </section>
+            <!-- Final Product Video -->
+            <section class = "section-image preview" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <video autoplay muted loop>
+                    <source src="img/toybox/search/implemented/filters.mp4" type="video/mp4">
+                    Your browser does not support videos
+
+                    <!-- <img src="img/covid/title-image.png" alt="Final Image"> -->
+                </video>
+            </section>    
         </div>
 
         <footer>

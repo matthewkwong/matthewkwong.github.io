@@ -30,12 +30,28 @@ a:visited{
     max-height: 80%;
 }
 
+.research-callout{
+    align-items: flex-start;
+}
+
+.section-image > video{
+    width: 90%;
+}
+
+ul li{
+    font-size: 14px
+}
+
+
 /* WIDTH is less than 900 */
 @media only screen and (max-width: 900px) {
-
-
-    .preview > video{
+    /* .preview > video{
         display: none;
+    } */
+
+    .preview{
+        height: auto;
+        padding:  50px 0px;
     }
 }
 

@@ -72,7 +72,7 @@ footer ul li:first-child{
         height: 240px;
     
         /* So polaroid image doesnt look off */
-        margin-top: 180px;
+        /* margin-top: 180px; */
     }
 
     footer #footer-content{

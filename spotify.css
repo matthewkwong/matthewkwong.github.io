@@ -18,9 +18,7 @@ a:visited{
 }
 
 #title-content-wrapper{
-    gap:10%;
-    /* Allows for the two items to breathe  */
-    width: 100%;
+    gap: 10%;
 }
 
 #project-preview{
@@ -41,17 +39,22 @@ a:visited{
 } */
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     .preview > video{
-        display: none;
+        /* display: none; */
+        height: auto;
     }
 
-    #project-preview{
+    .preview{
+        height: auto;
+    }
+
+    /* #project-preview{
         display: block;
         max-height: 60%;
-    }
+    } */
 
-    .final-prototype{
+    /* .final-prototype{
         display: none;
-    }
+    } */
 }

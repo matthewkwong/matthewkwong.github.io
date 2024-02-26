@@ -160,10 +160,15 @@ h2{
 
 
 @media screen and (max-width: 768px) {
+
+    #goddess{
+        padding: 0px;
+    }
+
     .grid-wrapper > .album-cover,
     .grid-wrapper > img
     {    
-        border: #18A0FB solid 2px ;    
+        /* border: #18A0FB solid 2px ;     */
         flex: 1 100%; 
     }
 

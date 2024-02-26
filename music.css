@@ -42,7 +42,7 @@ section{
     justify-content: center;
     text-align: center;
     max-height: 100%;
-    max-width: 45%;
+    max-width: 50%;
     /* border: solid 2px red; */
 }
 
@@ -163,6 +163,12 @@ h2{
 
     #goddess{
         padding: 0px;
+    }
+
+    #goddess video{        
+        margin: 0;
+        height: auto;
+        max-width: 100%;
     }
 
     .grid-wrapper > .album-cover,

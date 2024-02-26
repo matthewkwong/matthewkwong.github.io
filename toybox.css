@@ -17,9 +17,6 @@ a:visited{
     box-shadow: 0px 0px 100px #FF614C;
 }
 
-#title-content-wrapper{
-    gap:10%;
-}
 
 #title-content-wrapper h1{
     font-size: 40px;
@@ -42,21 +39,10 @@ ul li{
     font-size: 14px
 }
 
-
-/* WIDTH is less than 900 */
-@media only screen and (max-width: 900px) {
-    /* .preview > video{
-        display: none;
-    } */
-
+/* Less than 768px */
+@media only screen and (max-width: 768px) {
     .preview{
         height: auto;
         padding:  50px 0px;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    .final-prototype{
-        display: none;
     }
 }

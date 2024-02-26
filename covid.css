@@ -28,12 +28,20 @@ a:visited{
     max-width: 70%;
 }
 
-@media only screen and (max-width: 834px) {
-    .section-image{
-        height: 70vh;
+/* @media only screen and (max-width: 768px) {
+    .content-wrapper{
+        margin:50px;
+    }
+} */
+
+
+@media only screen and (max-width: 768px) {
+    .preview > video{
+        /* display: none; */
+        height: auto;
     }
 
-    .preview img{
-        max-width: 100%;
+    .preview{
+        height: auto;
     }
 }

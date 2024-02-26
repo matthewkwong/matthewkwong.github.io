@@ -58,34 +58,18 @@ img{
 }
 
 
+#case-studies, 
 #heading-wrapper, #experience-values, #hobbies-polaroids{
     max-width: 1080px;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
 
-    /* border: solid 2px red; */
-}
-
-#heading-wrapper{
-    margin-top: 80px;
-}
-
-
-#heading{
-    width: 480px;
-    height: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    /* border: solid 2px orange; */
-    /* box-sizing:border-box; */
+    /* box-sizing: border-box;
+    border: solid 2px red; */
 }
 
 
@@ -96,22 +80,27 @@ img{
     /* /* padding: 0px 15px; */
 }
 
-/* DESKTOP */
 
+/* DESKTOP */
 #video-profile{
-    width: 480px;
-    height: 480px;
-    position: relative;
+    padding-top: 50px;
+
+    max-width: 50%;
+    height: auto;
+    /* width: 480px;
+    height: 480px; */
+    /* position: relative; */
     overflow: hidden;
-    display: block;
+    /* display: block; */
     /* border: solid 2px orange; */
 }
 
-#video-profile video{
+#video-profile video{    
+    object-fit: fill;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: space-around;    
 
     margin-top: -250px;
     /* width: 960px !important; */
@@ -148,11 +137,7 @@ img{
 
 
 
-
-#heading-wrapper #heading #home-name {
-    width: 480px;
-}
-
+/* Heading for BOTH Home and About page */
 #heading-wrapper #heading #home-name p{
     font-style: normal;
     font-weight: normal;
@@ -165,11 +150,11 @@ img{
     font-weight: 600;
 }
 
-#heading-wrapper #heading  #home-name #about{
+#heading-wrapper #heading #home-name #about{
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 48px;
+    /* font-size: 18px;
+    line-height: 48px; */
     color: #18A0FB;
 }
 
@@ -179,74 +164,48 @@ img{
     color:black;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
-    line-height: 32px;
+    /* border: saddlebrown 2px solid;
+    border: solid 2px orange; */
 }
 
-#selected-work{
-    max-width: 1020px; 
-    margin: auto; 
-    display: flex; 
-    flex-wrap: wrap;
+section{
+    width: 1080px;
+    margin: auto;
 }
 
 
 /* Generic headers for both Home and About */
 #case-studies{
-    max-width: 1080px;
-    margin: auto;
-    margin-bottom: 80px;
+    /* These 2 lines are to offset the scroll of the anchor link when you press Work nav */
+    margin-top: -50px !important; 
+    padding-top: 100px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    /* border: solid 2px blue; */
-}
-
-
-#case-studies .case-study-card{
-    max-width: 480px;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-
-    /* border: solid 2px red;
+    /* border: solid 2px orange;
     box-sizing: border-box; */
+
+    width: 100%;
 }
 
-#case-studies .case-study-card img{
-    transition: all .3s ease-out;
-}
 
-#case-studies .case-study-card img:hover{
-    transform: scale(0.96);
-}
-
-#case-studies .case-study-card:nth-child(even) {
-    margin-top: 64px;
-}
-
- #case-studies .case-study-card a img{
-    max-width: 100%;
-    height: auto;
-}
-
- #case-studies .case-study-card p{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    color: #B2B2B2;
+#content-wrapper{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 50px;
 }
 
 
 /* About page */
+#heading-wrapper, #experience-values, #hobbies-polaroids{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    /* border: solid 2px red;
+    box-sizing: border-box; */
 
-/* Experience */
-#experience-values #experience {
-    width: 480px;
+    width: 100%;
 }
+
+
 
 #experience-values #experience .job-title {
     margin: 24px 0px 0px 0px;
@@ -261,54 +220,59 @@ a:visited{
     color: #18A0FB;
 }
 
-/* Values */
-#experience-values #values{
-    width: 480px;
-}
 
+#hobbies-polaroids #hobbies ul li{
+    margin: 24px 0;   
+}
 
 /* Hobbies and Polaroids */
 #hobbies-polaroids {
-    width: 100%;
-    margin-top: 144px;
+    /* width: 100%; */
     position: relative;
 
     /* border: solid 2px purple;
     box-sizing: border-box; */
 }
 
-/* Hobbies */
-#hobbies-polaroids #hobbies{
-    z-index: 3;
-    width: 480px;
+
+/* Heading, Values, Experience, Hobbies */
+
+#heading{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#hobbies-polaroids #hobbies ul li{
-    margin: 24px 0;   
+ #values{
+    z-index: 3;
+    max-width: 50%;
+    /* max-width: 480px; */
+    /* max-width: 50%; */
+}
+
+/* Hobbies */
+#hobbies{
+    z-index: 3;
 }
 
 /* Polaroids */
-#hobbies-polaroids #polaroids{
-
+ #polaroids{
     z-index: 2;
     position: absolute;
-    right: -400px;
-    top: -100px;
-
-    width: 100%;
-    height: auto;
-
+    right: -10%;
+    max-width: 70%;
     /* border: solid 2px red;
     box-sizing: border-box;  */
 }
 
-/* Allows for the polaroid effect to cut off and overflow properly :) */
-#hobbies-polaroids #invisible{
-    height: 1px; 
-    width: 480px;
-}
 
-@media screen and (max-width: 960px) {
+
+
+
+@media screen and (max-width: 768px) {
+
+    
     #profile-picture{
         display: block;
     }
@@ -321,56 +285,4 @@ a:visited{
         display: block;
     }
 
-    #selected-work{
-        max-width: 480px;
-        width: 100%;
-    }
-
-    #case-studies .case-study-card{
-        margin-top: 50px;
-    }
 }
-
-@media screen and (max-width: 600px) {
-
-    #case-studies .case-study-card{
-        margin-bottom: 24px;
-    }
-    
-
-    #heading-wrapper, #experience-values, #hobbies-polaroids{
-        flex-direction: column;
-        justify-content: center;
-        width: 300px;
-        gap: 80px;
-    }
-
-    #hobbies-polaroids{
-        margin-top: 0px;
-    }
-
-    #hobbies-polaroids #polaroids{
-        /* position: relative; */
-        /* right: 0px; */
-        /* top: 0px; */
-
-        right: 0px;
-        top: 500px;
-    }
-
-    #heading-wrapper,
-    #heading-wrapper #heading,
-     
-    #selected-work,
-    #case-studies,
-    
-    #profile-picture, 
-
-    #experience-values #experience, 
-    #experience-values #values, 
-    
-    #hobbies-polaroids, 
-    #hobbies-polaroids #hobbies{
-        width: 300px;
-    }
-  }

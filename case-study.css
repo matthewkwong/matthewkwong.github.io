@@ -35,15 +35,27 @@ body > div{
 
 .content-wrapper {
     overflow-y: hidden;
+    /* border: solid 2px green; */
+    box-sizing: border-box;
 }
 
-.content-wrapper > section{
+.content-wrapper section{
     overflow-y: hidden;
+    width: 100%;
+    /* border: solid 2px blue; */
+    box-sizing: border-box;
+}
+
+.content-wrapper  .section-image{
+    /* Needs to be max-width: 100% in order to go across the entire screen */
+    max-width: 100%;
+    /* border: solid 2px red; */
+    box-sizing: border-box;
+
 }
 
 section{
-    max-width: 100%;
-    width: 800px;
+    max-width: 900px;
     /* gap: 50px; */
     /* width: 100%; */
     margin: auto;
@@ -131,8 +143,9 @@ img{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+    /* justify-content: space-between; */
+    align-content: stretch;
+    gap: 0px 50px;
 }
 /* 
 #project-details div{
@@ -166,8 +179,7 @@ video{
 }
 
 .content-wrapper{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding: 100px 0px;
 
     display: flex;
     flex-direction: column;
@@ -232,10 +244,11 @@ video{
 .section-image{
     background-color: #f4f4f4;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .section-image video{
@@ -374,30 +387,27 @@ video{
 }
 
 
+@media (min-width: 800px){
 
-@media only screen and (max-width: 1024px) {
-    
-    #title-content-wrapper{
-        gap: 50px;
+    .content-wrapper section{
+        padding: 0px 50px;
     }
-    
-    /* body, html{
-        width:100%;
-        overflow-x: hidden;
-        scrollbar-width: none;
-    } */
 }
 
-/* Sorcery that makes 100% of the screen size on ALL window sizes */
-/* HEIGHT is less than 900 */
-/* @media only screen and (max-height: 900px) {
-    #title{
-        height: calc(100vh - 90px);
+
+/* This is done at 800px since that's the width of the sections rn */
+@media only screen and (max-width: 800px) {
+    /* Adds padding that acts as a fake margin. This helps maintain the 
+    full-width section image/videos */
+    .content-wrapper section{
+        padding: 0px 50px;
+        margin: 0px 50px;        
     }
-} */
+}
+
 
 /* WIDTH is less than 900 */
-@media only screen and (max-width: 834px) {
+@media only screen and (max-width: 768px) {
     #big-circle, #top-left-circle{
         display: none;
     }
@@ -420,13 +430,12 @@ video{
         margin: 0px 50px;
     } */
 
-    h2{
-        line-height: normal;
-        margin: 0px;
-    }
-
     section{
         flex-direction: column;
+    }
+
+    .section-image video{
+        margin: 20px 0px;
     }
     
     #title-content h1{
@@ -458,18 +467,12 @@ video{
 }
 
 /* Phones */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 360px) {
     #title-content-wrapper{
         margin: 0px 20px;
     }
 
-    .content-wrapper{
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .section-image{
-        margin-bottom: 50px;
+    .content-wrapper section{
+        padding: 0px 20px;
     }
 }

@@ -16,22 +16,54 @@
 </head>
 
 <style>
-  #heading, #case-studies-wrapper, #experience-values, #hobbies-polaroids{
-    justify-content: space-around;
-  }
 
-  #profile-picture{
-    display: block;
-  }
-
-  @media screen and (max-width: 600px) {
-    #polaroids{
-        /* So polaroid image doesnt look off */
-        /* margin-top: 500px; */
-        display: none;
-    }
+  #about-profile-picture{
+    width: 50%;
+    height: 100%;
   }
   
+  /* since polaroids are no longer in this div */
+  #hobbies{
+    max-width: 100%;
+  }
+
+
+#content-wrapper{
+  overflow: visible;
+}
+
+  @media screen and (max-width: 768px) {
+
+
+    #about-profile-picture{
+    /* width: 100%; */
+    width: auto;
+    height: auto;
+  }
+   #heading-wrapper, #experience-values, #hobbies-polaroids{
+    flex-direction: column;
+      border: none;
+    }
+
+
+    #heading, #about-profile-picture, #values, #experience, #hobbies{
+      border: none;
+      /* width: 100%; */
+      width: auto;
+      max-width: 100%;
+    }
+   
+  #polaroids{
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+      max-width: 100%;
+  }
+
+  #hobbies-polaroids{
+    gap: 0px;
+  }
+}
 
 </style>
 
@@ -64,21 +96,23 @@
 </ul>
 </nav>
 
+<div id = "content-wrapper">
   <section id = "heading-wrapper">
     <div id = "heading">
-      <div>
-        <p id= "name">Hi, I'm Matthew!</p>
+        <h1>Hi, I'm Matthew!</h1>
         <p>I’m a Product Designer from San Francisco, focused on creating visual, 
           user-centric designs that improve the world.</p>
        
-        <p style = "margin-top:24px;">I’ve always had a passion for technology, but it wasn’t until my first web-development class in 
+        <p>I’ve always had a passion for technology, but it wasn’t until my first web-development class in 
           high-school that I found a passion for design. Falling in love with creating websites, 
           taught me both visual design and web development skills. This newfound intersection of 
           design and development together is how I discovered UI/UX Design.</p>
-      </div>
+    
+        <p>If you'd like to meet, let's set up a <a href = "https://calendly.com/matthewkwong/intro"  target="_blank">
+          virutal coffee chat</a>!</p>
     </div>
-  
-    <img src = "img/index/profile.jpeg" height = "480" width = "480" id = "profile-picture"> 
+
+    <img src = "img/index/profile.jpeg" height = "400" width = "400" id = "about-profile-picture"> 
   </section>
 
 
@@ -141,25 +175,27 @@
     <div id = "values">
       <h2>My Values</h2>
       <!-- Compassion -->
-      <div class = "sub-value">
-        <h3>Compassion</h3>
-        <p>We’ve all been there before, where we feel lost or confused. Helping those around you can go a long way, 
-          especially when taking the time to understand others' perspectives.</p>
-      </div>  
-    
-      <!-- Learning -->
-      <div class = "sub-value">
-        <h3>Learning</h3>
-        <p>I’m a huge believer that you’ll often learn the most by doing. Whether it be learning how to skateboard, 
-          or how to code, you won't learn unless you make that first attempt.</p>
-      </div>  
+      <div id = "values-wrapper">
+        <div class = "sub-value">
+          <h3>Compassion</h3>
+          <p>We’ve all been there before, where we feel lost or confused. Helping those around you can go a long way, 
+            especially when taking the time to understand others' perspectives.</p>
+        </div>  
+      
+        <!-- Learning -->
+        <div class = "sub-value">
+          <h3>Learning</h3>
+          <p>I’m a huge believer that you’ll often learn the most by doing. Whether it be learning how to skateboard, 
+            or how to code, you won't learn unless you make that first attempt.</p>
+        </div>  
 
-      <!-- Trying -->
-      <div class = "sub-value">
-        <h3>Trying // Failure is Okay</h3>
-        <p>It’s okay to fail, it’s part of learning and at least you tried. Whether that be trying a new food or new experience, 
-          get out of your comfort zone and experience new things. </p>
-      </div>  
+        <!-- Trying -->
+        <div class = "sub-value">
+          <h3>Trying // Failure is Okay</h3>
+          <p>It’s okay to fail, it’s part of learning and at least you tried. Whether that be trying a new food or new experience, 
+            get out of your comfort zone and experience new things. </p>
+        </div>  
+      </div>
     </div>
   </section>
 
@@ -178,13 +214,11 @@
       </ul>
     </div>
 
-    <div id = "invisible"> </div>
-
     <div id = "polaroids"> 
-        <img src = "img/index/polaroids.png" height = "605" width = "972" >
+      <img src = "img/index/polaroids.png" height = "605" width = "972" >
     </div>
-
   </section>
+</div>
 
   <footer>
     <div id = "footer-content">

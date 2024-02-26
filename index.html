@@ -17,15 +17,112 @@
   <title>Matthew Kwong | Home</title>
 </head>
 
+<style>
+  #content-wrapper{
+    overflow-x: hidden;
+  }
+
+  #heading-wrapper{
+    align-items: center;
+  }
+
+  #case-studies{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 50px;
+    margin-top: 100px;
+    /* flex-flow: column wrap; */
+  }
+
+  #case-studies .case-study-card{   
+    /* max-width: 850px; */
+    flex: 1 0 345px; 
+
+    /* max-width: 500px; */
+    text-align: center;
+/* 
+    border: solid 2px blue;
+    box-sizing: border-box; */
+    /* width: auto; */
+  }
+
+  #case-studies .case-study-card img{
+      transition: all .3s ease-out;
+  }
+
+  #case-studies .case-study-card img:hover{
+      transform: scale(0.96);
+  }
+
+  #case-studies .case-study-card:nth-child(even) {
+      margin-top: 64px;
+  }
+
+  #case-studies .case-study-card p{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      color: #B2B2B2;
+  }
+
+
+  #case-studies .case-study-card img:hover{
+      transform: scale(0.96);
+  }
+
+  #case-studies .case-study-card:nth-child(even) {
+      margin-top: 64px;
+  }
+
+  #case-studies .case-study-card p{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      color: #B2B2B2;
+  }
+
+
+    
+@media screen and (max-width: 768px) {
+  #case-studies .case-study-card{
+    flex: 1 50%; 
+  }
+
+  #case-studies .case-study-card:nth-child(even) {
+    margin-top: 0px;
+  }
+
+  #heading-wrapper{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #heading-wrapper #heading{
+    max-width: 100%;
+  }
+
+}
+
+/* Phones */
+@media screen and (max-width: 360px) {
+  #content-wrapper{
+      margin: 20px;
+  }
+}
+
+</style>
+
 <body>
     <nav>
-        <!-- MK Logo -->
-        <a href = "index.html">
-            <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
-        </a>
+      <!-- MK Logo -->
+      <a href = "index.html">
+          <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+      </a>
 
-        <!-- Nav links -->
-        <ul id = "nav-links">
+      <!-- Nav links -->
+      <ul id = "nav-links">
   
         <!-- Checkbox hack for mobile -->
         <input type = "checkbox" id = "checkbox_toggle"/>
@@ -38,117 +135,112 @@
                 <a href = "index.html">
                     <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
                 </a>
-                <li><a href="#selected-work" class="middle">Work</a></li>
+                <li><a href="#case-studies" class="middle">Work</a></li>
                 <li><a href="about.html" class = "active-nav middle" >About</a></li>
                 <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
             </div>
         </div>
-    </ul>
-  </nav>
+      </ul>
+    </nav>
 
-  <section id = "heading-wrapper">
-    <div id = "heading">
-        <div id= "home-name">
-            <h1>Hey! I’m Matthew, </h1>
-            <p>a <span style = "font-weight: 600;">Product Designer
-            </span>making a difference through human-centered design
-          </p>
-            
-          <p>Currently @ <a href="https://toybox.com/" style = "color: #FF614C">Toybox</a></p>
-            <!-- <p>Currently, searching for <b>full-time Product Design roles.</b></p> -->
-            <!-- <p>Previously, a UX Designer at <a href = "https://www.savagebureau.com/"><span>The Savage Bureau</a></span>.</p> -->
-
-            <!-- <a href = "about.html" id = "about">More about me</a> -->
+    <div id = "content-wrapper">
+      <section id = "heading-wrapper">
+        <div id = "heading">
+          <div id= "home-name">
+              <h1>Hey! I’m Matthew, </h1>
+              <p>a <span style = "font-weight: 600;">Product Designer</span>
+                making a difference through human-centered design
+              </p>
+              
+              <p>Currently @ <a href="https://toybox.com/" style = "color: #FF614C">Toybox</a></p>
+          </div>
         </div>
-    </div>
-  
-    <!-- <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture">  -->
-    <div id = "video-profile">
-      <video width="480" playsinline autoplay muted loop>
-        <source src="img/index/video-profile.mp4" type="video/mp4">
-      </video>  
-    </div>
+    
+        <!-- <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture">  -->
+        <div id = "video-profile">
+          <video width="400" playsinline autoplay muted loop>
+            <source src="img/index/video-profile.mp4" type="video/mp4">
+          </video>  
+        </div>
 
-    <div id = "video-profile-mobile">
-      <video width="480" playsinline autoplay muted loop>
-        <source src="img/index/video-profile-mobile.mp4" type="video/mp4">
-      </video>  
-    </div>
+        <div id = "video-profile-mobile">
+          <video width="480" playsinline autoplay muted loop>
+            <source src="img/index/video-profile-mobile.mp4" type="video/mp4">
+          </video>  
+        </div>
 
-    <!-- <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture">  -->
-  </section>
+      <!-- <img src = "img/profile.png" height = "480" width = "480" id = "profile-picture">  -->
+      </section>
 
-  <section id = "selected-work">
-    <h2>Selected Work</h2>
-  </section> 
+    <!-- <section id = "selected-work">
+      <h2>Selected Work</h2>
+    </section>  -->
 
-  <!-- <section id = "case-studies-wrapper">   -->
-        <section id = "case-studies">
+    <!-- <section id = "case-studies-wrapper">   -->
+    <section id = "case-studies">
 
-          <!-- Toybox -->
-            <div class = "case-study-card" style="cursor:pointer">
-              <a href = "toybox-search.html">
-                <img src = "img/case-studies/toybox-search-browser.jpeg" height = "480" width = "480" alt = "Toybox">
-              </a>
-              <h2>Toybox: Better Model Search</h2>
-              <p>Improving the Toybox search experience</p>
-          </div>
+      <!-- Toybox -->
+        <div class = "case-study-card" style="cursor:pointer">
+          <a href = "toybox-search.html">
+            <img src = "img/case-studies/toybox-search-browser.jpeg" height = "515" width = "515" alt = "Toybox">
+          </a>
+          <h2>Toybox- Better Model Search</h2>
+          <p>Improving the Toybox search experience</p>
+      </div>
 
-          <!-- Music -->
-            <!-- <div class = "case-study-card" style="cursor:pointer">
-              <a href = "music.html"><img src = "img/case-studies/madeon-adventure.gif" height = "480" width = "480" alt = "Music case study card"></a>
-                <h2>Music</h2>
-              <p>Multidisciplinary collection of music industry related design projects</p>
-            </div> -->
+      <!-- Music -->
+        <!-- <div class = "case-study-card" style="cursor:pointer">
+          <a href = "music.html"><img src = "img/case-studies/madeon-adventure.gif" height = "515" width = "515" alt = "Music case study card"></a>
+            <h2>Music</h2>
+          <p>Multidisciplinary collection of music industry related design projects</p>
+        </div> -->
 
-          <!-- Salesforce -->
-          <div class = "case-study-card" style="cursor:pointer" onclick="document.location='salesforce.html'">
-              <a href = "salesforce.html"><img src = "img/case-studies/salesforce.jpg" height = "480" width = "480" alt = "Salesforce Customer Success Events"></a>
-                <h2>Salesforce Customer Success Events</h2>
-              <p>Building a more efficient design system</p>
-          </div>
+      <!-- Salesforce -->
+      <div class = "case-study-card" style="cursor:pointer" onclick="document.location='salesforce.html'">
+          <a href = "salesforce.html"><img src = "img/case-studies/salesforce.jpg" height = "515" width = "515" alt = "Salesforce Customer Success Events"></a>
+            <h2>Salesforce Customer Success Events</h2>
+          <p>Building a more efficient design system</p>
+      </div>
 
-          <!-- 45 Fremont -->
-          <div class = "case-study-card" style="cursor:pointer" onclick="document.location='45fremont.html'">
-              <a href = "45fremont.html"><img src = "img/case-studies/45fremont.jpg" height = "480" width = "480" alt = "45 Fremont"></a>
-                <h2>45 Fremont</h2>
-              <p>Optimizing the commercial real-estate leasing experience</p>
-          </div>
+      <!-- 45 Fremont -->
+      <div class = "case-study-card" style="cursor:pointer" onclick="document.location='45fremont.html'">
+          <a href = "45fremont.html"><img src = "img/case-studies/45fremont.jpg" height = "515" width = "515" alt = "45 Fremont"></a>
+            <h2>45 Fremont</h2>
+          <p>Optimizing the commercial real-estate leasing experience</p>
+      </div>
 
-          <!-- Aidin -->
-          <!-- <div class = "case-study-card">
-              <a href = "aidin.html"><img src = "img/case-studies/aidin.jpg" height = "480" width = "480" alt = "Aidin"></a>
-              <h2>Aidin</h2>
-              <p>Conducting user research to ease healthcare transitions</p>
-          </div> -->
+      <!-- Aidin -->
+      <!-- <div class = "case-study-card">
+          <a href = "aidin.html"><img src = "img/case-studies/aidin.jpg" height = "515" width = "515" alt = "Aidin"></a>
+          <h2>Aidin</h2>
+          <p>Conducting user research to ease healthcare transitions</p>
+      </div> -->
 
-          <!-- PlayTest -->
-          <div class = "case-study-card" style="cursor:pointer" onclick="document.location='playtest.html'">
-              <a href = "playtest.html"><img src = "img/case-studies/playtest.jpg" height = "480" width = "480" alt = "PlayTest"></a>
-                <h2>PlayTest</h2>
-              <p>Gamifying the education learning experience</p>
-          </div>
-          
-          <!-- Find My COVID Test -->
-          <div class = "case-study-card" style="cursor:pointer" onclick="document.location='covid.html'">
-              <a href = "covid.html"><img src = "img/case-studies/covid.jpg" height = "480" width = "480" alt = "Find My COVID Test"></a>
-                <h2>Find My COVID Test</h2>
-              <p>Creating an accessible one-stop solution to find COVID-19 testing</p>
-          </div>
+      <!-- PlayTest -->
+      <div class = "case-study-card" style="cursor:pointer" onclick="document.location='playtest.html'">
+          <a href = "playtest.html"><img src = "img/case-studies/playtest.jpg" height = "515" width = "515" alt = "PlayTest"></a>
+            <h2>PlayTest</h2>
+          <p>Gamifying the education learning experience</p>
+      </div>
+      
+      <!-- Find My COVID Test -->
+      <div class = "case-study-card" style="cursor:pointer" onclick="document.location='covid.html'">
+          <a href = "covid.html"><img src = "img/case-studies/covid.jpg" height = "515" width = "515" alt = "Find My COVID Test"></a>
+            <h2>Find My COVID Test</h2>
+          <p>Creating an accessible one-stop solution to find COVID-19 testing</p>
+      </div>
 
-          <!-- Spotify Rooms -->
-          <div class = "case-study-card" style="cursor:pointer" onclick="document.location='spotify.html'">
-              <a href = "spotify.html"><img src = "img/case-studies/spotify.jpg" height = "480" width = "480" alt = "Spotify Rooms"></a>
-                <h2>Spotify Rooms</h2>
-              <p>Pioneering the future music listening experience</p>
-          </div>
+      <!-- Spotify Rooms -->
+      <div class = "case-study-card" style="cursor:pointer" onclick="document.location='spotify.html'">
+          <a href = "spotify.html"><img src = "img/case-studies/spotify.jpg" height = "515" width = "515" alt = "Spotify Rooms"></a>
+            <h2>Spotify Rooms</h2>
+          <p>Pioneering the future music listening experience</p>
+      </div>
 
-          <!-- EMPTY SPACER-->
-          <div class = "case-study-card"></div>
 
-        </section>
-  <!-- </section> -->
-
+    </section>
+    <!-- </section> -->
+  </div>
 
 
   <footer>

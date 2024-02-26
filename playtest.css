@@ -25,19 +25,9 @@ a:visited{
 
 
 /* WIDTH is less than 900 */
-@media only screen and (max-width: 900px) {
-    /* .preview > video{
-        display: none;
-    } */
-
+@media only screen and (max-width: 768px) {
     .preview{
         height: auto;
-        padding:  50px 0px;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    .final-prototype{
-        display: none;
+        padding:  50px 50px;
     }
 }

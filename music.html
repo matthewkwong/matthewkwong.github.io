@@ -40,7 +40,7 @@
                     <a href = "index.html">
                         <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
                     </a>
-                    <li><a href="index.html" class="middle">Work</a></li>
+                    <li><a href="index.html#case-studies" class="middle">Work</a></li>
                     <li><a href="about.html" class = "active-nav middle" >About</a></li>
                     <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
                 </div>
@@ -48,27 +48,49 @@
         </ul>
         </nav>
 
-        <div class = "content-wrapper">
-            <h2>Music</h2>
-            
-            <!-- Overview -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">            
-                <div>
-                    <p>
-                        It's been a dream of mine to collaborate with musicians and create unique visual experiences together. 
-                        This is a collection of design projects that I’ve made to one day turn this dream into a reality.
-                    </p>                
+        <!-- <div id = "title">
+            <section id = "title-content-wrapper">
+                <div id = "title-content" data-aos="fade-right" 
+                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                    <h1>Music</h1>
+                    
+                    <p>It's been a dream of mine to collaborate with musicians and create unique visual experiences together. 
+                    This is a collection of design projects that I’ve made to one day turn this dream into a reality.</p>
                 </div>
+\
             </section>
 
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class = "music">
-                <!-- <h3 class = "subtitle">Website Experiences</h3> -->
+            <div class = "circle" id = "big-circle"  data-aos="fade-left" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1000" style = "overflow-x: hidden;"></div>
 
-                <div class = "full">
-                    <video autoplay playsinline muted loop controls class = "full">
-                        <source src="img/music/laufey-goddess-tour.mp4" type="video/mp4">
-                        Your browser does not support videos
-                    </video>
+            <div class = "circle" id = "top-left-circle"  data-aos="fade-right" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
+        </div> -->
+
+
+        <div class = "content-wrapper">
+            
+            <section data-aos="fade-right" 
+            data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1000" style = "overflow-x: hidden;"> 
+                <h1>Music</h1>
+                
+                <p>It's been a dream of mine to collaborate with musicians and create unique visual experiences together. 
+                This is a collection of design projects that I’ve made to one day turn this dream into a reality.</p>
+            </section>
+
+
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" 
+            class = "music">
+                <!-- <h2 class = "subtitle">Website Experiences</h2> -->
+
+                <div class="full">
+                    <div class="full section-image" id="goddess"> 
+                        <video autoplay playsinline muted loop controls>
+                            <source src="img/music/laufey-goddess-tour.mp4" type="video/mp4">
+                            Your browser does not support videos
+                        </video>
+                    </div>
+
                     <p>Animated Laufey's upcoming Bewitched: The Goddess Tour poster.</p>
                 </div>
 
@@ -77,8 +99,8 @@
                         <source src="img/music/amine-mooz-maps.mp4" type="video/mp4">
                         Your browser does not support videos
                     </video>
-                    <p>I created an interactive prototype of an additional feature to be added to Aminé's <a href="https://clubbanana.com/">merch website</a> 
-                    that could increase user engagement as he promotes his recent shoe collaboration with New Balance.</p>
+                    <p>I created an interactive prototype of an additional feature to be added to Aminé's
+                    <a href="https://clubbanana.com/">merch website</a> that could increase user engagement as he promotes his recent shoe collaboration with New Balance.</p>
                 </div>
 
                 <div class = "full">
@@ -100,15 +122,16 @@
             </section>
 
             <!-- Animated Cover Arts -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class = "music">
+            <section data-aos="fade-up"  class = "grid-wrapper" data-aos-mirror="true" data-aos-anchor-placement="top-center" 
+            data-aos-offset="-200">
 
                 <div class = "project-description">
-                    <h3 class = "subtitle">Animated Album Covers</h3>
+                    <h2>Animated Album Covers</h2>
                     <p>Inspired by the animated album covers on Apple music, I brought some of my favorite
                         album covers to life.</p>
                 </div>
 
-                <div>
+                <div class="album-cover">
                     <video autoplay playsinline muted loop controls>
                         <source src="img/music/juliet-ivy-playpen.mp4" type="video/mp4">
                         Your browser does not support videos
@@ -116,7 +139,7 @@
                     <p>Juliet Ivy's, <i>Playpen</i></p>
                 </div>
 
-                <div>
+                <div class="album-cover">
                     <video autoplay playsinline muted loop controls>
                         <source src="img/music/madeon-adventure.mp4" type="video/mp4">
                         Your browser does not support videos
@@ -124,7 +147,7 @@
                     <p>Madeon's, <i>Adventure</i> in sync to the end of "Isometric"</p>
                 </div>
 
-                <div>
+                <div class="album-cover">
                     <video autoplay playsinline muted loop>
                         <source src="img/music/louis-the-child.mp4" type="video/mp4">
                         Your browser does not support videos
@@ -132,7 +155,7 @@
                     <p>Louis the Child's, <i>Here for Now</i></p>
                 </div>
 
-                <div>
+                <div class="album-cover">
                     <video autoplay playsinline muted loop>
                         <source src="img/music/frank-ocean-blond.mp4" type="video/mp4">
                         Your browser does not support videos
@@ -140,7 +163,7 @@
                     <p>Frank Ocean's, <i>Blonde</i></p>
                 </div>
 
-                <div>
+                <div class="album-cover">
                     <video autoplay playsinline muted loop>
                         <source src="img/music/laufey-everything-I-know-about-love.mp4" type="video/mp4">
                         Your browser does not support videos
@@ -151,31 +174,31 @@
             </section>
 
             <!-- Stickers -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class = "music">
-                
+            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <div class = "project-description">
-                    <h3 class = "subtitle">Minimalistic Album Cover Stickers and Pins</h3>
-                    <!-- <p>A collection of minimalistic stickers and pins I made.</p> -->
+                    <h2>Minimalistic Album Cover Stickers and Pins</h2>
+                    <p>A collection of Tyler, The Creator and Frank Ocean stickers and pins that I've made.</p>
                 </div>
 
-                <!-- Flower Boy Sticker-->
-                <img src = "img/music/stickers/flower-boy-sticker.jpeg" width="390" height="390">
+                <div class = "grid-wrapper"> 
+                    <!-- Flower Boy Sticker-->
+                    <img src = "img/music/stickers/flower-boy-sticker.jpeg" width="500" height="500">
 
-                <!-- Camp Flog Gnaw Sticker -->
-                <img src = "img/music/stickers/camp-flog-gnaw-sticker.JPG" width="390" height="390">
+                    <!-- Camp Flog Gnaw Sticker -->
+                    <img src = "img/music/stickers/camp-flog-gnaw-sticker.JPG" width="500" height="500">
 
-                <!-- IGOR Sticker-->
-                <img src = "img/music/stickers/igor-sticker.jpg" width="390" height="390">
+                    <!-- IGOR Sticker-->
+                    <img src = "img/music/stickers/igor-sticker.jpg" width="500" height="500">
 
-                <!-- IGOR Pin-->
-                <img src = "img/music/stickers/igor-pin.jpg" width="390" height="390">
-                
-                <!-- Blonde Sticker -->
-                <img src = "img/music/stickers/blonde-sticker.JPG" width="390" height="390">
+                    <!-- IGOR Pin-->
+                    <img src = "img/music/stickers/igor-pin.jpg" width="500" height="500">
+                    
+                    <!-- Blonde Sticker -->
+                    <img src = "img/music/stickers/blonde-sticker.JPG" width="500" height="500">
 
-                <!-- Blonde Pin -->
-                <img src = "img/music/stickers/blonde-pin.JPG" width="390" height="390">
-
+                    <!-- Blonde Pin -->
+                    <img src = "img/music/stickers/blonde-pin.JPG" width="500" height="500">
+                </div>
             </section>
         </div>
 

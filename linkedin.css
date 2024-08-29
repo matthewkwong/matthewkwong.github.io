@@ -1,0 +1,57 @@
+a{
+    text-decoration: none;
+    color: #0966C2;
+}
+
+a:visited{
+    color: #0966C2;
+}
+
+.callout{
+    background-color: #0966C2;
+}
+
+/* Circles */
+.circle{
+    background: #0966C2;
+    box-shadow: 0px 0px 100px #0966C2;
+}
+
+#project-preview{
+    height: 50vh;
+    width: 100%;
+    background-image:url("img/linkedin-circles/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#title-content-wrapper h1{
+    font-size: 40px;
+}
+
+#project-preview{
+    width: auto;
+    max-height: 80%;
+}
+
+.research-callout{
+    align-items: flex-start;
+}
+
+.section-image > video{
+    width: 90%;
+}
+
+ul li{
+    font-size: 14px
+}
+
+/* Less than 768px */
+@media only screen and (max-width: 768px) {
+    .preview{
+        height: auto;
+        padding:  50px 0px;
+    }
+}

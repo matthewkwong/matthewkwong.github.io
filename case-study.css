@@ -9,19 +9,71 @@
 }
 
 @font-face {
-    font-family: Playfiar-Display;
+    font-family: Playfair-Display;
     src: url(fonts/PlayfairDisplay-Medium.ttf);
 }
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-VariableFont_slnt,wght.ttf);
+}
+
 
 html{
     overflow-x: initial !important;
 }
   
 body{
+    /* color: #666666; */
     background-color: white;
     margin: auto;
     font-family: 'Poppins', sans-serif;
+    font-style: normal;
 }
+
+h1{
+    /* font-family: Playfair-Display; */
+    font-size: 40px;
+    line-height: 64px;
+    font-weight: 600;
+}
+
+h2{
+    /* font-family: Playfair-Display; */
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 42px;
+    /* margin: 0; */
+}
+
+
+h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 18px;
+    font-weight: 600;
+    /* margin: 0; */
+    line-height: 12px;
+}
+
+
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+
 
 .content-wrapper img {
     cursor: -moz-zoom-in; 
@@ -73,7 +125,7 @@ section{
 .section-content{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
     justify-content: center;
 }
 
@@ -82,47 +134,13 @@ section{
 }
 
 
-h1{
-    font-size: 64px;
-}
+
 
 #title h1{
     font-family: CircularStd-Bold;
 }
 
-h2{
-    font-family: Playfair-Display;
-    font-family: "swear-display", serif;
-    font-weight: 400;
-    font-style: normal;
-    /* font-family: Poppins; */
-}
 
-h3, h4{
-    font-family: CircularStd-Book;
-    font-weight: 600;
-    font-style: normal;
-}
-
-h2{
-    font-size: 36px;
-    margin: 20px 0px;
-}
-
-h3{
-    font-size: 24px;
-    line-height: 30px;
-}
-
-h4{
-    font-size: 20px;
-    line-height: 0px;
-}
-
-p{
-    font-size: 16px;
-    line-height: 28px;
-}
 
 a{
     text-decoration: none;
@@ -143,8 +161,8 @@ img{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    align-content: stretch;
+    /* justify-content: flex-start; */
+    /* align-content: stretch; */
     gap: 0px 50px;
 }
 /* 
@@ -239,6 +257,7 @@ video{
     background-color: #0000;
     box-sizing: border-box;
     padding: 40px;
+    font-style: italic;
 }
 
 .section-image{
@@ -272,7 +291,7 @@ video{
 
 
 #title-content-wrapper{
-    margin:  0px 150px;
+    margin:  0px 50px;
     /* width: 100%; */
     /* max-width: 1080px; */
     /* margin: 0px, 150px; */
@@ -396,33 +415,33 @@ video{
 
 
 /* This is done at 800px since that's the width of the sections rn */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
     /* Adds padding that acts as a fake margin. This helps maintain the 
     full-width section image/videos */
     .content-wrapper section{
         padding: 0px 50px;
-        margin: 0px 50px;        
+        /* margin: 0px 50px;         */
     }
 }
 
 
-/* WIDTH is less than 900 */
+/* WIDTH is less than 768 */
 @media only screen and (max-width: 768px) {
     #big-circle, #top-left-circle{
         display: none;
     }
 
+
+    #title-content{
+        margin: 0;
+    }
+
     #title-content-wrapper{
-        margin: 0px 50px;
         flex-direction: column;
     }
 
-    #title{
-        height: 100%;
-    }
 
     #title-image {
-        display: none;
         width: 100%;
     }
 
@@ -431,6 +450,7 @@ video{
     } */
 
     section{
+        overflow-x: hidden;
         flex-direction: column;
     }
 
@@ -468,9 +488,7 @@ video{
 
 /* Phones */
 @media only screen and (max-width: 360px) {
-    #title-content-wrapper{
-        margin: 0px 20px;
-    }
+
 
     .content-wrapper section{
         padding: 0px 20px;

@@ -17,6 +17,15 @@ a:visited{
     box-shadow: 0px 0px 100px #FF614C;
 }
 
+#project-preview{
+    height: 50vh;
+    width: 100%;
+    background-image:url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 #title-content-wrapper h1{
     font-size: 40px;

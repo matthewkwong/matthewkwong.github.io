@@ -17,7 +17,7 @@ a:visited{
     box-shadow: 0px 0px 100px #0966C2;
 }
 
-#project-preview{
+.content-wrapper > #project-preview{
     height: 50vh;
     width: 100%;
     background-image:url("img/linkedin-circles/banner.jpg");

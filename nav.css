@@ -6,6 +6,11 @@
     overflow-y: scroll;
 }
 
+/* Navbar */
+nav img{
+    cursor: pointer;
+}
+
 nav {
     z-index: 4;
     

@@ -107,7 +107,9 @@ body > div{
 }
 
 section{
-    max-width: 900px;
+    max-width: 1000px;
+    /* changed on september 10, 2024 */
+    /* max-width: 900px; */
     /* gap: 50px; */
     /* width: 100%; */
     margin: auto;
@@ -160,14 +162,20 @@ img{
     border-radius: 8px;
 }
 
-.show{
-    cursor: zoom-out;
-}
-
+/* magnify cursor */
 .show img{
     cursor: zoom-out;
 }
 
+/* cursor */
+.show img{
+    cursor: zoom-out;
+}
+
+
+/* #title-content-wrapper > img {
+    cursor: default;
+} */
 
 #project-details{
     width: 100%;
@@ -234,18 +242,21 @@ video{
     /* border: solid 2px orange; */
     box-sizing: border-box;
     /* padding: 50px 0px;  */
+    gap: 50px;
 }
 
 .side-by-side > .left{
     /* border: solid 2px blue; */
-    width: 387.5px;
-    max-height: 100vh;
+    /* width: 387.5px; */
+    /* max-height: 100vh; */
+    width: 50%;
 }
 
 .side-by-side > .right{
     /* border: solid 2px red; */
-    width: 387.5px;
-    max-height: 100vh;
+    /* width: 387.5px;
+    max-height: 100vh; */
+    width: 50%;
 }
 
 .side-by-side > .right > video, 

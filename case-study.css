@@ -107,7 +107,9 @@ body > div{
 }
 
 section{
-    max-width: 900px;
+    max-width: 1000px;
+    /* changed on september 10, 2024 */
+    /* max-width: 900px; */
     /* gap: 50px; */
     /* width: 100%; */
     margin: auto;
@@ -164,11 +166,16 @@ img{
 .show img{
     cursor: zoom-out;
 }
+
 /* cursor */
 .show img{
     cursor: zoom-out;
 }
 
+
+/* #title-content-wrapper > img {
+    cursor: default;
+} */
 
 #project-details{
     width: 100%;

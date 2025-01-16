@@ -12,6 +12,10 @@ footer a {
     text-decoration: none;
 }
 
+img {
+border-radius: 0;
+}
+
 footer #footer-content {
     display: flex;
     flex-direction: column;

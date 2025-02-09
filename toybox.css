@@ -40,13 +40,25 @@ a:visited{
     align-items: flex-start;
 }
 
-.section-image > video{
+/* .section-image > video{
     width: 90%;
-}
+} */
 
 ul li{
     font-size: 14px
 }
+
+/* #research{
+    background-color: #F4F4F4 ;
+} */
+
+
+#title {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.8)), 
+    url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
+}
+
 
 /* Less than 768px */
 @media only screen and (max-width: 768px) {
@@ -54,4 +66,10 @@ ul li{
         height: auto;
         padding:  50px 0px;
     }
+}
+
+video{
+    box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
 }

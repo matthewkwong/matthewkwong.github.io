@@ -18,10 +18,9 @@ a:visited{
 }
 
 /* Sets the COVID Test image larger to fill the title screen ~100vh */
-#title-image {
+/* #title-image {
     padding: 100px 0;
-    /* border: solid 2px orange; */
-}
+} */
 
 
 .preview img{
@@ -34,6 +33,13 @@ a:visited{
     }
 } */
 
+#title {
+    color: white;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.8)), 
+    url("img/covid/desktopPrototypeBanner.png");
+}
 
 
 .project-preview{

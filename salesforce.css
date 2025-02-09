@@ -29,3 +29,23 @@ a:visited{
     width: auto;
     max-height: 80%;
 }
+
+#button{
+    background-color: #117CAD;
+    border: solid #117CAD;
+}
+
+#button:hover{
+    background-color: White;
+    color: #117CAD;
+    border: solid white
+}
+
+
+#title{
+    color: white;
+    background-image: linear-gradient(rgb(17, 124, 173, 0.8), 
+    rgb(17, 124, 173, 0.8)), 
+    url("img/salesforce/overview-new-resized.jpg");
+}
+

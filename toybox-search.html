@@ -17,6 +17,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
         <!-- Animated On Scroll Library -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- JQuery -->
@@ -54,72 +55,69 @@
         </ul>
       </nav>
 
-        <div id = "title">
-            <div id = "title-content-wrapper">
-                <div id = "title-content" data-aos="fade-up" 
-                data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="0"  data-aos-duration="1080" style = "overflow-x: hidden;"> 
-                    <h1>Toybox- Better Model Search</h1>
-                    
+      <!-- New Title Section -->
+      <div class = "content-wrapper" id = "title"  style="background-color: #4D4A49; color:white">
+        <section class = "side-by-side">
+            <div class = "left">
+
+                <div id="title-content">
+                    <h1>Toybox: Better Model Search</h1>
                     <p>Designing for a more efficent Toybox search experience.</p>
                 </div>
-                
-                <img src = "img/case-studies/toybox-search.jpg" id = "title-image" height = "600" width="600" alt = "Toybox Search Image"  data-aos="fade-up" 
-                data-aos-mirror="true" data-aos-duration="1250">
+
+                <!-- Project Details -->
+
+                <div id = "project-details">
+                    <h3>Project Details</h3>
+
+                    <div id = "project-details-list"> 
+                        <div>
+                            <h4>My Role:</h4>
+                            <p>Product Designer</p>
+                        </div>
+                        
+                        <div>
+                            <h4>Duration:</h4>
+                            <p>3 Months </p>
+                        </div>
+
+                        <div>
+                            <h4>Team:</h4>
+                            <p>Zach O., Kyle M.</p>
+                        </div>
+                    </div> 
+                </div>
             </div>
 
-            <div class = "circle" id = "big-circle"  data-aos="fade-up" 
+            <div class = "right">
+                <img src = "img/case-studies/toybox-search-browser.jpeg" height = "437" width = "437" alt = "Toybox Search Image" id = "title-image" >
+            </div>           
+        
+        </section>
+    </div>
+            
+
+            
+        
+            
+<!-- <div class = "circle" id = "big-circle"  data-aos="fade-up" 
             data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-duration="1080" style = "overflow-x: hidden;"></div>
 
             <div class = "circle" id = "top-left-circle"  data-aos="fade-up" 
-            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div>
-        </div>
+            data-aos-mirror="true" data-aos-anchor-placement="top-center"  data-aos-duration="750" style = "overflow-x: hidden;"> </div> -->
+        <!-- </div> -->
 
 
 
         <!-- Preview Image -->
-        <!-- <img src = "img/toybox/search/v3-deliverables/overview-banner.jpeg" id  = "project-preview" alt = "Design System Overview"> -->
-        <div id="project-preview"></div>
+        <!-- <div id="project-preview"></div> -->
 
         <div class = "content-wrapper">
 
             <!-- <section>
-                <h1>Toybox- Better Model Search</h1>
+                <h1>Toybox: Better Model Search</h1>
                 <p>Designing for a more efficent Toybox search experience.</p>
             </section> -->
-
-
-            <!-- Project Details -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <h2>Project Details</h2>
-                
-                <div id = "project-details"> 
-                    <div>
-                        <h4>My Role:</h4>
-                        <p>Product Designer</p>
-                    </div>
-                    
-                    <div>
-                        <h4>Tools:</h4>
-                        <p>Figma, Asana</p>
-                    </div>
-                    
-                    <div>
-                        <h4>Duration:</h4>
-                        <p>3 Months </p>
-                    </div>
-
-                    <div>
-                        <h4>Designer:</h4>
-                        <p>Matthew Kwong</p>
-                    </div>
-
-                    <div>
-                        <h4>Developers:</h4>
-                        <p>Zach O., Kyle M.</p>
-                    </div>
-                </div>        
-            </section>
-
 
 
             <!-- Problem -->
@@ -134,7 +132,7 @@
             </section>
 
             <!-- Research -->
-            <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+            <section id = "research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                 <h2>Research</h2>
                 <p>To get a better understanding of how other popular 3D printing websites use filters and sorting methods, 
                     I researched websites like Thingiverse, Cults3D, and Printables.</p>
@@ -168,19 +166,19 @@
                 
                     <!-- Trending -->
                     <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
-                        <h4>Trending Searches</h4>
+                        <h3>Trending Searches</h3>
                         <img src = "img/toybox/search/low-fidelity-v1/search/1-no-input-trending-search.jpg" width="1080">                
                     </div>
 
                     <!-- Recent Searches -->
                     <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
-                        <h4>Search History </h4>
+                        <h3>Search History </h3>
                         <img src = "img/toybox/search/low-fidelity-v1/search/2-no-input-recent-searches.jpg" width="1080">                
                     </div>
 
                     <!-- Suggested Search -->
                     <div data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
-                        <h4>Suggested Search</h4>
+                        <h3>Suggested Search</h3>
                         <img src = "img/toybox/search/low-fidelity-v1/search/3-suggested-search.jpg" width="1080" >                
                     </div>
                   
@@ -279,17 +277,17 @@
                     <div>
                         <h3>Creators</h3>
                         
-                        <img src = "img/toybox/search/v3-deliverables/creators/creators.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
+                        <img src = "img/toybox/search/v3-deliverables/creators/creators.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" width="1080">
                         
                         <!-- device sizes -->
-                        <img src = "img/toybox/search/v3-deliverables/creators/mobile.png" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <img src = "img/toybox/search/v3-deliverables/creators/mobile.png" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;" width="1080">
                         <!-- <img src = "img/toybox/search/v3-deliverables/creators/tablet.png" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
                         <img src = "img/toybox/search/v3-deliverables/creators/desktop.png" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;"> -->
                   
                         <p>Additionally, to ease the process of modifying these cards, I created a card component that utilizes Figma’s auto layout and properties.</p>
                         <p>These features include handling username text-overflow, the ability to easily switch between mobile and desktop cards, and changing the user’s account status.</p>
 
-                        <img src = "img/toybox/search/v3-deliverables/creators/creator-cards.gif" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                        <img src = "img/toybox/search/v3-deliverables/creators/creator-cards.gif" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;" width="1080">
                       </div>
                 </div>
             </section>          
@@ -307,13 +305,13 @@
                         <!-- <img src = "img/toybox/search/challenges/drop-down-modal.jpg" width="2339"> -->
 
                     <div>
-                        <h4>Original Deliverable</h4>
+                        <h3>Original Deliverable</h3>
                         <!-- <p>Sections were collapsable; but contained a lot of content that was difficult to see on various screen</p> -->
                         <img src = "img/toybox/search/v3-deliverables/revisions/original-filters.png" width="1224" alt = "original-filters">
                     </div>
 
                     <div>
-                        <h4>Revised Modal</h4>
+                        <h3>Revised Modal</h3>
                         <img src = "img/toybox/search/v3-deliverables/revisions/revised-filters.png" width="1224" alt = "revised-filters">
                     </div>
                 </div>
@@ -328,7 +326,7 @@
 
             <!-- Final Product Video -->
             <section class = "section-image preview" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
-                <video autoplay muted loop>
+                <video autoplay muted loop width="1080">
                     <source src="img/toybox/search/implemented/filters.mp4" type="video/mp4">
                     Your browser does not support videos
 

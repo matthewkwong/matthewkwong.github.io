@@ -25,6 +25,16 @@ a:visited{
     display: none;
 }
 
+#title{
+    color: white;
+
+
+    background-image: linear-gradient(rgb(29, 185, 84, 0.9), 
+    rgba(29, 185, 84, 0.8 )), 
+    url("img/rooms/mockup-banner.png");
+}
+
+
 /* .final-prototype{
     margin: auto;
     display: flex;

@@ -12,8 +12,8 @@ footer a {
     text-decoration: none;
 }
 
-img {
-border-radius: 0;
+footer img {
+    border-radius: 0;
 }
 
 footer #footer-content {
@@ -68,20 +68,12 @@ footer ul li:first-child{
 }
 
 @media screen and (max-width: 600px) {
-    footer #line{
-        width: 300px;
-    }
+
 
     footer{
         height: 240px;
     
         /* So polaroid image doesnt look off */
         /* margin-top: 180px; */
-    }
-
-    footer #footer-content{
-        text-align: center;
-        width: 300px;
-        padding: 10px 0;
     }
   }

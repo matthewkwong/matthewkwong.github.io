@@ -1,0 +1,131 @@
+h2{
+    font-family: 'ZT Formom';
+    font-size: 48px;
+    font-style: oblique;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    margin: 0;
+    font-family: 'ZT Formom';
+}
+
+#about-profile-picture{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+}
+  
+/* since polaroids are no longer in this div */
+#hobbies{
+    max-width: 100%;
+}
+
+#content-wrapper{
+    overflow: visible;
+}
+
+#heading-wrapper, #experience-values, #hobbies-polaroids{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+    /* border: solid 2px red;
+    box-sizing: border-box; */
+    width: 100%;
+}
+
+
+#experience-values #experience .job-title {
+    margin: 24px 0px 0px 0px;
+}
+
+
+#experience-values #experience .job-title .company-name {
+    color: #18A0FB;
+}
+
+#hobbies a, #heading a, a:visited{
+    color: #18A0FB;
+}
+
+
+#hobbies-polaroids #hobbies ul li{
+    margin: 24px 0;   
+}
+
+/* Hobbies and Polaroids */
+#hobbies-polaroids {
+    /* width: 100%; */
+    position: relative;
+
+    /* border: solid 2px purple;
+    box-sizing: border-box; */
+}
+
+
+/* Heading, Values, Experience, Hobbies */
+
+#heading{
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ #values{
+    z-index: 3;
+    max-width: 50%;
+    /* max-width: 480px; */
+    /* max-width: 50%; */
+}
+
+/* Hobbies */
+#hobbies{
+    z-index: 3;
+}
+
+/* Polaroids */
+ #polaroids img{
+    z-index: 2;
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    max-width: 70%;
+    /* border: solid 2px red;
+    box-sizing: border-box;  */
+}
+
+
+@media screen and (max-width: 768px) {
+    #about-profile-picture{
+        /* width: 100%; */
+        width: auto;
+        height: auto;
+    }
+
+  #heading-wrapper, #experience-values, #hobbies-polaroids{
+        flex-direction: column;
+        border: none;
+    }
+
+
+    #heading, #about-profile-picture, #values, #experience, #hobbies{
+      border: none;
+      width: auto;
+      max-width: 100%;
+        width: 100%;
+    }
+   
+
+  #polaroids img{
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    max-width: 100%;
+  }
+
+  #hobbies-polaroids{
+    gap: 0px;
+  }
+}

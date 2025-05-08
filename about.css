@@ -9,6 +9,10 @@ h2{
     font-family: 'ZT Formom';
 }
 
+a{
+    text-decoration: none;
+}
+
 #about-profile-picture{
     width: 50%;
     height: 100%;
@@ -18,6 +22,10 @@ h2{
 /* since polaroids are no longer in this div */
 #hobbies{
     max-width: 100%;
+}
+
+#hobbies ul{
+    list-style-type: none;
 }
 
 #content-wrapper{

@@ -1,26 +1,59 @@
+:root{
+    --custom-playtest-blue: #346DFF;
+}
+
+
 a{
     text-decoration: none;
-    color: #346DFF;
+    color: var(--custom-playtest-blue);
 }
 
 a:visited{
-    color: #346DFF;
+    color: var(--custom-playtest-blue);
 }
 
 .callout{
-    background-color: #346DFF;
+    background-color:  var(--custom-playtest-blue);
 }
 
 /* Circles */
 .circle{
-    background: #346DFF;
-    box-shadow: 0px 0px 100px #346DFF;
+    background:  var(--custom-playtest-blue);
+    box-shadow: 0px 0px 100px  var(--custom-playtest-blue);
 }
 
 /* Sets the COVID Test image larger to fill the title screen ~100vh */
 #title-image {
     padding: 100px 0;
     /* border: solid 2px orange; */
+}
+
+#title{
+    /* height: 47.5vh; */
+    color: white;
+    background-image:
+    url("img/playtest/preview.jpg");  
+    background-size: cover;  
+    /* background-image: linear-gradient(rgb(17, 124, 173, 0.8), 
+    rgb(17, 124, 173, 0.8)), 
+    url("img/salesforce/overview-new-resized.jpg"); */
+}
+
+/* Sidebar colors */
+.sidebar-menu a:hover {
+    color: var(--custom-playtest-blue);
+}
+
+.sidebar-menu a.active {
+    color: var(--custom-playtest-blue);
+}
+
+.sidebar-menu a.active::before {
+    background-color: var(--custom-playtest-blue);
+}
+
+.sidebar-menu a:hover::before {
+    background-color: var(--custom-playtest-blue);
 }
 
 

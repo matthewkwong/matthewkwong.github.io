@@ -1,21 +1,20 @@
+:root{
+    --custom-salesforce-blue: #009edb;
+}
+
 a{
     text-decoration: none;
-    color: #009edb;
+    color: var(--custom-salesforce-blue);
 }
 
 a:visited{
-    color: #009edb;
+    color: var(--custom-salesforce-blue);
 }
 
 .callout{
-    background-color: #009edb;
+    background-color: var(--custom-salesforce-blue);
 }
 
-/* Circles */
-.circle{
-    background: #009edb;
-    box-shadow: 0px 0px 100px #009edb;
-}
 
 #title-content-wrapper{
     gap:10%;
@@ -31,21 +30,40 @@ a:visited{
 }
 
 #button{
-    background-color: #117CAD;
+    background-color: var(--custom-salesforce-blue);
     border: solid #117CAD;
 }
 
 #button:hover{
     background-color: White;
-    color: #117CAD;
+    color: var(--custom-salesforce-blue);
     border: solid white
 }
 
 
 #title{
     color: white;
-    background-image: linear-gradient(rgb(17, 124, 173, 0.8), 
+    background-image:
+    url("img/salesforce/overview-new-resized.jpg");  
+    background-size: cover;  
+    /* background-image: linear-gradient(rgb(17, 124, 173, 0.8), 
     rgb(17, 124, 173, 0.8)), 
-    url("img/salesforce/overview-new-resized.jpg");
+    url("img/salesforce/overview-new-resized.jpg"); */
 }
 
+/* Sidebar colors */
+.sidebar-menu a:hover {
+    color: var(--custom-salesforce-blue);
+}
+
+.sidebar-menu a.active {
+    color: var(--custom-salesforce-blue);
+}
+
+.sidebar-menu a.active::before {
+    background-color: var(--custom-salesforce-blue);
+}
+
+.sidebar-menu a:hover::before {
+    background-color: var(--custom-salesforce-blue);
+}

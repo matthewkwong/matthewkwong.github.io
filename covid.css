@@ -1,5 +1,5 @@
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #7988FD;
 }
 
@@ -9,6 +9,7 @@ a:visited{
 
 .callout{
     background-color: #7988FD;
+    color:white;
 }
 
 /* Circles */
@@ -52,14 +53,33 @@ a:visited{
 }
 
 
-#desktop-iterations-banner{
+/* #desktop-iterations-banner{
     background-image:url("img/covid/desktopPrototypeBanner.png");
 }
 
 
 #mobile-iterations-banner{
     background-image:url("img/covid/mobilePrototypeBanner.png");
+} */
+
+
+/* Sidebar colors */
+.sidebar-menu a:hover {
+    color: #E63939;
 }
+
+.sidebar-menu a.active {
+    color: #E63939;
+}
+
+.sidebar-menu a.active::before {
+    background-color: #E63939;
+}
+
+.sidebar-menu a:hover::before {
+    background-color: #E63939;
+}
+
 
 @media only screen and (max-width: 768px) {
     .preview > video{

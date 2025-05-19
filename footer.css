@@ -8,6 +8,10 @@ footer{
     bottom: 0;
 }
 
+footer p{
+    color: white;
+}
+
 footer a {
     text-decoration: none;
 }

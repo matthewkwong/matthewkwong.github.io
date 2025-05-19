@@ -37,15 +37,26 @@ $(document).ready(function(){
     let fullscreen = document.getElementById("fullscreen");
    
   // Clones into fullscreen div
-    if (images.length > 0) { for (let x of images) {
-      x.onclick = () => {
-        let clone = x.cloneNode();
-        clone.className = "";
-        fullscreen.innerHTML = "";
-        fullscreen.appendChild(clone);
-        fullscreen.className = "show";
-      };
-    }}
+    if (images.length > 0) {
+      for (let x of images) {
+        x.onclick = (e) => {
+          // Prevent fullscreen for images in nav or footer, or with logo ids
+          if (
+            x.closest('nav') ||
+            x.closest('#footer-content') ||
+            x.id === 'logo' ||
+            x.id === 'logo-white'
+          ) {
+            return;
+          }
+          let clone = x.cloneNode();
+          clone.className = "";
+          fullscreen.innerHTML = "";
+          fullscreen.appendChild(clone);
+          fullscreen.className = "show";
+        };
+      }
+    }
   
     fullscreen.onclick = () => {
       fullscreen.className = "";

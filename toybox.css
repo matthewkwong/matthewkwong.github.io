@@ -48,9 +48,27 @@ ul li{
     font-size: 14px
 }
 
-/* #research{
-    background-color: #F4F4F4 ;
-} */
+/* Sidebar colors */
+.sidebar-menu a:hover {
+    color: #FF614C;
+}
+
+.sidebar-menu a.active {
+    color: #FF614C;
+}
+
+.sidebar-menu a.active::before {
+    background-color: #FF614C;
+}
+
+.sidebar-menu a:hover::before {
+    background-color: #FF614C;
+}
+
+
+#chart-container{
+    max-width: 100%;
+}
 
 
 #title {

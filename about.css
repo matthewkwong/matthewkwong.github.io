@@ -10,7 +10,7 @@ h2{
 }
 
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 #about-profile-picture{
@@ -43,9 +43,37 @@ a{
     width: 100%;
 }
 
+#experience-values{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+}
+
+#experience{
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+    max-width: 50%;
+}
+
+#values{
+    max-width: 50%;
+}
+
+#values-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
 
 #experience-values #experience .job-title {
-    margin: 24px 0px 0px 0px;
+    /* margin: 24px 0px 0px 0px; */
+    gap: 16px;
+
 }
 
 

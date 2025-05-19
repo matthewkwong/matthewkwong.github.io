@@ -161,12 +161,12 @@ p{
 /* Specific sizing for the grid items */
 .case-study:nth-child(1),
 .case-study:nth-child(4) {
-    grid-column: span 2;
+    grid-column: span 3;
 }
 
 .case-study:nth-child(2),
 .case-study:nth-child(3) {
-    grid-column: span 3;
+    grid-column: span 2;
 }
 
 
@@ -185,6 +185,10 @@ p{
     overflow-y: hidden;
 }
 
+.case-study-title > p{
+    text-align: right;
+}
+
 /* Header */
 #heading-wrapper {
     display: flex;
@@ -194,7 +198,7 @@ p{
 
 
 #heading{
-    margin: 64px 0;
+    margin: 0;
     width: 80%;
 }
 
@@ -216,14 +220,14 @@ p{
 
   .profile-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
     line-height: 1.5;
   }
 
   .profile-meta {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
   }
   .profile-meta a {
@@ -233,17 +237,20 @@ p{
 
   /* Selected Work */
 
-.case-study:nth-child(2) .image-placeholder{
+  /* salesforce */
+.case-study:nth-child(3) .image-placeholder{
     background-image: url("img/salesforce/overview-new-resized.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;        
 }
 
-.case-study:nth-child(3) .image-placeholder{
+/* find my covid test */
+.case-study:nth-child(1) .image-placeholder{
     background-color: #D6EBFF;   
 }
 
+/* 45 Fremont */
 .case-study:nth-child(4) .image-placeholder{
     background-image: url("45fremont.png");
     background-size: cover;
@@ -253,12 +260,23 @@ p{
     background-color: #FFD494;        
 }
 
+/* Spotify Rooms */
 .more-work-item:nth-child(2) .image-placeholder{
-    background-image: url("img/rooms/mockup-banner.png");
+    /* background-image: url("img/case-studies/spotify.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FDF7EF;
+}
+
+/* PlayTest */
+.more-work-item:nth-child(4) .image-placeholder{
+    /* background-image: url("img/playtest/overview.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 /* media queries */
 

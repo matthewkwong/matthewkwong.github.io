@@ -15,6 +15,8 @@
     
     <!-- Lenis Smooth Scroll -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script src="smooth-scroll.js"></script>
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -139,12 +141,29 @@
                     </div>
                     </a>
                 </div> -->
-
+                <div class="case-study">
+                    <a href="covid.html" style="text-decoration:none; color:inherit;">
+                        <div class="image-placeholder-wrapper" style>
+                        <div class="image-placeholder" style="position:relative;">
+                            <video src="img/index/find-my-covid-test/findmycovidtest_square.mp4" loop autoplay playsinline muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
+                         </div>
+                    </div>
+                    <div class="case-study-title">
+                        <h3>Find My COVID Test</h3>
+                        <!-- <p>Personal Project</p> -->
+                    </div>
+                    <div class="case-study-details">
+                        <p>Designed + developed a website to find COVID testing in California</p>
+                        <p>2020-2021</p>
+                    </div>
+                    </a>
+                </div>
+                
                 <div class="case-study">
                     <a href="toybox-search.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper" style>
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="modelSearchVideo" src="img/index/better-model-search/better_model_search.mp4" loop playsinline autoplay muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
+                            <video id="modelSearchVideo" src="img/index/better-model-search/better_model_search.mp4" loop playsinline autoplay muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
                         </div>
                     </div>
                     <!-- <div class="image-placeholder-wrapper">
@@ -155,7 +174,7 @@
                         <p>Toybox</p>
                     </div>
                     <div class="case-study-details">
-                        <p>Product Design</p>
+                        <p>Improved the search experience by 7%</p>
                         <p>2024</p>
                     </div>
                     </a>
@@ -167,31 +186,13 @@
                             <div class="image-placeholder"></div>
                         </div>
                         <div class="case-study-title">
-                            <h3>Customer Success Events</h3>
-                            <p>Salesforce, Savage Bureau</p>
+                            <h3>Salesforce</h3>
+                            <p>Savage Bureau</p>
                         </div>
                         <div class="case-study-details">
-                            <p>Design Systems</p>
+                            <p>Customer Success Events design system</p>
                             <p>2021</p>
                         </div>
-                    </a>
-                </div>
-
-                <div class="case-study">
-                    <a href="covid.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper" style>
-                        <div class="image-placeholder" style="position:relative;">
-                            <video src="img/index/find-my-covid-test/findmycovidtest-16x9.mp4" loop autoplay playsinline muted playsinline style="position:absolute;bottom:0;left:0;width:100%;height:100%;border-radius:10px;"></video>
-                         </div>
-                    </div>
-                    <div class="case-study-title">
-                        <h3>Find My COVID Test</h3>
-                        <p>Personal Project</p>
-                    </div>
-                    <div class="case-study-details">
-                        <p>Product Design, Web Development</p>
-                        <p>2020-2021</p>
-                    </div>
                     </a>
                 </div>
 
@@ -199,15 +200,15 @@
                     <a href="45fremont.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video src="img/index/45fremont/45fremont_tall.mp4"  loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px; object-fit: cover;"></video>
+                            <video id="45FremontVideo" src="img/index/45fremont/45fremont_square.mp4" loop playsinline autoplay muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
                         </div>
                     </div>
                     <div class="case-study-title">
-                        <h3>45 Fremont</h3>
+                        <h3>45 Fremont Sitemap</h3>
                         <p>Savage Bureau</p>
                     </div>
                     <div class="case-study-details">
-                        <p>UX/UI</p>
+                        <p>Designed a web template for Shorenstein Properties</p>
                         <p>2021</p>
                     </div></a>
                 </div>
@@ -226,7 +227,7 @@
                     <a href="linkedin-circles.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="modelSearchVideo2" src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                            <video id="LinkedinCirlcesVideo" src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
                         </div>
                     </div>
                     <div class="case-study-title">
@@ -234,29 +235,35 @@
                         <p>Personal Project</p>
                     </div>
                     <div class="case-study-details">
-                        <p>UX Design</p>
+                        <p>A better way to remember your LinkedIn connections</p>
                         <p>2023</p>
                     </div>
                     </a>
                 </div>
 
-                <!-- <div class="case-study more-work-item">
-                    <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder"></div>
-                    </div>
+
+                <!-- 45 Fremont -->
+                <div class="case-study more-work-item">
+                    <a href="45fremont-ibm.html" style="text-decoration:none; color:inherit;">
+                        <div class="image-placeholder-wrapper">
+                            <div class="image-placeholder" style="position:relative;">
+                                <video src="img/45fremont/ibm/banner.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                            </div>
+                        </div>
                     <div class="case-study-title">
-                        <h3>PlayTest</h3>
-                        <p>Design Interactive</p>
+                        <h3>45 Fremont: I.B.M</h3>
+                        <p>Savage Bureau</p>
                     </div>
                     <div class="case-study-details">
-                        <p>UI/UX</p>
+                        <p>Interactive building module to view units</p>
                         <p>2021</p>
                     </div>
-                  </div>
-                </div> -->
+                    </a>
+                </div>
 
 
-                  <div class="case-study more-work-item">
+                <!-- Spotify Rooms -->
+                <!-- <div class="case-study more-work-item">
                     <a href="spotify.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
@@ -267,8 +274,44 @@
                         <p>Personal Project</p>
                     </div>
                     <div class="case-study-details">
-                        <p>UX Design</p>
+                        <p>Democratizing the group listening experience</p>
                         <p>2019</p>
+                    </div>
+                    </a>
+                </div> -->
+
+                <!-- Spotify Wrapped -->
+                <div class="case-study more-work-item">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7280031343940395008/" style="text-decoration:none; color:inherit;">
+                    <div class="image-placeholder-wrapper">
+                        <div class="image-placeholder" style="position:relative;">
+                            <video id="SpotifyConcers" src="img/index/spotify-wrapped/concerts_square.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                        </div>
+                    </div>
+                    <div class="case-study-title">
+                        <h3>Spotify Wrapped: Concerts</h3>
+                    </div> 
+                    <div class="case-study-details">
+                        <p>Created a Wrapped experience for concerts</p>
+                        <p>2024</p>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- PlayTest -->
+                <div class="case-study more-work-item">
+                    <a href="playtest.html" style="text-decoration:none; color:inherit;">
+                        <div class="image-placeholder-wrapper" style>
+                            <div class="image-placeholder" style="position:relative;">
+                                <video id="modelSearchVideo" src="img/playtest/dashboard.mp4" loop playsinline autoplay muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
+                            </div>
+                        </div>
+                    <div class="case-study-title">
+                        <h3>PlayTest</h3>
+                    </div> 
+                    <div class="case-study-details">
+                        <p>Gamifying the learning experience</p>
+                        <p>2021</p>
                     </div>
                     </a>
                 </div>
@@ -307,30 +350,6 @@
       </div>
     </footer>
 
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <script>
-        // Initialize Lenis
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-            direction: 'vertical', // vertical, horizontal
-            gestureDirection: 'vertical', // vertical, horizontal, both
-            smooth: true,
-            smoothTouch: false, // smooth scroll on touch devices
-            touchMultiplier: 2,
-        });
-
-        // Get scroll value
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-    
-    
-    </script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
@@ -385,13 +404,18 @@
     // Add responsive video source change
     function updateVideoSource() {
         const video = document.getElementById('modelSearchVideo');
-        const video2 = document.getElementById('modelSearchVideo2');
+        const LinkedinCirlcesVideo = document.getElementById('LinkedinCirlcesVideo');
+        // const FremontVideo = document.getElementById('45FremontVideo');
+        
         if (window.innerWidth <= 768) {
             video.src = "img/index/better-model-search/better_model_search-16x9.mp4";
-            video2.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            LinkedinCirlcesVideo.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            // FremontVideo.src = "img/index/45fremont/45fremont_square.mp4";
+
         } else {
             video.src = "img/index/better-model-search/better_model_search.mp4";
-            video2.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            LinkedinCirlcesVideo.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            // FremontVideo.src = "img/index/45fremont/45fremont_square.mp4";
         }
     }
 

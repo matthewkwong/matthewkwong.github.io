@@ -19,50 +19,6 @@
 }
 
 
-.poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-
-
 html{
     overflow-x: initial !important;
 }
@@ -71,18 +27,21 @@ body{
     /* color: #666666; */
     background-color: white;
     margin: auto;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
 }
 
 h1{
-    /* font-family: Playfair-Display; */
     font-family: 'ZT Formom';
     font-style: oblique;
     font-size: 48px;
     line-height: 60px;
     font-weight: 600;
     margin: 0;
+    /* Improve rendering across OSes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 h2{

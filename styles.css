@@ -216,6 +216,10 @@ p{
     letter-spacing: 0.5px;
     line-height: 1.25;
     margin: 0;
+    /* Improve rendering across OSes */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   .profile-title {

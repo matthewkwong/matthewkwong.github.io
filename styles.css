@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'ZT Formom';
+    src: url('fonts/zt-formom-italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
 .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;

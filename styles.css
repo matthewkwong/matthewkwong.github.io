@@ -34,7 +34,7 @@ body {
     gap: 24px;
     flex-direction: column;
     font-family: "Poppins";
-    background-color: #ffff
+    background-color: #ffff;
 }
 
 .selected-work {
@@ -48,66 +48,87 @@ body {
     box-sizing: border-box;
 }
 
-h1{
-    font-size: 36px;
-    line-height: 64px;
-    font-weight: 600;
+
+h1 {
+    font-family: 'ZT Formom';
+    font-size: 48px;
+    font-style: oblique;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
     margin: 0;
-}
+    /* Improve rendering across OSes */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
 h2{
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 600;
-}
-
-
-h3{
     font-size: 20px;
-    line-height: 26px;
-    font-weight: 600;
+    line-height: 28px;
+    font-weight: 500;
 }
 
+h3{    
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
 
 h4{
     font-size: 14px;
-    line-height: 26px;
-    font-weight: 600;
-}
-
-h5{
-    font-size: 12px;
-    font-weight: 600;
-    /* margin: 0; */
-    line-height: 24px;
-}
+    line-height: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #595959;}
 
 p{
+    color: #595959;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
+}
+
+.tag{
+    font-size: 14px;
+    line-height: 28px;
+    border: solid 1px black;
+    border-radius: 50px;
+    padding: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 
 .work-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
-.case-study {
-    color: #666;
-    background-color: #f9f9f9;
-    border-radius: 20px;
+.work-grid:last-child{
+    margin-top: 28px;
+}
+
+.case-study a{
+    /* color: #666;
+    background-color: #f9f9f9; */
+    /* border-radius: 20px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: left; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .case-study-title, .case-study-details{
     display: flex;
-    justify-content:space-between;
+    justify-content: left;
+    gap: 12px;
+    /* justify-content:space-between; */
     /* border:solid 2px red; */        
     height: auto;
 }
@@ -120,7 +141,7 @@ p{
     overflow: hidden;
     border-radius: 10px;
     height: 380px;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .image-placeholder {
@@ -128,10 +149,6 @@ p{
     height: 100%;
     width: 100%;
     transition: transform 0.3s ease;
-}
-
-.case-study:hover .image-placeholder {
-    transform: scale(1.1);
 }
 
 .more-work {
@@ -158,11 +175,11 @@ p{
     color: var(--custom-blue);
 }
 
-.case-study:hover {
-    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    /* transform: scale(1.015); */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+.case-study:hover .image-placeholder {
+    transform: scale(1.05);
 }
+
 
 
 /* Specific sizing for the grid items */
@@ -181,11 +198,11 @@ p{
     display: flex;
     flex-direction: column;
     gap: 48px;
-    max-width: 1128px;
-    width: calc(100% - 48px); /* Account for 24px on each side */
+    max-width: 1080px;
+    /* Account for 24px on each side */
+    width: calc(100% - 48px); 
     margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 0 24px;
+    /* padding: 0 48px; */
     box-sizing: border-box;
 
     /* need to keep this so the scroll bar doesnt appear when the more work section is open */
@@ -203,7 +220,6 @@ p{
     width: 100%;
 }
 
-
 #heading{
     margin: 0;
     width: 80%;
@@ -215,19 +231,12 @@ p{
     gap: 28px;
 }
 
+
 .profile-name {
     font-family: 'ZT Formom';
     font-size: 64px;
-    font-style: oblique;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    line-height: 1.25;
-    margin: 0;
-    /* Improve rendering across OSes */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+}
+
 
   .profile-title {
     font-family: 'Poppins', sans-serif;
@@ -246,10 +255,11 @@ p{
     color: black
   }
 
+
   /* Selected Work */
 
   /* salesforce */
-.case-study:nth-child(3) .image-placeholder{
+#salesforce .image-placeholder{
     background-image: url("img/salesforce/overview-new-resized.jpg");
     background-size: cover;
     background-position: center;
@@ -292,6 +302,13 @@ p{
 /* media queries */
 
 @media (max-width: 768px) {
+    .profile-name {
+        font-size: 48px;
+    }
+
+    .profile-title{
+        font-size: 20px;
+    }
 
     #heading-wrapper{
         flex-direction: column;
@@ -304,14 +321,14 @@ p{
         width: 100%;
     }
 
-    #content-wrapper {
+    /* #content-wrapper {
         width: calc(100% - 48px);
         padding: 0 24px;
-    }
+    } */
     
     .work-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 64px;
     }
 
     .case-study:nth-child(1),
@@ -330,20 +347,6 @@ p{
 
 /* MOBILE */
 @media (max-width: 480px) {
-
-    /* Header */
-    .profile-title {
-        font-size: 28px;
-    }
-
-
-
-/* Wrapper */
-    #content-wrapper {
-        width: calc(100% - 48px);
-        padding: 0 24px;
-    }
-    
     .case-study-title{
         /* flex-direction: column; */
         height: auto;
@@ -357,9 +360,9 @@ p{
         flex-wrap: wrap;
     }
 
-    .image-placeholder-wrapper{
+    /* .image-placeholder-wrapper{
         height: 200px;
-    }
+    } */
 }
 
 

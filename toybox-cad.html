@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Matthew Kwong | Toybox: CAD</title>
+        <meta property="og:image" content="img/meta/45fremont.jpg">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="case-study.css">
+        <link rel="stylesheet" href="toybox.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="icon" type="image/png" href="img/nav/logo.svg">
+        <!-- Animated On Scroll Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Lenis Smooth Scroll -->
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
+    <body>
+
+        <!-- Fullscreen Image -->
+        <div id="fullscreen"></div>
+
+        <nav>
+            <!-- MK Logo -->
+            <a href = "index.html">
+                <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+            </a>
+    
+            <!-- Nav links -->
+            <ul id = "nav-links">
+      
+            <!-- Checkbox hack for mobile -->
+            <input type = "checkbox" id = "checkbox_toggle"/>
+            <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+            <label for = "checkbox_toggle" id = "close">&#215;</label>
+    
+            <!-- Nav menues -->
+            <div id = "menu-wrapper">
+                <div id = "menu">
+                    <a href = "index.html">
+                        <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
+                    </a>
+                    <li><a href="index.html#case-studies" class="middle">Work</a></li>
+                    <li><a href="about.html" class = "active-nav middle" >About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
+                </div>
+            </div>
+        </ul>
+      </nav>
+
+      <!-- Preview Section -->
+      <!-- <section class = "section-image preview" style="background-color: #4D4A49;">  -->
+        <!-- <video width = "1080" autoplay muted loop style = "object-fit: fill; width: 100%;">
+            <source src="img/toybox/search/implemented/filters.mp4" type="video/mp4">
+              Your browser does not support videos
+          </video> -->
+
+          <section class = "section-image preview"  style="background-color: #f4f4f4;"> 
+            <video width="1080" playsinline autoplay muted loop>
+                <source src="img/toybox/cad/banner.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+
+      <!-- </section> -->
+
+      <section class = "content-wrapper" id = "case-study-wrapper">
+          <!-- Sidebar Menu -->
+          <div class="sidebar-menu left">
+              <ul>
+                  <li><a href="#overview">Overview</a></li>
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#research">Research</a></li>
+                  <!-- <li><a href="#low-fidelity">Low Fidelity</a></li> -->
+                  <!-- <li><a href="#final-designs">Final Designs</a></li> -->
+                  <!-- <li><a href="#design-for-a-reason">Design for a reason</a></li> -->
+                  <li><a href="#solution">Solution</a></li>
+                  <li><a href="#impact">Impact</a></li>
+              </ul>
+          </div>
+
+          <!-- Main Content -->
+          <div class="right">
+              <!-- Overview Section -->
+              <section class="section-content overview">
+                  <div id="title-content">
+                      <h1>Toybox: CAD</h1>
+                      <h2>Designing a powerful cross-platform CAD experience specialized for 3D Printing.</h2>
+                  </div>
+
+                  <!-- Project Details -->
+                  <div id="project-details-list">
+                      <div>
+                          <h4>My Role:</h4>
+                          <p>Product Designer</p>
+                      </div>
+
+                      <div>
+                        <h4>Team</h4>
+                        <p>Cody A.</p>
+                        <p>Jenn C.</p>                        
+                        <p>Kyle M.</p>
+                        <p>Zach O.</p>
+                    </div>
+                    
+                    <div>
+                        <h4>Duration:</h4>
+                        <p>9 Months</p>
+                    </div>
+
+                    <div>
+                        <h4>Platforms</h4>
+                        <p>Mobile</p>
+                        <p>Tablet</p>
+                        <p>Desktop</p>
+                    </div>
+                    
+                    <div>
+                        <h4>Skills:</h4>
+                        <p>Wireframing</p>
+                        <p>Interaction Design</p>
+                        <p>Visual Design</p>
+                        <p>Prototyping</p>
+                    </div>
+                  </div>
+              </section>
+
+
+              <!-- Problem Section -->
+              <section class="section-content problem" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Problem</h4>
+                      <h2>“How can we create an accessible cross-platform 3D modeling application?”</h2>
+                      <p>Previously, users did not have the ability to 3D model and create their own creations from scratch. Our mission was to create a new experience for users to seamlessly 3D model and print their toy directly in the Toybox app.</p>
+                  </div>
+              </section>
+
+              <!-- Research Section -->
+              <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Research</h4>
+                      <h2>Competitor Analysis</h2>
+
+                    <p>To better understand what was already on the market, I did a competitor analysis with existing desktop and mobile 3D modeling apps.</p> 
+                    <p>What differed the most was that this app would be <b><i>specifically designed for 3D printing.</i></b></p>
+                    </div>
+<!-- 
+                    <div class = "list">
+                        <ul>
+                            <h2>TinkerCAD</h2>
+                            <li>Works great on desktop (what our primary audience is used to using)</li>
+                            <li>Lacks a useable mobile UI</li>
+                        </ul> 
+                        
+
+                        <ul>
+                            <h2>Shapr3D</h2>
+                            <li>iPad only</li>
+                            <li>Relies heavily on Apple Pencil</li>
+                            <li>Great beginner tutorials</li>
+                            <li>Relies heavily on large screen real-estate</li>
+                        </ul> 
+
+                        <ul>
+                            <h2>Shapeyard</h2>
+                            <li>Many sub-menus to navigate through tools</li>
+                        </ul> 
+                    </div> -->
+                </section>
+
+
+            <!-- Research Synthesis Section -->
+            <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>Research</h4>
+                    <h2>Synthesis</h2>
+
+                    <p>To better understand what was already on the market, I did a competitor analysis with apps like Shapr3D, TinkerCAD, and the Shapeyard app.</p> 
+                <p>What differed the most was that this app would be <b><i>specifically designed for 3D printing.</i></b></p>
+                </div>
+
+                <div class = "list" id = "synthesis">
+                    <ul>
+                        <h3>Creation</h3>
+                        <li>Boolean operators</li>
+                        <li>Primitive Shapes</li>
+                        <li>Modify</li>
+                        <li>Transform Controls (translate, rotate, scale)</li>
+                        <li>Copy</li>
+                        <li>Split</li>
+                        <li>Draw</li>
+                        <li>Import</li>
+                    </ul> 
+                    
+
+                    <ul>
+                        <h3>General Tools & Actions</h3>
+                        <li>Undo/redo</li>
+                        <li>Group/ungroup</li>
+                        <li>Arrange objects</li>
+                        <li>Layers list / Object management</li>
+                    </ul> 
+                </div>                    
+            </section>
+
+            <!-- Solution Section -->
+            <section class="section-content solution" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>solution</h4>
+                    <h2>Introducing a new way to 3D model on Toybox!</h2>
+                    <p>Users can now seamlessly 3D model directly in the Toybox platform and 3D print their creations on any device.</p>
+
+                    <video autoplay muted loop controls width="1080">
+                        <source src="img/toybox/CAD/solution/solution.mp4" type="video/mp4">
+                        Your browser does not support videos
+                    </video>
+
+                    <video autoplay muted loop controls width="1080">
+                        <source src="img/toybox/CAD/printing/printing.mp4" type="video/mp4">
+                        Your browser does not support videos
+                    </video>
+                </div>
+            </section>
+
+            <!-- Properties -->
+            <section class="section-content solution" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>solution</h4>
+                    <h2>Properties</h2>
+                        <h3>Desktop</h3>
+                        <p>The Properties panel is purely contextual to the selected object on the scene and appears within the 3D scene when clicked.</p>
+             
+                        <video autoplay muted loop controls width="1080">
+                            <source src="img/toybox/CAD/properties/desktop_properties.mp4" type="video/mp4">
+                            Your browser does not support videos
+                        </video>
+
+                        <h3>Mobile</h3>
+                        <p>Due to the lack of screen real-estate on tablets and phones, this is a contextual menu that slides in as an overlay.</p>
+                        <video autoplay muted loop controls width="1080">
+                            <source src="img/toybox/CAD/properties/mobile_properties.mp4" type="video/mp4">
+                            Your browser does not support videos
+                        </video>                    
+                </div>
+            </section>
+
+            <!-- Essentials Menu -->
+            <section class="section-content solution" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>solution</h4>
+                    <h2>Essentials Menu</h2>
+                    <!-- <p>The right-side menu has all of the essential features such as Add, Objects, Build.</p> -->
+
+                        <video autoplay muted loop controls width="1080">
+                            <source src="img/toybox/CAD/essentials/iPad.mp4" type="video/mp4">
+                            Your browser does not support videos
+                        </video>        
+                        
+                        
+                        <video autoplay muted loop controls width="1080">
+                            <source src="img/toybox/CAD/essentials/mobile.mp4" type="video/mp4">
+                            Your browser does not support videos
+                        </video>           
+                    </div>
+            </section>
+
+            <!-- Tools Menu -->
+            <section class="section-content solution" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>solution</h4>
+                    <h2>Tools Menu</h2>
+
+                    <h3>Subtract + Combine</h3>
+                    <video autoplay muted loop controls width="1080">
+                        <source src="img/toybox/CAD/tools/subtract_combine.mp4" type="video/mp4">
+                        Your browser does not support videos
+                    </video>   
+
+
+                    <h3>Duplicate + Arrange</h3>
+                    <video autoplay muted loop controls width="1080">
+                        <source src="img/toybox/CAD/tools/duplicate_arrange.mp4" type="video/mp4">
+                        Your browser does not support videos
+                    </video>   
+            </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="section-content impact" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <div>
+                    <h4>Impact</h4>
+                    <h2>The most popular Toybox App</h2>
+                    <p>Wthin the first week we found that <b>more than 53%</b> of the overall toys being created on Toybox were from the CAD app within the first week of release!</p>
+                  <img src="img/toybox/CAD/metrics/breakdown.png" width="1224" alt="revised-filters">
+                </div>
+             </section>
+          </div>
+      </section>
+
+      <footer>
+          <div id="footer-content">
+              <p>Let's connect!</p>
+              
+              <ul>
+                  <li>
+                      <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
+                          <img src="img/footer/white/email.svg" alt="Email" height="20" width="20">
+                      </a>
+                  </li>
+          
+                  <li>
+                      <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank">
+                          <img src="img/footer/white/linkedin.svg" alt="LinkedIn" height="20" width="20">
+                      </a>
+                  </li>
+          
+                  <li>
+                      <a href="https://www.instagram.com/kwongenterprises/?hl=en" target="_blank">
+                          <img src="img/footer/white/instagram.svg" alt="Instagram" height="20" width="20">
+                      </a>
+                  </li>
+              </ul>
+      
+              <div id="line"></div>      
+      
+              <p>Designed + Developed by Matthew Kwong • <span id="year"></span></p>
+          </div>
+      </footer>
+
+      <script src="script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
+      <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+      <script src="smooth-scroll.js"></script>
+      <script src="case-study-sidebar.js"></script>
+    </body>
+</html>

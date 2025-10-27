@@ -1,12 +1,3 @@
-@font-face {
-    font-family: CircularStd-Book;
-    src: url(fonts/CircularStd-Book.ttf);
-}
-
-@font-face {
-    font-family: CircularStd-Bold;
-    src: url(fonts/CircularStd-Bold.ttf);
-}
 
 @font-face {
     font-family: Playfair-Display;
@@ -25,68 +16,37 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'ZT Formom';
+    src: url('fonts/zt-formom-italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  
 html{
     overflow-x: initial !important;
 }
   
 body{
-    /* color: #666666; */
-    background-color: white;
     margin: auto;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-}
-
-h1{
-    font-family: 'ZT Formom';
-    font-style: oblique;
-    font-size: 48px;
-    line-height: 60px;
-    font-weight: 600;
-    margin: 0;
-    /* Improve rendering across OSes */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-h2{
-    font-size: 24px;
-    line-height: 32px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    color: black;
-}
-
-h3{
-    /* font-family: Playfair-Display; */
-    font-size: 14px;
-    line-height: 12px;
-    font-weight: 400;
-    color: #595959;
-    text-transform: uppercase;
-    /* margin: 0; */
+    font-family: 'Poppins', sans-serif;
+    /* font-style: normal; */
 }
 
 
-h4{
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 600;
-}
-
-h5{
-    font-size: 12px;
-    font-weight: 600;
-    /* margin: 0; */
-    line-height: 24px;
-}
-
-.project-tagline{
+/* .project-tagline{
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
-}   
+}    */
 
 
 p, ol, li{
@@ -172,9 +132,9 @@ section{
 }
 
 
-#title h1{
+/* #title h1{
     font-family: CircularStd-Bold;
-}
+} */
 
 
 
@@ -203,15 +163,20 @@ img{
     cursor: default;
 } */
 
-#project-details-list{
+.list > ul > h3{
+    margin-left: -40px;
+}
+
+#project-details-list, .list{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: space-around; */
     gap: 12px 64px;
 }
 
 
-#project-details-list > div >  p{
+.list, #project-details-list > div >  p{
     line-height: 12px !important;
 }
 
@@ -220,15 +185,6 @@ img{
     line-height: 20px;
 } */
 
-#project-preview {
-    /* display: flex;
-    align-items: center; */
-    max-height: 800px;
-    width: auto;
-    
-    /* height: 90vh; */
-    /* border: solid 2px blueviolet; */
-}
 
 
 video{
@@ -452,7 +408,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* gap: 12px; */
+    gap: 12px;
     /* margin: 0; */
 }
 
@@ -499,7 +455,7 @@ section {
     } */
 
 
-        #case-study-wrapper {
+    #case-study-wrapper {
         max-width: 100%;
     }
     .sidebar-menu {

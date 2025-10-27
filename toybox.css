@@ -11,13 +11,8 @@ a:visited{
     background-color: #FF614C;
 }
 
-/* Circles */
-.circle{
-    background: #FF614C;
-    box-shadow: 0px 0px 100px #FF614C;
-}
 
-#project-preview{
+/* #project-preview{
     height: 50vh;
     width: 100%;
     background-image:url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
@@ -25,6 +20,11 @@ a:visited{
     background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
+} */
+
+
+#synthesis > ul{
+    max-width: 45%;
 }
 
 #title-content-wrapper h1{
@@ -44,9 +44,9 @@ a:visited{
     width: 90%;
 } */
 
-ul li{
-    font-size: 14px
-}
+/* ul li{
+    font-size: 14px;
+} */
 
 /* Sidebar colors */
 .sidebar-menu a:hover {
@@ -71,11 +71,11 @@ ul li{
 }
 
 
-#title {
+/* #title {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), 
     rgba(0, 0, 0, 0.8)), 
     url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
-}
+} */
 
 
 /* Less than 768px */
@@ -86,8 +86,8 @@ ul li{
     }
 }
 
-video{
+/* video{
     box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
 -webkit-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
 -moz-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
-}
+} */

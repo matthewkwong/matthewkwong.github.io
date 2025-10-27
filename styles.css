@@ -31,7 +31,7 @@
 body {  
     margin: 0 auto;
     display: flex;
-    gap: 24px;
+    /* gap: 64px; */
     flex-direction: column;
     font-family: "Poppins";
     background-color: #ffff;
@@ -43,7 +43,6 @@ body {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    gap: 24px;
     flex-direction: column;
     box-sizing: border-box;
 }
@@ -94,7 +93,7 @@ p{
     line-height: 28px;
     border: solid 1px black;
     border-radius: 50px;
-    padding: 8px;
+    padding: 12px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -124,7 +123,14 @@ p{
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.case-study-title, .case-study-details{
+.case-study-text{
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+
+
+.case-study-details{
     display: flex;
     justify-content: left;
     gap: 12px;
@@ -133,9 +139,6 @@ p{
     height: auto;
 }
 
-.case-study-title h3{
-    color: black;
-}
 
 .image-placeholder-wrapper {
     overflow: hidden;
@@ -197,7 +200,7 @@ p{
 #content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 64px;
     max-width: 1080px;
     /* Account for 24px on each side */
     width: calc(100% - 48px); 
@@ -207,10 +210,7 @@ p{
 
     /* need to keep this so the scroll bar doesnt appear when the more work section is open */
     overflow-y: hidden;
-}
-
-.case-study-title > p{
-    text-align: right;
+    margin-bottom: 64px;
 }
 
 /* Header */
@@ -218,6 +218,7 @@ p{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 64px;
 }
 
 #heading{
@@ -312,7 +313,6 @@ p{
 
     #heading-wrapper{
         flex-direction: column;
-        /* gap: 24px; */
         margin: 0px;
     }
 
@@ -347,13 +347,7 @@ p{
 
 /* MOBILE */
 @media (max-width: 480px) {
-    .case-study-title{
-        /* flex-direction: column; */
-        height: auto;
-        flex-wrap: wrap;
-        /* margin-bottom: 20px; */
-    }
-    
+
     .case-study-details{
         height: auto;
         width: auto;

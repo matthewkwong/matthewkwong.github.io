@@ -20,14 +20,14 @@ a:visited{
     gap:10%;
 }
 
-#title-content-wrapper h1{
+/* #title-content-wrapper h1{
     font-size: 40px;
 }
 
 #project-preview{
     width: auto;
     max-height: 80%;
-}
+} */
 
 #button{
     background-color: var(--custom-salesforce-blue);

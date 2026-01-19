@@ -95,13 +95,16 @@ p{
     border-radius: 50px;
     padding: 12px;
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 4px;   
+    text-align: center;
 }
 
 .tag-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 12px;
+    /* border: solid 2px red; */
 }
 
 .work-grid {

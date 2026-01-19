@@ -39,7 +39,7 @@ body {
 
 .selected-work {
     /* padding: 20px; */
-    max-width: 1080px;
+    /* max-width: 1080px; */
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -90,7 +90,7 @@ p{
 
 .tag{
     font-size: 14px;
-    line-height: 28px;
+    line-height: 20px;
     border: solid 1px black;
     border-radius: 50px;
     padding: 12px;
@@ -98,6 +98,11 @@ p{
     padding-bottom: 4px;
 }
 
+.tag-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
 
 .work-grid {
     display: grid;
@@ -132,6 +137,7 @@ p{
 
 .case-study-details{
     display: flex;
+    flex-direction: column;
     justify-content: left;
     gap: 12px;
     /* justify-content:space-between; */
@@ -143,7 +149,9 @@ p{
 .image-placeholder-wrapper {
     overflow: hidden;
     border-radius: 10px;
-    height: 380px;
+    /* height: 380; */
+    height: 500px;
+    /* height: 100%; */
     /* margin-bottom: 24px; */
 }
 
@@ -201,8 +209,9 @@ p{
     display: flex;
     flex-direction: column;
     gap: 64px;
+    /* max-width: 1440px; */
     max-width: 1080px;
-    /* Account for 24px on each side */
+    /* Account for 24px on each side. 48px total */
     width: calc(100% - 48px); 
     margin: 0 auto;
     /* padding: 0 48px; */
@@ -222,14 +231,26 @@ p{
 }
 
 #heading{
+    /* align-items: center; */
+    /* display: flex; */
     margin: 0;
-    width: 80%;
+    width: 100%;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+
+#profile-image{
+    /* width: 50%; */
+    height: 300px;
+/* border: solid 2px red; */
 }
 
 #home-name{
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
     gap: 28px;
+    /* border: solid 2px red; */
 }
 
 
@@ -313,12 +334,16 @@ p{
 
     #heading-wrapper{
         flex-direction: column;
-        margin: 0px;
+        /* margin: 0px; */
     }
 
     #heading{
         margin: 0px;
         width: 100%;
+    }
+
+    #profile-image{
+        display: none;
     }
 
     /* #content-wrapper {
@@ -343,6 +368,8 @@ p{
     .work-item {
         grid-column: span 1;
     }
+    
+
 }
 
 /* MOBILE */
@@ -353,7 +380,15 @@ p{
         width: auto;
         flex-wrap: wrap;
     }
-
+    .image-placeholder-wrapper{
+        min-height: 288.8px;
+        height: 100%;
+        min-width: 288.8px;
+        width: auto; 
+        aspect-ratio: 1; 
+        /* margin: 0 auto; */
+/* object-fit: contain; */
+    }
     /* .image-placeholder-wrapper{
         height: 200px;
     } */

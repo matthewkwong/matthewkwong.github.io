@@ -48,10 +48,10 @@ nav li{
     height: auto;
 }
 
-#nav-links #active{
+/* .active-nav{
     color: #18A0FB !important; 
     font-weight: 600;
-}
+} */
 
 #nav-links a {
     color: black;

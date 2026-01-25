@@ -1,5 +1,6 @@
 DS_Store
 .vscode
+.cloudinary/environments.json
 img/play/animated-cover-art/frank-blond.mp4
 img/play/stage-visuals/something-comforting/something-comforting.mp4
 img/play/3d-motion-graphics/liquid-sim/final-sim.mp4

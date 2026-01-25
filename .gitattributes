@@ -1,6 +1,9 @@
 img/covid/prototype3.gif filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
 .webp filter=lfs diff=lfs merge=lfs -text
 *.psd filter=lfs diff=lfs merge=lfs -text
 .mov filter=lfs diff=lfs merge=lfs -text
 .mp4 filter=lfs diff=lfs merge=lfs -text
+=======
+>>>>>>> 674d1d7bbf0bac374cc7e50d8bdb6bf078aecfab

@@ -67,10 +67,7 @@
                   <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
               </a>
               <li><a href="#case-studies" class="middle">Work</a></li>
-<<<<<<< HEAD
               <li><a href="play.html" class="middle active-nav">Play</a></li>
-=======
->>>>>>> 674d1d7bbf0bac374cc7e50d8bdb6bf078aecfab
               <li><a href="about.html" class = "active-nav middle" >About</a></li>
               <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
           </div>
@@ -447,48 +444,6 @@
         // Animate elements as they come into view
         gsap.registerPlugin(ScrollTrigger);
 
-        // Animate home name text
-        gsap.from("#home-name h1, #home-name h2, #home-name p", {
-            scrollTrigger: {
-                trigger: "#home-name",
-                start: "top bottom-=100",
-                toggleActions: "play none none reset"
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.6,
-            stagger: {
-                amount: 0.5 // Total amount of time between the first and last animation
-            },
-            delay:0.2,
-            ease: "power3.out"
-        });
-
-        // Animate Selected Work heading
-        // gsap.from(".selected-work", {
-        //     scrollTrigger: {
-        //         trigger: ".selected-work",
-        //         start: "top bottom-=100",
-        //         toggleActions: "play none none reset"
-        //     },
-        //     y: 30,
-        //     opacity: 0,
-        //     duration: 1,
-        //     delay: 0.2,
-        //     ease: "power3.out"
-        // });
-
-        // Existing case study animation
-        gsap.from(".case-study", {
-            scrollTrigger: {
-                trigger: ".case-study",
-                toggleActions: "play none none reverse"
-            },
-            opacity: 0,
-            delay: 0.4,
-            duration: 1.2,
-            stagger: 0.2
-        });
 
         // Animate home name text
         gsap.from("#home-name h1, #home-name h2, #home-name p", {
@@ -508,6 +463,19 @@
         });
 
         gsap.from("#profile-image", {
+            scrollTrigger: {
+                trigger: ".case-study",
+                toggleActions: "play none none reverse"
+            },
+            opacity: 0,
+            delay: 0.4,
+            duration: 1.2,
+            stagger: 0.2
+        });
+
+        
+        // Existing case study animation
+        gsap.from(".case-study", {
             scrollTrigger: {
                 trigger: ".case-study",
                 toggleActions: "play none none reverse"

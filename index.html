@@ -444,6 +444,22 @@
         // Animate elements as they come into view
         gsap.registerPlugin(ScrollTrigger);
 
+        // Animate home name text
+        gsap.from("#home-name h1, #home-name h2, #home-name p", {
+            scrollTrigger: {
+                trigger: "#home-name",
+                start: "top bottom-=100",
+                toggleActions: "play none none reset"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.6,
+            stagger: {
+                amount: 0.5 // Total amount of time between the first and last animation
+            },
+            delay:0.2,
+            ease: "power3.out"
+        });
 
         // Animate home name text
         gsap.from("#home-name h1, #home-name h2, #home-name p", {

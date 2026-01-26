@@ -313,14 +313,14 @@
                 }
 
                 
-                .hover-text > h2{
+                /* .hover-text > h2{
                     color: black;
                 }
 
 
                  .hover-text > p{
                     color: #595959;
-                }
+                } */
 
                 .projects-3d-wrapper {
                     flex-direction: column;
@@ -345,7 +345,8 @@
                 }
 
                 .overlay > .hover-text > p {
-                    color: #595959;
+                    /* color: #595959; */
+                    color: white;
                 }
 
  

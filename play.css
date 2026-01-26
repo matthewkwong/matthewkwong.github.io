@@ -336,7 +336,7 @@
                     width: auto;
                     opacity: 1;
                     background-image: none;
-                    border-radius: 12px;    
+                    border-radius: 8px;    
                 }
 
                 .overlay > .hover-text > p {

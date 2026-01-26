@@ -1,4 +1,4 @@
-            body{
+            /* body{
                 background-color: black;
             }
 
@@ -22,15 +22,10 @@
             .section-image video {
                 max-height: 100%;
             }
-/* 
-            video, img{
-                border-radius: 0;
-                border: none;
-            } */
 
             body{
                 color: white;
-            }
+            } */
 
             .preview {
                 width: 100%;
@@ -313,14 +308,14 @@
                 }
 
                 
-                /* .hover-text > h2{
+                .hover-text > h2{
                     color: black;
                 }
 
 
                  .hover-text > p{
                     color: #595959;
-                } */
+                }
 
                 .projects-3d-wrapper {
                     flex-direction: column;
@@ -345,8 +340,8 @@
                 }
 
                 .overlay > .hover-text > p {
-                    /* color: #595959; */
-                    color: white;
+                    color: #595959;
+                    /* color: white; */
                 }
 
  

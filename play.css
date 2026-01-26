@@ -1,18 +1,23 @@
-            /* body{
+            body{
                 background-color: black;
             }
+
             nav{
                 background-color: black;
             }
 
-            nav #menu-wrapper #menu li a{
+            nav #menu-wrapper #menu li a, h4{
                 color:white;
-            } */
+            }
 
+            footer{
+                background-color: black !important;
+            }
             
-            /* .active-nav{
+            .active-nav{
                 font-family: 'NEOPIXEL', sans-serif;
-            } */
+                font-size: 20px;
+            }
 
             .section-image video {
                 max-height: 100%;
@@ -22,6 +27,10 @@
                 border-radius: 0;
                 border: none;
             } */
+
+            body{
+                color: white;
+            }
 
             .preview {
                 width: 100%;
@@ -187,6 +196,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 width: 100%;
+                /* background-color: white; */
             }
 
             #animated-cover-art-wrapper > video {

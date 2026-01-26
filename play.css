@@ -180,7 +180,18 @@
             }
 
 
-            
+            /* Cover art */
+            #animated-cover-art-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            #animated-cover-art-wrapper > video {
+                /* width: 100%; */
+                max-width: 25%;
+            }   
 
 
             /* Branding */
@@ -280,7 +291,6 @@
 
                 /* No need for hover to see the title / descriptions */
                 .stage-visual-wrapper > .stage-visual-video > a > video {
-                    /* position: relative; */
                     display: block;
                 }
 
@@ -290,7 +300,6 @@
                     bottom: auto;
                     left: auto;
                 }
-
 
                 
                 .hover-text > h2{
@@ -320,7 +329,6 @@
                     height: auto;
                     width: auto;
                     opacity: 1;
-                    /* transition: .5s ease; */
                     background-image: none;
                     border-radius: 12px;    
                 }
@@ -328,6 +336,16 @@
                 .overlay > .hover-text > p {
                     color: #595959;
                 }
+
+ 
+
+                #animated-cover-art-wrapper {
+                    flex-wrap: wrap;
+                }
+                #animated-cover-art-wrapper > video {
+                    max-width: 50%;
+                }   
+
 
                 .branding-wrapper{
 

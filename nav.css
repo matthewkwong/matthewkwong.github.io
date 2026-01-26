@@ -17,7 +17,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    /* background-color: white; */
     color: #C4C4C4;
     height: 90px;
     /* border-bottom: solid 1px #B3B3B3; */

@@ -94,7 +94,7 @@
                 </section>              
 
             <!-- Stage visuals -->
-                <section class="section-content overview" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-400">   
+                <section class="section-content overview">   
                         <h4>Stage Visuals + Visualizers</h4>
 
                         
@@ -119,7 +119,7 @@
                                     <video data-src="img/play/stage-visuals/divination/divination.mp4"  poster = "img/play/stage-visuals/divination/thumbnail.webp" loop playsinline preload="none"></video>
                                     <div class = "overlay">
                                         <div class = "hover-text">
-                                            <h2>JUELZ</h2>
+                                            <h2>Juelz</h2>
                                             <p>Divination visualizer</p>
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@
 
                             <div class = "stage-visual-video">
                                 <a href = "https://www.youtube.com/shorts/0Yk82EG08cI" target="_blank">
-                                <video data-src="img/play/stage-visuals/crystallized/crystallized-smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                                <video  id ="crystallized" autoplay muted loop playsinline preload="none"></video>
                                 <div class = "overlay">
                                     <div class = "hover-text">
                                         <h2>John Summit</h2>
@@ -143,7 +143,7 @@
                 </section>
 
                 <!-- 3D Projects -->
-                <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                <section class="section-content" >
                     <div>
                         <h4>3D Projects</h4>  
                         <div class = "projects-3d-wrapper">
@@ -228,13 +228,19 @@
                 </section>
 
                 <!-- Album Art -->
-                <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="200">
+                <section class="section-content">
                     <h4>Animated Album Covers</h4>
-                    <video data-src="img/play/animated-cover-art/banner.mp4" autoplay muted loop playsinline preload="none"></video>
+                    <!-- <video data-src="img/play/animated-cover-art/banner.mp4" autoplay muted loop playsinline preload="none"></video> -->
+                    <div id = "animated-cover-art-wrapper">
+                        <video data-src="img/play/animated-cover-art/phone-mockups/blond_1_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                        <video data-src="img/play/animated-cover-art/phone-mockups/drown_1_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                        <video data-src="img/play/animated-cover-art/phone-mockups/louis_1_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                        <video data-src="img/play/animated-cover-art/phone-mockups/madeon_1_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                    </div>
                 </section>
 
                 <!-- Branding -->
-                <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="200">
+                <section class="section-content">
                     <h4>Branding</h4>
                         
                     <div class = "branding-wrapper">
@@ -284,7 +290,7 @@
                             <div class = "overlay">
                                 <div class = "hover-text">
                                     <h2>Madeon Red Rocks</h2>
-                                    <p>Promotional concert social post</p>
+                                    <p>Social media concert promotion ad</p>
                                 </div>
                             </div>
                         </div>
@@ -375,6 +381,28 @@
             });
 
             videos.forEach(video => observer.observe(video));
+
+        </script>
+
+
+        <script>
+        // Add responsive video source change
+        function updateVideoSource() {
+            const video = document.getElementById('crystallized');
+            
+            if (window.innerWidth <= 768) {
+                video.src = "img/play/stage-visuals/crystallized/crystallized-mobile.mp4";
+
+            } else {
+                video.src = "img/play/stage-visuals/crystallized/crystallized-desktop.mp4";
+            }
+        }
+
+        // Initial check
+        updateVideoSource();
+
+        // Update on window resize
+        window.addEventListener('resize', updateVideoSource);
 
         </script>
     </body>

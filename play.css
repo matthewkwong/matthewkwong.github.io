@@ -273,7 +273,7 @@
                 }
                  */
                 /* Makes the vertical video of crystalized reformated to the 16:9 ratio */
-                .stage-visual-wrapper > .stage-visual-video > video{
+                .stage-visual-wrapper > .stage-visual-video > a > video {
                     /* max-height: 405px; */
                     aspect-ratio: 16 / 9;
                 }

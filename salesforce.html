@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Matthew Kwong | Salesforce Customer Success Events</title>
+        <title>Matthew Kwong | Salesforce Design System</title>
         <meta property="og:image" content="img/meta/salesforce.jpg">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +47,7 @@
                         <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
                     </a>
                     <li><a href="index.html#case-studies" class="middle">Work</a></li>
-                    <li><a href="play.html" class="middle active-nav">Play</a></li>
+                    <li><a href="motion.html" class="middle active-nav">Motion</a></li>
                     <li><a href="about.html" class = "active-nav middle" >About</a></li>
                     <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
                 </div>
@@ -55,8 +55,10 @@
         </ul>
       </nav>
 
-      <section id = "title">
-        </section>
+    <section class = "section-image preview" id = "title" style="background-color: #f4f4f4;"> 
+    </section>
+      <!-- <section id = "title">
+        </section> -->
 
 
       <section class = "content-wrapper" id = "case-study-wrapper">
@@ -146,7 +148,7 @@
                       <h3>Design Process</h3>
                       <h2>Capturing the Live Site</h2>
                       <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
-                      <img src = "img/salesforce/screenshots.jpg" width="6643" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300" style = "overflow-x: hidden;">
+                      <img src = "img/salesforce/screenshots.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
                   </div>
               </section>
 
@@ -168,16 +170,14 @@
                       <p>Many existing design components lacked editability and responsiveness that would require the designer to recreate the component entirely. </p>
                       <p>I created efficient components utilizing a combination of Figma's auto-layout, constraints, and variants features. Using these techniques helped create flexible components that were both easy to scale and change.</p>
 
-                      <video width="1080" playsinline autoplay muted loop>
-                          <source src="img/salesforce/responsive-cards-1.mp4" type="video/mp4">
+                      <video playsinline autoplay muted loop data-src="img/salesforce/responsive-cards-1.mp4" type="video/mp4">
                           Your browser does not support HTML5 video.
                       </video>
 
                       <p>Additionally, it contains a variety of auto-layout and hug-contents settings that allow for fast text
                               revisions without breaking the component entirely as everything stays intact and grows accordingly, based on the changes you make.</p>
-                      
-                      <video width="1080" playsinline autoplay muted loop>
-                          <source src="img/salesforce/responsive-cards-2.mp4" type="video/mp4">
+
+                      <video playsinline autoplay muted loop data-src="img/salesforce/responsive-cards-2.mp4" type="video/mp4">
                           Your browser does not support HTML5 video.
                       </video>
                   </div>
@@ -188,8 +188,7 @@
                       <h3>Design Process</h3>
                       <h2>Events Registration Form</h2>
                       <p>A large component feature I worked on was the Events Registration Form. I created a flexible component that allows the data entries to be changed through Figma component variants. Designs for default, invalid, and valid states are all accounted for and can easily be changed with a few clicks.</p>
-                      <video width="1080" playsinline autoplay muted loop>
-                          <source src="img/salesforce/registration-form.mp4" type="video/mp4">
+                      <video playsinline autoplay muted loop data-src="img/salesforce/registration-form.mp4" type="video/mp4">
                           Your browser does not support HTML5 video.
                       </video>
                   </div>
@@ -204,13 +203,13 @@
                     <p>To ensure that the components were easily editable, large components like as cards are interlaced with smaller components such as icons or tags that are reused in multiple other components. </p>
 
                       <!-- Result Images -->
-                      <img src = "img/salesforce/nav.png" width="1080" alt = "nav" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+                      <img src = "img/salesforce/nav.png" alt = "nav" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
 
-                      <img src = "img/salesforce/cards.png" width="1080" alt = "Desktop Cards" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+                      <img src = "img/salesforce/cards.png" alt = "Desktop Cards" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
 
-                      <img src = "img/salesforce/buttons-icons.png" width="1080" alt = "Desktop Button and Icons" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+                      <img src = "img/salesforce/buttons-icons.png" alt = "Desktop Button and Icons" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
 
-                      <img src = "img/salesforce/modals.png" width="1080" alt = "Desktop modals" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" style = "overflow-x: hidden;">
+                      <img src = "img/salesforce/modals.png" alt = "Desktop modals" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   </div>
               </section>
 
@@ -244,36 +243,33 @@
           </div>
       </section>
 
-      <footer>
-          <div id = "footer-content">
-              <p>Let's connect!</p>
-              
-              <ul>
-                  <li>
-                      <a href="mailto:&#109;&#097;&#116;&#116;&#104;&#101;&#119;&#114;&#107;&#119;&#111;&#110;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
-                          <img src = "img/footer/white/email.svg" alt = "Email" height = "20" width = "20">
-                      </a>
-                  </li>
-          
-                  <li>
-                      <a href = "https://www.linkedin.com/in/matthewrkwong/" target="_blank">
-                          <img src = "img/footer/white/linkedin.svg" alt = "LinkedIn" height = "20" width = "20">
-                      </a> 
-                  </li>
-          
-                  <li>
-                      <a href = "https://www.instagram.com/design.matthew/?hl=en" target="_blank">
-                          <img src = "img/footer/white/instagram.svg" alt = "Instagram" height = "20" width = "20">
-                      </a>
-                  </li>
-              </ul>
+        <div id="line"></div>      
+
+
+        <footer>
+        <div id = "footer-content">
+            <div>
+            <p> © 2026 Matthew Kwong</p>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="mailto:matthewrkwong@gmail.com" target="_blank">Email
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank">LinkedIn</a> 
+                </li>
+        
+                <li>
+                    <a href="https://www.instagram.com/design.matthew/" target="_blank">Instagram</a>
+                </li>
+            </ul>
+            </div>
+        </footer>
       
-              <div id = "line"></div>      
-      
-              <p>Designed + Developed by Matthew Kwong • <span id="year"></span></p>
-          </div>
-      </footer>
-      
+      <script src="video-loader.js  "></script>
       <script src="script.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>

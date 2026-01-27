@@ -43,9 +43,6 @@
         margin: 0px;
     }
 
-    footer #footer-content {
-        max-width: 1080px;
-    }
     /* footer p{
         font-size: 16px;
     } */
@@ -73,7 +70,7 @@
                   <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
               </a>
               <li><a href="#case-studies" class="middle">Work</a></li>
-              <li><a href="play.html" class="middle active-nav">Play</a></li>
+              <li><a href="motion.html" class="middle active-nav">Motion</a></li>
               <li><a href="about.html" class = "active-nav middle" >About</a></li>
               <li><a href="https://drive.google.com/file/d/1FhDiI5sC_muCGADNnV9m1qXDy_I9njyE/view" class="middle" target="_blank">Resume</a></li>
           </div>
@@ -129,8 +126,8 @@
                 <div class="case-study">
                     <a href="covid.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder" style="position:relative;">
-                                <video src="img/index/find-my-covid-test/findmycovidtest_square.mp4" loop autoplay playsinline muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" preload="none"></video>
+                            <div class="image-placeholder">
+                                <video data-src="img/index/find-my-covid-test/findmycovidtest_square.mp4" autoplay playsinline muted preload="none"></video>
                             </div>
                         </div>
                         
@@ -157,8 +154,9 @@
                 <div class="case-study">
                     <a href="45fremont.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder" style="position:relative;">
-                                <video id="45FremontVideo" src="img/index/45fremont/45fremont_square.mp4" loop playsinline autoplay muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" preload="none"></video>
+                            <div class="image-placeholder">
+                                <video id ="45FremontVideo" data-src="img/index/45fremont/45fremont_square.mp4" autoplay muted loop playsinline preload="none"></video>
+                                <!-- <video id="45FremontVideo" src="img/index/45fremont/45fremont_square.mp4" playsinline autoplay muted preload="none"></video> -->
                             </div>
                         </div>
                         
@@ -182,7 +180,7 @@
                     <a href="toybox-search.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="modelSearchVideo" src="img/index/better-model-search/better_model_search.mp4" loop playsinline autoplay muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" preload="none"></video>
+                            <video id="modelSearchVideo" data-src="img/index/better-model-search/better_model_search.mp4" loop playsinline autoplay muted preload="none"></video>
                         </div>
                     </div>
                     <!-- <div class="image-placeholder-wrapper">
@@ -211,7 +209,7 @@
                     <a href="toybox-cad.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video src="img/index/cad/cad_1x1.mp4" loop playsinline autoplay muted style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" preload="none"></video>
+                            <video data-src="img/index/cad/cad_1x1.mp4" loop playsinline autoplay muted preload="none"></video>
                         </div>
                     </div>
                     <!-- <div class="image-placeholder-wrapper">
@@ -275,8 +273,8 @@
                 <div class="case-study more-work-item">
                     <a href="45fremont-ibm.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder" style="position:relative;">
-                                <video src="img/45fremont/ibm/banner.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                            <div class="image-placeholder">
+                                <video data-src="img/45fremont/ibm/banner.mp4" loop autoplay playsinline muted playsinline></video>
                             </div>
                         </div>
                     <div class = "case-study-text">
@@ -286,12 +284,12 @@
                     <!-- <p>Created an interactive feature to view floorplans.</p> -->
 
                         <div class="case-study-details">
-                            <p>Interactive building module to view units</p>
+                            <p>Interactive building module to view building units</p>
 
                             <div class = "tag-wrapper">
                                 <div class = "tag-wrapper">
                                     <div class = "tag">Real-Estate</div>
-                                    <div class = "tag">Web</div>
+                                    <div class = "tag">Web / Mobile</div>
                                 </div>
                             </div>
                             <!-- <p>2021</p> -->
@@ -326,7 +324,7 @@
                     <a href="https://www.linkedin.com/feed/update/urn:li:activity:7280031343940395008/" style="text-decoration:none; color:inherit;">
                     <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="SpotifyConcers" src="img/index/spotify-wrapped/concerts_square.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                            <video id="SpotifyConcers" data-src="img/index/spotify-wrapped/concerts_square.mp4" loop autoplay playsinline muted playsinline ></video>
                         </div>
                     </div>
 
@@ -352,7 +350,7 @@
                     <a href="linkedin-circles.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="LinkedinCirlcesVideo" src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;object-fit: cover;"></video>
+                            <video id="LinkedinCirlcesVideo" data-src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline ></video>
                         </div>
                     </div>
 
@@ -380,7 +378,7 @@
                 <!-- <div class="case-study more-work-item">
                     <a href="playtest.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper" style>
-                            <div class="image-placeholder" style="position:relative;">
+                            <div class="image-placeholder">
                                 <video id="modelSearchVideo" src="img/playtest/dashboard.mp4" loop playsinline autoplay muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
                             </div>
                         </div>
@@ -397,8 +395,9 @@
           </section>
       </div>
     </div>
+        <div id="line"></div>      
 
-    <footer>
+    <!-- <footer>
       <div id="footer-content">
         <p>Let's connect!</p>
         
@@ -426,6 +425,29 @@
   
         <p>Designed + Developed by Matthew Kwong • <span id="year">2026</span></p>
       </div>
+    </footer> -->
+
+    <footer>
+      <div id = "footer-content">
+        <div>
+          <p> © 2026 Matthew Kwong</p>
+        </div>
+
+          <ul>
+              <li>
+                  <a href="mailto:matthewrkwong@gmail.com" target="_blank">Email
+                  </a>
+              </li>
+      
+              <li>
+                  <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank">LinkedIn</a> 
+              </li>
+      
+              <li>
+                  <a href="https://www.instagram.com/design.matthew/" target="_blank">Instagram</a>
+              </li>
+          </ul>
+        </div>
     </footer>
 
     <script src="script.js"></script>
@@ -433,6 +455,7 @@
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="smooth-scroll.js"></script>
     <script src="case-study-sidebar.js"></script>
+    <script src="video-loader.js"></script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -499,6 +522,7 @@
             stagger: 0.2
         });
     </script>
+    
     <script>
     // Add responsive video source change
     function updateVideoSource() {
@@ -507,14 +531,14 @@
         const FremontVideo = document.getElementById('45FremontVideo');
         
         if (window.innerWidth <= 768) {
-            video.src = "img/index/better-model-search/better_model_search-16x9.mp4";
-            LinkedinCirlcesVideo.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
-            FremontVideo.src = "img/index/45fremont/45fremont_square.mp4";
+            video.dataset.src = "img/index/better-model-search/better_model_search-16x9.mp4";
+            LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_square.mp4";
 
         } else {
-            video.src = "img/index/better-model-search/better_model_search.mp4";
-            LinkedinCirlcesVideo.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
-            FremontVideo.src = "img/index/45fremont/45fremont_tall.mp4";
+            video.dataset.src = "img/index/better-model-search/better_model_search.mp4";
+            LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
+            // if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_tall.mp4";
         }
     }
 

@@ -1,84 +1,79 @@
 /* Footer */
-footer{
-    z-index: 1;
-    background-color: #18A0FB;
-    height: 200px;
-    width: 100%;
-    color: white;
+
+footer #footer-content{
+    z-index: 2;
+    /* background-color: #18A0FB; */
+    background-color: transparent;
+    color: black;
     bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 26px;
+    padding:   64px 24px 64px 24px ;
+    /* max-width: */
+    max-width: 1200px;
+
 }
 
 footer p{
-    color: white;
+    margin: 0;
 }
 
-footer a {
-    text-decoration: none;
+footer a{
+    color: #595959;
+    margin: 0;
 }
 
-footer img {
-    border-radius: 0;
-    cursor: pointer;
-}
 
-footer #footer-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 1080px;
-    margin: auto;
-    gap: 26px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
+footer a:visited{
+    color: #595959;
+    text-decoration: underline !important;
+ }
 
-footer  #footer-content p{
-    margin-bottom: 0px;
-}
-
-footer  #footer-content p:first-child{
-    margin-top: 25px;
-}
-
-footer #footer-content p:last-child {
-    text-align: center;
-    margin-top: 0px;
-}
 
 footer ul{
-    padding-left: 0px;
-    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 0;
 }
 
 footer ul li{
     display: inline-block;
     list-style: none;
-    margin-left: 20px;
-    height: 20px;
-    width: 20px;
 }
 
-footer ul li:first-child{
-    margin-left: 0px;
-}
 
 #line{
     margin: auto;
     text-align: center;
-    background-color: white;
+    background-color: #E3E3E3;
     
     /* bc div within div */
-    max-width: 1080px;
+    max-width: 1200px;
     width: 100%;
     height: 1px;
+    /* display: none; */
 }
 
-@media screen and (max-width: 600px) {
-
-
-    footer{
-        height: 240px;
-    
-        /* So polaroid image doesnt look off */
-        /* margin-top: 180px; */
+@media only screen and (max-width: 768px) {
+    #line{
+        max-width:calc(100% - 48px);
     }
-  }
+
+    /* footer #footer-content{
+        flex-direction: column;
+    }
+
+    #footer-content{
+        flex-direction: column;
+    } */
+
+    footer ul{
+        flex-direction: column;
+        padding: 0px;
+        gap: 8px;
+    }
+}

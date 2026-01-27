@@ -27,6 +27,7 @@ nav {
     position: -webkit-sticky;
 
     top: 0;
+    /* overflow-x: hidden; */
 }
 
 nav ul {
@@ -111,13 +112,12 @@ input[type=checkbox]{
     display: none;
     font-size: 48px;
     user-select: none;
+    color: #595959;
 }
 
 #close{
     z-index: 5;
     display: none;
-
-    color: white;
     position: absolute;
     top: 12px; 
     right: 44px;
@@ -146,7 +146,7 @@ input[type=checkbox]{
         display: none;
 
         position: absolute;
-        background-color: #18A0FB;
+        background-color: white;
         right: 0;
         left: 0;
         top:0;
@@ -161,7 +161,7 @@ input[type=checkbox]{
     }
 
     #menu-wrapper #menu li a {
-        color: white;    
+        color: #444;    
     }
 
     #hamburger {
@@ -174,11 +174,11 @@ input[type=checkbox]{
 
     /* Hides the blue hover on desktop */
     #nav-links a.middle:before {
-        background-color: #FFF;
+        background-color: #18A0FB;
     }
     
     #menu-wrapper #menu  li a:hover {
-        color: White;
+        color: #18A0FB;
     }  
 
 
@@ -212,7 +212,6 @@ input[type=checkbox]{
     }
 
     /* White logo  */
-
     input[type=checkbox]:checked ~ #logo-white{
         display: block;
     }

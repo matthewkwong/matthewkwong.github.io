@@ -73,10 +73,15 @@ body > div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 50px;
     box-sizing: border-box;
     overflow: visible;
+    
+    width: 100%;
+    max-width: 1200px;
+    /* max-width: 1440px; */
+    /* border: solid 2px red; */
 }
 
 .content-wrapper section {
@@ -94,7 +99,7 @@ body > div{
 }
 
 section{
-    max-width: 1080px;
+    /* max-width: 1080px; */
     /* changed on september 10, 2024 */
     /* max-width: 900px; */
     /* gap: 50px; */
@@ -171,7 +176,7 @@ img{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    /* justify-content: space-between; */
     gap: 12px 64px;
 }
 
@@ -207,14 +212,16 @@ video{
 #case-study-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     margin: auto;
     margin-top: 64px;
     margin-bottom: 64px;
-    width: 1080px;
+    max-width: 1200px;
     box-sizing: border-box;
     gap: 64px;
+    width: calc(100% - 48px);
+    /* padding: 0 24px; */
 }
 
 #case-study-wrapper > .left {
@@ -229,7 +236,16 @@ video{
     display: flex;
     flex-direction: column;
     gap: 64px;
-    width: calc(1080px - 248px); /* 1080px - (200px + 40px gap) */
+
+
+    /* margin-right: 24px; */
+    /* adds it up to 1080px */
+        /* width: calc(1440px - 360px); */
+    /* width: calc(1200px - 264px); */
+    width: 100%;
+    /* width: calc(1080px - 248px);  */
+    /* 1080px - (200px + 40px gap) */
+    /* max-width: 1080px; */
 }
 
 #case-study-wrapper > .right > video, 
@@ -238,9 +254,29 @@ video{
     margin: auto;
 }
 
+/* Responsive for case study layout */
+@media (max-width: 768px) {
+    #case-study-wrapper {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 20px;
+    }
+
+    #case-study-wrapper > .left {
+        width: 100%;
+        position: static;
+        top: auto;
+    }
+
+    #case-study-wrapper > .right {
+        width: 100%;
+    }
+}
+
 
 /* Add scroll margin to sections with h2 */
 section {
+    width: 100%;
     scroll-margin-top: 120px; /* Same as navbar height */
 }
 
@@ -250,9 +286,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 100%;
+    width: 50%;
     position: sticky;
     top: 120px;
+    margin-left: 24px;
 }
 
 .sidebar-menu ul {
@@ -365,9 +402,9 @@ section {
     width: 50%;
 }
 
-.side-by-side > .right{
+/* .side-by-side > .right{
     width: 50%;
-}
+} */
 
 .side-by-side > .right > h2,
 .side-by-side > .left > h2{
@@ -446,7 +483,7 @@ section {
 
 
 /* This is done at 800px since that's the width of the sections rn */
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1440px) {
     /* Adds padding that acts as a fake margin. This helps maintain the 
     full-width section image/videos */
     /* .content-wrapper section{
@@ -455,37 +492,33 @@ section {
     } */
 
 
-    #case-study-wrapper {
-        max-width: 100%;
-    }
-    .sidebar-menu {
-        display: none;
-    }
-    
+
+/*     
     #case-study-wrapper > .left {
         width: 0px;
         display: none;
-    }    
-    #case-study-wrapper > .right {
-        width: 100%;
-    }
-
-    #case-study-wrapper {
-        width: 100%;
-
-        padding: 0 48px;
-        margin: 48px 0px;
-    }
+    }     
     
     #case-study-wrapper > .right {
         width: 100%;
     }
+
+
+    #case-study-wrapper {
+        width: 100%;
+    } */
+    
+    /* #case-study-wrapper > .right {
+        width: 50%;
+    } */
 }
 
 
 /* WIDTH is less than 768 */
 @media only screen and (max-width: 768px) {
-
+    .sidebar-menu {
+        display: none;
+    }
     #title-content{
         margin: 0;
     }
@@ -528,9 +561,11 @@ section {
     #case-study-wrapper {
         flex-direction: column;
         gap: 25px;
+        width: 100%;
+        /* width: calc(100% - 48px); */
 
-        padding: 0 24px;
-        margin: 24px 0px;
+        /* padding: 0 24px; */
+        /* margin: 24px 0px; */
     }
 
     #case-study-wrapper > .left,
@@ -559,4 +594,3 @@ section {
     .content-wrapper section{
         padding: 0px 20px;
     }
-} */

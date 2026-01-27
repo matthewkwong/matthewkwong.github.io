@@ -15,11 +15,6 @@ a:visited{
     background-color: var(--custom-salesforce-blue);
 }
 
-
-#title-content-wrapper{
-    gap:10%;
-}
-
 /* #title-content-wrapper h1{
     font-size: 40px;
 }
@@ -42,10 +37,13 @@ a:visited{
 
 
 #title{
-    color: white;
+    /* overflow-x: hidden; */
+    /* max-width: 100%; */
     background-image:
     url("img/salesforce/overview-new-resized.jpg");  
     background-size: cover;  
+    margin: 0 auto;
+    max-width: 100% !important;
     /* background-image: linear-gradient(rgb(17, 124, 173, 0.8), 
     rgb(17, 124, 173, 0.8)), 
     url("img/salesforce/overview-new-resized.jpg"); */

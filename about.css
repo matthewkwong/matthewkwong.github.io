@@ -19,6 +19,9 @@
 #content-wrapper{
     overflow: visible;
 }
+body{
+    overflow-x: hidden;
+}
 
 #heading-wrapper, #experience-values, #hobbies-polaroids{
     display: flex;
@@ -92,7 +95,7 @@
 /* Heading, Values, Experience, Hobbies */
 
 #heading{
-    max-width: 40%;
+    /* max-width: 40%; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -144,7 +147,7 @@
    
 
   #polaroids img{
-    display: none;
+    /* display: none; */
     position: relative;
     top: 0px;
     bottom: 0px;
@@ -153,6 +156,7 @@
   }
 
   #hobbies-polaroids{
+    /* position: absolute; */
     gap: 0px;
   }
 }

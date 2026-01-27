@@ -1,3 +1,13 @@
+/* nav */
+
+#hamburger, #close{
+    color: white !important;
+}
+
+#menu-wrapper{
+    background-color: black !important;
+}
+
 body{
     background-color: black;
 }

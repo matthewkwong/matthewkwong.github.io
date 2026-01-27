@@ -4,9 +4,6 @@
     color: white !important;
 }
 
-#menu-wrapper{
-    background-color: black !important;
-}
 
 body{
     background-color: black;
@@ -290,6 +287,7 @@ footer #footer-content{
 }
 
 @media only screen and (max-width: 768px) {
+    
 
     .stage-visual-wrapper, 
     .projects-3d-wrapper, 
@@ -403,5 +401,10 @@ footer #footer-content{
     }
 }
 
+@media only screen and (max-width: 600px) {
+    #menu-wrapper{
+    background-color: black !important;
+}
+}
 
 

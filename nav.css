@@ -140,7 +140,7 @@ input[type=checkbox]{
 }
 
 
-@media screen and (max-width: 600px) {  
+@media screen and (max-width: 768px) {  
     #menu-wrapper { 
         /* hides the content until button is clicked */
         display: none;

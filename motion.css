@@ -349,7 +349,9 @@ footer #footer-content{
     }
 
     .button-overlay{
-        height: calc(100% - 92px);
+        /* border: solid 2px red;
+        box-sizing: border-box; */
+        height: calc(100% - 88px);
     }
 
     .stage-visual-video {

@@ -2,8 +2,13 @@
     text-decoration: none;
 }
 
+
+#heading{
+    max-width: calc(50% - 48px);
+}
+
 #about-profile-picture{
-    width: 50%;
+    max-width: calc(50%);
     height: 100%;
     border-radius: 20px;
 }
@@ -35,17 +40,13 @@ body{
 }
 
 
-#heading-wrapper > #heading{
-    width: 50%;
-}
-
 
 #experience-values{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 48px;
     width: 100%;
 }
 
@@ -53,11 +54,11 @@ body{
     display: flex;
     flex-direction: column;
     /* gap: 16px; */
-    max-width: 50%;
+    max-width: calc(50% - 48px);
 }
 
 #values{
-    max-width: 50%;
+    max-width: calc(50% - 48px);
 }
 
 #values-wrapper{

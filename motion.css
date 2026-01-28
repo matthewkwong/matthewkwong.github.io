@@ -343,9 +343,13 @@ footer #footer-content{
     }
 
     button {
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .button-overlay{
+        height: calc(100% - 92px);
     }
 
     .stage-visual-video {

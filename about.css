@@ -34,6 +34,12 @@ body{
     width: 100%;
 }
 
+
+#heading-wrapper > #heading{
+    width: 50%;
+}
+
+
 #experience-values{
     display: flex;
     justify-content: space-between;
@@ -126,6 +132,10 @@ body{
 
 
 @media screen and (max-width: 768px) {
+    #heading-wrapper > #heading{
+        width: 100%;
+    }
+
     #about-profile-picture{
         /* width: 100%; */
         width: auto;

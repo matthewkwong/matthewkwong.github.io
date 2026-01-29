@@ -23,13 +23,14 @@ a:visited{
 } */
 
 
-#synthesis > ul{
-    max-width: 45%;
+#synthesis > div{
+display: flex;
+flex-direction: row;
 }
 
-#title-content-wrapper h1{
+/* #title-content-wrapper h1{
     font-size: 40px;
-}
+} */
 
 #project-preview{
     width: auto;

@@ -33,7 +33,7 @@ body {
     display: flex;
     /* gap: 64px; */
     flex-direction: column;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     background-color: #ffff;
 }
 
@@ -280,22 +280,27 @@ p{
     margin: 0;
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #profile-image{
-    /* width: 30%; */
-    height: 300px;
-/* border: solid 2px red; */
+    max-width: 50%;
+    /* height: 300px; */
+    /* width: 100%; */
+        /* border: solid 2px rosybrown; */
+}
+
+#profile-image img{
+    margin: auto 0;
+    /* border: solid 2px red; */
 }
 
 #home-name{
-
-    /* width: 50%; */
     display: flex;
     flex-direction: column;
     gap: 28px;
     /* border: solid 2px red; */
+    width: 50%;
 }
 
 
@@ -306,22 +311,28 @@ p{
 
 
   .profile-title {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     /* width: 80%; */
   }
 
+  .profile-title span{
+    font-weight: 300;
+  }
+
+/* 
   .profile-meta {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
   }
+
   .profile-meta a {
     text-decoration: underline;
     color: black
-  }
+  } */
 
 
   /* Selected Work */
@@ -396,6 +407,11 @@ p{
 
     #profile-image{
         display: none;
+    }
+
+    #home-name{
+        width: 100%;
+        /* justify-content: center; */
     }
 
     /* #content-wrapper {

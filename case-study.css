@@ -168,11 +168,19 @@ img{
     cursor: default;
 } */
 
-.list > ul > h3{
-    margin-left: -40px;
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    /* justify-content: space-between; */
 }
 
-#project-details-list, .list{
+#competitor-analysis > ul{
+    max-width:calc(30% - 24px);
+}
+
+#project-details-list{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -481,37 +489,6 @@ section {
     /* width: auto; */
 }
 
-
-/* This is done at 800px since that's the width of the sections rn */
-@media only screen and (max-width: 1440px) {
-    /* Adds padding that acts as a fake margin. This helps maintain the 
-    full-width section image/videos */
-    /* .content-wrapper section{
-        padding: 0px 50px;
-        margin: 0px 50px;        
-    } */
-
-
-
-/*     
-    #case-study-wrapper > .left {
-        width: 0px;
-        display: none;
-    }     
-    
-    #case-study-wrapper > .right {
-        width: 100%;
-    }
-
-
-    #case-study-wrapper {
-        width: 100%;
-    } */
-    
-    /* #case-study-wrapper > .right {
-        width: 50%;
-    } */
-}
 
 
 /* WIDTH is less than 768 */

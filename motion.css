@@ -26,6 +26,11 @@ footer{
     background-color: black !important;
 }
 
+footer h1{
+        color: white !important;
+
+}
+
 .section-image video {
     max-height: 100%;
 }

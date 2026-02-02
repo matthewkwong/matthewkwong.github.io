@@ -8,13 +8,13 @@ footer #footer-content{
     bottom: 0;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
     margin: 0 auto;
     gap: 26px;
-    padding:   64px 24px 64px 24px ;
+    padding:   48px 24px 48px 24px ;
     /* max-width: */
     max-width: 1200px;
-
 }
 
 footer p{
@@ -24,19 +24,27 @@ footer p{
 footer a{
     color: #595959;
     margin: 0;
+    text-decoration: none;
 }
 
 
 footer a:visited{
     color: #595959;
-    text-decoration: underline !important;
+    text-decoration: none !important;
  }
 
 
-footer ul{
+ footer #footer-content, 
+ footer #footer-content #footer-links{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 12px;
+ }
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin: 0;
 }
 

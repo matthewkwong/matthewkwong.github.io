@@ -37,8 +37,9 @@ html{
   
 body{
     margin: auto;
-    font-family: 'Poppins', sans-serif;
-    /* font-style: normal; */
+    font-family: "InterDisplay", sans-serif;
+
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 
@@ -47,6 +48,11 @@ body{
     line-height: 28px;
     font-weight: 400;
 }    */
+footer #footer-content{
+
+    max-width: 1200px !important;
+   
+}
 
 
 p, ol, li{
@@ -491,6 +497,7 @@ section {
 
 
 
+
 /* WIDTH is less than 768 */
 @media only screen and (max-width: 768px) {
     .sidebar-menu {
@@ -537,7 +544,7 @@ section {
 
     #case-study-wrapper {
         flex-direction: column;
-        gap: 25px;
+        /* gap: 25px; */
         width: 100%;
         /* width: calc(100% - 48px); */
 

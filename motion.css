@@ -80,143 +80,7 @@ section{
 }
 
 
-.stage-visual-wrapper {  
-    /* width: 1080px; */
-    width: 100%;
-    max-width: 100%;
-    /* border: solid 2px blue; */
-    /* box-sizing: border-box; */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, auto);
-    grid-template-rows: auto auto;
-    gap: 12px;
-    height: auto;
-}
-
-.stage-visual-video .hover-text p, .branding-item .hover-text p{
-    color: white;
-}
-
-
-.stage-visual-video .hover-text, .branding-item .hover-text{
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-}
-
-.stage-visual-video,
-.branding-item{
-    padding: 0;
-    margin: 0;
-    display: block;
-    position: relative;
-}
-
-
-.overlay{
-    position: absolute;
-    /* top: calc(100%); */
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    height: 50%;
-    width: 100%;
-    opacity: 1;
-    transition: .5s ease;
-    background-image: 
-    linear-gradient(-180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
-    border-radius: 8px;    
-}
-
-.stage-visual-video:hover .overlay,
-.branding-item:hover .overlay {
-    opacity: 1;
-}
-
-
-/* .stage-visual-video > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    line-height: 0;
-} */
-
-.stage-visual-wrapper > .stage-visual-video:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1;
- 
-}
-
-.stage-visual-wrapper > .stage-visual-video:nth-child(2) {
-    grid-column: 3;
-    grid-row: 2;
-
-}
-
-.stage-visual-wrapper > .stage-visual-video:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-
-}
-
-
-.stage-visual-wrapper > .stage-visual-video:nth-child(4) {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-
-}
-
-
-.stage-visual-wrapper > .stage-visual-video > a > video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-button {
-    z-index: 12;
-    position: absolute;
-    padding: 16px  24px;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: rgba(255, 255, 255, 0.75);
-    border: none;
-    /* border: 2px solid white; */
-    border-radius: 36px;
-    opacity: 0;
-    z-index: 10;
-    font-size: 16px;
-    transition: opacity 0.3s ease;  
-    /* text-transform: uppercase; */
-    cursor: pointer;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the element based on its own size */
-}
-
-
-.stage-visual-video:hover .button-overlay,
-.stage-visual-video:hover button {
-    opacity: 1;
-}
-
-.button-overlay{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    /* border: solid 2px red; */
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;  
-}
-
+/* Stage visual wrapper + overlay + button-overlay: see styles.css (shared with index) */
 
 /* 3D Projects Layout */
 .projects-3d-wrapper {
@@ -330,123 +194,24 @@ footer #footer-content{
     max-width: 2560px !important;
 }
 
-#line{
+/* #line{
     max-width: 2560px !important;
     width:calc(100% - 48px) !important;
-}
+} */
 
 @media only screen and (max-width: 768px) {
-    
 
-    .stage-visual-wrapper, 
-    .projects-3d-wrapper, 
-    .branding-wrapper,             
-    .projects-3d-wrapper > .col-1,
-    .projects-3d-wrapper > .col-2,
-    .projects-3d-wrapper > .col-3 {
-        gap: 24px;
+    .branding-wrapper{
+        gap: 48px;
     }
 
-    button {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .button-overlay{
-        /* border: solid 2px red;
-        box-sizing: border-box; */
-        height: calc(100% - 88px);
-    }
-
-    .stage-visual-video {
-        height: auto;
-    }
-
-    .stage-visual-video > a {
-        height: auto;
-    }
-
-    .stage-visual-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .stage-visual-video {
-        width: 100%;
-        height: auto;
-    }
-
-    /* .stage-visual-wrapper > .stage-visual-video:nth-child(1),
-    .stage-visual-wrapper > .stage-visual-video:nth-child(2),
-    .stage-visual-wrapper > .stage-visual-video:nth-child(3) {
-        grid-column: 1;
-        grid-row: auto;
-        width: 100%;
-        height: auto;
-    }
-        */
-    /* Makes the vertical video of crystalized reformated to the 16:9 ratio */
-    .stage-visual-wrapper > .stage-visual-video > a > video {
-        /* max-height: 405px; */
-        aspect-ratio: 16 / 9;
-    }
-
-    /* No need for hover to see the title / descriptions */
-    .stage-visual-wrapper > .stage-visual-video > a > video {
-        display: block;
-    }
-
-    
-    .stage-visual-video .hover-text, .branding-item .hover-text{
-        position: relative;
-        bottom: auto;
-        left: auto;
-    }
-
-    
-    .hover-text > h2{
-        /* color: black; */
+    .stage-visual-wrapper .overlay > .hover-text > p {
         color: white;
-    }
-
-        .hover-text > p{
-        color:white;
-        /* color: #595959; */
     }
 
     .projects-3d-wrapper {
         flex-direction: column;
     }
-
-    .stage-visual-video .overlay,
-    .branding-item .overlay {
-        opacity: 1;
-    }
-
-    .overlay{
-        position: relative;
-        top: 0;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        height: auto;
-        width: auto;
-        opacity: 1;
-        background-image: none;
-        border-radius: 8px;    
-    }
-
-    .overlay > .hover-text > p {
-        /* color: #595959; */
-        color: white;
-    }
-
-
 
     #animated-cover-art-wrapper {
         flex-wrap: wrap;

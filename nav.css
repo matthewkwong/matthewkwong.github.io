@@ -12,6 +12,7 @@ nav img{
 }
 
 nav {
+    /* mix-blend-mode: difference; */
     z-index: 4;
     
     display: flex;
@@ -19,6 +20,7 @@ nav {
     justify-content: space-between;
     background-color: white;
     color: #C4C4C4;
+    
     height: 90px;
     /* border-bottom: solid 1px #B3B3B3; */
     /* box-sizing: border-box; */
@@ -33,7 +35,7 @@ nav {
 nav ul {
     padding-left: 0;
     list-style: none;    
-    padding-right: 40px;
+    padding-right: 48px;
 }
 
 nav li{
@@ -44,7 +46,7 @@ nav li{
 }
 
 #logo{
-    padding-left: 40px;
+    padding-left: 48px;
     max-width: 60px;
     height: auto;
 }
@@ -55,7 +57,7 @@ nav li{
 } */
 
 #nav-links a {
-    color: black;
+    color: #595959;
     text-decoration: none;
 }
 
@@ -73,7 +75,8 @@ nav li{
   bottom: 0;
   left: 0;
   bottom: -5px;
-  background-color: #18A0FB;
+  background-color: #000000;
+  /* background-color: #18A0FB; */
   visibility: hidden;
   transform: scaleX(0);
 
@@ -83,13 +86,14 @@ nav li{
 #nav-links a.middle:hover:before {
   visibility: visible;
   transform: scaleX(1);
+  color: #595959;
 }
 
 /* Menu elements - work, about, resume */
 #menu-wrapper #menu {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 48px;
 }
 
 #menu-wrapper #menu li a{
@@ -97,7 +101,8 @@ nav li{
 }
 
 #menu-wrapper #menu  li a:hover {
-    color: #18A0FB;
+    /* color: #18A0FB; */
+    color: #000000;
     border-radius: 5px;
 }
 
@@ -121,6 +126,7 @@ input[type=checkbox]{
     position: absolute;
     top: 12px; 
     right: 44px;
+    color: white;
 
     /* box-sizing: border-box;
     border: solid 2px blue; */
@@ -134,19 +140,30 @@ input[type=checkbox]{
     
     top: 15px;
     left: 0px;
-    padding-left: 40px;
+    padding-left: 48px;
     max-width: 60px;
     height: auto;
 }
 
 
 @media screen and (max-width: 768px) {  
+
+
+    #logo{
+        padding-left:24px;
+    }
+
+    nav ul {
+        padding-right: 24px;
+    }
+
     #menu-wrapper { 
         /* hides the content until button is clicked */
         display: none;
 
         position: absolute;
-        background-color: white;
+        background-color: black;
+        /* background-color: white; */
         right: 0;
         left: 0;
         top:0;
@@ -161,7 +178,8 @@ input[type=checkbox]{
     }
 
     #menu-wrapper #menu li a {
-        color: #444;    
+        /* color: #444;     */
+        color: white;
     }
 
     #hamburger {
@@ -169,16 +187,21 @@ input[type=checkbox]{
     }
 
     #logo-white{
+        padding-left: 24px;
         display: block;
     }
 
     /* Hides the blue hover on desktop */
     #nav-links a.middle:before {
-        background-color: #18A0FB;
+        background-color: white;
+        /* background-color: #595959; */
+        /* background-color: #18A0FB; */
     }
     
     #menu-wrapper #menu  li a:hover {
-        color: #18A0FB;
+        /* color: #18A0FB; */
+        /* color: black; */
+        color: white;
     }  
 
 
@@ -209,6 +232,7 @@ input[type=checkbox]{
 
     input[type=checkbox]:checked ~ #close{
         display: block;
+        right: 24px;
     }
 
     /* White logo  */

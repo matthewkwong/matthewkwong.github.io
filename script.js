@@ -78,17 +78,28 @@ $(document).ready(function(){
   }
   
   
-  // Disable Scroll on nav
+  // Disable scroll when mobile menu is open; re-enable when it closes (any method)
   function disable(){
     document.querySelector('body').classList.add('disable-scroll');
   }
-  
+
   function enable(){
     document.querySelector('body').classList.remove('disable-scroll');
   }
-  
-  document.querySelector('#hamburger').addEventListener('click', disable);
-  document.querySelector('#close').addEventListener('click', enable);
+
+  var hamburger = document.querySelector('#hamburger');
+  var closeBtn = document.querySelector('#close');
+  var checkbox = document.querySelector('#checkbox_toggle');
+
+  if (hamburger) hamburger.addEventListener('click', disable);
+  if (closeBtn) closeBtn.addEventListener('click', enable);
+
+  // When menu closes (checkbox unchecked), always re-enable scroll (e.g. tap outside or link click)
+  if (checkbox) {
+    checkbox.addEventListener('change', function() {
+      if (!this.checked) enable();
+    });
+  }
   
   // Display year at bottom of nav
   const year = new Date().getFullYear();

@@ -1,21 +1,28 @@
-// Initialize Lenis – smoothTouch: true so mobile can scroll
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: true,
-    touchMultiplier: 2,
-});
+// Use native scroll on touch devices (phones/tablets) so the page actually scrolls.
+// Lenis can block touch scroll on some mobile browsers.
+var isTouch =
+    typeof window !== 'undefined' &&
+    ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
-// Get scroll value
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+if (isTouch) {
+    window.lenis = null;
+} else {
+    var lenis = new Lenis({
+        duration: 1.2,
+        easing: function (t) {
+            return Math.min(1, 1.001 - Math.pow(2, -10 * t));
+        },
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    window.lenis = lenis;
 }
-
-requestAnimationFrame(raf)
-
-// Export lenis for use in other scripts if needed
-window.lenis = lenis; 

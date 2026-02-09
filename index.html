@@ -77,9 +77,21 @@
     }
 
     @media screen and (max-width: 768px) {
+        html {
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            height: auto;
+            min-height: 100%;
+        }
+        body {
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            min-height: 100%;
+        }
+
         nav #menu-wrapper #menu li a {
         color: white !important;
-        /* Hides the blue hover on desktop */
          }
        
          nav #nav-links a.middle:before {
@@ -87,9 +99,7 @@
         }
 
         nav #menu-wrapper #menu  li a:hover {
-        /* color: #18A0FB; */
         color: white !important;
-            /* mix-blend-mode: difference; */
         }
 
         #test{

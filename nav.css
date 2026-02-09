@@ -18,19 +18,21 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    /* background-color: white; */
     color: #C4C4C4;
     
     height: 90px;
     /* border-bottom: solid 1px #B3B3B3; */
     /* box-sizing: border-box; */
 
-    position: sticky;
-    position: -webkit-sticky;
+    position: relative;
+    /* position: sticky; */
+    /* position: -webkit-sticky; */
 
     top: 0;
     /* overflow-x: hidden; */
 }
+
 
 nav ul {
     padding-left: 0;
@@ -43,13 +45,20 @@ nav li{
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 500;
 }
 
-#logo{
+a #logo {
+    /* color: black; */
+    color: #595959;
     padding-left: 48px;
     max-width: 60px;
     height: auto;
+    /* font-size: 30px; */
+    /* font-weight: 900; */
 }
+
+
 
 /* .active-nav{
     color: #18A0FB !important; 
@@ -147,9 +156,11 @@ input[type=checkbox]{
 
 
 @media screen and (max-width: 768px) {  
+    body{
+        overflow: hidden;
+    }
 
-
-    #logo{
+    a #logo{
         padding-left:24px;
     }
 

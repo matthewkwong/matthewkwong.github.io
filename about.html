@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="inter/inter.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,13 +39,18 @@
     font-style: oblique;
   }
 
-  #content-wrapper{
+  h2{
+    margin: 0px;
+  }
+
+ .content-wrapper{
     max-width: 1200px;
   }
+  
 </style>
 
 <body>
-  <nav>
+     <nav>
     <!-- MK Logo -->
     <a href = "index.html">
         <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
@@ -63,16 +70,16 @@
               <a href = "index.html">
                   <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
               </a>
-              <li><a href="index.html" class="middle">UX Design</a></li>
+              <li><a href="uxdesign.html" class="middle active-nav">UX Design</a></li>
               <li><a href="motion.html" class="middle">Motion</a></li>
-              <li><a href="about.html" class = "middle active-nav" >About</a></li>
-                <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
+              <li><a href="about.html" class = "middle" >About</a></li>
+            <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
           </div>
       </div>
     </ul>
   </nav>
 
-<div id = "content-wrapper">
+<div class = "content-wrapper">
   <section id = "heading-wrapper">
     <div id = "heading">
         <h1>Hi, I'm Matthew!</h1>
@@ -91,8 +98,13 @@
         <!-- <p>If you'd like to meet, let's set up a <a href = "https://calendly.com/matthewkwong/intro"  target="_blank">
           virtual coffee chat</a>!</p> -->
 
-          <a href="Matthew Kwong Resume.pdf" class="middle" target="_blank">
-            Download my resume here
+          <a href="Matthew Kwong Resume.pdf" class="middle" target="_blank" style="text-decoration: none;">
+            <button>
+              Download My Resume
+              <span class="material-symbols-outlined">
+                  arrow_outward
+              </span>
+            </button>
           </a>
     </div>
 
@@ -165,7 +177,7 @@
     <div id = "values">
       <h1>My Values</h1>
       <!-- Compassion -->
-      <div id = "values-wrapper">
+      <!-- <div id = "values-wrapper"> -->
         <div class = "sub-value">
           <h2>Compassion</h2>
           <p>We've all been there before, where we feel lost or confused. Helping those around you can go a long way, 
@@ -183,26 +195,27 @@
         <div class = "sub-value">
           <h2>Trying something new</h2>
           <p>Whether you fail or succeed, you wouldn't know unless you tried. I think we should all get out of our comfort zones and experience new things. </p>
-        </div>  
+        <!-- </div>   -->
       </div>
     </div>
+  </section>
+      
+
+
+
+  <section id = "hobbies-polaroids">
 
     <div id = "hobbies">
       <h1>Hobbies / Interests</h1>
-        
-        <p>When I’m not working, you can find me building LEGO, going to concerts, or snowboarding!</p>
+      <p>When I’m not working, you can find me building LEGO, going to concerts, or snowboarding!</p>
     </div>
 
-
-  </section>
-
-  <section id = "hobbies-polaroids">
-    <div></div>
     <div id = "polaroids"> 
-      <!-- <img src = "img/index/waving.gif" width = "700" > -->
       <img src = "img/index/polaroids-2.png" width = "800" >
     </div>
-</section>        
+</section>  
+
+
 </div>
 
 
@@ -222,26 +235,26 @@
     <!-- Nav -->
       <ul>
           <li>
-              <a href="index.html#ux-design" target="_blank">UX Design</a> 
+              <a href="index.html#ux-design" target="_blank" class = "middle">UX Design</a> 
           </li>
   
           <li>
-              <a href="motion.html" target="_blank">Motion</a> 
+              <a href="motion.html" target="_blank" class = "middle">Motion</a> 
           </li>
 
           <li>
-              <a href="about.html" target="_blank">About</a> 
+              <a href="about.html" target="_blank" class = "middle">About</a> 
           </li>
       </ul>
 
     <!-- Social Medias -->
       <ul>
           <li>
-              <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank">LinkedIn</a> 
+              <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank" class = "middle">LinkedIn</a> 
           </li>
   
           <li>
-              <a href="https://www.instagram.com/design.matthew/" target="_blank">Instagram</a>
+              <a href="https://www.instagram.com/design.matthew/" target="_blank"class = "middle">Instagram</a>
           </li>
       </ul>
       </div>

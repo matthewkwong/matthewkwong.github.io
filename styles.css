@@ -499,6 +499,22 @@ button:hover {
    9. Media queries
    ========================================================================== */
 
+/* Mobile scroll fix – ensures page scrolls on phones (used by all pages) */
+@media (max-width: 768px) {
+    html {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        height: auto;
+        min-height: 100%;
+    }
+    body {
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        min-height: 100%;
+    }
+}
+
 @media (max-width: 768px) {
 
     h2{

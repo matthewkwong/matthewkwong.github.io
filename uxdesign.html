@@ -30,6 +30,9 @@
     #heading-wrapper{
         gap: 0px;
     }
+    #heading-wrapper h2{
+        max-width: 75vw;
+    }
 
     #content-wrapper{
         overflow-x: hidden;
@@ -43,7 +46,14 @@
         margin-top: 0px;
         margin-bottom: 8px;
     }
+    
+    @media (max-width: 768px) {
 
+        #heading-wrapper h2{
+            max-width: 100vw;
+
+        }
+    }
     /* footer p{
         font-size: 16px;
     } */
@@ -92,7 +102,7 @@
         <section id="heading-wrapper">
 
             <h1>UX/Product Design</h1>
-            <h2 style="max-width: 75vw;">With experience designing from 0 to 1 at startups and design agencies,
+            <h2>With experience designing from 0 to 1 at startups and design agencies,
                 to scaling enterprise design systems, I focus on creating impactful solutions.</h2>
         
         </section>

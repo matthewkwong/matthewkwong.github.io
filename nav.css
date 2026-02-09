@@ -1,5 +1,5 @@
-.disable-scroll{
-    overflow-y: hidden;
+.disable-scroll {
+    overflow-y: hidden !important;
 }
 
 .scrollable{

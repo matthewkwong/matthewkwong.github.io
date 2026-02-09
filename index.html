@@ -12,16 +12,22 @@
     <link rel="stylesheet" href="inter/inter.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
 
-    <!-- Lenis Smooth Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
-    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <script src="smooth-scroll.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+  <script src="smooth-scroll.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
 </head>
 <body>
     <style>
@@ -30,18 +36,15 @@
         color: #595959 !important;
     }
 
-
-
     #motion-graphics-banner h1,
     #work-together h1 {
-        font-family: 'InterDisplay';
+        /* font-family: 'InterDisplay'; */
         /* font-weight: bold; */
         font-style: normal;
     }
     
     body{
         background-color: white;
-
     }
     
     #content-wrapper{
@@ -55,41 +58,23 @@
     #hover-text h2{
         margin-top: 0;
     }
-    
-    /* #heading{
-        align-items: center;
+
+    #button-wrapper{
         display: flex;
-    } */
-
-    /* h2, h2, p{
-        margin: 0px;
-    } */
-
-    /* footer p{
-        font-size: 16px;
-    } */
+        flex-direction: row;
+        gap: 24px;
+    }
 
     @media (max-width: 768px) {
-        .overlay > .hover-text > h2 {
+        #ux-design .overlay > .hover-text > h2 {
             color: black;
         }
 
-        .overlay > .hover-text > p {
+        #ux-design .overlay > .hover-text > p {
             color: #595959;
             margin-bottom: 8px;
         }
     }
-
-
-    button{
-        transition: 0.5s ease;
-    }
-
-    button:hover{
-        background-color: black;
-        color:white !important;
-    }
-
 
     @media screen and (max-width: 768px) {
         nav #menu-wrapper #menu li a {
@@ -106,10 +91,17 @@
         color: white !important;
             /* mix-blend-mode: difference; */
         }
+
+        #test{
+            display: block !important;
+        }
+
+        .stage-visual-wrapper .stage-visual-video video {
+            aspect-ratio: auto;
+            display: block;
+            width: 100%;
+        }
     }   
-
-
-
     </style>
 
 
@@ -133,7 +125,7 @@
               <a href = "index.html">
                   <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
               </a>
-              <li><a href="#ux-design" class="middle active-nav">UX Design</a></li>
+              <li><a href="uxdesign.html" class="middle active-nav">UX Design</a></li>
               <li><a href="motion.html" class="middle">Motion</a></li>
               <li><a href="about.html" class = "middle" >About</a></li>
             <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
@@ -142,7 +134,7 @@
     </ul>
   </nav>
   
-    <div id="content-wrapper">
+    <div class="content-wrapper">
         <section id="heading-wrapper">
             <!-- <h1>Matthew Kwong</h1> -->
 
@@ -150,62 +142,80 @@
                 <img src = "img/name.svg">
 
                 <div id = "heading-video-wrapper">
-                    <video autoplay loop muted playsinline>
-                        <source src = "https://res.cloudinary.com/dvhxd28ok/video/upload/v1770194319/matthew-head_porn3c.mp4"> 
-                    </video>
+                    <video data-src="img/Matthew-Head-handbrake.mp4" loop autoplay playsinline muted preload="auto"></video>
                 </div>
                 
 
                 <div id = "heading-text">
                     <div id = "left">
                         <h2>UX & Motion Designer</h2>
-                        <a href="mailto:matthewrkwong@gmail.com" target="_blank">
-                            <button>
-                                Let's Chat
+                        <a href="mailto:matthewrkwong@gmail.com" target="_blank" style=" text-decoration: none !important;">        
+                            <!-- <button style="padding-right: 24px"> -->
+                                <button>
+                                    Let's Chat 
+                                    <span class="material-symbols-outlined">
+                                        arrow_outward
+                                    </span>
                             </button>
-                        </a>
-                    </div>
+                        </a>    
+                    </div> 
  
                     
                     <div id = "right">
-                        <h2>Searching for new opportunities</h2>
-                    </div>
-                </div>
-                
-                
-                <!-- <div id="home-name">
-                    <h1 class="profile-name">Matthew Kwong</h1>
-                    <h2 class="profile-title">
-                        Product & Motion Designer
-                        <span>seeking new opportunities</span>
-                    </h2>
+                        <!-- <h2>Open to work</h2> -->
+                        <h2>Open to new opportunities</h2>
+
+
+                        <div id="test">
+                            <a href="mailto:matthewrkwong@gmail.com" target="_blank" style=" text-decoration: none !important;">        
+                                <button style="padding-right: 24px">
+                                        Let's Chat 
+                                        <!-- <span class="material-symbols-outlined">
+                                            arrow_outward
+                                        </span> -->
+                                </button>
+                            </a> 
+                        </div>
+                    </div>  
+                    
+                    
+
+
+
                 </div>
 
-                <div id="profile-image">
-                    <img src="img/index/waving.webp" alt="Matthew Kwong" width="400" loading="lazy" decoding="async">
-                </div> -->
             </div>
         </section>
 
-        <section class = "content-wrapper" id = "ux-design">
+    <div class="line"></div>
+
+        <section id = "ux-design">
 
                 <!-- Stage visuals -->
-                <section class="section-content">   
-                        <h1>UX Design</h1>                        
-                        <h4>Selected Work</h4>                        
-
-
-
+                <section class="section-content">  
+                    
+                    <div class = "category-and-button">
+                        <h1>UX Design</h1>
                         
+                        <a href="uxdesign.html" style="text-decoration: none;">
+                            <button>View all 
+                                    <span class="material-symbols-outlined">
+                                        arrow_outward
+                                    </span>
+                            </button>
+                        </a>
+                    </div>
+         
+                    <h4>Selected Work</h4>                                                
                         <div class="stage-visual-wrapper stage-visual-wrapper--five">
 
                             <!-- Toybox Better Model Search -->
                             <div class = "stage-visual-video">
                                 <a href="toybox-search.html">
                                     <video data-src = "img/index/better-model-search/better_model_search-16x9.mp4" autoplay loop playsinline preload="none"></video>
-                                        <!-- <div class = "button-overlay"> -->
-                                            <!-- <button>View Project</button> -->
-                                        <!-- </div> -->
+                                        <!-- <div class = "button-overlay">
+                                            <button>View Project</button>
+                                        </div> -->
                                     <div class = "overlay">
                                         <div class = "hover-text">
                                             <h2>Toybox: Search</h2>
@@ -316,318 +326,183 @@
                                     </div>
                                 </a>
                             </div>
-
-
                         </div>
                 </section>
             </section>
-
-            
-            <!-- Motion Graphics Banner -->
-            <section class = "stage-visual-video" id = "motion-graphics-banner">
-            <!-- <h2>3D Motion Graphics</h2>                        
-            <h4>Selected Work</h4>                         -->
-
-
-                <a href = "motion.html">
-                <div class="video-overlay-wrapper">
-                    <video src="https://res.cloudinary.com/dvhxd28ok/video/upload/v1769294318/banner_elzucr.mp4" width="2560" 
-                    loop autoplay muted playsinline ></video>
-                    <div class = "button-overlay">
-                        <!-- <button>View Project</button> -->
-                    </div>
-                </div>
-                <div class = "overlay">
-                    <div class = "hover-text">
-                        <div>
-                            <h1>3D & Motion Graphics</h1>
-                            <h2>A collection of concert visuals, music visualizers, and branding projects</h2>
-                        </div>
-
-                        <button>
-                            View work
-                        </button>
-                    </div>
-                </div>
-                </a>
-            </section>
-                                            
-            <section class = "stage-visual-video" id = "work-together">
-                <h1>Let's work together</h1>
-                
-                <div class = "button-wrapper">
-                    <a href="mailto:matthewrkwong@gmail.com" target="_blank">
-                        <button> Contact</button>
-                    </a>
-                    <!-- <button> Email</button> -->
-                </div>
-            </section>
-
-        <!-- <section class="selected-work"> -->
-            <!-- <h2>Selected Work</h2> -->
-            <!-- <div class="work-grid"> -->
-               
-               
-
-
-
-                <!-- Toybox | Search Optimization -->
-                <!-- <div class="case-study">
-                    <a href="toybox-search.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder" style="position:relative;">
-                            <video id="modelSearchVideo" poster="img/play/stage-visuals/something-comforting/thumbnail.webp" loop playsinline autoplay muted preload="none"></video>
-                        </div>
-                    </div>
-
-                    <div class = "case-study-text">
-                        <h2>Toybox: Search</h2>                
-                        <div class="case-study-details">
-                            <p>Improved the search experience by 7%</p>
-                            <div class = "tag-wrapper">
-                                <div class = "tag">Search Optimization</div>
-                                <div class = "tag">Startup</div>
-                                <div class = "tag">Web / Mobile</div>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div> -->
-
-
-
-                
-
-                <!-- Toybox | CAD -->
-                <!-- <div class="case-study">
-                    <a href="toybox-cad.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder" style="position:relative;">
-                            <video poster="img/play/stage-visuals/something-comforting/thumbnail.webp" loop playsinline autoplay muted preload="none"></video>
-                        </div>
-                    </div>
-                        <div class = "case-study-text">
-                            <h2>Toybox: CAD</h2>                    
-
-                        <div class="case-study-details">
-                        <p>Designed a cross-platform 3D modeling application</p>
-                            <div class="tag-wrapper">
-                                <div class = "tag">3D Modeling App</div>
-                                <div class = "tag">Startup</div>    
-                                <div class = "tag">Web / Mobile</div>
-                            </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
-
-
-
-                <!-- Salesforce~ -->
-                <!-- <div class="case-study" id = "salesforce">
-                    <a href="salesforce.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder">
-                                <video poster="img/play/stage-visuals/something-comforting/thumbnail.webp" loop autoplay playsinline muted playsinline></video>
-                            </div>
-                        </div>
-
-                        <div class = "case-study-text">
-                            <h2>Salesforce</h2>
-                            <div class="case-study-details">
-                                <p>Customer Success Events design system</p>
-                                 <div class = "tag-wrapper">
-                                    <div class = "tag">Design Systems</div>
-                                    <div class = "tag">Web / Mobile</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
-
-              
-                <!-- 45 Fremont -->
-                <!-- <div class="case-study more-work-item">
-                    <a href="45fremont-ibm.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder">
-                                <video poster="img/play/stage-visuals/something-comforting/thumbnail.webp" loop autoplay playsinline muted playsinline></video>
-                            </div>
-                        </div>
-                    <div class = "case-study-text">
-                        <h2>45 Fremont: I.B.M</h2>
-
-                        <div class="case-study-details">
-                            <p>Interactive building module to view building units</p>
-
-                            <div class = "tag-wrapper">
-                                <div class = "tag-wrapper">
-                                    <div class = "tag">Real-Estate</div>
-                                    <div class = "tag">Web / Mobile</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div> -->
-
-
-              
-            <!-- </div>
-        </section> -->
-
-
-        <!-- <section> -->
-        <!-- <h2 id="toggleButton" class="toggle-button">
-            Looking for <a href="#" id="toggleLink">more work</a>? 
-        </h2> -->
-          <!-- <div class="selected-work more-work" style="display: none;"> -->
-            <!-- <div class="work-grid"> -->
-
-               
-                
-                  <!-- 45 Fremont -->
-                <!-- <div class="case-study">
-                    <a href="45fremont.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder">
-                                <video id ="45FremontVideo" poster="img/play/stage-visuals/something-comforting/thumbnail.webp" autoplay muted loop playsinline preload="none"></video>
-]                            </div>
-                        </div>
-                        
-                        <div class = "case-study-text">
-                            <h2>45 Fremont Sitemap</h2>
-                            <div class="case-study-details">
-                                <p>Built a web template for Shorenstein Properties</p>
-                                <div class = "tag-wrapper">
-                                    <div class = "tag">Real-Estate</div>
-                                    <div class = "tag">Web</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
-
-
-                  <!-- Find My COVID Test -->
-                <!-- <div class="case-study">
-                    <a href="covid.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                            <div class="image-placeholder">
-                                <video poster="img/index/find-my-covid-test/findmycovidtest_square.mp4" autoplay loop playsinline muted preload="none"></video>
-                            </div>
-                        </div>
-                        
-                        <div class="case-study-text">
-                            <h2>Find My COVID Test</h2>
-                            <div class="case-study-details">
-                                <p>Designed + Developed a website to find COVID testing in California</p>
-                                <div class="tag-wrapper">
-                                    <div class = "tag">Health App</div>
-                                    <div class = "tag">Web / Mobile</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
-
-
-
-                <!-- Spotify Rooms -->
-                <!-- <div class="case-study more-work-item">
-                    <a href="spotify.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder" style="position:relative;">
-                        </div>
-                    </div>
-                    <div class="case-study-title">
-                        <h2>Spotify Rooms</h2>
-                        <p>Personal Project</p>
-                    </div>
-                    <div class="case-study-details">
-                        <p>Democratizing the group listening experience</p>
-                        <p>2019</p>
-                    </div>
-                    </a>
-                </div> -->
-
-                <!-- Spotify Wrapped -->
-                <!-- <div class="case-study more-work-item">
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7280031343940395008/" style="text-decoration:none; color:inherit;">
-                    <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder" style="position:relative;">
-                            <video id="SpotifyConcers" poster="img/index/spotify-wrapped/concerts_square.mp4" loop autoplay playsinline muted playsinline ></video>
-                        </div>
-                    </div>
-
-                    <div class = "case-study-text">
-                        <h2>Spotify Wrapped: Concerts</h2>
-                    
-                    <p>Mock up of a Spotify Wrapped experience for concerts</p>
-
-                        <div class="case-study-details">
-                            <div class = "tag-wrapper">
-                                <div class = "tag">Side Project</div>    
-                                <div class = "tag">Mobile</div>    
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div> -->
-
-
-                <!-- Linkedin Circles -->
-                <!-- <div class="case-study more-work-item">
-                    <a href="linkedin-circles.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper">
-                        <div class="image-placeholder" style="position:relative;">
-                            <video id="LinkedinCirlcesVideo" poster="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline ></video>
-                        </div>
-                    </div>
-
-                    <div class = "case-study-text">
-                        <h2>LinkedIn Circles</h2>
-                    
-                    <p>Mock up of a new way to remember your LinkedIn Connections</p>
-
-                        <div class="case-study-details">
-                            <div class = "tag-wrapper">
-                                <div class = "tag">Side Project</div>    
-                                <div class = "tag">Web</div>    
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                 -->
-
-                <!-- PlayTest -->
-                <!-- <div class="case-study more-work-item">
-                    <a href="playtest.html" style="text-decoration:none; color:inherit;">
-                        <div class="image-placeholder-wrapper" style>
-                            <div class="image-placeholder">
-                                <video id="modelSearchVideo" src="img/playtest/dashboard.mp4" loop playsinline autoplay muted playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"></video>
-                            </div>
-                        </div>
-                    <div class="case-study-title">
-                        <h2>PlayTest</h2>
-                    </div> 
-                    <div class="case-study-details">
-                        <p>Gamifying the learning experience</p>
-                        <p>2021</p>
-                    </div>
-                    </a>
-                </div> -->
-            <!-- </div> -->
-
         </div>
         </section>
     </div>
 
 
+    
+
+ <!-- Motion Graphics Banner -->
+        <div style="background-color: black;
+  margin-top: 64px;">
+            
+            <!-- <section class = "stage-visual-video" id = "motion-graphics-banner">
+                <div class="video-overlay-wrapper">
+                    <video src="https://res.cloudinary.com/dvhxd28ok/video/upload/v1769294318/banner_elzucr.mp4" width="2560" 
+                    loop autoplay muted playsinline ></video>
+                </div>
+            </section> -->
+
+            <div class = "content-wrapper"> 
+            <section id = "motion-graphics" >
+            <!-- Overview -->
+                <div class = "category-and-button">
+                    <h1>3D & Motion</h1>
+                    
+                    <a href="motion.html" style="text-decoration: none;">                        
+                        <button class="inverse-button">
+                            View all
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button>
+                    </a>
+                </div>
+
+            <!-- Stage visuals -->
+                <section class="section-content">   
+                    <h4>Selected Work</h4>                        
+                        
+                        <div class = "stage-visual-wrapper" id = "motion-graphics-wrapper"> 
+                            <!-- Porter Robinson- Something Comforting -->
+
+                            <!-- <div class = "stage-visual-video" style="grid-column: 1 /span 2;   grid-row: 1;">
+
+                                <a href="https://www.youtube.com/watch?v=q-8ozRoiP7Y" target="_blank">
+                                    <video poster = "img/play/stage-visuals/something-comforting/thumbnail.webp" autoplay playsinline preload="none"></video>
+                                        <div class = "button-overlay">
+                                            <button>Watch Video</button>
+                                        </div>
+                                    <div class = "overlay">
+                                        <div class = "hover-text">
+                                            <h2>Porter Robinson</h2>
+                                            <p>Something Comforting Tour Visual Remake</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>  -->
 
 
-    <div id="line"></div>      
+                            <!-- John Summit Crystallized -->
+                            <div class = "stage-visual-video" style="grid-column: 2; grid-row: 1/ span 2" >
+                                <a href="https://www.youtube.com/watch?v=YwNeE4UV0t0" target="_blank">
+                                    <video data-src="img/play/stage-visuals/crystallized/crystallized.mp4"
+                                     autoplay muted loop playsinline preload="none"></video>
+                                        <div class = "button-overlay">
+                                            <button class=" inverse-button">Watch Video
+                                            <span class="material-symbols-outlined">
+                                                arrow_outward
+                                            </span>
+                                        </button>
+                                        </div>
+                                    <div class = "overlay">
+                                        <div class = "hover-text">
+                                            <h2>John Summit</h2>
+                                            <p>Crystallized Visualizer</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Spinner -->
+                            <div class = "stage-visual-video" style="grid-column: 1;   grid-row: 1;">
+
+                                <video poster = "img/play/3d-motion-graphics/spinner/collage.webp" autoplay playsinline preload="none"></video>
+                                    <!-- <div class = "button-overlay">
+                                        <button>Watch Video</button>
+                                    </div> -->
+                                <div class = "overlay">
+                                    <div class = "hover-text">
+                                        <h2>Spinner</h2>
+                                        <p>Cinema 4D Motion study</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Laufey -->
+                            <div class = "stage-visual-video" style="grid-column: 1; grid-row: 2">
+                                <!-- <a href="https://www.youtube.com/watch?v=YwNeE4UV0t0" target="_blank"> -->
+                                    <video data-src="img/play/branding/laufey-goddess-tour/animated-poster-smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                                        <!-- <div class = "button-overlay">
+                                            <button>Watch Video</button>
+                                        </div> -->
+                                    <div class = "overlay">
+                                        <div class = "hover-text">
+                                            <h2>Laufey</h2>
+                                            <p>"The Goddess Tour" animated poster</p>
+                                        </div>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+
+    
+
+                            <!-- John Summit Crystallized -->
+                            <!-- <div class = "stage-visual-video">
+                                <a href = "https://www.youtube.com/shorts/0Yk82EG08cI" target="_blank">
+                               <video id="crystallized" data-src="img/play/stage-visuals/crystallized/crystallized-desktop.mp4" autoplay muted loop playsinline preload="none"></video>
+                                    <div class = "button-overlay">
+                                        <button>Watch Video</button>
+                                    </div>                               
+                                    <div class = "overlay">
+                                    <div class = "hover-text">
+                                        <h2>John Summit</h2>
+                                        <p>Crystallized Visualizer</p>
+                                    </div>
+                                </div>
+                                </a>
+                            </div> -->
+                            
+                        </div>
+                </section>
+            </section>
+            </div>
+            </div>
+
+    <!-- <div class="line"></div>       -->
+<div style = "max-width: 100vw;">
+    <section class="content-wrapper" id = "work-together" style="color: black;">   
+        <!-- <section class = "stage-visual-video"> -->
+            <div id = "work-together-content">
+                <div>
+                    <h1>Let's work together</h1>
+                    <h2>Whether you're searching for a Product Designer
+                        or someone to create visuals for your next live show, 
+                        I'm the designer for you.</h2>
+                </div>
+
+
+                <div id = "button-wrapper">
+                    <a href="mailto:matthewrkwong@gmail.com" target="_blank" style="text-decoration: none;">
+                        <button> 
+                            Email
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button>
+                    </a>
+
+
+                    <a href="http://calendly.com/matthewkwong/intro" target="_blank" style="text-decoration: none;" >
+                        <button>
+                            Book a call
+                            <span class="material-symbols-outlined">
+                                arrow_outward
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        <!-- </section> -->
+    </section>
+</div>
+
+    <div class="line" style="display: block;"></div>      
 
     <footer>
       <div id = "footer-content">
@@ -643,7 +518,7 @@
         <!-- Nav -->
           <ul>
               <li>
-                  <a href="index.html#ux-design" target="_blank" class="middle">UX Design</a> 
+                  <a href="uxdesign.html" target="_blank" class="middle">UX Design</a> 
               </li>
       
               <li>
@@ -742,42 +617,5 @@
         });
     </script>
     
-    <script>
-    // Add responsive video source change
-    function updateVideoSource() {
-        const video = document.getElementById('modelSearchVideo');
-        const LinkedinCirlcesVideo = document.getElementById('LinkedinCirlcesVideo');
-        const FremontVideo = document.getElementById('45FremontVideo');
-        
-        if (window.innerWidth <= 768) {
-            video.dataset.src = "img/index/better-model-search/better_model_search-16x9.mp4";
-            LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
-            if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_square.mp4";
-
-        } else {
-            video.dataset.src = "img/index/better-model-search/better_model_search.mp4";
-            LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
-            // if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_tall.mp4";
-        }
-    }
-
-    // Initial check
-    updateVideoSource();
-
-    // Update on window resize
-    window.addEventListener('resize', updateVideoSource);
-
-    // document.querySelectorAll('.case-study').forEach(card => {
-    //   const video = card.querySelector('.image-placeholder video');
-    //   if (video) {
-    //     card.addEventListener('mouseenter', () => {
-    //       video.play();
-    //     });
-    //     card.addEventListener('mouseleave', () => {
-    //       video.pause();
-    //     });
-    //   }
-    // });
-    </script>
 </body>
 </html>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="motion.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,10 +36,28 @@
 
 
     <style>
+        #heading-wrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            /* gap: 24px; */
+            flex-direction: column;
+        }
+
+        #heading-wrapper h2 {
+            font-weight: 400;
+            color: white;
+        }
+
+        /* #heading-wrapper h1{
+            font-size: 36px !important;
+            line-height: 32px;
+        } */
 
         body::-webkit-scrollbar {
             display: none;      
         }
+        
          #menu-wrapper #menu  li a:hover {
             /* color: #18A0FB; */
             color: white;
@@ -53,6 +72,11 @@
             .overlay > .hover-text > *{
                 color: white !important;
             }
+
+
+            .stage-visual-wrapper .button-overlay {
+                aspect-ratio: 16/9;
+            }
         }
     
     </style>
@@ -61,34 +85,34 @@
     <div id="fullscreen"></div>
 
 
-         <nav>
-    <!-- MK Logo -->
-    <a href = "index.html">
-        <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo">
-    </a>
+    <nav>
+        <!-- MK Logo -->
+        <a href = "index.html">
+            <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+        </a>
 
-    <!-- Nav links -->
-    <ul id = "nav-links">
+        <!-- Nav links -->
+        <ul id = "nav-links">
 
-      <!-- Checkbox hack for mobile -->
-      <input type = "checkbox" id = "checkbox_toggle"/>
-      <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
-      <label for = "checkbox_toggle" id = "close">&#215;</label>
+            <!-- Checkbox hack for mobile -->
+            <input type = "checkbox" id = "checkbox_toggle"/>
+            <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+            <label for = "checkbox_toggle" id = "close">&#215;</label>
 
-      <!-- Nav menues -->
-      <div id = "menu-wrapper">
-          <div id = "menu">
-            <a href = "index.html">
-                <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
-            </a>
-            <li><a href="index.html" class="middle">UX Design</a></li>
-            <li><a href="motion.html" class="middle active-nav">Motion</a></li>
-            <li><a href="about.html" class = "middle" >About</a></li>
-            <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
-          </div>
-      </div>
-    </ul>
-  </nav>
+            <!-- Nav menues -->
+            <div id = "menu-wrapper">
+                <div id = "menu">
+                    <a href = "index.html">
+                        <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
+                    </a>
+                    <li><a href="uxdesign.html" class="middle active-nav">UX Design</a></li>
+                    <li><a href="motion.html" class="middle">Motion</a></li>
+                    <li><a href="about.html" class = "middle" >About</a></li>
+                <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
+                </div>
+            </div>
+        </ul>
+        </nav>
 
 
         <section class = "section-image preview"  style="background-color: black;"> 
@@ -99,11 +123,20 @@
         <section class = "content-wrapper" id = "case-study-wrapper">
             <!-- Overview -->
 
-            <h1>Motion Graphics</h1>
-
+            <div id = "heading-wrapper">
+                <h1>3D & Motion</h1>
+                <h2>A series of stage visuals, 3D graphics, and branding projects.</h2>
+            </div>
+            
             <!-- Stage visuals -->
-                <section class="section-content">   
-                        <h4>Stage Visuals + Visualizers</h4>
+                <section class="section-content">  
+                    
+                        <h2>Stage Visuals </h2>
+                        <!-- <h2 style="color: white;">Stage Visuals</h2> -->
+                        <!-- <div>
+                            <h1>3D & Motion</h1>
+                            <h2 style="color: white;">Stage Visuals</h2>
+                        </div> -->
 
                         
                         <!-- Porter Robinson- Something Comforting -->
@@ -112,7 +145,11 @@
                                 <a href="https://www.youtube.com/watch?v=q-8ozRoiP7Y" target="_blank">
                                     <video poster = "img/play/stage-visuals/something-comforting/thumbnail.webp"   loop playsinline preload="none"></video>
                                         <div class = "button-overlay">
-                                            <button>Watch Video</button>
+                                            <button class="inverse-button">Watch Video
+                                                <span class="material-symbols-outlined">
+                                                    arrow_outward
+                                                </span>
+                                            </button>
                                         </div>
                                     <div class = "overlay">
                                         <div class = "hover-text">
@@ -129,7 +166,11 @@
                                 <a href="https://www.youtube.com/watch?v=YwNeE4UV0t0" target="_blank">
                                     <video poster = "img/play/stage-visuals/shiver/loop.webp" loop playsinline preload="none"></video>
                                         <div class = "button-overlay">
-                                            <button>Watch Video</button>
+                                            <button class="inverse-button">Watch Video
+                                                <span class="material-symbols-outlined">
+                                                    arrow_outward
+                                                </span>
+                                            </button>
                                         </div>
                                     <div class = "overlay">
                                         <div class = "hover-text">
@@ -146,9 +187,12 @@
                                         <video poster = "img/play/stage-visuals/divination/thumbnail.webp"   loop playsinline preload="none"></video>
                                 
                                         <div class = "button-overlay">
-                                            <button>Watch Video</button>
+                                            <button class="inverse-button">Watch Video
+                                                <span class="material-symbols-outlined">
+                                                    arrow_outward
+                                                </span>
+                                            </button>
                                         </div>
-
                                         <div class = "overlay">
                                             <div class = "hover-text">
                                                 <h2>Juelz</h2>
@@ -164,7 +208,11 @@
                                 <a href = "https://www.youtube.com/shorts/0Yk82EG08cI" target="_blank">
                                <video id="crystallized" data-src="img/play/stage-visuals/crystallized/crystallized-desktop.mp4" autoplay muted loop playsinline preload="none"></video>
                                     <div class = "button-overlay">
-                                        <button>Watch Video</button>
+                                        <button class = "inverse-button">Watch Video
+                                            <span class="material-symbols-outlined">
+                                                arrow_outward
+                                            </span>
+                                        </button>
                                     </div>                               
                                     <div class = "overlay">
                                     <div class = "hover-text">
@@ -180,92 +228,90 @@
 
                 <!-- 3D Projects -->
                 <section class="section-content" >
-                    <div>
-                        <h4>3D Projects</h4>  
-                        <div class = "projects-3d-wrapper">
-                            <div class = "col-1">
+                <h2>3D Projects</h2>  
+                <div class = "projects-3d-wrapper">
+                    <div class = "col-1">
 
-                                <!-- 9:16 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/robot-walk-cycle/final-montage.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
+                        <!-- 9:16 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/robot-walk-cycle/final-montage.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
 
-                                <!-- 1:1 -->
-                                <div class = "project-3d">
-                                    <img src="img/play/3d-motion-graphics/spinner/collage.webp" alt="collage spinner" loading="lazy" decoding="async">                                
-                                    <!-- <video data-src="img/play/3d-motion-graphics/spinner/collage.mp4" autoplay muted loop playsinline preload="none"></video> -->
-                                </div>
-                                
-                                <!-- 9: 16 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/divine-feminine/the-divine-feminine.webm" autoplay muted loop playsinline preload="none"></video>
-                                </div>
+                        <!-- 1:1 -->
+                        <div class = "project-3d">
+                            <img src="img/play/3d-motion-graphics/spinner/collage.webp" alt="collage spinner" loading="lazy" decoding="async">                                
+                            <!-- <video data-src="img/play/3d-motion-graphics/spinner/collage.mp4" autoplay muted loop playsinline preload="none"></video> -->
+                        </div>
+                        
+                        <!-- 9: 16 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/divine-feminine/the-divine-feminine.webm" autoplay muted loop playsinline preload="none"></video>
+                        </div>
 
-                                <!-- 4:3 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/liquid-sim/carousel-ratio.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
-                            </div>
+                        <!-- 4:3 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/liquid-sim/carousel-ratio.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
+                    </div>
 
-                            <div class = "col-2">
+                    <div class = "col-2">
 
-                                <!-- 4:3 -->
-                                <div class = "project-3d">
-                                    <img src="img/play/3d-motion-graphics/sword/final-smaller.webp" alt="Animated sword" loading="lazy" decoding="async">
-                                </div>
+                        <!-- 4:3 -->
+                        <div class = "project-3d">
+                            <img src="img/play/3d-motion-graphics/sword/final-smaller.webp" alt="Animated sword" loading="lazy" decoding="async">
+                        </div>
 
-                                <!-- 9:16 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/silent-night/car.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
+                        <!-- 9:16 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/silent-night/car.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
 
-                                <!-- 9:16 -->
-                                <div class = "project-3d">
-                                    <img src="img/play/3d-motion-graphics/odesza-visualizer/square.webp" alt="odesza visualizer" loading="lazy" decoding="async">
-                                </div>
+                        <!-- 9:16 -->
+                        <div class = "project-3d">
+                            <img src="img/play/3d-motion-graphics/odesza-visualizer/square.webp" alt="odesza visualizer" loading="lazy" decoding="async">
+                        </div>
 
 
-                                <!-- 9: 16 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/config/config-2025.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
-                                
-                                <!-- 9:16 -->
-                                <!-- <div class = "project-3d">
-                                    <img src="img/play/3d-motion-graphics/images/chain-sway.jpg">
-                                </div> -->
+                        <!-- 9: 16 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/config/config-2025.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
+                        
+                        <!-- 9:16 -->
+                        <!-- <div class = "project-3d">
+                            <img src="img/play/3d-motion-graphics/images/chain-sway.jpg">
+                        </div> -->
 
-                            </div>
+                    </div>
 
-                            <div class = "col-1">
+                    <div class = "col-1">
 
-                                <!-- 9: 16 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/silent-night/black-white-birds.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
+                        <!-- 9: 16 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/silent-night/black-white-birds.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
 
-                                
-                                <!-- 1:1 -->
-                                <div class = "project-3d">
-                                    <img src="img/play/3d-motion-graphics/pixelated-kisses/falling.webp" alt="Falling" loading="lazy" decoding="async">
-                                </div>
+                        
+                        <!-- 1:1 -->
+                        <div class = "project-3d">
+                            <img src="img/play/3d-motion-graphics/pixelated-kisses/falling.webp" alt="Falling" loading="lazy" decoding="async">
+                        </div>
 
-                                <!-- 4:3 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/provectus/combined_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
+                        <!-- 4:3 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/provectus/combined_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
 
-                                <!-- 4:3 -->
-                                <div class = "project-3d">
-                                    <video data-src="img/play/3d-motion-graphics/shrink-grow/grow-shrink-smaller.mp4" autoplay muted loop playsinline preload="none"></video>
-                                </div>
-                            </div>
+                        <!-- 4:3 -->
+                        <div class = "project-3d">
+                            <video data-src="img/play/3d-motion-graphics/shrink-grow/grow-shrink-smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Album Art -->
                 <section class="section-content">
-                    <h4>Animated Album Covers</h4>
+                    <h2>Animated Album Covers</h2>
                     <!-- <video data-src="img/play/animated-cover-art/banner.mp4" autoplay muted loop playsinline preload="none"></video> -->
                     <div id = "animated-cover-art-wrapper">
                         <video data-src="img/play/animated-cover-art/phone-mockups/blond_1_smaller.mp4" autoplay muted loop playsinline preload="none"></video>
@@ -276,9 +322,8 @@
                 </section>
 
                 <!-- Branding -->
-                <section class="section-content">
-                    <h4>Branding</h4>
-                        
+                <section class="section-content">  
+                    <h2>Branding</h2>                      
                     <div class = "branding-wrapper">
                         <!-- Marty Supreme -->
                         <div class = "branding-item">
@@ -339,7 +384,7 @@
                             <div class = "overlay">
                                 <div class = "hover-text">
                                     <h2>Laufey</h2>
-                                    <p>Animated Goddess Tour poster</p>
+                                    <p>"The Goddess Tour" animated poster</p>
                                 </div>
                             </div>
                         </div>
@@ -347,7 +392,7 @@
                 </section>
         </section>
 
-                                <div id="line"></div>      
+<div class="line" style="display: block;"></div>      
 
 
 <footer>

@@ -351,7 +351,7 @@ button:hover {
     margin: 0;
     display: block;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 16px;
     width: 100%;
 }

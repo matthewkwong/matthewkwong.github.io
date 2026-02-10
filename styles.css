@@ -663,9 +663,9 @@ button:hover {
         gap: 12px;
     }
 
-    /* #work-together {
+    #work-together {
         padding: 48px 0;
-    } */
+    }
 
     .content-wrapper {
         width: calc(100% - 48px);

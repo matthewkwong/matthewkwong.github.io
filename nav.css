@@ -1,6 +1,18 @@
-.disable-scroll {
-    overflow-y: hidden !important;
+/* Lock page scroll when mobile menu is open – apply to both html and body */
+/* html.disable-scroll {
+    overflow: hidden !important;
+    height: 100%;
 }
+
+body.disable-scroll {
+    overflow: hidden !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+} */
 
 .scrollable{
     overflow-y: scroll;
@@ -123,6 +135,8 @@ input[type=checkbox]{
 
 /*Hamburger*/
 #hamburger, #close{
+    /* border: solid 2px red; */
+    box-sizing: border-box;
     display: none;
     font-size: 48px;
     user-select: none;
@@ -134,8 +148,7 @@ input[type=checkbox]{
     display: none;
     position: absolute;
     top: 12px; 
-    right: 44px;
-    color: white;
+    color: #595959;
 
     /* box-sizing: border-box;
     border: solid 2px blue; */
@@ -155,10 +168,7 @@ input[type=checkbox]{
 }
 
 
-@media screen and (max-width: 768px) {  
-    body{
-        overflow: hidden;
-    }
+@media screen and (max-width: 768px) {
 
     a #logo{
         padding-left:24px;
@@ -168,82 +178,88 @@ input[type=checkbox]{
         padding-right: 24px;
     }
 
-    #menu-wrapper { 
-        /* hides the content until button is clicked */
-        display: none;
-
+    /* Slide-down panel: sits below nav, height auto, left-aligned */
+    #menu-wrapper {
+        display: block;
         position: absolute;
-        background-color: black;
-        /* background-color: white; */
+        background-color: white;
+        /* background-color: black; */
         right: 0;
         left: 0;
-        top:0;
-        text-align: center;
-        /* padding: 20px 0; */
-        /* margin-top: 10px; */
-        height: 100vh;   
+        top: 90px;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        text-align: left;
+        box-sizing: border-box;
+        transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* transition: max-height 1s cubic-bezier(0.42,0.00,0.58,1.00); */
+        will-change: max-height;
+    }
+
+    #menu-wrapper #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 0;
+        padding-bottom: 12px;
+        padding: 0px 24px ;
+        border-bottom: 2px solid #f4f4f4;
     }
 
     #menu-wrapper #menu li{
-        padding: 12px;
+        padding: 12px 0;
     }
 
     #menu-wrapper #menu li a {
-        /* color: #444;     */
-        color: white;
+        /* color: white; */
+        color: black;
     }
 
     #hamburger {
         display: block;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        /* transition: transform 0.3s ease; */
+    }
+
+    /* When menu open: hamburger rotates 90deg (no separate close icon) */
+    input[type=checkbox]:checked ~ #hamburger {
+        transform: rotate(90deg);
     }
 
     #logo-white{
         padding-left: 24px;
-        display: block;
+        /* display: block; */
     }
 
     /* Hides the blue hover on desktop */
     #nav-links a.middle:before {
-        background-color: white;
-        /* background-color: #595959; */
-        /* background-color: #18A0FB; */
+        /* background-color: white; */
+        background-color: black;
     }
     
     #menu-wrapper #menu  li a:hover {
-        /* color: #18A0FB; */
-        /* color: black; */
-        color: white;
-    }  
-
-
-    @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
+        /* color: white; */
+        color: black;
     }
 
-    /* When hamburger clicked */
+    /* When hamburger clicked – slide down from under nav, height fits content */
     input[type=checkbox]:checked ~ #menu-wrapper {
-        animation: fadeIn linear 0.3s;
-        display: flex;
-        justify-content: center;
-        align-items: center;     
+        max-height: 80vh;
     }
     
-    /* Styling for inner content when checkbox is clicked */
     input[type=checkbox]:checked ~ #menu-wrapper #menu {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
     }
 
 
-    /* Brings in the X button menu  */
-    input[type=checkbox]:checked ~ #hamburger{
-        display: none;
-    }
-
-    input[type=checkbox]:checked ~ #close{
-        display: block;
-        right: 24px;
+    /* Keep #close hidden on mobile – hamburger rotates instead */
+    #close {
+        display: none !important;
     }
 
     /* White logo  */

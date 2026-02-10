@@ -52,6 +52,7 @@ body {
 h1 {
     /* font-family: 'ZT Formom'; */
     font-size: 48px;
+    /* font-size: 40px; */
     /* font-style: oblique; */
     font-weight: 500;
     /* font-weight: 800; */
@@ -64,13 +65,14 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 1.4;
     font-weight: 500;
+    /* margin-bottom: 0; */
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 500;
 }
@@ -103,6 +105,7 @@ p {
     width: calc(100% - 96px);
     margin: 0 auto;
     box-sizing: border-box;
+    margin-top: 48px;
 }
 
 
@@ -174,7 +177,7 @@ p {
     width: 300px;
 }
 
-#heading-text h2 {
+#heading-text h1 {
     font-size: 48px;
     line-height: 58px;
     color: black;
@@ -186,9 +189,9 @@ p {
 }
 
 #heading-text #right {
-    width: 400px;
+    max-width: 350px;
     align-items: flex-end;
-    color: var(--default-text);
+    color: black;
     text-align: right;
 }
 
@@ -305,9 +308,11 @@ button {
 }
 
 button:hover {
-    background-color: white;
-    color: black !important;
-    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: white; */
+    /* color: black !important; */
+    color: white;
+    border: 2px solid transparent;
     box-sizing: border-box;
 }
 
@@ -321,14 +326,15 @@ button:hover {
 }
 
 .inverse-button:hover {
-    background-color: black;
-    color: white !important;
-    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* background-color: black; */
+    /* color: white !important; */
+    border: 2px solid transparent;
 }
 
-.inverse-button:hover span {
+/* .inverse-button:hover span {
     color: white;
-}
+} */
 
 
 /* --------------------------------------------------------------------------
@@ -516,9 +522,12 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    h1{
+        font-size: 38px;
+    }
 
     h2{
-          font-size: 24px;
+          font-size: 28px;
     }
 
     /* Stage visuals & branding */
@@ -637,9 +646,6 @@ button:hover {
         font-size: 38px;
     } */
 
-    h1{
-        font-size: 38px;
-    }
 
     .line {
         max-width: 100% !important;
@@ -657,9 +663,9 @@ button:hover {
         gap: 12px;
     }
 
-    #work-together {
+    /* #work-together {
         padding: 48px 0;
-    }
+    } */
 
     .content-wrapper {
         width: calc(100% - 48px);
@@ -692,9 +698,9 @@ button:hover {
         position: relative;
     }
 
-    #heading-text > div > h2 {
-        font-size: 36px !important;
-        line-height: 32px;
+    #heading-text > div > h1 {
+        font-size: 48px !important;
+        line-height: 48px;
     }
 
     #heading-text > #left {
@@ -703,10 +709,11 @@ button:hover {
 
     #heading-text > #right {
         text-align: left;
+        width: 100%;
         align-items: baseline;
     }
 
-    #heading-text #right h2 {
+    #heading-text #right h1 {
         text-align: left;
         color: #595959;
         margin-top: 0;

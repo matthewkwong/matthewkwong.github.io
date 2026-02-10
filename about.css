@@ -121,7 +121,27 @@ footer #footer-content{
     max-width: calc(50% - 48px);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    height: auto;
+    gap: 48px;
+}
+
+#heading-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #heading h1{
+    font-family: 'zt formom';
+} */
+
+
+#heading p{
+    margin-bottom: 0px;
+}
+
+#heading p:first-of-type{
+    margin-top: 0;
 }
 
  #values{

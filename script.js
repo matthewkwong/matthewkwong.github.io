@@ -78,26 +78,32 @@ $(document).ready(function(){
   }
   
   
-  // Disable scroll when mobile menu is open; re-enable when it closes (any method)
+  // Disable scroll when mobile menu is open (lock both html and body)
+  var savedScrollY = 0;
   function disable(){
-    document.querySelector('body').classList.add('disable-scroll');
+    savedScrollY = window.scrollY || document.documentElement.scrollTop;
+    document.documentElement.classList.add('disable-scroll');
+    document.body.classList.add('disable-scroll');
+    document.body.style.top = '-' + savedScrollY + 'px';
   }
 
   function enable(){
-    document.querySelector('body').classList.remove('disable-scroll');
+    document.documentElement.classList.remove('disable-scroll');
+    document.body.classList.remove('disable-scroll');
+    document.body.style.top = '';
+    window.scrollTo(0, savedScrollY);
   }
 
   var hamburger = document.querySelector('#hamburger');
   var closeBtn = document.querySelector('#close');
   var checkbox = document.querySelector('#checkbox_toggle');
 
-  if (hamburger) hamburger.addEventListener('click', disable);
-  if (closeBtn) closeBtn.addEventListener('click', enable);
-
-  // When menu closes (checkbox unchecked), always re-enable scroll (e.g. tap outside or link click)
+  // Drive scroll-locking off the checkbox state (labels toggle it).
+  // This avoids calling disable()/enable() in the wrong order on close/open.
   if (checkbox) {
     checkbox.addEventListener('change', function() {
-      if (!this.checked) enable();
+      if (this.checked) disable();
+      else enable();
     });
   }
   

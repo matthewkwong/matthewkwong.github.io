@@ -68,7 +68,6 @@ h2 {
     font-size: 32px;
     line-height: 1.4;
     font-weight: 500;
-    /* margin-bottom: 0; */
 }
 
 h3 {
@@ -174,7 +173,7 @@ p {
 }
 
 #heading-text > #left {
-    width: 300px;
+    width: 400px;
 }
 
 #heading-text h1 {
@@ -184,7 +183,7 @@ p {
     margin-bottom: 0;
 }
 
-#heading-text #right a button {
+#heading-text #right #mobile-only {
     display: none;
 }
 
@@ -663,9 +662,9 @@ button:hover {
         gap: 12px;
     }
 
-    /* #work-together {
+    #work-together {
         padding: 48px 0;
-    } */
+    }
 
     .content-wrapper {
         width: calc(100% - 48px);
@@ -686,7 +685,7 @@ button:hover {
     }
 
     #heading-text #right a button {
-        display: block;
+        display: inline-flex;
     }
 
     #heading > #heading-video-wrapper > video {

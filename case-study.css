@@ -40,6 +40,15 @@ body{
     font-family: "InterDisplay", sans-serif;
     /* font-family: 'Poppins', sans-serif; */
 }
+
+h2{
+    margin-top: 0px;
+}
+
+h4{
+    color: #000;
+}
+
 #title-content h1{
     font-size: 48px;
 }
@@ -51,6 +60,7 @@ body{
     line-height: 38px;
     font-weight: 400;    
     width: 100%;
+    margin: auto;
 }
 
 
@@ -137,7 +147,7 @@ section{
 .section-content{
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 48px;
     justify-content: center;
 }
 
@@ -200,18 +210,36 @@ ul{
     flex: 1;
 }
 
-#project-details-list{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 12px 64px;
-    
+#project-details-list h4{
+    margin-top: 0px;
 }
 
+#project-details-list{
+    width: 100%;
+    display: flex;    
+    /* border: solid 2px orange; */
+    box-sizing: border-box;
+    gap: 12px;
+        flex-wrap: wrap;
+
+}
+
+#project-details-list > *{
+    border: solid 2px #f4f4f4;
+    border-radius: 8px;  
+    box-sizing: border-box;
+
+    padding: 20px;
+    /* width: 1fr;  */  
+    flex-grow: 1;
+    flex: 0 0 calc(50% - 6px);
+    /* min-width: ; */
+ }
 
 .list, #project-details-list > div >  p{
-    line-height: 12px !important;
+    /* line-height: 12px !important; */
+        margin: 0px;
+
     padding: 0;
 }
 
@@ -301,6 +329,8 @@ video{
     #case-study-wrapper > .right {
         width: 100%;
     }
+
+
 }
 
 
@@ -425,7 +455,7 @@ section {
     width: 100%;
     gap: 48px;
     justify-content: center;
-    align-items: center;
+    align-items:flex-end;
 }
 
 .side-by-side > .left{
@@ -557,6 +587,14 @@ section {
     img{
         width: 100%;
     }
+
+    #project-details-list > *{
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    /* #project-details-list p:last-of-type{
+        margin: 0px;
+    } */
 
     #case-study-wrapper {
         flex-direction: column;

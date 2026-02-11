@@ -65,13 +65,13 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.4;
     font-weight: 500;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
     font-weight: 500;
 }
@@ -246,11 +246,11 @@ p {
     color: var(--default-text);
 }
 
-#work-together h2 {
+/* #work-together h2 {
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
-}
+} */
 
 #work-together a {
     width: fit-content;
@@ -356,7 +356,7 @@ button:hover {
     margin: 0;
     display: block;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 16px;
     width: 100%;
 }
@@ -373,22 +373,33 @@ button:hover {
     border-radius: 16px;
 }
 
-.stage-visual-video .hover-text,
-.branding-item .hover-text {
+.hover-text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hover-text {
     color: white;
     font-size: 20px;
     position: absolute;
-    bottom: 0;
-    left: 24px;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
 }
+
+/* .hover-text h3{
+    line-height: 4px;
+} */
 
 .stage-visual-video .hover-text p,
 .branding-item .hover-text p {
     color: white;
 }
 
-.stage-visual-wrapper .hover-text * {
+.hover-text * {
     color: white;
+    margin: 0;
 }
 
 /* Overlay */
@@ -403,7 +414,7 @@ button:hover {
     opacity: 0;
     transition: 0.5s ease;
     background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
-    border-radius: 16px;
+    /* border-radius: 16px; */
 }
 
 .stage-visual-wrapper .overlay p {
@@ -599,6 +610,7 @@ button:hover {
         position: relative;
         bottom: auto;
         left: auto;
+        right: auto;
     }
 
     .stage-visual-wrapper .hover-text > h2 {

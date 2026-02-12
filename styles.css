@@ -243,6 +243,7 @@ p {
 
 #work-together-content h2{
     max-width: 75%;
+    font-weight: 400;
     color: var(--default-text);
 }
 
@@ -377,9 +378,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.hover-text {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -388,9 +386,9 @@ button:hover {
     right: 16px;
 }
 
-/* .hover-text h3{
-    line-height: 4px;
-} */
+.hover-text h3{
+    margin-bottom: 0px;
+}
 
 .stage-visual-video .hover-text p,
 .branding-item .hover-text p {
@@ -399,6 +397,10 @@ button:hover {
 
 .hover-text * {
     color: white;
+    /* margin: 0; */
+}
+
+.hover-text p{
     margin: 0;
 }
 
@@ -550,11 +552,18 @@ button:hover {
         gap: 24px;
     }
 
-    .button-overlay button {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    /* .button-overlay button {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        position: relative;
     }
+
+    .button-overlay{
+        transform: translate(0, 0);
+        position: relative;
+        opacity: 1;
+    } */
 
     .stage-visual-wrapper .button-overlay {
         width: 100%;
@@ -587,7 +596,6 @@ button:hover {
     .stage-visual-video {
         width: 100%;
         height: auto;
-        gap: 8px;
     }
 
     .stage-visual-wrapper .stage-visual-video video {
@@ -602,7 +610,7 @@ button:hover {
 
     #motion-graphics .button-overlay {
         aspect-ratio: auto !important;
-        top: 50%;
+        top: 42.5%;
     }
 
     .stage-visual-video .hover-text,
@@ -639,6 +647,10 @@ button:hover {
         background-image: none;
         border-radius: 8px;
         margin: 0;
+
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-around; */
     }
 
     /* Index heading & layout */
@@ -667,7 +679,7 @@ button:hover {
     #motion-graphics {
         display: flex;
         flex-direction: column;
-        padding: 48px 0;
+        padding: 64px 0;
     }
 
     #motion-graphics > div {
@@ -675,7 +687,7 @@ button:hover {
     }
 
     #work-together {
-        padding: 48px 0;
+        padding: 64px 0;
     }
 
     .content-wrapper {

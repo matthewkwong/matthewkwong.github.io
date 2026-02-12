@@ -140,7 +140,7 @@ section{
 
  section > div:last-of-type{
     margin: 0px;
-      flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 /* Space between the subtitle h2 and the content below it */
@@ -451,20 +451,24 @@ section {
 
 .side-by-side{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    gap: 48px;
+    gap: 24px;
     justify-content: center;
-    align-items:flex-end;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .side-by-side > .left{
-    width: 50%;
+    /* width:calc(40% - 12px);
+    min-width: 30%; */
+    width: 100%;
 }
 
-/* .side-by-side > .right{
-    width: 50%;
-} */
+.side-by-side > .right{
+    width: 100%;
+    /* width:calc(60% - 12px); */
+}
 
 .side-by-side > .right > h2,
 .side-by-side > .left > h2{
@@ -589,11 +593,12 @@ section {
     }
 
     #project-details-list > *{
-        flex: 0 0 calc(50% - 12px);
+        flex: 0 0 calc(50% - 6px);
     }
 
-    /* #project-details-list p:last-of-type{
-        margin: 0px;
+    /* Only if I decide if skills is necessary here */
+    /* #project-details-list > *:last-of-type {
+        flex: 0 0 calc(100%);
     } */
 
     #case-study-wrapper {

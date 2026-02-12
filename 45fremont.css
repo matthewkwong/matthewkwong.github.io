@@ -70,11 +70,11 @@ a:visited{
 }
 
 .sidebar-menu a.active::before {
-    background-color: #FFC56E;
+    background-color: #FED499;
 }
 
 .sidebar-menu a:hover::before {
-    background-color: #FFC56E;
+    background-color: #FED499;
 }
 
 

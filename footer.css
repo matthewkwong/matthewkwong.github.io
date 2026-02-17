@@ -170,6 +170,6 @@ footer ul li{
     footer ul{
         /* flex-direction: row; */
         padding: 0px;
-        gap: 8px;
+        gap: 24px;
     }
 }

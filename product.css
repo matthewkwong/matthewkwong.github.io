@@ -241,7 +241,7 @@ body {
 
     /* need to keep this so the scroll bar doesnt appear when the more work section is open */
     /* overflow-y: hidden; */
-    margin-bottom: 64px;
+    /* margin-bottom: 64px; */
 }
 
 /* Header */

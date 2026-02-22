@@ -23,9 +23,18 @@ a:visited{
 } */
 
 
-#synthesis > div{
-display: flex;
-flex-direction: row;
+#synthesis{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: solid 2px red;
+    box-sizing: border-box; */
+}
+
+#synthesis div {
+    max-width:calc(50% - 24px);
 }
 
 /* #title-content-wrapper h1{
@@ -84,6 +93,11 @@ flex-direction: row;
     .preview{
         height: auto;
         padding:  50px 0px;
+    }
+
+
+    #synthesis div {
+        max-width: 100%;
     }
 }
 

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mono Halftone - Vanilla Three.js</title>
+  <style>
+    :root {
+      --bg: #f3f3f3;
+      --ink: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .hint {
+      position: fixed;
+      left: 12px;
+      bottom: 12px;
+      padding: 6px 10px;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div class="hint">Drag to orbit</div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    const container = document.getElementById("app");
+
+    function showMessage(text) {
+      const el = document.createElement("div");
+      el.style.position = "fixed";
+      el.style.top = "12px";
+      el.style.left = "12px";
+      el.style.zIndex = "1000";
+      el.style.maxWidth = "560px";
+      el.style.padding = "10px 12px";
+      el.style.borderRadius = "8px";
+      el.style.background = "rgba(0, 0, 0, 0.82)";
+      el.style.color = "#fff";
+      el.style.font = "12px/1.4 Helvetica, Arial, sans-serif";
+      el.textContent = text;
+      document.body.appendChild(el);
+    }
+
+    async function init() {
+      try {
+        const THREE = await import("three");
+        const { OrbitControls } = await import("https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/controls/OrbitControls.js");
+        const { GLTFLoader } = await import("https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/loaders/GLTFLoader.js");
+        const { EffectComposer } = await import("https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/EffectComposer.js");
+        const { RenderPass } = await import("https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/RenderPass.js");
+        const { ShaderPass } = await import("https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/ShaderPass.js");
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color("#f8f8f8");
+
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0, 0, 5);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+        renderer.outputColorSpace = THREE.SRGBColorSpace;
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 0.5));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+
+        const hemi = new THREE.HemisphereLight(0xffffff, 0x666666, 0.35);
+        scene.add(hemi);
+
+        const key = new THREE.DirectionalLight(0xffffff, 5.1);
+        key.position.set(5, 5, 5);
+        scene.add(key);
+
+        const fill = new THREE.DirectionalLight(0xffffff, 0.7);
+        fill.position.set(-5, 3, -5);
+        scene.add(fill);
+
+        const facingPivot = new THREE.Group();
+        const spinPivot = new THREE.Group();
+        facingPivot.add(spinPivot);
+        scene.add(facingPivot);
+
+        const topLight = new THREE.PointLight(0xffffff, 0.95, 24);
+        topLight.position.set(0, 3.5, 0);
+        scene.add(topLight);
+
+        const frontLight = new THREE.SpotLight(0xffffff, 0.9, 28, Math.PI / 6, 0.3, 1.2);
+        frontLight.position.set(0, 0.5, 4.5);
+        frontLight.target.position.set(0, 0, 0);
+        scene.add(frontLight);
+        scene.add(frontLight.target);
+
+        let subject = new THREE.Mesh(
+          new THREE.TorusKnotGeometry(0.8, 0.3, 100, 16),
+          new THREE.MeshStandardMaterial({
+            color: 0x9d9d9d,
+            roughness: 0.85,
+            metalness: 0.0,
+          })
+        );
+        spinPivot.add(subject);
+
+        const loader = new GLTFLoader();
+        try {
+          const gltf = await loader.loadAsync("./img/index/head.glb");
+          const model = gltf.scene;
+
+          // Normalize size and center so it fits the current camera framing.
+          const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3());
+          const center = box.getCenter(new THREE.Vector3());
+          const maxAxis = Math.max(size.x, size.y, size.z) || 1;
+          const targetSize = 2.0;
+          const scale = targetSize / maxAxis;
+
+          model.position.sub(center);
+          model.scale.setScalar(scale);
+          model.rotation.set(0, 45, 0);
+
+          spinPivot.remove(subject);
+          subject = model;
+          spinPivot.add(subject);
+
+          // Keep the model facing camera/front; spin happens only on spinPivot.z.
+          // facingPivot.lookAt(camera.position);
+          // facingPivot.rotation.z = 0;
+        } catch (loadError) {
+          console.error("Failed to load ./img/index/head.glb", loadError);
+        }
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+
+        const MonoHalftoneShader = {
+          uniforms: {
+            tDiffuse: { value: null },
+            uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+            uCellSize: { value: 7.0 },
+            uInvert: { value: 0.0 },
+            uDotOpacity: { value: 0.42 },
+          },
+          vertexShader: /* glsl */`
+            varying vec2 vUv;
+
+            void main() {
+              vUv = uv;
+              gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+          `,
+          fragmentShader: /* glsl */`
+            uniform sampler2D tDiffuse;
+            uniform vec2 uResolution;
+            uniform float uCellSize;
+            uniform float uInvert;
+            uniform float uDotOpacity;
+
+            varying vec2 vUv;
+
+            float luminance(vec3 color) {
+              return dot(color, vec3(0.299, 0.587, 0.114));
+            }
+
+            void main() {
+              vec2 fragCoord = vUv * uResolution;
+              float ca = cos(0.78539816339);
+              float sa = sin(0.78539816339);
+              mat2 rot = mat2(ca, -sa, sa, ca);
+              mat2 invRot = mat2(ca, sa, -sa, ca);
+
+              vec2 gridCoord = rot * fragCoord;
+              vec2 cell = floor(gridCoord / uCellSize);
+              vec2 cellCenter = cell * uCellSize + vec2(uCellSize * 0.5);
+              vec2 sampleCoord = invRot * cellCenter;
+
+              vec2 sampleUv = sampleCoord / uResolution;
+              vec3 src = texture2D(tDiffuse, sampleUv).rgb;
+              float lum = luminance(src);
+
+              float radius = (1.0 - lum) * (uCellSize * 0.48);
+
+              float d = length(gridCoord - cellCenter);
+              float aa = 1.0;
+              float dotMask = 1.0 - smoothstep(radius - aa, radius + aa, d);
+
+              // Keep the original render (textures + lighting), then overlay halftone.
+              vec3 base = mix(src, vec3(lum), 0.35);
+              vec3 dotLayer = base * 0.55;
+              vec3 outColor = mix(base, dotLayer, dotMask * uDotOpacity);
+
+              if (uInvert > 0.5) {
+                outColor = 1.0 - outColor;
+              }
+
+              gl_FragColor = vec4(outColor, 1.0);
+            }
+          `,
+        };
+
+        const halftonePass = new ShaderPass(MonoHalftoneShader);
+        composer.addPass(halftonePass);
+
+        const BlackWhiteShader = {
+          uniforms: {
+            tDiffuse: { value: null },
+            uContrast: { value: 1.08 },
+          },
+          vertexShader: /* glsl */`
+            varying vec2 vUv;
+
+            void main() {
+              vUv = uv;
+              gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+          `,
+          fragmentShader: /* glsl */`
+            uniform sampler2D tDiffuse;
+            uniform float uContrast;
+            varying vec2 vUv;
+
+            void main() {
+              vec3 color = texture2D(tDiffuse, vUv).rgb;
+              float luma = dot(color, vec3(0.299, 0.587, 0.114));
+              luma = (luma - 0.5) * uContrast + 0.5;
+              luma = clamp(luma, 0.0, 1.0);
+              gl_FragColor = vec4(vec3(luma), 1.0);
+            }
+          `,
+        };
+
+        const blackWhitePass = new ShaderPass(BlackWhiteShader);
+        composer.addPass(blackWhitePass);
+
+        function onResize() {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          composer.setSize(window.innerWidth, window.innerHeight);
+          halftonePass.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener("resize", onResize);
+
+        const clock = new THREE.Clock();
+        function animate() {
+          const dt = clock.getDelta();
+          spinPivot.rotation.x = 0;
+          spinPivot.rotation.y += dt * 0.35;
+          spinPivot.rotation.z = 0;
+          controls.update();
+          composer.render();
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        if (location.protocol === "file:") {
+          showMessage("If this is blank, serve the folder and open test.html via http://localhost (not file://).");
+        }
+      } catch (error) {
+        console.error(error);
+        showMessage("Failed to load Three.js modules. Check browser console and network access.");
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

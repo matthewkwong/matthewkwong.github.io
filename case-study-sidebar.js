@@ -5,6 +5,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarHeight = 120; // Height of the navbar
     const scrollOffset = navbarHeight + 100; // Add 40px padding for better spacing
 
+    function smoothScrollToTop(targetTop, durationMs) {
+        const startTop = window.scrollY;
+        const distance = targetTop - startTop;
+        const startTime = performance.now();
+
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function step(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / durationMs, 1);
+            const eased = easeOutCubic(progress);
+
+            window.scrollTo(0, Math.round(startTop + distance * eased));
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        requestAnimationFrame(step);
+    }
+
     // Set initial active state to Overview
     const overviewLink = document.querySelector('.sidebar-menu a[href="#overview"]');
     if (overviewLink) {
@@ -20,11 +44,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(`.${targetId}`);
             
             if (targetSection) {
-                lenis.scrollTo(targetSection, {
-                    offset: -scrollOffset, // Account for navbar height plus padding
-                    duration: 1.2,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                });
+                const targetTop = Math.max(
+                    0,
+                    Math.round(targetSection.getBoundingClientRect().top + window.scrollY - scrollOffset)
+                );
+
+                if (window.lenis && typeof window.lenis.scrollTo === 'function') {
+                    window.lenis.scrollTo(targetSection, {
+                        offset: -scrollOffset,
+                        duration: 1.2,
+                        immediate: false,
+                        force: true,
+                        lock: true,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                    });
+                } else {
+                    smoothScrollToTop(targetTop, 700);
+                }
                 
                 // Set active state on click
                 navLinks.forEach(l => l.classList.remove('active'));

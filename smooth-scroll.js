@@ -4,10 +4,10 @@ var isTouch =
     typeof window !== 'undefined' &&
     ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
-if (isTouch) {
+if (isTouch || typeof Lenis === 'undefined') {
     window.lenis = null;
 } else {
-    var lenis = new Lenis({
+    window.lenis = new Lenis({
         duration: 1.2,
         easing: function (t) {
             return Math.min(1, 1.001 - Math.pow(2, -10 * t));
@@ -20,9 +20,8 @@ if (isTouch) {
     });
 
     function raf(time) {
-        lenis.raf(time);
+        window.lenis.raf(time);
         requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-    window.lenis = lenis;
 }

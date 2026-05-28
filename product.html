@@ -117,7 +117,7 @@
                     <a href="toybox-search.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="modelSearchVideo" data-src="img/index/better-model-search/better_model_search.mp4" loop playsinline autoplay muted preload="none"></video>
+                            <video id="modelSearchVideo" data-src="img/index/better-model-search/better_model_search.mp4" poster="img/index/better-model-search/better_model_search.jpg" loop playsinline autoplay muted preload="none"></video>
                         </div>
                     </div>
                     <!-- <div class="image-placeholder-wrapper">
@@ -151,7 +151,7 @@
                     <a href="toybox-cad.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video data-src="img/index/cad/cad_1x1.mp4" loop playsinline autoplay muted preload="none"></video>
+                            <video data-src="img/index/cad/cad_1x1.mp4" poster="img/index/cad/cad_1x1.jpg" loop playsinline autoplay muted preload="none"></video>
                         </div>
                     </div>
                     <!-- <div class="image-placeholder-wrapper">
@@ -210,7 +210,7 @@
                     <a href="45fremont-ibm.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                             <div class="image-placeholder">
-                                <video data-src="img/45fremont/ibm/banner.mp4" loop autoplay playsinline muted playsinline></video>
+                                <video data-src="img/45fremont/ibm/banner.mp4" poster="img/45fremont/ibm/banner.jpg" loop autoplay playsinline muted playsinline></video>
                             </div>
                         </div>
                         
@@ -242,7 +242,7 @@
                     <a href="45fremont.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                             <div class="image-placeholder">
-                                <video id ="45FremontVideo" data-src="img/index/45fremont/45fremont_square.mp4" autoplay muted loop playsinline preload="none"></video>
+                                <video id ="45FremontVideo" data-src="img/index/45fremont/45fremont_square.mp4" poster="img/index/45fremont/45fremont_square.jpg" autoplay muted loop playsinline preload="none"></video>
                                 <!-- <video id="45FremontVideo" src="img/index/45fremont/45fremont_square.mp4" playsinline autoplay muted preload="none"></video> -->
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                     <a href="covid.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                             <div class="image-placeholder">
-                                <video data-src="img/index/find-my-covid-test/findmycovidtest_square.mp4" autoplay loop playsinline muted preload="none"></video>
+                                <video data-src="img/index/find-my-covid-test/findmycovidtest_square.mp4" poster="img/index/find-my-covid-test/findmycovidtest_square.jpg" autoplay loop playsinline muted preload="none"></video>
                             </div>
                         </div>
                         
@@ -316,7 +316,7 @@
                     <a href="https://www.linkedin.com/feed/update/urn:li:activity:7280031343940395008/" style="text-decoration:none; color:inherit;">
                     <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="SpotifyConcers" data-src="img/index/spotify-wrapped/concerts_square.mp4" loop autoplay playsinline muted playsinline ></video>
+                            <video id="SpotifyConcers" data-src="img/index/spotify-wrapped/concerts_square.mp4" poster="img/index/spotify-wrapped/concerts_square.jpg" loop autoplay playsinline muted playsinline ></video>
                         </div>
                     </div>
 
@@ -343,7 +343,7 @@
                     <a href="linkedin-circles.html" style="text-decoration:none; color:inherit;">
                         <div class="image-placeholder-wrapper">
                         <div class="image-placeholder" style="position:relative;">
-                            <video id="LinkedinCirlcesVideo" data-src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" loop autoplay playsinline muted playsinline ></video>
+                            <video id="LinkedinCirlcesVideo" data-src="img/index/linkedin-circles/LinkedIn_Circles-square.mp4" poster="img/index/linkedin-circles/LinkedIn_Circles-square.jpg" loop autoplay playsinline muted playsinline ></video>
                         </div>
                     </div>
 
@@ -438,7 +438,54 @@
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="smooth-scroll.js"></script>
     <script src="case-study-sidebar.js"></script>
-    <script src="video-loader.js"></script>
+    <script>
+    // Hover-to-load videos on product.html to reduce initial load.
+    // On touch devices (no hover), fall back to viewport-based loading.
+    (function () {
+        const videos = document.querySelectorAll('.case-study video[data-src]');
+        const canHover = window.matchMedia('(hover: hover)').matches;
+
+        // Mirror the poster as a CSS background so there's no blank gap
+        // when the browser swaps the poster overlay for the first video frame.
+        videos.forEach(v => {
+            if (v.poster) {
+                v.style.backgroundImage = `url("${v.getAttribute('poster')}")`;
+                v.style.backgroundSize = 'cover';
+                v.style.backgroundPosition = 'center';
+            }
+        });
+
+        function loadVideo(video) {
+            if (video.dataset.src && !video.src) {
+                video.src = video.dataset.src;
+                video.load();
+            }
+        }
+
+        if (canHover) {
+            videos.forEach(video => {
+                const card = video.closest('.case-study') || video;
+                card.addEventListener('mouseenter', () => {
+                    loadVideo(video);
+                    video.play().catch(() => {});
+                });
+                card.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+            });
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    loadVideo(entry.target);
+                    entry.target.play().catch(() => {});
+                    observer.unobserve(entry.target);
+                });
+            }, { rootMargin: '300px' });
+            videos.forEach(v => observer.observe(v));
+        }
+    })();
+    </script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -515,11 +562,13 @@
         
         if (window.innerWidth <= 768) {
             video.dataset.src = "img/index/better-model-search/better_model_search-16x9.mp4";
+            video.poster = "img/index/better-model-search/better_model_search-16x9.jpg";
             LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
             if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_square.mp4";
 
         } else {
             video.dataset.src = "img/index/better-model-search/better_model_search.mp4";
+            video.poster = "img/index/better-model-search/better_model_search.jpg";
             LinkedinCirlcesVideo.dataset.src = "img/index/linkedin-circles/LinkedIn_Circles-square.mp4";
             // if (FremontVideo) FremontVideo.dataset.src = "img/index/45fremont/45fremont_tall.mp4";
         }

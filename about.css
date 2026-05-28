@@ -1,228 +1,360 @@
+/* ==========================================================================
+   ABOUT PAGE
+   ========================================================================== */
 
-#about-profile-picture{
-    max-width: calc(50%);
-    height: 100%;
-    border-radius: 20px;
-}
-  
-/* since polaroids are no longer in this div */
-#hobbies{
-  max-width: calc(50% - 48px);
-}
-
-#hobbies ul{
-    list-style-type: none;
-}
-
-#content-wrapper{
-    overflow: visible;
-    overflow-x: hidden;
-    overflow-y: inherit;
-}
-
-body{
+body {
     overflow-x: hidden;
 }
 
-footer ul{
-        z-index: 5;
-
+footer ul {
+    z-index: 5;
 }
 
-footer #footer-content{
+footer #footer-content {
     max-width: 1200px !important;
 }
 
 
-#heading-wrapper, #experience-values, #hobbies-polaroids{
+/* --------------------------------------------------------------------------
+   1. Hero
+   -------------------------------------------------------------------------- */
+
+#heading-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     gap: 64px;
-    flex-direction: row;
-    /* border: solid 2px red;
-    box-sizing: border-box; */
     width: 100%;
 }
 
-#hobbies-polaroids{
-    align-items: start;
-}
-
-#experience-values{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 48px;
-    width: 100%;
-}
-
-#experience{
+#heading {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    max-width: calc(50% - 48px);
+    gap: 28px;
+    width: 568px;
+    flex-shrink: 0;
 }
 
-
-#experience > .job-title a{
-    text-decoration: none;
+#heading h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
 }
 
-#values{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: calc(50% - 48px);
-}
-
-#values-wrapper{
-    display: flex;
-    flex-direction: column;
-    /* gap: 16px; */
-}
-
-
-
-#experience-values #experience .job-title {
-    /* margin: 24px 0px 0px 0px; */
-    gap: 16px;
-
-}
-
-
-#experience-values #experience .job-title .company-name {
-    color: #18A0FB;
-}
-
-#hobbies a, #heading a, a:visited{
-    color: #18A0FB;
-}
-
-
-/* Hobbies and Polaroids */
-#hobbies-polaroids {
-    /* width: 100%; */
+#heading-text {
     position: relative;
     display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: row;
-    align-items: start;
-
-    /* border: solid 2px purple;
-    box-sizing: border-box; */
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
 }
 
+#heading-text p {
+    /* font-size: 16px;
+    line-height: 28px;
+    color: #444; */
+    margin: 0;
+}
 
-/* Heading, Values, Experience, Hobbies */
-
-#heading{
-    max-width: calc(50% - 48px);
-    display: flex;
-    flex-direction: column;
+#about-profile-picture {
+    flex: 1 1 0;
+    aspect-ratio: 1 / 1;
+    width: 100%;
     height: auto;
-    gap: 48px;
+    max-width: none;
+    object-fit: cover;
+    border-radius: 16px;
+    min-width: 0;
 }
 
-#heading-text{
-    position: relative;
+#resume-button a {
+    display: inline-block;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Values
+   -------------------------------------------------------------------------- */
+
+#values {
     display: flex;
     flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 100%;
+    z-index: auto;
 }
 
-/* #heading h1{
-    font-family: 'zt formom';
+#values h2 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}
+
+.values-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    width: 100%;
+}
+
+.value-card {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background-color: #fff;
+    border: 2px solid #ededed;
+    border-radius: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease;
+}
+
+.value-card:hover {
+    background-color: #f7f7f7;
+}
+
+.value-card .value-number {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}
+
+/* .value-card .value-body {
+    font-size: 16px;
+    line-height: 28px;
+    color: #444;
+    margin: 0;
 } */
 
 
-#heading p{
-    margin-bottom: 0px;
+/* --------------------------------------------------------------------------
+   3. Experience
+   -------------------------------------------------------------------------- */
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 64px;
 }
 
-#heading p:first-of-type{
-    margin-top: 0;
+#experience h2 {
+    /* font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #000; */
+    margin: 0;
 }
 
- #values{
-    z-index: 2;
-    max-width: 50%;
-    /* max-width: 480px; */
-    /* max-width: 50%; */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-/* Hobbies */
-#hobbies{
+.experience-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 36px 0;
+    border-bottom: 1px solid #ededed;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    min-width: 0;
+}
+
+.company-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: #f4f4f4;
+}
+
+.white{
+    background-color: white !important;
+}r
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.experience-text h3 {
+    /* font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #000; */
+    margin: 0;
+}
+
+.experience-text h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+/* 
+.experience-text h3 a:hover {
+    color: var(--custom-blue);
+} */
+
+.experience-text p {
+    /* font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #444; */
+    margin: 0;
+}
+
+.experience-date {
+    /* font-size: 16px; */
+    /* line-height: 28px; */
+    /* font-weight: 400; */
+    /* color: #444; */
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Hobbies
+   -------------------------------------------------------------------------- */
+
+#hobbies-polaroids {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+    width: 100%;
+}
+
+#hobbies {
+    max-width: calc(50% - 32px);
     z-index: 3;
 }
 
-/* Polaroids */
-#polaroids{
+#hobbies ul {
+    list-style-type: none;
+}
+
+#hobbies a,
+#heading a,
+a:visited {
+    color: #18A0FB;
+}
+
+#polaroids {
     position: relative;
-    height: auto;
-    margin-top: -10%;
-    /* max-height: 400px; */
-    /* border: solid 2px red; */
-    max-width: calc(50%);
+    max-width: 50%;
     width: 100%;
-    
+    height: auto;
 }
 
- #polaroids img{
-    /* max-width: 40%; */
-    /* z-index: 0; */
-    /* position: absolute; */
-    /* right: -10%; */
-    top: -50%;
-    /* left: -50px; */
+#polaroids img {
     max-width: 100%;
-    /* border: solid 2px red; */
-    /* box-sizing: border-box;  */
+    height: auto;
 }
 
+
+/* --------------------------------------------------------------------------
+   5. Responsive
+   -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-    #heading-wrapper > #heading{
-        width: 100%;
+    #heading-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
     }
 
-    #about-profile-picture{
-        /* width: 100%; */
-        width: auto;
+    #heading {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #heading h1 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    #about-profile-picture {
+        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
-  #heading-wrapper, #experience-values, #hobbies-polaroids{
-        flex-direction: column;
-        border: none;
+    #values h2,
+    #experience h2 {
+        font-size: 28px;
+        line-height: 34px;
     }
 
+    .values-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
 
-    #heading, #about-profile-picture, #values, #experience, #hobbies{
-      border: none;
-      width: auto;
-      max-width: 100%;
+    .value-card {
         width: 100%;
     }
-   
 
-  #polaroids img{
-    /* display: none; */
-    position: relative;
-    /* right: -10%; */
-    top: 0px;
-    left: 0px;
-    max-width: 100%;
-  }
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 24px 0;
+    }
 
-  #polaroids{
-        margin-top: 0%;
+    .experience-date {
+        padding-left: 88px;
+    }
+
+    #hobbies-polaroids {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    #hobbies,
+    #polaroids {
         max-width: 100%;
-
-  }
-
-  #hobbies-polaroids{
-    /* position: absolute; */
-    gap: 0px;
-  }
+        width: 100%;
+    }
 }

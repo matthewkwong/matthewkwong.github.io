@@ -131,12 +131,17 @@ p {
     margin-bottom: 0px;
 }
 
-#heading > img {
+#heading > #heading-name {
     pointer-events: none;
     -webkit-touch-callout: none;
     position: absolute;
     width: 100%;
     z-index: 2;
+}
+
+#heading > #heading-name > img {
+    display: block;
+    width: 100%;
 }
 
 #heading > #heading-video-wrapper {
@@ -654,7 +659,7 @@ button:hover {
     }
 
     /* Index heading & layout */
-    #heading > img {
+    #heading > #heading-name {
         position: relative;
     }
 

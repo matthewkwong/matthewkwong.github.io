@@ -46,13 +46,27 @@
         font-style: normal;
     }
     
+    /* Hide native scrollbar (page is still scrollable via wheel/keys/touch). */
+    html{
+        scrollbar-width: none;        /* Firefox */
+        -ms-overflow-style: none;     /* legacy Edge */
+    }
+    html::-webkit-scrollbar{
+        display: none;                /* Chrome / Safari / new Edge */
+    }
+
+    body{
+        overflow-x: clip;       /* clip without becoming a scroll container (avoids implicit overflow-y: auto) */
+    }
+
     body{
         background-color: white;
     }
-    
+
     .content-wrapper{
         margin-top: 0;
-        overflow-x: hidden;
+        overflow-x: clip;     /* clip horizontally without creating an inner scroll container */
+        overflow-y: visible;
     }
 
     #heading-wrapper{
@@ -67,6 +81,52 @@
         display: flex;
         flex-direction: row;
         gap: 24px;
+    }
+
+    /* Let's work together — Figma 2026-03 design */
+    #work-together-bg {
+        background: black;
+        width: 100%;
+    }
+    #work-together {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        padding: 128px 48px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 2560px;
+        box-sizing: border-box;
+    }
+    #work-together h1 {
+        color: white;
+        font-size: 60px;
+        font-weight: 500;
+        margin: 0;
+    }
+    #work-together p {
+        color: white;
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: 500;
+        max-width: 1200px;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        #work-together {
+            padding: 64px 24px;
+            gap: 24px;
+        }
+        #work-together h1 {
+            font-size: 38px;
+        }
+        #work-together p {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 
     @media (max-width: 768px) {
@@ -137,10 +197,12 @@
             <!-- <h1>Matthew Kwong</h1> -->
 
             <div id="heading">
-                <img src = "img/name.svg">
+                <div id="heading-name">
+                    <img src = "img/name.svg">
+                </div>
 
                 <div id = "heading-video-wrapper">
-                    <video data-src="img/Matthew-Head-handbrake.mp4" loop autoplay playsinline muted preload="auto"></video>
+                    <video src="img/matthew-head-hq.mp4" loop autoplay playsinline muted preload="metadata"></video>
                 </div>
                 
 
@@ -209,7 +271,7 @@
                             <!-- Toybox Better Model Search -->
                             <div class = "stage-visual-video">
                                 <a href="toybox-search.html">
-                                    <video data-src = "img/index/better-model-search/better_model_search-16x9.mp4" autoplay loop playsinline preload="none"></video>
+                                    <video data-src="img/index/better-model-search/better_model_search-16x9.mp4" poster="img/index/better-model-search/better_model_search-16x9.jpg" autoplay loop playsinline preload="none"></video>
                                         <!-- <div class = "button-overlay">
                                             <button>View Project</button>
                                         </div> -->
@@ -233,7 +295,7 @@
                             <!-- CAD -->
                             <div class = "stage-visual-video">
                                 <a href="toybox-cad.html">
-                                    <video data-src="img/index/cad/cad_16x9.mp4" autoplay loop playsinline preload="none"></video>
+                                    <video data-src="img/index/cad/cad_16x9-hq.mp4" poster="img/index/cad/cad_16x9-hq.jpg" autoplay loop playsinline preload="none"></video>
                                         <!-- <div class = "button-overlay">
                                             <button>View Project</button>
                                         </div> -->
@@ -256,7 +318,7 @@
                             <!-- 45 Fremont IBM -->
                             <div class = "stage-visual-video">
                                     <a href="45fremont-ibm.html">
-                                    <video data-src = "img/45fremont/ibm/final.mp4" autoplay loop playsinline preload="none"></video>
+                                    <video data-src="img/45fremont/ibm/final.mp4" poster="img/45fremont/ibm/final.jpg" autoplay loop playsinline preload="none"></video>
                                 
                                         <!-- <div class = "button-overlay"> -->
                                             <!-- <button>View Project</button> -->
@@ -283,7 +345,7 @@
                             <!-- Find My COVID Test -->
                             <div class = "stage-visual-video">
                                 <a href = "covid.html">
-                                    <video data-src="img/covid/final-live-site.mp4" autoplay loop playsinline preload="none"></video>
+                                    <video data-src="img/covid/final-live-site.mp4" poster="img/covid/final-live-site.jpg" autoplay loop playsinline preload="none"></video>
                                     <!-- <div class = "button-overlay"> -->
                                         <!-- <button>View Project</button> -->
                                     <!-- </div>                                -->
@@ -350,7 +412,7 @@
                 <div class = "category-and-button">
                     <h1>3D / Motion</h1>
                     
-                    <a href="motion.html" style="text-decoration: none;">                        
+                    <a href="motion.html" style="text-decoration: none;">
                         <button class="inverse-button">
                             View all
                             <span class="material-symbols-outlined">
@@ -387,7 +449,7 @@
                             <!-- John Summit Crystallized -->
                             <div class = "stage-visual-video" style="grid-column: 2; grid-row: 1/ span 2" >
                                 <a href="motion.html#stage-visuals">
-                                    <video data-src="img/play/stage-visuals/crystallized/crystallized.mp4"
+                                    <video data-src="img/play/stage-visuals/crystallized/crystallized-hq.mp4" poster="img/play/stage-visuals/crystallized/crystallized-hq.jpg"
                                      autoplay muted loop playsinline preload="none"></video>
                                         <div class = "button-overlay">
                                             <button class=" inverse-button">View Stage Visuals
@@ -429,7 +491,7 @@
                             <!-- Laufey -->
                             <div class = "stage-visual-video" style="grid-column: 1; grid-row: 2">
                                 <a href="motion.html#branding">
-                                    <video data-src="img/play/branding/laufey-goddess-tour/animated-poster-smaller.mp4" autoplay muted loop playsinline preload="none"></video>
+                                    <video data-src="img/play/branding/laufey-goddess-tour/animated-poster-smaller.mp4" poster="img/play/branding/laufey-goddess-tour/animated-poster-smaller.jpg" autoplay muted loop playsinline preload="none"></video>
                                         <div class = "button-overlay">
                                             <button class=" inverse-button">View Branding Projects
                                                 <span class="material-symbols-outlined">
@@ -471,40 +533,16 @@
             </div>
 
     <!-- <div class="line"></div>       -->
-<div style = "max-width: 100vw;">
-    <section class="content-wrapper" id = "work-together" style="color: black;">   
-        <!-- <section class = "stage-visual-video"> -->
-            <div id = "work-together-content">
-                <div>
-                    <h1>Let's work together</h1>
-                    <h2>Whether you're searching for a Product Designer
-                        or someone to create visuals for your next live show, 
-                        I'm the designer for you.</h2>
-                </div>
-
-
-                <div id = "button-wrapper">
-                    <a href="mailto:matthewrkwong@gmail.com" target="_blank" style="text-decoration: none;">
-                        <button> 
-                            Email
-                            <span class="material-symbols-outlined">
-                                arrow_outward
-                            </span>
-                        </button>
-                    </a>
-
-
-                    <a href="http://calendly.com/matthewkwong/intro" target="_blank" style="text-decoration: none;" >
-                        <button>
-                            Book a call
-                            <span class="material-symbols-outlined">
-                                arrow_outward
-                            </span>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        <!-- </section> -->
+<div id="work-together-bg">
+    <section id="work-together">
+        <h1>Let's work together</h1>
+        <p>Whether you're searching for a Product Designer or someone to create visuals for your next live show, I'm the designer for you.</p>
+        <a href="mailto:matthewrkwong@gmail.com" target="_blank" style="text-decoration: none;">
+            <button class="inverse-button">
+                Contact
+                <span class="material-symbols-outlined">arrow_outward</span>
+            </button>
+        </a>
     </section>
 </div>
 
@@ -555,72 +593,82 @@
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="smooth-scroll.js"></script>
     <script src="case-study-sidebar.js"></script>
-    <script src="video-loader.js"></script>
+    <script>
+    // Hover-to-load videos on index.html to reduce initial load.
+    // Scoped to .stage-visual-video so the hero heading video is untouched.
+    // On touch devices (no hover), fall back to viewport-based loading.
+    (function () {
+        const videos = document.querySelectorAll('.stage-visual-video video[data-src]');
+        const canHover = window.matchMedia('(hover: hover)').matches;
+
+        // Mirror the poster as a CSS background so there's no blank gap
+        // when the browser swaps the poster overlay for the first video frame.
+        videos.forEach(v => {
+            if (v.poster) {
+                v.style.backgroundImage = `url("${v.getAttribute('poster')}")`;
+                v.style.backgroundSize = 'cover';
+                v.style.backgroundPosition = 'center';
+            }
+        });
+
+        function loadVideo(video) {
+            if (video.dataset.src && !video.src) {
+                video.src = video.dataset.src;
+                video.load();
+            }
+        }
+
+        if (canHover) {
+            videos.forEach(video => {
+                const card = video.closest('.stage-visual-video') || video;
+                card.addEventListener('mouseenter', () => {
+                    loadVideo(video);
+                    video.play().catch(() => {});
+                });
+                card.addEventListener('mouseleave', () => {
+                    video.pause();
+                });
+            });
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    loadVideo(entry.target);
+                    entry.target.play().catch(() => {});
+                    observer.unobserve(entry.target);
+                });
+            }, { rootMargin: '300px' });
+            videos.forEach(v => observer.observe(v));
+        }
+    })();
+    </script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script>
-        // Animate elements as they come into view
-        gsap.registerPlugin(ScrollTrigger);
+        // ---------- HERO ENTRANCE ----------
+        // Below 768px the heading stacks to a single column — slide right side from
+        // the left too so it matches the left side's direction.
+        const isStacked = window.matchMedia('(max-width: 768px)').matches;
+        const rightX = isStacked ? -80 : 80;
 
-        // Animate home name text
-        // gsap.from("#home-name h1, #home-name h2, #home-name p", {
-        //     scrollTrigger: {
-        //         trigger: "#home-name",
-        //         start: "top bottom-=100",
-        //         toggleActions: "play none none reset"
-        //     },
-        //     y: 50,
-        //     opacity: 0,
-        //     duration: 0.6,
-        //     stagger: {
-        //         amount: 0.5 // Total amount of time between the first and last animation
-        //     },
-        //     delay:0.2,
-        //     ease: "power3.out"
-        // });
-
-        // Animate home name text
-        gsap.from("#home-name h1, #home-name h2, #home-name p", {
-            scrollTrigger: {
-                trigger: "#home-name",
-                start: "top bottom-=100",
-                toggleActions: "play none none reset"
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.6,
-            stagger: {
-                amount: 0.5 // Total amount of time between the first and last animation
-            },
-            delay:0.2,
-            ease: "power3.out"
-        });
-
-        gsap.from("#profile-image", {
-            scrollTrigger: {
-                trigger: ".case-study",
-                toggleActions: "play none none reverse"
-            },
-            opacity: 0,
-            delay: 0.4,
-            duration: 1.2,
-            stagger: 0.2
-        });
-
-        
-        // Existing case study animation
-        gsap.from(".case-study", {
-            scrollTrigger: {
-                trigger: ".case-study",
-                toggleActions: "play none none reverse"
-            },
-            opacity: 0,
-            delay: 0.4,
-            duration: 1.2,
-            stagger: 0.2
-        });
+        const heroTl = gsap.timeline({ defaults: { ease: 'power2.out', force3D: true } });
+        heroTl
+            .from('#heading-name', { y: -200, autoAlpha: 0, duration: 1, snap: { y: 1 } })
+            .from('#heading-video-wrapper', { scale: 0.5, autoAlpha: 0, duration: 1 }, '-=0.9')
+            .from('#heading-text #left > *', {
+                x: -80,
+                autoAlpha: 0,
+                duration: 0.8,
+                stagger: 0.12
+            }, '-=0.7')
+            .from('#heading-text #right > *', {
+                x: rightX,
+                autoAlpha: 0,
+                duration: 0.8,
+                stagger: 0.12
+            }, '<');
     </script>
     
 </body>

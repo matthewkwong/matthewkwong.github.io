@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll('video[data-src]');
+const videos = document.querySelectorAll('video[data-src], video:has(source[data-src])');
 
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
@@ -6,7 +6,13 @@ entries.forEach(entry => {
 
     const video = entry.target;
 
-    video.src = video.dataset.src;
+    if (video.dataset.src) {
+        video.src = video.dataset.src;
+    } else {
+        video.querySelectorAll('source[data-src]').forEach(source => {
+            source.src = source.dataset.src;
+        });
+    }
     video.preload = 'none';
     video.load();
 

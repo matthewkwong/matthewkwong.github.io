@@ -35,6 +35,24 @@
 
 
     <style>
+.live-video{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
         .hover-text h3{
             margin-bottom: 0;
         }
@@ -129,16 +147,85 @@
 
         <section class = "content-wrapper" id = "case-study-wrapper">
             <!-- Overview -->
+            
+            <!-- Live visuals -->
+            <section class="section-content" id = "stage-visuals">  
+                    
+                <h2>Commissioned Stage Visuals</h2>
+                
+                <!-- Norae- Chain Visual Live Recap -->
+                <div class = "stage-visual-wrapper" style="display: flex; flex-direction: row; gap: 24px; align-items: center;">
 
-            <div id = "heading-wrapper">
-                <h1>3D / Motion</h1>
-                <h2>A series of stage visuals, 3D graphics, and branding projects.</h2>
-            </div>
+                    <!-- DEVYN- Dance Dance Revolution DJ Visual -->
+                    <div class = "stage-visual-video">
+                        <a href="https://www.youtube.com/shorts/kjPhDZoYtHU" target="_blank">
+                            <video src="https://res.cloudinary.com/dvhxd28ok/video/upload/v1787007267/devyn-loop_ndazbc.mp4" autoplay muted loop playsinline preload="auto"></video>                        
+                                <div class = "button-overlay">
+                                    <button class="inverse-button">Watch Video
+                                        <span class="material-symbols-outlined">
+                                            arrow_outward
+                                        </span>
+                                    </button>
+                                </div>
+                            <div class = "overlay">
+                                <div class = "hover-text">
+                                    <h3>DEVYN</h3>
+                                    <p>Dance Dance Revolution Overlay Visual</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class = "stage-visual-video">
+                        <a href="https://www.youtube.com/shorts/3VgGtnthv_Y" target="_blank">
+                            <video src="https://res.cloudinary.com/dvhxd28ok/video/upload/v1787007470/live-recap_hab2on.mp4" autoplay muted loop playsinline preload="auto"></video>                        
+                            <div class = "button-overlay">
+                                    <button class="inverse-button">Watch Video
+                                        <span class="material-symbols-outlined">
+                                            arrow_outward
+                                        </span>
+                                    </button>
+                                </div>
+                            <div class = "overlay">
+                                <div class = "hover-text">
+                                    <h3>Norae</h3>
+                                    <p>Chain Visual</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                    <!-- Matt Jereza -->
+                    <div class = "stage-visual-video">
+                        <a href="https://www.youtube.com/shorts/UCVUWnwKQS4" target="_blank">
+                            <video src="https://res.cloudinary.com/dvhxd28ok/video/upload/v1787007470/matt-jereza_cakzpq.mp4" autoplay muted loop playsinline preload="auto"></video>                        
+                            <div class = "button-overlay">
+                                <button class="inverse-button">Watch Video
+                                    <span class="material-symbols-outlined">
+                                        arrow_outward
+                                    </span>
+                                </button>
+                            </div>
+                            <div class = "overlay">
+                                <div class = "hover-text">
+                                    <h3>Matt Jereza</h3>
+                                    <p>Gradient Visual</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+
             
             <!-- Stage visuals -->
                 <section class="section-content" id = "stage-visuals">  
                     
-                        <h2>Stage Visuals </h2>
+                        <h2>Practice Stage Visuals + Visualizers </h2>
                         <!-- <h3 style="color: white;">Stage Visuals</h3> -->
                         <!-- <div>
                             <h1>3D & Motion</h1>

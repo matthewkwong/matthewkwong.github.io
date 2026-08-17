@@ -596,14 +596,28 @@
     <script>
     // Hover-to-load videos on index.html to reduce initial load.
     // Scoped to .stage-visual-video so the hero heading video is untouched.
-    // On touch devices (no hover), fall back to viewport-based loading.
+    // Motion section videos (#motion-graphics-wrapper) always autoplay on scroll
+    // instead of requiring hover. On touch devices (no hover) everything falls
+    // back to viewport-based loading.
     (function () {
-        const videos = document.querySelectorAll('.stage-visual-video video[data-src]');
+        const allVideos = document.querySelectorAll('.stage-visual-video video[data-src]');
         const canHover = window.matchMedia('(hover: hover)').matches;
+
+        // Motion section autoplays regardless of hover; the rest use hover (with
+        // a touch fallback below).
+        const autoplayVideos = [];
+        const hoverVideos = [];
+        allVideos.forEach(v => {
+            if (v.closest('#motion-graphics-wrapper')) {
+                autoplayVideos.push(v);
+            } else {
+                hoverVideos.push(v);
+            }
+        });
 
         // Mirror the poster as a CSS background so there's no blank gap
         // when the browser swaps the poster overlay for the first video frame.
-        videos.forEach(v => {
+        allVideos.forEach(v => {
             if (v.poster) {
                 v.style.backgroundImage = `url("${v.getAttribute('poster')}")`;
                 v.style.backgroundSize = 'cover';
@@ -618,8 +632,24 @@
             }
         }
 
+        // Viewport-based autoplay: load and play as the video scrolls into view.
+        function autoplayOnView(videoList) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    loadVideo(entry.target);
+                    entry.target.play().catch(() => {});
+                    observer.unobserve(entry.target);
+                });
+            }, { rootMargin: '300px' });
+            videoList.forEach(v => observer.observe(v));
+        }
+
+        // Motion section always autoplays.
+        autoplayOnView(autoplayVideos);
+
         if (canHover) {
-            videos.forEach(video => {
+            hoverVideos.forEach(video => {
                 const card = video.closest('.stage-visual-video') || video;
                 card.addEventListener('mouseenter', () => {
                     loadVideo(video);
@@ -630,15 +660,7 @@
                 });
             });
         } else {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    loadVideo(entry.target);
-                    entry.target.play().catch(() => {});
-                    observer.unobserve(entry.target);
-                });
-            }, { rootMargin: '300px' });
-            videos.forEach(v => observer.observe(v));
+            autoplayOnView(hoverVideos);
         }
     })();
     </script>

@@ -540,7 +540,7 @@ button:hover {
 
 @media (max-width: 768px) {
     h1{
-        font-size: 38px;
+        font-size: 36px;
     }
 
     h2{
@@ -727,8 +727,8 @@ button:hover {
     }
 
     #heading-text > div > h1 {
-        font-size: 48px !important;
-        line-height: 48px;
+        font-size: 36px !important;
+        line-height: 32px;
     }
 
     #heading-text > #left {

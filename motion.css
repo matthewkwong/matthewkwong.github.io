@@ -208,8 +208,8 @@ footer #footer-content{
         color: white;
     }
 
-    .projects-3d-wrapper {
-        flex-direction: column;
+    .projects-3d-wrapper, #live-visuals {
+        flex-direction: column !important;
     }
 
     #animated-cover-art-wrapper {

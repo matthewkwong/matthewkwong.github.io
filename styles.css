@@ -603,6 +603,13 @@ button:hover {
         height: auto;
     }
 
+    /* Live visuals: matt, norae, devyn */
+    #live-visuals .stage-visual-video video {
+        aspect-ratio:  9 / 16;
+        display: block;
+        width: 100%;
+    }
+
     .stage-visual-wrapper .stage-visual-video video {
         aspect-ratio: 16 / 9;
         display: block;

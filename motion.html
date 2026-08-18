@@ -93,14 +93,25 @@
             /* background-color: #18A0FB; */
         }
 
+        #live-visuals {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            align-items: center;
+        }
+
         @media (max-width: 768px) {
             .overlay > .hover-text > *{
                 color: white !important;
             }
-
-
+            
             .stage-visual-wrapper .button-overlay {
                 aspect-ratio: 16/9;
+            }
+           
+           
+            #live-visuals .button-overlay {
+                aspect-ratio: 9/16;
             }
         }
     
@@ -154,7 +165,7 @@
                 <h2>Commissioned Stage Visuals</h2>
                 
                 <!-- Norae- Chain Visual Live Recap -->
-                <div class = "stage-visual-wrapper" style="display: flex; flex-direction: row; gap: 24px; align-items: center;">
+                <div class = "stage-visual-wrapper" id = "live-visuals">
 
                     <!-- DEVYN- Dance Dance Revolution DJ Visual -->
                     <div class = "stage-visual-video">

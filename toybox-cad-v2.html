@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Matthew Kwong | Toybox: Build App</title>
+        <meta property="og:image" content="img/meta/toybox-cad.jpg">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="case-study.css">
+        <link rel="stylesheet" href="toybox.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="inter/inter.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="icon" type="image/png" href="img/nav/logo.svg">
+        <!-- Animated On Scroll Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Lenis Smooth Scroll -->
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
+    <body>
+
+        <!-- Fullscreen Image -->
+        <div id="fullscreen"></div>
+
+     <nav>
+        <!-- MK Logo -->
+        <a href = "index.html">
+            <img src = "img/nav/logo.png" height = "60" width = "60" id = "logo">
+        </a>
+
+        <!-- Nav links -->
+        <ul id = "nav-links">
+
+        <!-- Checkbox hack for mobile -->
+        <input type = "checkbox" id = "checkbox_toggle"/>
+        <label for = "checkbox_toggle" id = "hamburger">&#9776;</label>
+        <label for = "checkbox_toggle" id = "close">&#215;</label>
+
+        <!-- Nav menues -->
+        <div id = "menu-wrapper">
+            <div id = "menu">
+                <a href = "index.html">
+                    <img src = "img/nav/logo-white.png" height = "60" width = "60" id = "logo-white">
+                </a>
+                <li><a href="product.html" class="middle active-nav">Product</a></li>
+                <li><a href="motion.html" class="middle">3D / Motion</a></li>
+                <li><a href="about.html" class = "middle" >About</a></li>
+                <li><a href="mailto:matthewrkwong@gmail.com" class = "middle" target="_blank">Contact</a></li>
+            </div>
+        </div>
+        </ul>
+    </nav>
+
+      <!-- Preview Section -->
+      <!-- <section class = "section-image preview" style="background-color: #4D4A49;">  -->
+        <!-- <video width = "1080" autoplay muted loop style = "object-fit: fill; width: 100%;">
+            <source src="img/toybox/search/implemented/filters.mp4" type="video/mp4">
+              Your browser does not support videos
+          </video> -->
+
+        <section class = "section-image preview"  style="background-color: #f4f4f4;"> 
+            <video data-src="img/toybox/CAD/cad-banner_smaller.mp4" autoplay muted loop playsinline preload="auto"></video>
+        </section>
+
+      <!-- </section> -->
+
+      <section class = "content-wrapper" id = "case-study-wrapper">
+          <!-- Sidebar Menu -->
+          <div class="sidebar-menu left">
+              <ul>
+                  <li><a href="#overview">Overview</a></li>
+                <li><a href="#impact">Impact</a></li>
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#research">Research</a></li>
+                  <!-- <li><a href="#low-fidelity">Low Fidelity</a></li> -->
+                  <!-- <li><a href="#final-designs">Final Designs</a></li> -->
+                  <!-- <li><a href="#design-for-a-reason">Design for a reason</a></li> -->
+                  <li><a href="#solution">Solution</a></li>
+              </ul>
+          </div>
+
+          <!-- Main Content -->
+          <div class="right">
+              <style>
+                  .v2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 12px}
+                  .v2-stats > div,.v2-cards > div{background:#fbfaf7;border:1px solid #ededed;border-radius:8px;padding:24px}
+                  .v2-stats h3{font-size:40px;margin:0 0 12px;color:#ff614c}
+                  .v2-stats p,.v2-cards p{margin:0}
+                  .v2-source{font-size:14px;color:#777}
+                  .v2-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
+                  .v2-cards h3{margin:0 0 12px}
+                  .v2-cards .wide{grid-column:1 / -1}
+                  .v2-journey{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px}
+                  .v2-journey img{width:100%;aspect-ratio:7/4;object-fit:cover;border-radius:8px;background:#ededed}
+                  .v2-roster{display:flex;flex-wrap:wrap;gap:24px;align-items:center;background:#fbfaf7;border:1px solid #ededed;border-radius:8px;padding:24px;margin-top:32px}
+                  .v2-roster span{display:flex;align-items:center;gap:12px}
+                  .v2-roster img{width:52px;height:52px;border-radius:8px;object-fit:cover}
+                  .v2-table{width:100%;border-collapse:collapse;margin-top:32px;text-align:center}
+                  .v2-table th,.v2-table td{border:1px solid #ededed;padding:12px 8px}
+                  .v2-table td:first-child{font-weight:500}
+                  .v2-table img{width:26px;height:26px;vertical-align:middle}
+                  .v2-pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+                  .v2-pills span{background:#ededed;border-radius:100px;padding:8px 16px}
+                  .v2-split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:24px}
+                  .v2-split.center{align-items:center}
+                  .v2-frame{background:#ededed;border-radius:16px;padding:24px;display:flex;gap:24px;justify-content:center;align-items:center}
+                  .v2-frame img{max-width:100%;border-radius:8px}
+                  .v2-frame.pair img:first-child{width:62%}
+                  .v2-frame.pair img:last-child{width:30%}
+                  .v2-sub{margin-top:64px}
+                  @media (max-width:800px){.v2-stats,.v2-cards,.v2-journey,.v2-split{grid-template-columns:1fr}.v2-frame{flex-direction:column}.v2-frame.pair img{width:100%!important}.v2-table{font-size:12px}}
+              </style>
+
+              <!-- Overview Section -->
+              <section class="section-content overview">
+                  <div id="title-content">
+                      <h1>Toybox: CAD App</h1>
+                      <h2>Designing a powerful cross-platform CAD experience specialized for 3D Printing within the Toybox App.</h2>
+                  </div>
+
+                  <div id="project-details-list">
+                      <div>
+                          <h4>My Role:</h4>
+                          <p>Sole Product Designer</p>
+                      </div>
+                      <div>
+                          <h4>Duration:</h4>
+                          <p>Mar 2023 – Aug 2024</p>
+                      </div>
+                      <div>
+                          <h4>Team</h4>
+                          <p>2 Developers, CPO, CTO</p>
+                      </div>
+                      <div>
+                          <h4>Platforms</h4>
+                          <p>Mobile, Tablet, Desktop</p>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Summary -->
+              <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Overview</h4>
+                      <h2>I led the design for a new cross-platform 3D modeling platform from 0→1.</h2>
+                      <p>Toybox is a 3D printing platform for kids ages 10 to 14. I led the design of its first in-app 3D modeling tool across phone, tablet and desktop, so kids could make their own toy without leaving the app to do it.</p>
+                  </div>
+              </section>
+
+              <!-- Impact -->
+              <section class="section-content impact" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Impact</h4>
+                      <div class="v2-stats">
+                          <div>
+                              <h3>53%</h3>
+                              <p>of custom creations were made in CAD, more than the other 11 creation methods combined!</p>
+                          </div>
+                          <div>
+                              <h3>5.5x</h3>
+                              <p>the prints of the most popular toy app in September 2024</p>
+                          </div>
+                          <div>
+                              <h3>1 in 3</h3>
+                              <p>users who opened the CAD app created a toy within an hour, in a median of 8.4 minutes.</p>
+                          </div>
+                      </div>
+                      <p class="v2-source">Source: Mixpanel data from month of September 1-30</p>
+                  </div>
+              </section>
+
+              <!-- Solution -->
+              <section class="section-content solution" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Solution</h4>
+                      <h2>Introducing a new way to 3D model on Toybox</h2>
+                      <p>Kids can now model a toy from a blank canvas and 3D print it from any device, without leaving Toybox. Here’s what shipped; the rest of this page is how it got there.</p>
+
+                      <video autoplay muted loop width="1080" data-src="img/toybox/CAD/solution/solution.mp4" preload="none"></video>
+
+                      <h3 class="v2-sub">Usable across all platforms</h3>
+                      <img src="img/toybox/CAD/v2/Image441.png" width="1224" alt="Toybox CAD on mobile, tablet and desktop" loading="lazy" decoding="async">
+
+                      <h3 class="v2-sub">Essentials Menus</h3>
+                      <p>The Edit panel is purely contextual to the selected object on the scene and appears within the 3D scene when clicked.</p>
+                      <video autoplay muted loop width="1080" data-src="img/toybox/CAD/essentials/iPad_smaller.mp4" preload="none"></video>
+                      <video autoplay muted loop width="1080" data-src="img/toybox/CAD/essentials/mobile_smaller.mp4" preload="none"></video>
+
+                      <h3 class="v2-sub">Tools</h3>
+                      <h4>Subtract + Combine</h4>
+                      <video autoplay muted loop width="1080" data-src="img/toybox/CAD/tools/subtract_combine_smaller.mp4" preload="none"></video>
+                      <h4>Duplicate + Arrange</h4>
+                      <video autoplay muted loop width="1080" data-src="img/toybox/CAD/tools/duplicate_arrange_smaller.mp4" preload="none"></video>
+                  </div>
+              </section>
+
+              <!-- Problem Section -->
+              <section class="section-content problem" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Problem</h4>
+                      <h2>Currently, users have to leave the platform to 3D Model</h2>
+                      <p>Users would have to leave to a third-party application to create their own creations from scratch. Our mission was to create a new experience for users to seamlessly 3D model and print their toy directly in the Toybox app.</p>
+                      <div class="v2-journey">
+                          <div>
+                              <img src="img/toybox/CAD/v2/Image73.png" alt="User wants to create a 3D model" loading="lazy" decoding="async">
+                              <p>User wants to create a 3D model</p>
+                          </div>
+                          <div>
+                              <img src="img/toybox/CAD/v2/Image74.png" alt="User exits the Toybox app" loading="lazy" decoding="async">
+                              <p>User exits the Toybox app and models creation in another app.</p>
+                          </div>
+                          <div>
+                              <img src="img/toybox/CAD/v2/Image75.png" alt="User imports toy into Toybox" loading="lazy" decoding="async">
+                              <p>User imports toy into Toybox. Return to Toybox to print.</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Constraints -->
+              <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Constraints</h4>
+                      <h2>Four constraints that shaped every decision</h2>
+                      <div class="v2-cards">
+                          <div>
+                              <h3>3 in 4</h3>
+                              <p>prints came from phones and iPads, and only about 7% from desktop. Touch came first, and a phone in portrait was the tightest screen.</p>
+                          </div>
+                          <div>
+                              <h3>Usable for a 10–14 year-old</h3>
+                              <p>Every tool had to make sense for a kid with no prior 3D modeling experience to use.</p>
+                          </div>
+                          <div>
+                              <h3>0 kids to test with</h3>
+                              <p>Child-safety rules meant adult testers, so kid-specific choices were hypotheses until launch data came in.</p>
+                          </div>
+                          <div>
+                              <h3>2 engineers</h3>
+                              <p>With only 2 engineers on this project, it meant slower times to test my solutions.</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Research: Competitor Analysis -->
+              <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Research</h4>
+                      <h2>Competitor Analysis</h2>
+                      <p>To better understand what was already on the market, I did a competitor analysis with existing desktop and mobile 3D modeling apps. What differed the most was that the Toybox CAD app would be <b><i>specifically designed for 3D printing.</i></b></p>
+
+                      <div class="v2-roster">
+                          <span><img src="img/toybox/CAD/v2/CompetitorLogo.png" alt="" loading="lazy">TinkerCAD</span>
+                          <span><img src="img/toybox/CAD/v2/CompetitorLogo1.png" alt="" loading="lazy">Shapr3D</span>
+                          <span><img src="img/toybox/CAD/v2/CompetitorLogo2.png" alt="" loading="lazy">Shapeyard</span>
+                          <span><img src="img/toybox/CAD/v2/CompetitorLogo3.png" alt="" loading="lazy">Vectary</span>
+                          <span><img src="img/toybox/CAD/v2/CompetitorLogo4.png" alt="" loading="lazy">Spline</span>
+                      </div>
+                  </div>
+
+                  <div class="outlined-containers" id="competitor-analysis">
+                      <div>
+                          <h3>TinkerCAD</h3>
+                          <li>Works great on desktop (what our primary audience is used to using)</li>
+                          <li>Lacks a useable mobile UI</li>
+                          <li>Easy to use</li>
+                      </div>
+                      <div>
+                          <h3>Shapr3D</h3>
+                          <li>iPad only</li>
+                          <li>Relies heavily on Apple Pencil</li>
+                          <li>Great beginner tutorials</li>
+                          <li>Relies heavily on large screen real-estate</li>
+                      </div>
+                      <div>
+                          <h3>Shapeyard</h3>
+                          <li>Overwhelming how many sub-menus to navigate through tools</li>
+                      </div>
+                  </div>
+
+                  <div>
+                      <table class="v2-table">
+                          <thead>
+                              <tr><th></th><th>TinkerCAD</th><th>Shapr3D</th><th>Shapeyard</th><th>Vectary</th><th>Spline</th><th>Toybox</th></tr>
+                          </thead>
+                          <tbody>
+                              <tr><td>Desktop</td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td></tr>
+                              <tr><td>Mobile</td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td></tr>
+                              <tr><td>Beginner Friendly</td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td></tr>
+                              <tr><td>Optimized for 3D printing</td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/X.svg" alt="No"></td><td><img src="img/toybox/CAD/v2/Check.svg" alt="Yes"></td></tr>
+                          </tbody>
+                      </table>
+                      <p style="margin-top:32px">Our top competitor TinkerCAD, was used heavily within members of our community, but the biggest problem of the website was that it was NOT mobile friendly. With over 50% of the Toybox users being mobile phone users, it was necessary for our app to be mobile friendly.</p>
+                      <img src="img/toybox/CAD/v2/DeviceStats.png" width="1224" alt="Toybox device stats" loading="lazy" decoding="async">
+                  </div>
+              </section>
+
+              <!-- Research: Interview + Prioritization + Synthesis -->
+              <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Research</h4>
+                      <h2>Getting a professional’s input</h2>
+                      <p>To understand professional 3D modeling, I interviewed our in-house toy designers and watched how they work in Blender and ZBrush. It showed how complex pro workflows are, and which tools are non-negotiable even for beginners, like boolean operations (union, subtract, intersect).</p>
+
+                      <h2 class="v2-sub">From everything we could build to what we should</h2>
+                      <p>Using the competitor analysis and interview with the toy designer, I initiated and co-led the session where the Product team and I listed every candidate tool across eight areas and ranked each area against what is absolutely necessary for a 3D modeling app. Move ranked first in all three; Properties ranked last. Instead of debating features one by one, we kept the simplest tools that let a beginner finish a first model.</p>
+                      <img src="img/toybox/CAD/v2/Image444.png" width="1224" alt="Prioritization results" loading="lazy" decoding="async">
+
+                      <h2 class="v2-sub">Synthesis</h2>
+                      <p>These results were then synthesized to the most important features that would be needed in a 3D modeling app for Toybox.</p>
+                      <div class="v2-split">
+                          <div>
+                              <h3>General Tools &amp; Actions</h3>
+                              <div class="v2-pills"><span>Camera controls</span><span>Undo / Redo</span><span>Group / Ungroup</span><span>Arrange Objects</span><span>Layers list</span></div>
+                          </div>
+                          <div>
+                              <h3>Creation</h3>
+                              <div class="v2-pills"><span>Boolean operations</span><span>Primitive shapes</span><span>Modify dimensions</span><span>Transform Controls</span><span>Copy</span><span>Split</span><span>Draw</span><span>Import</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Core System -->
+              <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Core System</h4>
+                      <h2>At first nothing translated one-to-one</h2>
+                      <p>Every phone screen needed a matching tablet and desktop version, and few things carried over directly. I explored layouts for each device side by side, which slowed the project down. Below are a few of those explorations, followed by what fixed the problem.</p>
+
+                      <h3 class="v2-sub">Low Fidelity Designs</h3>
+                      <img src="img/toybox/CAD/v2/Rectangle4.png" width="1224" alt="Low fidelity designs" loading="lazy" decoding="async">
+
+                      <h3 class="v2-sub">One set of rules, three screens</h3>
+                      <p>On mobile, the groups became a bottom tab bar, a pattern kids already use daily. On tablet and desktop the same groups moved to left and right panels, because large screens have room at the edges and the 3D view needs the center.</p>
+                      <p>A 3D editor has dozens of functions and a phone has room for five. To decide where each group could live, I classified every function by how it behaves. This meant asking questions like:</p>
+                      <ul>
+                          <li>Does it need a selected object, does it act on the whole scene?</li>
+                          <li>Does it change geometry?</li>
+                      </ul>
+                      <p>By categorizing the features of this app, I was able to come up with a set of key groupings that could translate easily between devices.</p>
+                  </div>
+              </section>
+
+              <!-- Beta Testing -->
+              <section class="section-content research" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Beta Testing</h4>
+                      <h2>Two rounds of beta testing</h2>
+                      <div class="v2-split center">
+                          <div>
+                              <p>I couldn’t test with 10 to 14-year-olds directly, so 15 to 20 adults with no 3D experience tried two beta builds: coworkers, their families, and parents from the Toybox Facebook community.</p>
+                              <p>Toybox printers are used by entire families, so they were real users, although they couldn’t replace a kid’s patience.</p>
+                              <p>Testing showed that designing screens and using them were two different things, especially for 3D controls I couldn’t design in Figma.</p>
+                          </div>
+                          <img src="img/toybox/CAD/v2/Image438.png" alt="Beta testing" loading="lazy" decoding="async">
+                      </div>
+
+                      <h3 class="v2-sub">Contextual Edit button</h3>
+                      <p>After the first beta, we moved Edit from the bottom nav into the 3D scene. For it to be used, it needs a selection, so it now only appears when an object is selected.</p>
+                      <div class="v2-split">
+                          <div><h4>Before</h4><div class="v2-frame"><img src="img/toybox/CAD/v2/Image439.png" alt="Edit button before" loading="lazy" decoding="async"></div></div>
+                          <div><h4>After</h4><div class="v2-frame"><img src="img/toybox/CAD/v2/Image68.png" alt="Edit button after" loading="lazy" decoding="async"></div></div>
+                      </div>
+
+                      <h3 class="v2-sub">Collapsible Tools menu</h3>
+                      <p>Testers told us the tool icons alone didn’t explain what each tool did, which matched our own experience. We made the Tools menu collapsible on tablet and desktop.</p>
+
+                      <h3 class="v2-sub">Scaling + Snap to floor</h3>
+                      <p>Members of the “Toybox 3d printing community” Facebook group often asked how to rescale imported models, and a parent testing on iPad noted that kids won’t understand typing scale percentages. We added contextual Scale equally and Snap to floor toggles, so resizing works without typing numbers.</p>
+                      <div class="v2-frame pair">
+                          <img src="img/toybox/CAD/v2/Image428.png" alt="Scale equally" loading="lazy" decoding="async">
+                          <img src="img/toybox/CAD/v2/Image429.png" alt="Snap to floor" loading="lazy" decoding="async">
+                      </div>
+
+                      <h3 class="v2-sub">Promoting Build</h3>
+                      <p>In the second beta, testers struggled to find Build inside Settings. Every model has to be sliced before it can print, and Build is the only place to control print settings, so I moved it into the phone’s main nav and next to the print button on larger screens.</p>
+                      <div class="v2-split">
+                          <div><h4>Before</h4><div class="v2-frame"><img src="img/toybox/CAD/v2/Image430.png" alt="Build before" loading="lazy" decoding="async"></div></div>
+                          <div><h4>After</h4><div class="v2-frame"><img src="img/toybox/CAD/v2/Image445.png" alt="Build after" loading="lazy" decoding="async"></div></div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Outcomes -->
+              <section class="section-content impact" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Outcomes</h4>
+                      <h2>The most popular Toybox app</h2>
+                      <img src="img/toybox/CAD/v2/CreatorSpaceAppPopularity41.png" width="1224" alt="Toybox app popularity" loading="lazy" decoding="async">
+                      <p>And the toys got printed. In September 2024, the first full month after launch, users printed 5,665 CAD toys: 39% of all prints of user-generated toys, about 1.5× drawings (3,671) and 5.5× cars (1,029), the most-printed template.</p>
+                  </div>
+              </section>
+
+              <!-- Reflection -->
+              <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+                  <div>
+                      <h4>Reflection</h4>
+                      <h2>The most challenging project I’ve worked on as a designer</h2>
+                      <p>Leading this from 0 → 1 as the only designer taught me more about cross-platform systems and working with engineers than any project before it. Four lessons I still use:</p>
+                      <div class="v2-cards">
+                          <div class="wide">
+                              <h3>📐 System before screens</h3>
+                              <p>At the beginning I was very overwhelmed with the amount of content that had to fit within this project.</p>
+                              <p style="margin-top:16px">Exploring various layouts separately slowed the project. Next time I would start with mobile phone first, and I design only what each larger screen adds rather than trying to balance all 3 at once.</p>
+                          </div>
+                          <div>
+                              <h3>🧪 Mockups can only get you so far</h3>
+                              <p>I couldn’t test a lot of my designs until the engineering team had created a prototype of the modeling program.</p>
+                              <p style="margin-top:16px">If I were to redo this project with modern day AI tools, we would’ve been able to test layouts and touch interactions much faster.</p>
+                          </div>
+                          <div>
+                              <h3>🛑 Working within constraints</h3>
+                              <p>With no research team and no 3D modeling background, I had to learn the domain fast and make the most of what I had: our in-house toy designers, the pro tools they used, and the Toybox community as beta testers.</p>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+          </div>
+        </section>
+
+  <div class="line"></div>      
+
+
+    <footer>
+      <div id = "footer-content">
+        <div>
+          <h1>Matthew Kwong</h1>
+          <a href="mailto:matthewrkwong@gmail.com" target="_blank">
+            <p>matthewrkwong@gmail.com</p>
+          </a>
+        </div>
+
+
+        <div id = "footer-links">
+        <!-- Nav -->
+          <ul>
+              <li>
+                  <a href="product.html" target="_blank" class="middle">Product</a> 
+              </li>
+      
+              <li>
+                  <a href="motion.html" target="_blank" class="middle">3D / Motion</a> 
+              </li>
+
+              <li>
+                  <a href="about.html" target="_blank" class="middle">About</a> 
+              </li>
+          </ul>
+
+        <!-- Social Medias -->
+          <ul>
+              <li>
+                  <a href="https://www.linkedin.com/in/matthewrkwong/" target="_blank" class="middle">LinkedIn</a> 
+              </li>
+      
+              <li>
+                  <a href="https://www.instagram.com/design.matthew/" target="_blank" class="middle">Instagram</a>
+              </li>
+          </ul>
+          </div>
+        </div>
+    </footer>
+    <script src="video-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script  src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script  src="smooth-scroll.js"></script>
+    <script  src="case-study-sidebar.js"></script>
+    </body>
+</html>

@@ -1,70 +1,40 @@
-a{
+/* Spotify Rooms – project accent: Spotify green */
+:root {
+    --accent: var(--colors-spotify-green);
+}
+
+a {
     text-decoration: none;
-    color: #1dd05d;
-}
-
-a:visited{
-    color: #1dd05d;
-}
-
-.callout{
-    background-color: #1dd05d;
 }
 
 /* Circles */
-.circle{
-    background: #1dd05d;
-    box-shadow: 0px 0px 100px #1dd05d;
+.circle {
+    background: var(--colors-spotify-green);
+    box-shadow: 0px 0px 100px var(--colors-spotify-green);
 }
 
-#title-content-wrapper{
+#title-content-wrapper {
     gap: 10%;
 }
 
-#project-preview{
+#project-preview {
     display: none;
 }
 
-#title{
-    color: white;
-
-
-    background-image: linear-gradient(rgb(29, 185, 84, 0.9), 
-    rgba(29, 185, 84, 0.8 )), 
-    url("img/rooms/mockup-banner.png");
+#title {
+    color: var(--colors-white);
+    background-image: linear-gradient(color-mix(in srgb, var(--colors-spotify-green) 90%, transparent),
+        color-mix(in srgb, var(--colors-spotify-green) 80%, transparent)),
+        url("img/rooms/mockup-banner.png");
 }
 
-
-/* .final-prototype{
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 675px;
-
-}
-
-.final-prototype iframe{
-    transform: scale(0.5);
-} */
-
-
-@media only screen and (max-width: 768px) {
-    .preview > video{
-        /* display: none; */
+/* Mobile mode: under 768px */
+@media only screen and (max-width: 767px) {
+    .preview > video {
         height: auto;
     }
 
-    .preview{
+    .preview {
         height: auto;
     }
-
-    /* #project-preview{
-        display: block;
-        max-height: 60%;
-    } */
-
-    /* .final-prototype{
-        display: none;
-    } */
 }

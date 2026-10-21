@@ -9,18 +9,15 @@
   <link rel="icon" type="image/png" href="img/nav/logo.svg">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="design-system.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="inter/inter.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
 
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Lenis Smooth Scroll -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
@@ -32,22 +29,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 </head>
 
-<style>
-
-  /* h2{
-    font-family: 'ZT Formom';
-    font-style: oblique;
-  } */
-
-  h3{
-    margin: 0px;
-  }
-
- .content-wrapper{
-    max-width: 1200px;
-  }
-  
-</style>
 
 <body>
      <nav>
@@ -96,11 +77,9 @@
 
         <div id = "resume-button">
           <a href="Matthew Kwong Resume.pdf" class="middle" target="_blank" style="text-decoration: none;">
-            <button>
+            <button class="mk-btn mk-btn--dark">
                 Download My Resume
-                <span class="material-symbols-outlined">
-                    arrow_outward
-                </span>
+                <svg class="mk-icon" width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M11.75 10.75V4.25H5.25M11.75 4.25L4.25 11.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </a>
         </div>

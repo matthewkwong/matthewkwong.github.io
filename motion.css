@@ -1,43 +1,76 @@
-/* nav */
+/* ==========================================================================
+   3D / MOTION PAGE
+   The one dark page: the work sits on black with white type.
+   Colours, type, radii and gaps come from the design system
+   (tokens.css + design-system.css).
+   ========================================================================== */
 
-#hamburger, #close{
-    color: white !important;
+body {
+    background-color: var(--black);
+    color: var(--colors-white);
 }
 
-.overview{
-    margin: auto;
-    max-width: 1200px;
+/* --------------------------------------------------------------------------
+   1. Nav on black
+   -------------------------------------------------------------------------- */
+
+#hamburger,
+#close {
+    color: var(--colors-white) !important;
 }
 
-
-body{
-    background-color: black;
-}
-
-nav{
-    /* margin-top: 64px; */
+nav {
     background-color: transparent !important;
 }
 
-nav #menu-wrapper #menu li a, h4{
-    color:white;
+nav #menu-wrapper #menu li a,
+#menu-wrapper #menu li a:hover {
+    color: var(--colors-white);
 }
 
-footer{
-    background-color: black !important;
+#nav-links a.middle:before {
+    background-color: var(--colors-white);
 }
 
-footer h1{
-    color: white !important;
 
+/* --------------------------------------------------------------------------
+   2. Page
+   -------------------------------------------------------------------------- */
+
+.overview {
+    margin: auto;
+    max-width: var(--max-width);
+}
+
+#case-study-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mk-gap-sections);
+    max-width: 2560px;
+}
+
+section {
+    max-width: 100%;
+}
+
+.section-content {
+    gap: var(--mk-gap-images);
+}
+
+.content-wrapper h2,
+.content-wrapper h3,
+.content-wrapper h4,
+.content-wrapper p {
+    color: var(--colors-white);
+}
+
+.section-content > h2,
+.section-content > h3 {
+    margin: 0;
 }
 
 .section-image video {
     max-height: 100%;
-}
-
-body{
-    color: white;
 }
 
 .preview {
@@ -46,47 +79,58 @@ body{
     object-fit: cover;
 }
 
-.section-image video {
-    max-height: 100%;
-}
-
-a{
+a {
     text-decoration: none;
 }
 
-/* h2{
-    margin-bottom: 0;
-} */
-    div > p{
+div > p {
     margin-top: 0;
-    /* padding: 0; */
-    /* line-height: 1;   */
-    }
-
-#fullscreen{
-    background-color: black;
 }
 
-#case-study-wrapper {
-    display: flex;
-    flex-direction: column;
-    /* width: calc(100% - 48px); */
-    max-width: 2560px;
-    /* padding: 0 24px; */
+#fullscreen {
+    background-color: var(--black);
 }
 
-section{
-    max-width: 100%;
+body::-webkit-scrollbar {
+    display: none;
 }
-
 
 /* Stage visual wrapper + overlay + button-overlay: see styles.css (shared with index) */
 
-/* 3D Projects Layout */
+#live-visuals {
+    display: flex;
+    flex-direction: row;
+    gap: var(--mk-gap-images);
+    align-items: center;
+}
+
+.live-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. 3D projects
+   -------------------------------------------------------------------------- */
+
 .projects-3d-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: var(--mk-gap-images);
     width: 100%;
 }
 
@@ -96,19 +140,17 @@ section{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: var(--mk-gap-images);
 }
 
 .project-3d {
-    /* border: solid 2px red; */
     width: 100%;
     height: auto;
 }
 
-.project-3d img{
+.project-3d img {
     max-width: 1400px;
-    /* max-width: 845.33px; */
-    width: 100%;    
+    width: 100%;
 }
 
 .project-3d video {
@@ -118,27 +160,31 @@ section{
 }
 
 
-/* Cover art */
+/* --------------------------------------------------------------------------
+   4. Cover art
+   -------------------------------------------------------------------------- */
+
 #animated-cover-art-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    /* background-color: white; */
 }
 
 #animated-cover-art-wrapper > video {
-    /* width: 100%; */
     max-width: 25%;
-}   
+}
 
 
-/* Branding */
-.branding-wrapper{
+/* --------------------------------------------------------------------------
+   5. Branding
+   -------------------------------------------------------------------------- */
+
+.branding-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: var(--mk-gap-images);
 }
 
 .branding-wrapper > .branding-item {
@@ -147,22 +193,15 @@ section{
     width: 100%;
 }
 
-
-.branding-wrapper > .branding-item:nth-child(2), 
-.branding-item:nth-child(3), 
-.branding-item:nth-child(4), 
+.branding-wrapper > .branding-item:nth-child(2),
+.branding-item:nth-child(3),
+.branding-item:nth-child(4),
 .branding-item:nth-child(5) {
-    flex: 1 0 calc(50% - 24px);
+    flex: 1 0 calc(50% - var(--mk-gap-images));
 }
 
-/* .branding-wrapper > .branding-item:nth-child(2), 
-.branding-wrapper > .branding-item:nth-child(3){
-    aspect-ratio: 1;
-} */
-
 .branding-wrapper > .branding-item > img,
-.branding-wrapper > .branding-item > video  
-{
+.branding-wrapper > .branding-item > video {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -172,64 +211,78 @@ section{
     aspect-ratio: 3 / 4;
 }
 
-
-/* DO NOT MOVE POSITION OF THIS. The above code applies to this. 
-This changes the marty supreme aspect ratio*/
+/* DO NOT MOVE POSITION OF THIS. The above code applies to this.
+This changes the marty supreme aspect ratio */
 .branding-wrapper > .branding-item:nth-child(1) > video {
     flex: 100%;
     aspect-ratio: 16 / 9;
 }
 
-footer p, footer a{
-    color: white !important;
+
+/* --------------------------------------------------------------------------
+   6. Footer on black
+   -------------------------------------------------------------------------- */
+
+footer {
+    background-color: var(--black) !important;
+    color: var(--colors-white);
 }
 
-footer a, footer a:visited{
-    text-decoration: underline;
-    color: white !important;
+footer h1 {
+    color: var(--colors-white) !important;
 }
 
-footer #footer-content{
+footer p,
+footer a {
+    color: var(--colors-white) !important;
+}
+
+footer a,
+footer a:visited {
+    color: var(--colors-white) !important;
+}
+
+footer #footer-content {
     max-width: 2560px !important;
 }
 
-/* #line{
-    max-width: 2560px !important;
-    width:calc(100% - 48px) !important;
-} */
 
-@media only screen and (max-width: 768px) {
+/* --------------------------------------------------------------------------
+   7. Mobile mode: under 768px
+   -------------------------------------------------------------------------- */
 
-    .branding-wrapper{
-        gap: 48px;
+@media only screen and (max-width: 767px) {
+    #menu-wrapper {
+        background-color: var(--black) !important;
     }
 
-    .stage-visual-wrapper .overlay > .hover-text > p {
-        color: white;
+    .branding-wrapper {
+        gap: var(--mk-gap-sections);
+        flex-direction: column;
     }
 
-    .projects-3d-wrapper, #live-visuals {
+    .overlay > .hover-text > * {
+        color: var(--colors-white) !important;
+    }
+
+    .projects-3d-wrapper,
+    #live-visuals {
         flex-direction: column !important;
     }
 
     #animated-cover-art-wrapper {
         flex-wrap: wrap;
     }
+
     #animated-cover-art-wrapper > video {
         max-width: 50%;
-    }   
+    }
 
+    .stage-visual-wrapper .button-overlay {
+        aspect-ratio: 16 / 9;
+    }
 
-    .branding-wrapper{
-
-        flex-direction: column;
+    #live-visuals .button-overlay {
+        aspect-ratio: 9 / 16;
     }
 }
-
-@media only screen and (max-width: 768px) {
-    #menu-wrapper{
-        background-color: black !important;
-    }
-}
-
-

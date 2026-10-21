@@ -1,35 +1,28 @@
-h1{
-    line-height: 32px;
-}
+/* ==========================================================================
+   MUSIC PAGE
+   Type and colour come from the design system (tokens.css + design-system.css).
+   ========================================================================== */
 
-h2{
-    font-family: Poppins;
-    font-weight: 800;
-}
-
-a{
-    color: #18A0FB;
+a {
     text-decoration: none;
 }
 
-a:visited{
-    color: #18A0FB;
-    text-decoration: none;
+h2 {
+    text-align: left;
 }
 
-section{
+section {
     max-width: 1440px;
 }
 
-.section-image{
+.section-image {
     width: auto;
 }
 
-#goddess{    
-    background-color: #28384e;
-    padding: 50px 0px;
+#goddess {
+    background-color: var(--colors-black);
+    padding: var(--mk-gap-header) 0;
     height: auto;
-    
     text-align: center;
     display: flex;
     justify-content: center;
@@ -37,69 +30,54 @@ section{
     gap: 20px;
 }
 
-#goddess video{
+#goddess video {
     align-items: center;
     justify-content: center;
     text-align: center;
     max-height: 100%;
     max-width: 50%;
-    /* border: solid 2px red; */
 }
 
 /* Circles */
-.circle{
-    background: #18A0FB;
-    box-shadow: 0px 0px 100px #18A0FB;
+.circle {
+    background: var(--colors-blue);
+    box-shadow: 0px 0px 100px var(--colors-blue);
 }
 
-#title-content-wrapper{
+#title-content-wrapper {
     gap: 0px 50px;
 }
 
 #title-content > #title-content,
-#title-content-wrapper > div{
+#title-content-wrapper > div {
     max-width: 50%;
 }
 
-
-.content-wrapper{    
-    padding-top: 50px;
-    /* background-color: #f4f4f4; */
+.content-wrapper {
+    padding-top: var(--mk-gap-header);
     max-width: 1440px;
-    /* max-width: 100%; */
     margin: auto;
 }
 
-.music{
+.music {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    /* width: 1920px; */
-}
-
-
-h2{
-    text-align: left;
 }
 
 .music > .full {
     text-align: center;
 }
 
-.music > .full > video{
-    /* text-align: center; */
-    /* max-width: 490px; */
-    /* max-height: 390px; */
-    /* min-width: 200px; */
+.music > .full > video {
     height: 100%;
     width: 100%;
 }
 
-
-/* Album Covers + stickers*/
-.grid-wrapper{
+/* Album Covers + stickers */
+.grid-wrapper {
     flex-wrap: wrap;
     justify-content: flex-start;
     display: flex;
@@ -107,88 +85,81 @@ h2{
     gap: 20px;
 }
 
-.grid-wrapper > img{
+.grid-wrapper > img {
     max-width: 48%;
 }
 
 .grid-wrapper > .album-cover,
-.grid-wrapper > img{
-    /* border: solid 2px red;
-    box-sizing: border-box; */
-    
+.grid-wrapper > img {
     text-align: center;
-
-    flex: 0 1 48%; 
+    flex: 0 1 48%;
 }
 
-
-.grid-wrapper > .album-cover > video{
+.grid-wrapper > .album-cover > video {
     max-width: 100%;
-    /* min-width: none; */
     width: 100%;
 }
 
-
 /* Full width videos */
-.music > div > .full{
+.music > div > .full {
     max-width: 100%;
-    /* width: 1920px; */
     max-height: 100%;
 }
 
 /* Section Description */
-.project-description, .project-description > p{
-    /* border : solid 2px red;  */
+.project-description,
+.project-description > p {
     width: 100%;
     max-width: 100% !important;
     text-align: left !important;
 }
 
-/*  Descriptions underneath Image/Videos */
-.music > div > p{
-    /* margin-top: 0px; */
-    /* font- size: 14px; */
+/* Descriptions underneath Image/Videos */
+.music > div > p {
     text-align: center;
-    /* max-width: 390px; */
     max-width: 390px;
 }
 
 .music > .full > p {
-    /* margin: 0 50px; */
     max-width: 100%;
 }
 
-
-@media screen and (max-width: 768px) {
-
-    #goddess{
+@media screen and (max-width: 767px) {
+    #goddess {
         padding: 0px;
     }
 
-    #goddess video{        
+    #goddess video {
         margin: 0;
         height: auto;
         max-width: 100%;
     }
 
     .grid-wrapper > .album-cover,
-    .grid-wrapper > img
-    {    
-        /* border: #18A0FB solid 2px ;     */
-        flex: 1 100%; 
+    .grid-wrapper > img {
+        flex: 1 100%;
     }
 
-    .grid-wrapper > .album-cover > video, 
-    .grid-wrapper > img{
+    .grid-wrapper > .album-cover > video,
+    .grid-wrapper > img {
         min-width: 150px;
     }
 
-    .grid-wrapper > img{
+    .grid-wrapper > img {
         max-width: 100%;
     }
 
     #title-content > #title-content,
-    #title-content-wrapper > div{
+    #title-content-wrapper > div {
         max-width: 100%;
     }
+}
+
+/* The footer name on this page, as before */
+footer #footer-content h1 {
+    margin: 0.67em 0;
+    font-size: var(--size-32);
+    line-height: var(--line-height-32);
+    letter-spacing: normal;
+    font-weight: var(--weight-bold);
 }

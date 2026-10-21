@@ -1,353 +1,175 @@
+/* ==========================================================================
+   CASE STUDY – the page shell and blocks shared by every case study
 
-@font-face {
-    font-family: Playfair-Display;
-    src: url(fonts/PlayfairDisplay-Medium.ttf);
-}
+   Built on the design system (tokens.css + design-system.css): a 1200px
+   container holding a 296px side nav and a 904px body, sections 64px apart,
+   16px between the lines of a block.
 
-@font-face {
-    font-family: Inter;
-    src: url(fonts/Inter-VariableFont_slnt,wght.ttf);
-}
+   A page sets its project accent in its own stylesheet:
+     --accent          links and the callout ground
+     --accent-nav      the current side-nav link   (defaults to --accent)
+     --accent-marker   the side-nav marker         (defaults to --accent-nav)
+   ========================================================================== */
 
-@font-face {
-    font-family: 'ZT Formom';
-    src: url('fonts/zt-formom-italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'ZT Formom';
-    src: url('fonts/zt-formom-italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-
-  
-html{
+html {
     overflow-x: initial !important;
 }
-  
-body{
-    margin: auto;
-    font-family: "InterDisplay", sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
-}
 
-h2{
-    margin-top: 0px;
-}
-
-h4{
-    color: #000;
-}
-
-#title-content h1{
-    font-size: 48px;
-}
-
-
-#title-content h2{
-    color: #595959;
-    font-size: 28px;
-    line-height: 38px;
-    font-weight: 400;    
-    width: 100%;
+body {
     margin: auto;
 }
 
-
-/* .project-tagline{
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 400;
-}    */
-footer #footer-content{
-    max-width: 1200px !important;
-}
-
-
-p, ol, li{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #595959;
-}
-
-
-
-.content-wrapper img {
-    cursor: -moz-zoom-in; 
-    cursor: -webkit-zoom-in; 
-    cursor: zoom-in;
-}
-
-body > div{
+body > div {
     overflow-x: hidden;
 }
 
+footer #footer-content {
+    max-width: 1200px !important;
+}
+
+/* Footer links take the case-study copy size, as before */
+footer li {
+    font-size: var(--size-18);
+    line-height: var(--line-height-28);
+}
+
+
+/* --------------------------------------------------------------------------
+   1. Page shell
+   -------------------------------------------------------------------------- */
+
 .content-wrapper {
-    /* margin: 64px 0px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    gap: 64px;
+    gap: var(--mk-gap-sections);
     box-sizing: border-box;
     overflow: visible;
-    
     width: 100%;
-    max-width: 1200px;
-    /* max-width: 1440px; */
-    /* border: solid 2px red; */
+    max-width: var(--max-width);
 }
 
 .content-wrapper section {
     overflow: visible;
     width: 100%;
-    /* box-sizing: border-box; */
 }
 
-.content-wrapper  .section-image{
-    /* Needs to be max-width: 100% in order to go across the entire screen */
-    max-width: 100%;
-    /* border: solid 2px red; */
-    box-sizing: border-box;
-
-}
-
-section{
-    /* max-width: 1080px; */
-    /* changed on september 10, 2024 */
-    /* max-width: 900px; */
-    /* gap: 50px; */
-    /* width: 100%; */
-    margin: auto 0;  
+section {
+    margin: auto 0;
     display: flex;
     justify-content: center;
-    align-items:baseline;
+    align-items: baseline;
     flex-direction: column;
-    
-}
-
-
- section > div:last-of-type{
-    margin: 0px;
-    /* flex-wrap: wrap; */
-}
-
-/* Space between the subtitle h2 and the content below it */
-.section-content{
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    justify-content: center;
-}
-
-#chart-container{
-    max-width: 100%;
-}
-
-#chart-container > #myChart{
     width: 100%;
+    scroll-margin-top: 120px;
 }
 
-
-/* #title h1{
-    font-family: CircularStd-Bold;
-} */
-
-
-
-
-img{
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    cursor: zoom-in;
-
-    border-radius: 8px;
-}
-
-/* magnify cursor */
-.show img{
-    cursor: zoom-out;
-}
-
-/* cursor */
-.show img{
-    cursor: zoom-out;
-}
-
-
-/* #title-content-wrapper > img {
-    cursor: default;
-} */
-
-
-/* .list ul{
-    flex: 1;
-} */
-
-#project-details-list h4{
-    margin-top: 0px;
-}
-
-.outlined-containers h3{
-    margin-top: 0px;
-}
-
-.outlined-containers li{
-    margin-left: 24px;
-}
-
-#project-details-list, 
-.outlined-containers{
-    width: 100%;
-    display: flex;    
-    /* border: solid 2px orange; */
-    box-sizing: border-box;
-    gap: 12px;
-    flex-wrap: wrap;
-
-}
-
-#project-details-list > *, 
-.outlined-containers > * {
-    border: solid 2px #f4f4f4;
-    border-radius: 8px;  
-    box-sizing: border-box;
-
-    padding: 20px;
-    /* width: 1fr;  */  
-    flex-grow: 1;
-    flex: 0 0 calc(50% - 6px);
-    /* min-width: ; */
- }
-
-#project-details-list > div >  p,
-.outlined-containers p
-{
-    /* line-height: 12px !important; */
-        margin: 0px;
-
-    padding: 0;
-}
-
-/* #project-details-list div:last-of-type p {
-    margin-top: -10px;
-    line-height: 20px;
-} */
-
-
-
-video{
-    /* max-height: 1000px;
-    height: 100%; */
-
-    max-width: 100%;
-    height: auto;
-    
-    border-radius: 8px;
-}
-
-.video-wrapper{
-    background-color: #FAFAFA;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+section > div:last-of-type {
+    margin: 0;
 }
 
 #case-study-wrapper {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: flex-start;
-    margin: auto;
-    margin-top: 64px;
-    margin-bottom: 64px;
-    max-width: 1200px;
+    gap: 0;
     box-sizing: border-box;
-    gap: 64px;
-    width: calc(100% - 96px);
-    /* padding: 0 24px; */
+    width: 100%;
+    max-width: calc(var(--max-width) + 2 * var(--mk-margin));
+    margin: 0 auto;
+    padding: var(--mk-gap-sections) var(--mk-margin);
 }
 
+/* Side nav: 296px, of which 48px either side is margin */
 #case-study-wrapper > .left {
-    width: 200px;
+    flex: none;
+    box-sizing: border-box;
+    width: 296px;
+    margin: 0;
+    padding: 0 var(--margins-margin);
     position: sticky;
-    top: 120px;
+    top: var(--space-between-sections);
     height: fit-content;
     align-self: flex-start;
 }
 
+/* Body column */
 #case-study-wrapper > .right {
     display: flex;
+    flex: 1 1 0;
     flex-direction: column;
-    gap: 64px;
-
-
-    /* margin-right: 24px; */
-    /* adds it up to 1080px */
-        /* width: calc(1440px - 360px); */
-    /* width: calc(1200px - 264px); */
-    width: 100%;
-    /* width: calc(1080px - 248px);  */
-    /* 1080px - (200px + 40px gap) */
-    /* max-width: 1080px; */
+    gap: var(--mk-gap-sections);
+    min-width: 0;
+    max-width: 904px;
 }
 
-#case-study-wrapper > .right > video, 
+#case-study-wrapper > .right > video,
 #case-study-wrapper > .left > video {
     display: block;
     margin: auto;
 }
 
-/* Responsive for case study layout */
-@media (max-width: 768px) {
-    #case-study-wrapper {
-        flex-direction: column;
-        /* gap: 48px; */
-        padding: 0 24px;
-    }
 
-    #case-study-wrapper > .left {
-        width: 100%;
-        position: static;
-        top: auto;
-    }
-
-    #case-study-wrapper > .right {
-        width: 100%;
-    }
-
-
+/* The side nav uses the variable Inter so a weight change eases between 400 and 600
+   (the static faces can only jump). Falls back to static Inter. */
+:root {
+    --font-inter-variable: InterVariable, Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+/* --------------------------------------------------------------------------
+   2. Side nav (Figma: matthewkwong.com - March 2026, node 1932:2253)
+   A "Back" link (24px arrow, 8px gap) leads to product.html, then the page's
+   sections: Inter 16/28, body dark grey, 20px apart, each indented 32px. The
+   current section is the accent colour with a dot in the 24px lead-in.
+   -------------------------------------------------------------------------- */
 
-/* Add scroll margin to sections with h2 */
-section {
-    width: 100%;
-    scroll-margin-top: 120px; /* Same as navbar height */
+#case-study-wrapper > .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+/* Back is the first row of the list and follows the same rules as the links below it:
+   a 24px icon + 8px gap gives the same 32px indent, and the icon sits in the 24px
+   lead-in where the current-section dot sits, so the two share one centre line.
+   Icon and text are centred on one line, and Back is never underlined. */
+.side-nav__back,
+.side-nav__back:visited,
+.side-nav__back:hover,
+.side-nav__back:focus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--size-16);
+    line-height: var(--line-height-28);
+    font-weight: var(--weight-regular);
+    color: var(--colors-body-text-dark-grey);
+    text-decoration: none !important;
+    border-bottom: 0;
+    box-shadow: none;
+    font-family: var(--font-inter-variable);
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1), font-weight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-/* Sidebar Menu Styles */
+.side-nav__back::before,
+.side-nav__back::after {
+    content: none;
+}
+
+.side-nav__back:hover {
+    font-weight: var(--weight-semibold);
+}
+
+.side-nav__back .mk-icon {
+    display: block;
+    flex: none;
+    width: 24px;
+    height: 24px;
+}
+
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 50%;
-    position: sticky;
-    top: 120px;
-    margin-left: 24px;
 }
 
 .sidebar-menu ul {
@@ -356,7 +178,7 @@ section {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 }
 
 .sidebar-menu li {
@@ -364,287 +186,720 @@ section {
     text-align: left;
 }
 
-.sidebar-menu a {
-    color: #000;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 1.5;
+.sidebar-menu a,
+.sidebar-menu a:visited {
     display: block;
-    padding: 8px 0;
     position: relative;
-    transition: color 0.3s ease;
+    padding-left: 32px;
+    font-size: var(--size-16);
+    line-height: var(--line-height-28);
+    font-weight: var(--weight-regular);
+    color: var(--colors-body-text-dark-grey);
+    text-decoration: none;
+    font-family: var(--font-inter-variable);
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1), font-weight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sidebar-menu a:hover {
-    color: #373764;
-}
-
+/* Current section: accent colour, semi-bold, with the dot */
 .sidebar-menu a.active {
-    color: #373764;
-    font-weight: 600;
+    color: var(--accent-nav, var(--accent, var(--colors-toybox-orange)));
+    font-weight: var(--weight-semibold);
+}
+
+/* Hover on any other link: semi-bold only, the colour stays as it is */
+.sidebar-menu a:hover {
+    font-weight: var(--weight-semibold);
+}
+
+/* The dot sits centred in the 24px lead-in, where the Back arrow's icon is */
+.sidebar-menu a::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-marker, var(--accent-nav, var(--accent, var(--colors-toybox-orange))));
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sidebar-menu a.active::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 2px;
-    background-color: #FFC56E;
-}
-
-.sidebar-menu a:hover::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 2px;
-    background-color: #FFC56E;
+    transform: translateY(-50%) scale(1);
 }
 
 
-#title .left{
-    gap: 50px;
-}
+/* --------------------------------------------------------------------------
+   3. Sections and text blocks
+   -------------------------------------------------------------------------- */
 
-.banner{    
-    overflow-x: hidden;
+/* A section: its heading block, then the groups under it */
+.section-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: var(--mk-gap-header);
     justify-content: center;
-
-    /* Not 1080px becuase theres 40px loss due to space-around to make it responsive */
-    /* max-width: 1040px; */
 }
 
-.callout{
-    font-size: 24px;
-    line-height: normal;
-    color: #FFFFFF;
-    background-color: #0000;
+/* A text block: eyebrow, heading, copy and media, 16px apart */
+.section-content > div:not([class]):not([id]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-between-text);
+    width: 100%;
+}
+
+.section-content > div:not([class]):not([id]) > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Section eyebrows (the h4 above each heading, which the side nav lists) take the
+   project's accent, the same colour as the side nav's active link. The project
+   details (role, team, duration, skills, platforms) stay grey. */
+.section-content h4:not(.mk-h4):not(#project-details-list h4) {
+    color: var(--accent-nav, var(--accent, var(--colors-toybox-orange)));
+}
+
+/* A sub-heading that follows other content opens a new group: 48px above it */
+.section-content > div:not([class]):not([id]) > :not(h4) + h2,
+.section-content > div:not([class]):not([id]) > :not(h4) + h3,
+.section-content > div:not([class]):not([id]) > :not(h2):not(h3) + h4 {
+    margin-top: calc(var(--mk-gap-header) - var(--space-between-text));
+}
+
+/* A group of cards, panels or a table that follows copy opens a new group too */
+.section-content > div:not([class]):not([id]) > :not(h4) + :is(.stat-cards, .mk-grid-2, .journey, .roster, .comparison-table-wrap, .mk-ba, .pill-groups, .mk-panel, .split, .outlined-containers) {
+    margin-top: calc(var(--mk-gap-header) - var(--space-between-text));
+}
+
+/* Copy that follows the comparison table (the table carries its own 12px row gap) */
+.section-content > div:not([class]):not([id]) > .comparison-table-wrap + * {
+    margin-top: calc(var(--mk-gap-header) - var(--space-between-text));
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Project heading: the title and the line under it */
+#title-content {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-between-text);
+}
+
+#title-content h1,
+#title-content h2 {
+    width: 100%;
+    margin: 0;
+}
+
+#chart-container {
+    max-width: 100%;
+}
+
+#chart-container > #myChart {
+    width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Meta cards (Role / Duration / Team / Platforms)
+   -------------------------------------------------------------------------- */
+
+/* One row on desktop however many details a project lists (4 or 5), so no item
+   is left alone on a second row; 32px under the title, as on the Build App page */
+#project-details-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    width: 100%;
+    margin-top: calc(var(--space-between-text) * -1);
     box-sizing: border-box;
-    padding: 40px;
-    font-style: italic;
 }
 
-.section-image{
-    background-color: #f4f4f4;
-    /* height: 100vh; */
-    /* padding: 50px 50px; */
-    /* width: 100vw; */
+/* Plain label + value, no boxes (as the meta row on the Build App page) */
+#project-details-list > * {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-between-label-caps);
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Desktop: the details spread across the row with equal space between them (each as
+   wide as its text, up to 200px), instead of equal-width columns. When the row is too
+   full (five long details), they shrink and wrap, never narrower than their longest
+   word, so nothing overflows and the gap stays equal (16px minimum). Under 1024px the
+   two-column grid takes over. */
+@media only screen and (min-width: 1024px) {
+    #project-details-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    #project-details-list > * {
+        flex: 0 1 auto;
+        min-width: min-content;
+        max-width: 200px;
+    }
+}
+
+#project-details-list h3,
+#project-details-list h4,
+#project-details-list > div > p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Cards (words on creme)
+   -------------------------------------------------------------------------- */
+
+.outlined-containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-between-text);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.outlined-containers > * {
+    flex: 0 0 calc(50% - var(--space-between-text) / 2);
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: var(--mk-radius-image);
+    background-color: var(--colors-creme);
+}
+
+.outlined-containers h3 {
+    margin: 0 0 var(--space-between-text);
+}
+
+.outlined-containers p {
+    margin: 0;
+    padding: 0;
+}
+
+.outlined-containers li {
+    margin-left: 24px;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Media
+   -------------------------------------------------------------------------- */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: var(--mk-radius-image);
+}
+
+.content-wrapper img {
+    cursor: zoom-in;
+}
+
+.show img {
+    cursor: zoom-out;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--mk-radius-image);
+}
+
+/* Media panel: screenshots and recordings sit on colors-ed */
+.section-image {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    background-color: var(--colors-ed);
 }
 
-.section-image video{
+.content-wrapper .section-image {
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--mk-radius-image);
+}
+
+.section-image video {
     max-height: 60vh;
 }
 
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    border-radius: var(--mk-radius-image);
+    background-color: var(--colors-ed);
+}
 
-.side-by-side{
+/* ---- Blocks that are this site's own (not design-system components) ---- */
+
+/* Stat cards: a big number over its line, on creme */
+.stat-cards {
+    display: flex;
+    align-items: stretch;
+    gap: var(--mk-gap-images);
+}
+
+.stat-card {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--space-between-header) 24px;
+    border-radius: var(--mk-radius-image);
+    background: var(--colors-creme);
+}
+
+.stat-card .mk-h1 {
+    color: var(--colors-body-text-dark-grey);
+}
+
+/* Card: a title and copy on creme. --small is the Reflection card. */
+.card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: var(--space-between-text);
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: var(--mk-radius-image);
+    background: var(--colors-creme);
+}
+
+.card--small {
+    border-radius: var(--mk-radius-image);
+}
+
+.card--small .mk-body {
+    color: var(--colors-black);
+}
+
+/* Journey: pictures in a row, each with its caption */
+.journey {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--mk-gap-images);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.journey li {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.journey__img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 280 / 160;
+    object-fit: cover;
+    border: 1px solid var(--colors-ed);
+    border-radius: var(--mk-radius-image);
+    background: #d9d9d9;
+}
+
+/* Roster: a row of logos with their names */
+.roster {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #e1e0dc;
+    border-radius: var(--mk-radius-image);
+    background: var(--colors-creme);
+    list-style: none;
+}
+
+.roster li {
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    gap: var(--mk-gap-images);
+    min-width: 0;
+    color: var(--colors-black);
+}
+
+.roster__logo {
+    display: block;
+    flex: none;
+    width: 52px;
+    height: 52px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: var(--mk-radius-image);
+    background: #d9d9d9;
+    object-fit: cover;
+}
+
+/* Pill groups: titled sets of the system's pills, side by side */
+.pill-groups {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-between-header);
+}
+
+.pill-group {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: var(--space-between-text);
+    min-width: 0;
+}
+
+.pill-group .mk-h3 {
+    color: var(--black);
+}
+
+/* Comparison table: products across, features down, the system's feature marks in the cells.
+   Always shown whole, at the width of the column: it is never a scroll box. Where the column
+   is too narrow for the product names side by side, they turn to read down their columns. */
+.comparison-table-wrap {
+    width: 100%;
+    container-type: inline-size;
+}
+
+.comparison-table {
+    width: 100%;
+    margin: -12px 0;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    table-layout: fixed;
+    color: var(--black);
+}
+
+.comparison-table th,
+.comparison-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.comparison-table thead th {
+    padding: 20px 0;
+    background: #f6f4ef;
+    font-size: var(--size-12);
+    line-height: var(--line-height-16);
+    letter-spacing: var(--tracking-wide-048);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.comparison-table thead th:first-child,
+.comparison-table tbody th {
+    width: 25%;
+}
+
+.comparison-table tbody th {
+    padding: 10px;
+    font-size: var(--size-16);
+    line-height: var(--line-height-28);
+    font-weight: var(--weight-regular);
+    color: var(--black);
+}
+
+.comparison-table tbody td {
+    padding: 10px;
+    line-height: 0;
+}
+
+@container (max-width: 620px) {
+    .comparison-table thead th:first-child,
+    .comparison-table tbody th {
+        width: 30%;
+    }
+
+    .comparison-table thead th {
+        padding: 16px 0;
+    }
+
+    .comparison-table thead th:not(:first-child) {
+        writing-mode: vertical-rl;
+    }
+
+    .comparison-table tbody th {
+        padding: 10px 8px;
+    }
+
+    .comparison-table tbody td {
+        padding: 10px 0;
+    }
+}
+
+/* The system's media panel, written as a <figure> */
+figure.mk-panel {
+    margin: 0;
+}
+
+/* Two screenshots in one panel: the wide one and its detail */
+.mk-panel--pair > img:first-child {
+    width: 62%;
+}
+
+.mk-panel--pair > img:last-child {
+    width: 30%;
+}
+
+/* Copy beside its picture */
+.split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--mk-gap-images);
+    align-items: start;
+}
+
+.split--center {
+    align-items: center;
+}
+
+.split > div > :first-child {
+    margin-top: 0;
+}
+
+.split > div > :last-child {
+    margin-bottom: 0;
+}
+
+.banner {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text beside (above, on this layout) its picture */
+.side-by-side {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 24px;
+    gap: var(--space-between-text);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.side-by-side > .left{
-    /* width:calc(40% - 12px);
-    min-width: 30%; */
+.side-by-side > .left,
+.side-by-side > .right {
     width: 100%;
-}
-
-.side-by-side > .right{
-    width: 100%;
-    /* width:calc(60% - 12px); */
 }
 
 .side-by-side > .right > h2,
-.side-by-side > .left > h2{
-    line-height: 32px;
+.side-by-side > .left > h2 {
+    margin: 0 0 var(--space-between-text);
+}
+
+.side-by-side > .left > p,
+.side-by-side > .right > p {
+    margin: 0;
 }
 
 
+/* --------------------------------------------------------------------------
+   7. Callout: a line set large on the project accent
+   -------------------------------------------------------------------------- */
+
+.callout {
+    box-sizing: border-box;
+    padding: var(--mk-gap-header);
+    border-radius: var(--mk-radius-image);
+    background-color: var(--accent, var(--colors-black));
+    color: var(--colors-white);
+    font-size: var(--mk-h3-size);
+    line-height: var(--mk-h3-lh);
+    letter-spacing: var(--mk-h3-ls);
+    font-weight: var(--weight-medium);
+}
+
+.callout p,
+.callout li,
+.callout a,
+.callout a:visited {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
 
 
-#title{  
-    /* remove this line for the right-side circle to overflow */
+/* --------------------------------------------------------------------------
+   8. Title band (older case studies) and the fullscreen image viewer
+   -------------------------------------------------------------------------- */
+
+#title .left {
+    gap: var(--mk-gap-header);
+}
+
+#title {
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: calc(100vh - 90px - 10vh);
     width: 100vw !important;
     max-width: none !important;
-
+    height: 47.5vh;
     overflow-y: hidden;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 47.5vh;
-
-
-    opacity:0.9;
-    background-color: black;
+    background-color: var(--black);
+    opacity: 0.9;
 }
 
-
-#title-content{
-    z-index: 3;    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 12px;
-    /* margin: 0; */
-}
-
-
-#fullscreen{
-    position: fixed; 
+#fullscreen {
+    position: fixed;
     z-index: 9;
     top: 0;
     left: 0;
-    width: 100vw; 
+    width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-   
+    background: color-mix(in srgb, var(--black) 50%, transparent);
     display: flex;
     align-items: center;
     visibility: hidden;
     opacity: 0;
-   
     transition: opacity ease 0.4s;
 }
-   
-#fullscreen.show{
+
+#fullscreen.show {
     visibility: visible;
     opacity: 1;
 }
 
-#fullscreen img{
+#fullscreen img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-height: 90%;
     width: auto;
-    /* width: auto; */
 }
 
 
+/* --------------------------------------------------------------------------
+   9. Narrow windows
+   -------------------------------------------------------------------------- */
 
-
-
-/* WIDTH is less than 768 */
-@media only screen and (max-width: 768px) {
-    .sidebar-menu {
+/* Under 1024px the side nav goes, Back with it, and the project details drop to two columns */
+@media only screen and (max-width: 1023px) {
+    #case-study-wrapper > .left {
         display: none;
     }
-    #title-content{
-        margin: 0;
-    }
 
-    #title-content-wrapper{
+    #project-details-list {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: var(--space-between-text);
+    }
+}
+
+/* Mobile mode: under 768px */
+@media only screen and (max-width: 767px) {
+    #case-study-wrapper {
         flex-direction: column;
     }
 
+    #case-study-wrapper > .left,
+    #case-study-wrapper > .right {
+        flex: none;
+        width: 100%;
+    }
+
+    #title-content {
+        margin: 0;
+    }
+
+    #title-content-wrapper {
+        flex-direction: column;
+    }
 
     #title-image {
         width: 100%;
     }
 
-    /* .content-wrapper{
-        margin: 0px 50px;
-    } */
-
-    section{
+    section {
         overflow-x: hidden;
         flex-direction: column;
     }
 
-    /* .section-image video{
-        margin: 20px 0px;
-    } */
-    
-    /* #title-content h1{
-        font-size: 48px;
-    }
-
-    .callout{
-        font-size: 18px;
-    }
-     */
-
-    img{
+    img {
         width: 100%;
     }
 
-  
-
-
-    #project-details-list > *,
     .outlined-containers > * {
-        /* min-width: 400px; */
-        /* max-width: 100%; */
-        flex: 0 0 calc(50% - 6px);
-    }
-
-    #project-details-list > div,
-    .outlined-containers > div {
         flex: 0 0 100%;
     }
 
-    /* Only if I decide if skills is necessary here */
-    /* #project-details-list > *:last-of-type {
-        flex: 0 0 calc(100%);
-    } */
-
-    #case-study-wrapper {
-        flex-direction: column;
-        /* gap: 25px; */
-        width: 100%;
-        /* width: calc(100% - 48px); */
-
-        /* padding: 0 24px; */
-        /* margin: 24px 0px; */
-    }
-
-    #case-study-wrapper > .left,
-    #case-study-wrapper > .right {
-        width: 100%;
-    }
-
-    .reverse{
+    .reverse {
         flex-direction: column-reverse;
     }
 
-    .side-by-side{
+    .side-by-side {
         flex-direction: column;
     }
 
-    .side-by-side > .right, .side-by-side > .left{
+    .side-by-side > .right,
+    .side-by-side > .left {
         width: 100%;
+    }
 
+    .mk-grid-2,
+    .split {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .stat-cards,
+    .journey,
+    .pill-groups {
+        flex-direction: column;
+    }
+
+    .roster {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 16px;
+    }
+
+    .roster li {
+        gap: var(--space-between-text);
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--colors-ed);
+    }
+
+    .roster li:last-child {
+        border-bottom: 0;
+    }
+
+    .roster__logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .mk-panel--pair > img:first-child,
+    .mk-panel--pair > img:last-child {
+        width: 100%;
     }
 }
-
-/* Phones */
-/* @media only screen and (max-width: 360px) {
-
-
-    .content-wrapper section{
-        padding: 0px 20px;
-    }
-} */

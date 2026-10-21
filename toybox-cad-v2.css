@@ -1,0 +1,808 @@
+/* ==========================================================================
+   TOYBOX: CAD APP (v2) – layout for toybox-cad-v2.html
+
+   Built from the Figma frame "Toybox: CAD — Restructure (v3) · Spacing trial".
+   Load last, after case-study.css and toybox.css. Everything is scoped to
+   .cad / .cad-hero, so the other case studies keep the shared look.
+
+   Colour, type, gaps and radii read tokens.css. A literal here is a value the
+   Figma frame hardcodes (it has no variable), carried as drawn.
+   ========================================================================== */
+
+.cad {
+    /* The frame sets every eyebrow in the Toybox orange. Point this at
+       var(--grey) to go back to the system's grey eyebrow. */
+    --eyebrow: var(--colors-toybox-orange);
+    --annotation: var(--colors-toybox-orange);
+}
+
+
+/* --------------------------------------------------------------------------
+   1. Hero: one picture across the window, 1920 × 823 in the frame
+   -------------------------------------------------------------------------- */
+
+.cad-hero {
+    display: block;
+    background: var(--colors-f4);
+}
+
+.cad-hero video {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    max-height: none;
+    margin: 0 auto;
+    /* The video's own shape (2880×1620), so the full frame shows uncropped */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Page shell: a 200px side nav, then the 904px body with 48px either side
+   -------------------------------------------------------------------------- */
+
+#case-study-wrapper.cad > .left {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 0;
+}
+
+#case-study-wrapper.cad > .right {
+    max-width: 1000px;
+    padding: 0 var(--mk-margin);
+}
+
+/* Sections sit 64px apart; a section that continues its chapter sits 48px below */
+.cad .section-content {
+    align-items: stretch;
+}
+
+.cad .section-content--joined {
+    margin-top: calc(var(--mk-gap-header) - var(--mk-gap-sections));
+}
+
+/* Spacing comes from the stacks, never from element margins */
+.cad :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure) {
+    margin: 0;
+}
+
+.cad [hidden] {
+    display: none !important;
+}
+
+/* Copy written as paragraphs with an empty line between them */
+.cad .prose > * + * {
+    margin-top: var(--mk-body-lh);
+}
+
+.cad .prose > p + ul {
+    margin-top: 0;
+}
+
+.cad .prose ul,
+.cad .findings ul {
+    padding-left: 24px;
+}
+
+/* Body/Base Bold as the frame sets it */
+.cad strong {
+    font-weight: var(--weight-semibold);
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Intro: project heading, meta, impact
+   -------------------------------------------------------------------------- */
+
+.cad .eyebrow,
+.cad .mk-labelhead .mk-caps {
+    color: var(--eyebrow);
+}
+
+.cad .meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.cad .meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-between-label-caps);
+    min-width: 0;
+}
+
+.cad .stat-cards {
+    gap: var(--space-between-text);
+}
+
+.cad .stat-card {
+    gap: var(--space-between-text);
+    min-height: 260px;
+    padding: 32px;
+    box-shadow: inset 0 0 0 1px var(--colors-ed);
+}
+
+.cad .source {
+    color: var(--colors-body-text-dark-grey);
+}
+
+.cad .source .mk-caps {
+    color: inherit;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Media
+   -------------------------------------------------------------------------- */
+
+/* A recording on the colors-f4 ground. The recordings are 16:9; the square
+   phone recording sits centred on the ground, which matches its own background. */
+.cad .media {
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--mk-radius-image);
+    background: var(--colors-f4);
+}
+
+.cad .media > video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* A picture set straight on the page */
+.cad .picture {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cad .picture--round {
+    border-radius: var(--mk-radius-image);
+}
+
+.cad .picture--outlined {
+    box-sizing: border-box;
+    border: 1px solid var(--colors-ed);
+}
+
+/* Crops the frame draws */
+.cad .picture--lofi {
+    aspect-ratio: 808 / 400;
+    object-fit: cover;
+    object-position: 0 17%;
+}
+
+/* Same box as the desktop wireframes, so switching views doesn't resize it */
+.cad .picture--lofi-mobile {
+    object-position: 50% 0;
+}
+
+.cad .picture--popularity {
+    aspect-ratio: 634 / 330;
+    object-fit: cover;
+    object-position: 0 43%;
+}
+
+/* The device views share one slot, so the panel keeps its height between them */
+.cad .mk-panel > .device-view {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: 2208 / 1400;
+    object-fit: contain;
+}
+
+.cad .mk-placeholder {
+    box-sizing: border-box;
+}
+
+/* Segments are equal widths, each as wide as the longest label: the selection
+   thumb lands on every one, and a long label ("Tablet/Desktop") keeps its padding */
+.cad .mk-seg {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+}
+
+/* Only when the control is wider than the page: labels wrap inside their segment */
+.cad .mk-seg__item {
+    white-space: normal;
+}
+
+/* Annotations: a 2px outline round the control, and a 2px line ending in a dot */
+.cad .shot {
+    position: relative;
+    width: 100%;
+}
+
+.cad .shot > img,
+.cad .shot > video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+}
+
+/* The tablet recording is 2048 × 1534; hold its space before it loads */
+.cad .shot--tablet > video {
+    aspect-ratio: 2048 / 1534;
+}
+
+/* A panel on the colors-f4 ground, as the frame's Cross Platform Modal */
+.cad .mk-panel--f4 {
+    background: var(--colors-f4);
+}
+
+.cad .mark-box,
+.cad .mark-line {
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.cad .mark-box {
+    aspect-ratio: 1;
+    border: 2px solid var(--annotation);
+    border-radius: 8px;
+}
+
+.cad .mark-line {
+    background: var(--annotation);
+}
+
+.cad .mark-line::after {
+    content: "";
+    position: absolute;
+    width: 10.66px;
+    height: 10.66px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.cad .mark-line--up,
+.cad .mark-line--down {
+    width: 2px;
+    margin-left: -1px;
+}
+
+.cad .mark-line--left,
+.cad .mark-line--right {
+    height: 2px;
+    margin-top: -1px;
+}
+
+.cad .mark-line--up::after { top: -5.33px; left: 50%; transform: translateX(-50%); }
+.cad .mark-line--down::after { bottom: -5.33px; left: 50%; transform: translateX(-50%); }
+.cad .mark-line--left::after { left: -5.33px; top: 50%; transform: translateY(-50%); }
+.cad .mark-line--right::after { right: -5.33px; top: 50%; transform: translateY(-50%); }
+
+/* The tablet recording with its two notes: 658 × 518 in the frame */
+.cad .shot--tablet {
+    max-width: 658px;
+    padding-top: min(3.86%, 25.4px);
+}
+
+.cad .shot--tablet .mark-line--up { left: 75.97%; top: 1.03%; height: 14.83%; }
+.cad .shot--tablet .mark-line--left { left: -6.99%; top: 52.47%; width: 7.75%; }
+
+/* The phone tab bar with its note: 440 × 713 in the frame, set at the tablet
+   recording's 518px height so switching views keeps the panel's size */
+.cad .shot--tab-bar {
+    max-width: calc(518px * 440 / 713);
+    aspect-ratio: 440 / 713;
+}
+
+.cad .shot--tab-bar > img {
+    width: 91.29%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cad .shot--tab-bar .mark-line--right { left: 86.14%; top: 93.97%; width: 13.86%; }
+
+/* A phone screenshot; the space under it holds the Before note */
+.cad .shot--phone {
+    padding-bottom: 9.7%;
+}
+
+.cad .shot--edit-before .mark-box { left: 51.79%; top: 82.96%; width: 21.73%; }
+.cad .shot--edit-before .mark-line--down { left: 62.65%; top: 94.64%; height: 4.51%; }
+.cad .shot--edit-after .mark-box { left: 87.71%; top: 6.59%; width: 12.29%; }
+.cad .shot--edit-after .mark-line--right { left: 99.86%; top: 9.89%; width: 9.32%; }
+
+/* Before / after: the label above its panel */
+.cad .compare {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-between-text);
+}
+
+.cad .compare > figure {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: var(--compare-gap, var(--space-between-label-caps));
+    min-width: 0;
+}
+
+.cad .compare--loose {
+    --compare-gap: var(--space-between-text);
+}
+
+.cad .compare figcaption {
+    color: var(--colors-black);
+}
+
+.cad .compare .mk-panel {
+    flex: 1 0 auto;
+    justify-content: flex-start;
+}
+
+.cad .compare .mk-panel > img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Blocks
+   -------------------------------------------------------------------------- */
+
+/* Journey: expanding panels with captions below. The open panel takes 2 of
+   4 shares of the row; panel height is fixed so only the width animates. */
+.cad .jr {
+    --jr-gaps: calc(var(--space-between-images) * 2);
+    container-type: inline-size;
+    width: 100%;
+}
+
+.cad .jr-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-between-images);
+    width: 100%;
+}
+
+.cad .jr-col {
+    flex: 1 1 0px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--mk-radius-image);
+    background: transparent;
+    color: var(--colors-body-text-dark-grey);
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: flex-grow 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cad .jr-col[aria-pressed="true"] {
+    flex-grow: 2;
+}
+
+.cad .jr-panel {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc((100cqw - var(--jr-gaps)) * 2 / 7);
+    border: 1px solid var(--colors-ed);
+    border-radius: var(--mk-radius-image);
+    overflow: hidden;
+    background: #e7e7e7;
+}
+
+.cad .jr-panel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 0;
+    cursor: inherit;
+}
+
+.cad .jr-track {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: var(--space-between-text);
+    background: var(--colors-ed);
+}
+
+.cad .jr-bar {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--colors-body-text-dark-grey);
+    transform-origin: left center;
+    animation: jr-fill var(--jr-dur, 4s) linear forwards;
+    transition: opacity 0.2s ease;
+}
+
+.cad .jr.is-paused .jr-bar,
+.cad .jr.is-offscreen .jr-bar {
+    animation-play-state: paused;
+}
+
+.cad .jr.is-paused .jr-bar {
+    opacity: 0.35;
+}
+
+/* Copy on the open step is set at its final width so it doesn't reflow
+   while the panel grows */
+.cad .jr-copy {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 56px;
+    margin-top: 12px;
+    padding-right: 12px;
+}
+
+.cad .jr-col[aria-pressed="true"] .jr-copy {
+    width: calc((100cqw - var(--jr-gaps)) / 2);
+}
+
+.cad .jr-title {
+    font-weight: var(--weight-medium);
+    color: var(--black);
+}
+
+.cad .jr-title::after {
+    content: " ";
+}
+
+/* Shown only on the open step; display flipping on replays the fade */
+.cad .jr-desc {
+    display: none;
+    color: var(--grey);
+    animation: jr-in 220ms linear 280ms both;
+}
+
+.cad .jr-col.is-open .jr-desc {
+    display: inline;
+}
+
+@keyframes jr-fill {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes jr-in {
+    from { opacity: 0; filter: blur(3px); }
+    to { opacity: 1; filter: blur(0); }
+}
+
+/* Narrow: every step is open and stacked; no timer, nothing to select */
+@container (max-width: 700px) {
+    .cad .jr-row {
+        flex-direction: column;
+        gap: var(--space-between-images-mobile);
+    }
+
+    .cad .jr-col,
+    .cad .jr-col[aria-pressed="true"] {
+        flex: none;
+        width: 100%;
+        cursor: default;
+        transition: none;
+    }
+
+    .cad .jr-panel,
+    .cad .jr-col[aria-pressed="true"] .jr-panel {
+        height: auto;
+        aspect-ratio: 7 / 4;
+    }
+
+    .cad .jr-track {
+        display: none;
+    }
+
+    .cad .jr-copy,
+    .cad .jr-col[aria-pressed="true"] .jr-copy {
+        width: 100%;
+        min-height: 0;
+    }
+
+    .cad .jr-desc {
+        display: inline;
+        animation: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cad .jr-col {
+        transition: none;
+    }
+
+    .cad .jr-bar,
+    .cad .jr-desc {
+        animation: none;
+    }
+}
+
+/* Cards: words on creme, outlined in colors-ed */
+.cad .card {
+    border: 1px solid var(--colors-ed);
+}
+
+.cad .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.cad .cards .card {
+    gap: var(--space-between-label-caps);
+    min-height: 182px;
+}
+
+.cad .card--wide {
+    grid-column: 1 / -1;
+}
+
+.cad .mk-grid-2 > .card--small:not(.card--wide) {
+    min-height: 264px;
+}
+
+/* Key findings: three columns inside one card */
+.cad .findings {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--mk-gap-images);
+}
+
+/* Each finding is headed by the competitor's logo beside its name, set in H4.
+   It is an h4 under the card's title, so the site's caps treatment of h4 is undone here. */
+.cad .findings__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: none;
+}
+
+.cad .findings__logo {
+    display: block;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--mk-radius-image);
+    background: #d9d9d9;
+    object-fit: cover;
+}
+
+/* Comparison table: outlined, creme header, caps row labels */
+.cad .comparison-table-wrap {
+    box-sizing: border-box;
+    border: 1px solid var(--colors-ed);
+    border-radius: var(--mk-radius-image);
+    /* Trims the header ground to the rounded outline; clip is not a scroll box */
+    overflow: hidden;
+    overflow: clip;
+}
+
+.cad .comparison-table {
+    color: var(--colors-black);
+}
+
+.cad .comparison-table thead th {
+    background: var(--colors-creme);
+    color: var(--colors-black);
+}
+
+.cad .comparison-table tbody th {
+    padding-left: 20px;
+    font-size: var(--size-12);
+    line-height: var(--line-height-16);
+    letter-spacing: var(--tracking-wide-048);
+    font-weight: var(--weight-semibold);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@container (max-width: 620px) {
+    .cad .comparison-table tbody th {
+        padding-left: 12px;
+    }
+}
+
+.cad .pill-groups {
+    gap: var(--space-between-text);
+}
+
+
+/* Sorting table (Core system): functions, how they behave, and their group */
+.cad .sort-figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-between-label-caps);
+}
+
+.cad .sort-figure figcaption {
+    color: var(--colors-body-text-dark-grey);
+}
+
+.cad .sort-table-wrap {
+    box-sizing: border-box;
+    border: 1px solid var(--colors-ed);
+    border-radius: var(--mk-radius-image);
+    overflow: hidden;
+    overflow: clip;
+}
+
+.cad .sort-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--colors-black);
+    font-size: var(--size-14);
+    line-height: var(--line-height-20);
+}
+
+.cad .sort-table th,
+.cad .sort-table td {
+    padding: 14px 16px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 1px solid var(--colors-ed);
+}
+
+.cad .sort-table thead th {
+    border-top: 0;
+    background: var(--colors-creme);
+    font-size: var(--size-12);
+    line-height: var(--line-height-16);
+    letter-spacing: var(--tracking-wide-048);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+}
+
+.cad .sort-table tbody th {
+    font-weight: var(--weight-medium);
+}
+
+.cad .sort-table td {
+    color: var(--colors-body-text-dark-grey);
+}
+
+.cad .sort-table__group {
+    background: var(--colors-ed);
+    color: var(--colors-black);
+}
+
+/* Quotes from early users */
+.cad .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-between-text);
+    margin: 0;
+}
+
+.cad .quote blockquote {
+    margin: 0;
+}
+
+.cad .quote figcaption {
+    color: var(--colors-body-text-dark-grey);
+}
+
+/* --------------------------------------------------------------------------
+   6. Desktop-only values (the shared stylesheets restack these under 768px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Two screenshots in one panel, 530 and 254 wide in the frame */
+    .cad .mk-panel--pair {
+        gap: 24px;
+        padding: 24px var(--mk-margin);
+    }
+
+    .cad .mk-panel--pair > img:first-child {
+        flex: 530 1 0;
+        width: auto;
+        min-width: 0;
+    }
+
+    .cad .mk-panel--pair > img:last-child {
+        flex: 254 1 0;
+        width: auto;
+        min-width: 0;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Narrow windows
+   -------------------------------------------------------------------------- */
+
+/* Under 1024px the side nav goes and the body takes the page margin */
+@media (max-width: 1023px) {
+    #case-study-wrapper.cad > .left {
+        display: none;
+    }
+
+    #case-study-wrapper.cad > .right {
+        max-width: none;
+        padding: 0;
+    }
+
+    .cad .meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile mode: under 768px */
+@media (max-width: 767px) {
+    .cad-hero.preview {
+        padding: 0;
+    }
+
+    .cad .cards,
+    .cad .findings {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cad .cards .card,
+    .cad .stat-card,
+    .cad .mk-grid-2 > .card--small:not(.card--wide) {
+        min-height: auto;
+    }
+
+    .cad .compare {
+        flex-direction: column;
+    }
+
+    /* The sorting table drops its "What it does" column to fit */
+    .cad .sort-table th:nth-child(3),
+    .cad .sort-table td:nth-child(3) {
+        display: none;
+    }
+
+    .cad .sort-table th,
+    .cad .sort-table td {
+        padding: 12px 10px;
+    }
+
+    .cad .sort-table th:first-child {
+        width: 52%;
+    }
+
+    .cad .sort-table__group {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .cad .quotes {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cad .mk-panel--roomy {
+        padding: var(--mk-margin);
+    }
+
+    /* The side notes have no room beside a full-width screenshot */
+    .cad .shot--tablet .mark-line--left,
+    .cad .shot--edit-after .mark-line--right {
+        display: none;
+    }
+}

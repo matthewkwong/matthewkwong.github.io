@@ -1,108 +1,57 @@
-/* a{
-    text-decoration: none;
-    color: #FF614C;
-} */
-
-a:visited{
-    color: #FF614C;
+/* Toybox – the orange is the system's own hue: it marks the current section in the
+   side nav (link and marker). It is not set as --accent, so links stay colors-blue. */
+:root {
+    --accent-nav: var(--colors-toybox-orange);
 }
 
-.callout{
-    background-color: #FF614C;
-}
-
-
-/* #project-preview{
-    height: 50vh;
-    width: 100%;
-    background-image:url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-
-
-#synthesis{
+#synthesis {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: var(--space-between-text);
     flex-wrap: wrap;
     width: 100%;
-    /* border: solid 2px red;
-    box-sizing: border-box; */
 }
 
 #synthesis div {
-    max-width:calc(50% - 24px);
+    max-width: calc(50% - var(--space-between-text));
 }
 
-/* #title-content-wrapper h1{
-    font-size: 40px;
-} */
-
-#project-preview{
+#project-preview {
     width: auto;
     max-height: 80%;
 }
 
-.research-callout{
+.research-callout {
     align-items: flex-start;
 }
 
-/* .section-image > video{
-    width: 90%;
-} */
-
-/* ul li{
-    font-size: 14px;
-} */
-
-/* Sidebar colors */
-.sidebar-menu a:hover {
-    color: #FF614C;
-}
-
-.sidebar-menu a.active {
-    color: #FF614C;
-}
-
-.sidebar-menu a.active::before {
-    background-color: #FF614C;
-}
-
-.sidebar-menu a:hover::before {
-    background-color: #FF614C;
-}
-
-
-#chart-container{
+#chart-container {
     max-width: 100%;
 }
 
-
-/* #title {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), 
-    rgba(0, 0, 0, 0.8)), 
-    url("img/toybox/search/v3-deliverables/overview-banner.jpeg");
-} */
-
-
-/* Less than 768px */
-@media only screen and (max-width: 768px) {
-    .preview{
+/* Mobile mode: under 768px */
+@media only screen and (max-width: 767px) {
+    .preview {
         height: auto;
-        padding:  50px 0px;
+        padding: var(--space-between-header) 0;
     }
-
 
     #synthesis div {
         max-width: 100%;
     }
 }
 
-/* video{
-    box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
--webkit-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
--moz-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
-} */
+
+/* Project details: four to a row on desktop, the fifth on its own line below.
+   Each row keeps the equal space between items (see case-study.css). */
+@media only screen and (min-width: 1024px) {
+    #project-details-list {
+        flex-wrap: wrap;
+        row-gap: var(--space-between-text);
+    }
+
+    #project-details-list > :nth-child(5) {
+        flex-basis: 100%;
+        max-width: none;
+    }
+}

@@ -7,6 +7,8 @@
         <meta property="og:image" content="img/meta/toybox-search.jpg">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="tokens.css">
+        <link rel="stylesheet" href="design-system.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="inter/inter.css">
         <link rel="stylesheet" href="case-study.css">
@@ -20,8 +22,7 @@
         <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css">
         <!-- JQuery -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
 
     <body>
 
@@ -64,7 +65,7 @@
               Your browser does not support videos
           </video> -->
 
-          <section class = "section-image preview"  style="background-color: #f4f4f4;"> 
+          <section class = "section-image preview" style="background-color: var(--colors-f4);"> 
             <video width="1080" playsinline autoplay muted loop>
                 <source src="img/toybox/search/banner.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -75,7 +76,12 @@
 
       <section class = "content-wrapper" id = "case-study-wrapper">
           <!-- Sidebar Menu -->
-        <div class="sidebar-menu left">
+        <div class="left">
+            <a class="side-nav__back" href="product.html">
+                <svg class="mk-icon" width="24" height="24" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.29289 3.4038L2.6967 8L7.29289 12.5962M2.6967 8H13.3033" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+            </a>
+            <div class="sidebar-menu">
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#impact">Impact</a></li>
@@ -86,6 +92,7 @@
                 <li><a href="#design-for-a-reason">Design for a reason</a></li>
                 <li><a href="#solution">Solution</a></li>
             </ul>
+            </div>
         </div>
 
           <!-- Main Content -->
@@ -283,7 +290,7 @@
                               <script>
                                 const ctx = document.getElementById('myChart');
                               
-                                new Chart(ctx, {
+                                const chart = new Chart(ctx, {
                                   type: 'bar',
                                   data: {
                                       labels: ['< 15 mins', '15-30 mins', '30 min-1 hour', '1-1.5 hours', '1.5-2 hours', '2+ hours'],
@@ -318,6 +325,10 @@
                                       responsive: true
                                     }
                                 });
+
+                                // Keep the chart the width of its section: re-fit whenever the
+                                // section's width changes (including when the window grows again).
+                                new ResizeObserver(() => chart.resize()).observe(ctx.parentElement);
                               </script>
                       </div>
               </section>
@@ -495,5 +506,6 @@
       <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
       <script src="smooth-scroll.js"></script>
       <script src="case-study-sidebar.js"></script>
+    <script src="video-loader.js"></script>
     </body>
 </html>

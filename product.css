@@ -1,45 +1,66 @@
-@font-face {
-    font-family: 'ZT Formom';
-    src: url('fonts/zt-formom-italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
+/* ==========================================================================
+   PRODUCT PAGE – the grid of case studies
+   Type, colour, radii and gaps come from the design system
+   (tokens.css + design-system.css).
+   ========================================================================== */
 
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-
-
-:root{
-    --custom-blue: #18A0FB;
-}
-
-body {  
+body {
     margin: 0 auto;
     display: flex;
-    /* gap: 64px; */
     flex-direction: column;
-    font-family: "Poppins", sans-serif;
-    background-color: #ffff;
 }
 
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mk-gap-sections);
+    max-width: 2560px;
+    width: calc(100% - 2 * var(--mk-margin));
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: var(--space-between-sections);
+    overflow-x: hidden;
+}
+
+
+/* --------------------------------------------------------------------------
+   1. Header: the page title and its lead
+   -------------------------------------------------------------------------- */
+
+#heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-between-text);
+    width: 100%;
+    margin-top: var(--mk-gap-header);
+}
+
+/* Every h2 on this page uses the body text colour */
+h2 {
+    color: var(--colors-body-text-dark-grey);
+}
+
+/* The lead under the title: Heading/H2 */
+#heading-wrapper h2 {
+    max-width: 75vw;
+    margin: 0;
+    color: var(--colors-body-text-dark-grey);
+}
+
+#heading {
+    margin: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Work grid
+   -------------------------------------------------------------------------- */
+
 .selected-work {
-    /* padding: 20px; */
-    /* max-width: 1080px; */
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -47,104 +68,129 @@ body {
     box-sizing: border-box;
 }
 
-
-.tag{
-    font-size: 14px;
-    line-height: 20px;
-    background-color:#f4f4f4;
-    /* background-color: #9e9e9e; */
-    border-radius: 8px;
-    padding: 12px;
-    padding-top: 4px;
-    padding-bottom: 4px;   
-    text-align: center;
-    /* color: white; */
-    color: #595959;
-}
-
-.tag-wrapper {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    /* z-index: 1; */
-
-    display: flex;
-        /* display: none; */
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    width:fit-content;
-    /* border: solid 2px red; */
-}
-
 .work-grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr); */
-    column-gap: 12px;
-    row-gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--mk-gap-images);
+    row-gap: var(--mk-gap-header);
 }
 
-/* .work-grid:last-child{
-    margin-top: 28px;
-} */
-
-.case-study{
-    flex: 1 0 33%;
+.case-study {
     position: relative;
+    min-width: 0;
 }
 
-.case-study-content{
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
+/* Empty spacer cell (was only needed to even out the old flex rows) */
+.case-study:empty {
+    display: none;
 }
 
-.case-study a{
-    /* color: #666;
-    background-color: #f9f9f9; */
-    /* border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left; */
+/* Very wide screens (over 1920px): 3 columns, so cards stay a comfortable size */
+@media (min-width: 1921px) {
+    .work-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Tablet: 2 columns (same as desktop) */
+@media (max-width: 1023px) {
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.case-study a {
     display: flex;
     flex-direction: column;
-    /* gap: 12px; */
+    gap: var(--space-between-text);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.case-study-text{
+/* Card text: title, description, 6px apart */
+.case-study-text {
     display: flex;
-    flex-direction:column;
-    /* gap: 8px; */
+    flex-direction: column;
+    gap: 6px;
 }
 
+/* Card title: Heading/H3 */
+.case-study-text h3 {
+    margin: 0;
+}
 
-.case-study-details{
+.case-study-details {
     display: flex;
     flex-direction: column;
     justify-content: left;
     gap: 12px;
-    /* justify-content:space-between; */
-    /* border:solid 2px red; */        
     height: auto;
 }
 
+.case-study-details p {
+    margin: 0;
+    color: var(--grey);
+}
+
+/* Tags: a row of labels over the top-right of the image, shown on hover / keyboard focus.
+   Touch screens can't hover, so there they stay below the description. */
+.case-study .tag-wrapper {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: fit-content;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .case-study .tag-wrapper {
+        position: absolute;
+        top: var(--space-between-text);
+        right: var(--space-between-text);
+        z-index: 1;
+        justify-content: flex-end;
+        max-width: calc(100% - 2 * var(--space-between-text));
+        pointer-events: none;
+    }
+
+    /* The tags ease in together: a soft fade and a short drop */
+    .case-study .tag-wrapper .mk-tag {
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .case-study:hover .tag-wrapper .mk-tag,
+    .case-study:focus-within .tag-wrapper .mk-tag {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study .tag-wrapper .mk-tag {
+        transform: none;
+        transition: opacity 0.2s ease;
+    }
+}
 
 .image-placeholder-wrapper {
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--mk-radius-image);
 }
 
 .image-placeholder {
     position: relative;
-    background-color: #e0e0e0;
-    width: 100%;
+    background-color: var(--colors-ed);
+    width: auto;
     height: auto;
+    aspect-ratio: 16 / 9;
     transition: transform 0.3s ease;
 }
 
@@ -153,8 +199,48 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* margin: auto; */
 }
+
+.case-study:hover .image-placeholder {
+    transform: scale(1.05);
+}
+
+/* Salesforce */
+#salesforce .image-placeholder {
+    background-image: url("img/salesforce/overview-new-resized.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 45 Fremont */
+.case-study:nth-child(4) .image-placeholder {
+    background-image: url("45fremont.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: var(--colors-45-fremont-peach);
+}
+
+/* Spotify Rooms */
+.more-work-item:nth-child(2) .image-placeholder {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--colors-creme);
+}
+
+/* PlayTest */
+.more-work-item:nth-child(4) .image-placeholder {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. More work toggle
+   -------------------------------------------------------------------------- */
 
 .more-work {
     display: none;
@@ -167,284 +253,42 @@ body {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    margin-bottom: 36px;
+    margin-bottom: var(--mk-gap-images);
 }
 
 .toggle-button {
     cursor: pointer;
-    color: black;
+    color: var(--black);
     text-decoration: none;
     margin: 0 0 24px 0;
 }
 
-.toggle-button a{
-    color: var(--custom-blue);
-}
 
+/* --------------------------------------------------------------------------
+   4. Mobile mode: under 768px
+   -------------------------------------------------------------------------- */
 
-.case-study:hover .image-placeholder {
-    transform: scale(1.05);
-}
-
-
-
-/* Specific sizing for the grid items */
-.case-study:nth-child(1),
-.case-study:nth-child(4),
-.case-study:nth-child(5),
-.case-study:nth-child(8) {
-    grid-column: span 3;
-}
-
-.case-study:nth-child(2),
-.case-study:nth-child(3) 
-.case-study:nth-child(6) 
-.case-study:nth-child(7) {
-    grid-column: span 2;
-}
-
-/* 16: 9 Horizontal */
-.case-study:nth-child(1) .image-placeholder,
-.case-study:nth-child(4) .image-placeholder,
-.case-study:nth-child(5) .image-placeholder,
-.case-study:nth-child(8) .image-placeholder {
-    /* max-height: 600px; */
-    width: auto;
-    aspect-ratio: 1 / 1;
-        /* height: auto; */
-}
-
-/* square items */
-.case-study:nth-child(2) .image-placeholder,
-.case-study:nth-child(3) .image-placeholder,
-.case-study:nth-child(6) .image-placeholder,
-.case-study:nth-child(7) .image-placeholder {
-    /* max-height: 100%; */
-    width: auto;
-    aspect-ratio: 1 / 1;
-}
-
-
-
-
-#content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
-    max-width: 2560px;
-    /* max-width: 1080px; */
-    /* Account for 24px on each side. 48px total */
-    width: calc(100% - 96px); 
-    margin: 0 auto;
-    /* padding: 0 48px; */
-    box-sizing: border-box;
-
-    /* need to keep this so the scroll bar doesnt appear when the more work section is open */
-    /* overflow-y: hidden; */
-    margin-bottom: 64px;
-}
-
-/* Header */
-#heading-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 48px;
-    gap: 24px;
-    flex-direction: column;
-}
-
-#heading{
-    /* align-items: center; */
-    /* display: flex; */
-    margin: 0;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#profile-image{
-    max-width: 50%;
-    /* height: 300px; */
-    /* width: 100%; */
-        /* border: solid 2px rosybrown; */
-}
-
-#profile-image img{
-    margin: auto 0;
-    /* border: solid 2px red; */
-}
-
-#home-name{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    /* border: solid 2px red; */
-    width: 50%;
-}
-
-
-.profile-name {
-    font-family: 'ZT Formom';
-    font-size: 64px;
-}
-
-
-  .profile-title {
-    /* font-family: 'Poppins', sans-serif; */
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.5;
-    /* width: 80%; */
-  }
-
-  .profile-title span{
-    font-weight: 300;
-  }
-
-/* 
-  .profile-meta {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  .profile-meta a {
-    text-decoration: underline;
-    color: black
-  } */
-
-
-  /* Selected Work */
-
-  /* salesforce */
-#salesforce .image-placeholder{
-    background-image: url("img/salesforce/overview-new-resized.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;        
-}
-
-/* find my covid test */
-.case-study:nth-child(1) .image-placeholder{
-    background-color: #D6EBFF;   
-}
-
-/* 45 Fremont */
-.case-study:nth-child(4) .image-placeholder{
-    background-image: url("45fremont.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-color: #FFD494;  
-}
-
-/* Spotify Rooms */
-.more-work-item:nth-child(2) .image-placeholder{
-    /* background-image: url("img/case-studies/spotify.jpg"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #FDF7EF;
-        aspect-ratio: 1 / 1;
-}
-
-/* PlayTest */
-.more-work-item:nth-child(4) .image-placeholder{
-    /* background-image: url("img/playtest/overview.png"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-/* media queries */
-
-@media (max-width: 768px) {
-
-    #content-wrapper{
-        width: calc(100% - 48px);
+@media (max-width: 767px) {
+    #heading-wrapper h2 {
+        max-width: 100%;
     }
 
-    .case-study{
-        flex: 1 0 100%;
-    }
-
-    .profile-name {
-        font-size: 48px;
-    }
-
-    .profile-title{
-        font-size: 20px;
-    }
-
-    #heading-wrapper{
-        flex-direction: column;
-        /* margin: 0px; */
-    }
-
-    #heading{
-        margin: 0px;
+    #heading {
+        margin: 0;
         width: 100%;
     }
 
-    #profile-image{
-        display: none;
-    }
-
-    #home-name{
-        width: 100%;
-        /* justify-content: center; */
-    }
-
-    /* #content-wrapper {
-        width: calc(100% - 48px);
-        padding: 0 24px;
-    } */
-    
     .work-grid {
-        grid-template-columns: 1fr;
-        gap: 64px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--mk-gap-sections);
     }
-
-    .case-study:nth-child(1),
-    .case-study:nth-child(4) {
-        grid-column: span 1;
-    }
-
-    .case-study:nth-child(2),
-    .case-study:nth-child(3) {
-        grid-column: span 1;
-    }
-    /* .work-item {
-        grid-column: span 1;
-    }
-     */
-
 }
 
-/* MOBILE */
 @media (max-width: 480px) {
-
-    /* .case-study{
-      flex: 1 0 100%;
-} */
-    .case-study-details{
+    .case-study-details {
         height: auto;
         width: auto;
         flex-wrap: wrap;
     }
-    .image-placeholder-wrapper{
-        min-height: 288.8px;
-        height: 100%;
-        min-width: 288.8px;
-        width: auto; 
-        aspect-ratio: 1; 
-        /* margin: 0 auto; */
-/* object-fit: contain; */
-    }
-    /* .image-placeholder-wrapper{
-        height: 200px;
-    } */
+
 }

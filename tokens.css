@@ -1,0 +1,103 @@
+/* ==========================================================================
+   DESIGN TOKENS - matthewkwong.com design system
+   Generated from the system's tokens.json, which is synced from the variables
+   and styles of the Figma file "matthewkwong.com - March 2026".
+   Do not edit values here: change the Figma variable, re-sync the design
+   system, then regenerate this file.
+   ========================================================================== */
+
+:root {
+    /* Colour */
+    --colors-white: #ffffff;
+    --colors-creme: #fbfaf7;
+    --colors-ed: #ededed;
+    --colors-f4: #f4f4f4;
+    --colors-body-text-dark-grey: #444444;
+    --colors-toybox-orange: #ff614c;
+    --colors-black: #1c1f23;
+    --colors-green: #368d00;
+    --colors-red: #cf3535;
+    --colors-blue: #18a0fb;
+    --colors-45-fremont-navy: #373764;
+    --colors-45-fremont-peach: #fed499;
+    --colors-linkedin-blue: #0966c2;
+    --colors-covid-purple: #7988fd;
+    --colors-covid-red: #e63939;
+    --colors-aidin-pink: #fe0058;
+    --colors-spotify-green: #1dd05d;
+    --colors-salesforce-blue: #00a1e0;
+    --colors-playtest-blue: #346dff;
+    --black: #000000;
+    --grey: #595959;
+    --light-grey: #b3b3b3;
+    --gray-1: #333333;
+
+    /* Spacing */
+    --space-between-sections: 64px;
+    --space-between-sections-mobile: 48px;
+    --space-between-header: 48px;
+    --space-between-header-mobile: 32px;
+    --space-between-images: 32px;
+    --space-between-images-mobile: 24px;
+    --space-between-text: 16px;
+    --space-between-label-caps: 8px;
+    --margins-margin: 48px;
+    --margins-margin-mobile: 24px;
+    --mobile-margin-left-right: 24px;
+    --button-padding-left-right: 12px;
+    --button-padding-top-bottom: 10px;
+    --button-no-launch-button: 24px;
+
+    /* Radius */
+    --image-border-radius: 16px;
+    --image-border-radius-mobile: 8px;
+
+    /* Layout */
+    --max-width: 1200px;
+
+    /* Font size */
+    --size-12: 12px;
+    --size-14: 14px;
+    --size-16: 16px;
+    --size-18: 18px;
+    --size-20: 20px;
+    --size-24: 24px;
+    --size-32: 32px;
+    --size-40: 40px;
+
+    /* Line height */
+    --line-height-16: 16px;
+    --line-height-20: 20px;
+    --line-height-24: 24px;
+    --line-height-28: 28px;
+    --line-height-32: 32px;
+    --line-height-40: 40px;
+    --line-height-48: 48px;
+
+    /* Letter spacing */
+    --tracking-tight-080: -0.8px;
+    --tracking-tight-048: -0.48px;
+    --tracking-tight-024: -0.24px;
+    --tracking-tight-010: -0.1px;
+    --tracking-none: 0px;
+    --tracking-wide-048: 0.48px;
+
+    /* Font weight */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Font families. Inter is served from inter/inter.css. */
+    --font-inter: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-formom: "ZT Formom", Inter, system-ui, sans-serif;
+}
+
+/* The one display face: the name in the footer (footer-name). */
+@font-face {
+    font-family: "ZT Formom";
+    src: url("fonts/zt-formom-italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}

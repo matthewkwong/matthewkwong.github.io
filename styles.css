@@ -1,94 +1,44 @@
 /* ==========================================================================
-   SHARED STYLES – index.html, motion.html, toybox-search.html
+   SHARED STYLES – layout for index.html, motion.html and the case studies
+
+   Type, colour, spacing and radii come from the design system:
+     tokens.css          the variables
+     design-system.css   element defaults and the .mk-* components
+   This file only holds layout that is specific to this site.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Variables & fonts
-   -------------------------------------------------------------------------- */
-
-:root {
-    --custom-blue: #18A0FB;
-    --default-text: #595959;
-}
-
-@font-face {
-    font-family: 'ZT Formom';
-    src: url('fonts/zt-formom-italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-
-/* --------------------------------------------------------------------------
-   2. Base – body & typography
+   1. Base
    -------------------------------------------------------------------------- */
 
 body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    font-family: "InterDisplay", sans-serif;
-    background-color: #fff;
 }
 
-h1 {
-    /* font-family: 'ZT Formom'; */
-    font-size: 48px;
-    /* font-size: 40px; */
-    /* font-style: oblique; */
-    font-weight: 500;
-    /* font-weight: 800; */
-    letter-spacing: 0.5px;
-    line-height: 1.25;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+
+/* --------------------------------------------------------------------------
+   2. States the design system does not define
+   The Figma file draws no hover look, so these keep the site's existing
+   hover feedback, coloured from the tokens.
+   -------------------------------------------------------------------------- */
+
+.mk-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h2 {
-    font-size: 28px;
-    line-height: 1.4;
-    font-weight: 500;
+.mk-btn--dark:hover {
+    background-color: var(--grey);
 }
 
-h3 {
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 500;
+.mk-btn--light:hover {
+    background-color: var(--colors-ed);
 }
 
-h4 {
-    font-size: 14px;
-    line-height: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--default-text);
-}
-
-p {
-    color: var(--default-text);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
+/* A button sits inside its link on this site */
+a:has(> .mk-btn) {
+    text-decoration: none;
 }
 
 
@@ -99,12 +49,12 @@ p {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: var(--mk-gap-sections);
     max-width: 2560px;
-    width: calc(100% - 96px);
+    width: calc(100% - 2 * var(--mk-margin));
     margin: 0 auto;
     box-sizing: border-box;
-    margin-top: 48px;
+    margin-top: var(--mk-gap-header);
 }
 
 
@@ -127,8 +77,8 @@ p {
     width: 100%;
 }
 
-#heading-wrapper h2{
-    margin-bottom: 0px;
+#heading-wrapper h2 {
+    margin-bottom: 0;
 }
 
 #heading > #heading-name {
@@ -165,7 +115,6 @@ p {
     justify-content: space-between;
     position: absolute;
     top: 40%;
-    /* top: 35vh; */
     margin: auto;
     width: 100%;
 }
@@ -174,7 +123,7 @@ p {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: var(--mk-gap-images);
 }
 
 #heading-text > #left {
@@ -182,10 +131,18 @@ p {
 }
 
 #heading-text h1 {
-    font-size: 48px;
-    line-height: 58px;
-    color: black;
     margin-bottom: 0;
+}
+
+/* "Open to new opportunities" is an h2 (the h1 is the line beside it). On desktop it
+   keeps the h1 look it always had; on a phone it takes the h2 type, below. */
+#heading-text #right h2 {
+    margin: 0;
+    font-size: var(--mk-h1-size);
+    line-height: var(--mk-h1-lh);
+    letter-spacing: var(--mk-h1-ls);
+    font-weight: var(--weight-semibold);
+    color: var(--black);
 }
 
 #heading-text #right #mobile-only {
@@ -195,7 +152,6 @@ p {
 #heading-text #right {
     max-width: 350px;
     align-items: flex-end;
-    color: black;
     text-align: right;
 }
 
@@ -206,26 +162,19 @@ p {
 
 #motion-graphics {
     max-width: 2560px;
-    padding: 64px 0;
+    padding: var(--space-between-sections) 0;
 }
 
 #motion-graphics h1,
+#motion-graphics h3,
 #motion-graphics p,
 #motion-graphics h4 {
-    color: white;
+    color: var(--colors-white);
 }
 
 #motion-graphics .overlay {
-    color: white;
+    color: var(--colors-white);
 }
-
-/* #motion-graphics h1,
-#work-together h1,
-#ux-design h1{
-    font-family: "InterDisplay", sans-serif;
-    font-style: normal;
-    font-size: 48px;
-} */
 
 .category-and-button {
     display: flex;
@@ -237,7 +186,7 @@ p {
 }
 
 #work-together {
-    padding: 128px 0;
+    padding: calc(2 * var(--space-between-sections)) 0;
 }
 
 #work-together-content {
@@ -246,17 +195,10 @@ p {
     gap: 24px;
 }
 
-#work-together-content h2{
+#work-together-content h2 {
     max-width: 75%;
-    font-weight: 400;
-    color: var(--default-text);
+    color: var(--colors-body-text-dark-grey);
 }
-
-/* #work-together h2 {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 48px;
-} */
 
 #work-together a {
     width: fit-content;
@@ -265,24 +207,14 @@ p {
 
 /* --------------------------------------------------------------------------
    6. Tags
+   The tag itself is the design system's .mk-tag; this places a row of them.
    -------------------------------------------------------------------------- */
-
-.tag {
-    font-size: 14px;
-    line-height: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 8px 12px 8px 12px ;
-    text-align: center;
-    color: #595959;
-    /* box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25); */
-}
 
 .tag-wrapper {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 20px;
+    margin: var(--space-between-text);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -291,59 +223,7 @@ p {
 
 
 /* --------------------------------------------------------------------------
-   7. Buttons
-   -------------------------------------------------------------------------- */
-
-button {
-    padding: 10px 18px 10px 24px;
-    background-color: black;
-    color: white;
-    border: 2px transparent solid;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    /* background-color: white; */
-    /* color: black !important; */
-    color: white;
-    border: 2px solid transparent;
-    box-sizing: border-box;
-}
-
-.inverse-button {
-    background-color: white;
-    color: black !important;
-}
-
-.inverse-button span {
-    color: black;
-}
-
-.inverse-button:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    /* background-color: black; */
-    /* color: white !important; */
-    border: 2px solid transparent;
-}
-
-/* .inverse-button:hover span {
-    color: white;
-} */
-
-
-/* --------------------------------------------------------------------------
-   8. Stage visuals & branding (index + motion)
+   7. Stage visuals & branding (index + motion)
    -------------------------------------------------------------------------- */
 
 .stage-visual-wrapper {
@@ -352,7 +232,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, auto);
     grid-template-rows: auto auto;
-    gap: 12px;
+    gap: var(--mk-gap-images);
     height: auto;
 }
 
@@ -363,7 +243,7 @@ button:hover {
     display: block;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--mk-radius-image);
     width: 100%;
 }
 
@@ -376,40 +256,35 @@ button:hover {
     display: block;
     padding: 0;
     margin: 0;
-    border-radius: 16px;
+    border-radius: var(--mk-radius-image);
 }
 
-.hover-text{
+.hover-text {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    color: white;
-    font-size: 20px;
+    gap: var(--space-between-label-caps);
+    color: var(--colors-white);
     position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
+    bottom: var(--space-between-text);
+    left: var(--space-between-text);
+    right: var(--space-between-text);
 }
 
-.hover-text h3{
-    margin-bottom: 0px;
-}
-
-.stage-visual-video .hover-text p,
-.branding-item .hover-text p {
-    color: white;
-}
-
-.hover-text * {
-    color: white;
-    /* margin: 0; */
-}
-
-.hover-text p{
+.hover-text h3 {
     margin: 0;
 }
 
-/* Overlay */
+.hover-text p {
+    margin: 0;
+}
+
+.hover-text,
+.hover-text h3,
+.hover-text p {
+    color: var(--colors-white);
+}
+
+/* Overlay: the black fade under the text of a motion card */
 .stage-visual-wrapper .overlay,
 .branding-wrapper .overlay {
     position: absolute;
@@ -420,16 +295,7 @@ button:hover {
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
-    /* border-radius: 16px; */
-}
-
-.stage-visual-wrapper .overlay p {
-    margin-top: 0;
-}
-
-.stage-visual-wrapper .overlay h2 {
-    margin-bottom: 0;
+    background: linear-gradient(to top, var(--black), transparent);
 }
 
 .stage-visual-video:hover .overlay,
@@ -445,7 +311,7 @@ button:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: color-mix(in srgb, var(--black) 50%, transparent);
     transition: opacity 0.3s ease;
 }
 
@@ -455,12 +321,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.3s ease-in-out;
     cursor: pointer;
-}
-
-.button-overlay button:hover {
-    border: 2px solid transparent;
 }
 
 .stage-visual-video:hover .button-overlay,
@@ -519,11 +380,11 @@ button:hover {
 
 
 /* ==========================================================================
-   9. Media queries
+   8. Mobile (the design system's Mobile mode: under 768px)
    ========================================================================== */
 
 /* Mobile scroll fix – ensures page scrolls on phones (used by all pages) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     html {
         overflow-y: auto;
         overflow-x: hidden;
@@ -531,6 +392,7 @@ button:hover {
         height: auto;
         min-height: 100%;
     }
+
     body {
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
@@ -538,37 +400,14 @@ button:hover {
     }
 }
 
-@media (max-width: 768px) {
-    h1{
-        font-size: 36px;
-    }
-
-    h2{
-          font-size: 28px;
-    }
-
+@media (max-width: 767px) {
     /* Stage visuals & branding */
-    .stage-visual-wrapper,
     .projects-3d-wrapper,
-    .branding-wrapper,
     .projects-3d-wrapper > .col-1,
     .projects-3d-wrapper > .col-2,
     .projects-3d-wrapper > .col-3 {
-        gap: 24px;
+        gap: var(--mk-gap-images);
     }
-
-    /* .button-overlay button {
-        top: 0;
-        left: 0;
-        transform: translate(0, 0);
-        position: relative;
-    }
-
-    .button-overlay{
-        transform: translate(0, 0);
-        position: relative;
-        opacity: 1;
-    } */
 
     .stage-visual-wrapper .button-overlay {
         width: 100%;
@@ -595,7 +434,7 @@ button:hover {
         height: auto;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 48px;
+        gap: var(--mk-gap-sections);
     }
 
     .stage-visual-video {
@@ -603,9 +442,14 @@ button:hover {
         height: auto;
     }
 
+    /* On the home page, Toybox: Build App comes first on a phone, ahead of Toybox: Search */
+    .stage-visual-wrapper--five > .stage-visual-video:nth-child(2) {
+        order: -1;
+    }
+
     /* Live visuals: matt, norae, devyn */
     #live-visuals .stage-visual-video video {
-        aspect-ratio:  9 / 16;
+        aspect-ratio: 9 / 16;
         display: block;
         width: 100%;
     }
@@ -625,20 +469,14 @@ button:hover {
         top: 42.5%;
     }
 
+    /* The card text sits under the media instead of over it */
     .stage-visual-video .hover-text,
     .branding-item .hover-text {
         position: relative;
         bottom: auto;
         left: auto;
         right: auto;
-    }
-
-    .stage-visual-wrapper .hover-text > h2 {
-        color: white;
-    }
-
-    .stage-visual-wrapper .hover-text > p {
-        color: white;
+        margin-top: var(--space-between-text);
     }
 
     .stage-visual-video .overlay,
@@ -656,13 +494,8 @@ button:hover {
         height: auto;
         width: 100%;
         opacity: 1;
-        background-image: none;
-        border-radius: 8px;
+        background: none;
         margin: 0;
-
-        /* display: flex;
-        flex-direction: row;
-        justify-content: space-around; */
     }
 
     /* Index heading & layout */
@@ -674,14 +507,6 @@ button:hover {
         display: none;
     }
 
-    /* #motion-graphics h1,
-    #work-together h1,
-    #ux-design h1,
-    .content-wrapper h1 {
-        font-size: 38px;
-    } */
-
-
     .line {
         max-width: 100% !important;
         width: 100% !important;
@@ -691,7 +516,7 @@ button:hover {
     #motion-graphics {
         display: flex;
         flex-direction: column;
-        padding: 64px 0;
+        padding: var(--space-between-sections) 0;
     }
 
     #motion-graphics > div {
@@ -699,25 +524,35 @@ button:hover {
     }
 
     #work-together {
-        padding: 64px 0;
+        padding: var(--space-between-sections) 0;
     }
 
-    .content-wrapper {
-        width: calc(100% - 48px);
-        gap: 64px;
+    #heading-text {
+        flex-direction: column;
+        position: relative;
     }
 
     #heading-text > #left {
-        width: 175px;
+        width: 100%;
         gap: 12px;
     }
 
     #heading-text > #right {
+        text-align: left;
         width: 100%;
+        max-width: none;
+        align-items: baseline;
     }
 
-    button {
-        padding: 8px 16px 8px 24px;
+    /* The second hero line reads as the sub-line on a phone: grey */
+    #heading-text #right h2 {
+        text-align: left;
+        margin-top: 0;
+        font-size: var(--mk-h2-size);
+        line-height: var(--mk-h2-lh);
+        letter-spacing: var(--mk-h2-ls);
+        font-weight: var(--weight-medium);
+        color: var(--grey);
     }
 
     #heading-text #right a button {
@@ -726,33 +561,6 @@ button:hover {
 
     #heading > #heading-video-wrapper > video {
         height: auto;
-    }
-
-    #heading-text {
-        flex-direction: column;
-        position: relative;
-    }
-
-    #heading-text > div > h1 {
-        font-size: 36px !important;
-        line-height: 32px;
-    }
-
-    #heading-text > #left {
-        width: 100%;
-    }
-
-    #heading-text > #right {
-        text-align: left;
-        width: 100%;
-        align-items: baseline;
-    }
-
-    #heading-text #right h1 {
-        text-align: left;
-        color: #595959;
-        margin-top: 0;
-        font-size: 28px !important;
     }
 
     .category-and-button {
@@ -769,8 +577,6 @@ button:hover {
     }
 
     #work-together h2 {
-        font-size: 24px;
-        line-height: 32px;
         max-width: 100%;
     }
 
@@ -778,4 +584,3 @@ button:hover {
         gap: 12px;
     }
 }
-

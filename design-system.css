@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* ==========================================================================
+   DESIGN SYSTEM - matthewkwong.com
+   Load after tokens.css and before every other stylesheet.
+
+   1. Elements    plain HTML mapped onto the system's type roles (this site's own layer)
+   2. Components  the .mk-* classes, copied verbatim from the design system's
+                  components/bundle.css. To re-sync, replace section 2 only.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. ELEMENTS
+   ========================================================================== */
+
+/* Plain HTML takes the system's type roles, so a page needs no class to be on the scale.
+   The Desktop and Mobile values come from the --mk-* mode variables in section 2. */
+
+body {
+    font-family: var(--font-inter);
+    font-size: var(--size-16);
+    line-height: var(--mk-body-lh);
+    letter-spacing: var(--tracking-none);
+    font-weight: var(--weight-regular);
+    color: var(--colors-body-text-dark-grey);
+    background-color: var(--colors-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Heading/H1: the page title */
+h1 {
+    margin: 0;
+    font-size: var(--mk-h1-size);
+    line-height: var(--mk-h1-lh);
+    letter-spacing: var(--mk-h1-ls);
+    font-weight: var(--weight-semibold);
+    color: var(--black);
+}
+
+/* Heading/H2: section titles */
+h2 {
+    font-size: var(--mk-h2-size);
+    line-height: var(--mk-h2-lh);
+    letter-spacing: var(--mk-h2-ls);
+    font-weight: var(--weight-medium);
+    color: var(--colors-black);
+}
+
+/* Heading/H3: sub-sections, card titles, leads */
+h3 {
+    font-size: var(--mk-h3-size);
+    line-height: var(--mk-h3-lh);
+    letter-spacing: var(--mk-h3-ls);
+    font-weight: var(--weight-medium);
+    color: var(--colors-black);
+}
+
+/* Label/Caps: this site writes the eyebrow above a heading as an h4 */
+h4 {
+    font-size: var(--size-12);
+    line-height: var(--line-height-16);
+    letter-spacing: var(--tracking-wide-048);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+/* Body/Base is the body rule above: copy, list items and table cells inherit it,
+   so text on a dark ground only needs the ground to set its colour. */
+
+/* Body/Base Bold */
+b, strong {
+    font-weight: var(--weight-medium);
+}
+
+/* Links take the page's project accent when it sets one, colors-blue otherwise */
+a,
+a:visited {
+    color: var(--accent, var(--colors-blue));
+}
+
+a:focus-visible,
+button:focus-visible,
+label:focus-visible {
+    outline: 2px solid var(--colors-black);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   2. COMPONENTS (design system bundle.css)
+   ========================================================================== */
+
+/* matthewkwong.com — component styles. Every colour, gap and radius that has a token reads it;
+   a literal here is a value the Figma file hardcodes: it has no variable or style, so it is not a token. */
+/* ---------- Modes: Figma "Desktop" and "Mobile" ----------
+   Desktop is the default. Mobile applies under 768px, or anywhere inside [data-mk-mode="mobile"].
+   [data-mk-mode="desktop"] forces Desktop inside a narrow frame. */
+:root, [data-mk-mode="desktop"] {
+  --mk-gap-sections: var(--space-between-sections);
+  --mk-gap-header: var(--space-between-header);
+  --mk-gap-images: var(--space-between-images);
+  --mk-margin: var(--margins-margin);
+  --mk-radius-image: var(--image-border-radius);
+  --mk-h1-size: var(--size-40); --mk-h1-lh: var(--line-height-48); --mk-h1-ls: var(--tracking-tight-080);
+  --mk-h2-size: var(--size-32); --mk-h2-lh: var(--line-height-40); --mk-h2-ls: var(--tracking-tight-048);
+  --mk-h3-size: var(--size-24); --mk-h3-lh: var(--line-height-32); --mk-h3-ls: var(--tracking-tight-024);
+  --mk-h4-size: var(--size-20); --mk-h4-lh: var(--line-height-28); --mk-h4-ls: var(--tracking-tight-010);
+  --mk-body-lh: var(--line-height-28);
+}
+@media (max-width: 767px) {
+  :root {
+    --mk-gap-sections: var(--space-between-sections-mobile);
+    --mk-gap-header: var(--space-between-header-mobile);
+    --mk-gap-images: var(--space-between-images-mobile);
+    --mk-margin: var(--margins-margin-mobile);
+    --mk-radius-image: var(--image-border-radius-mobile);
+    --mk-h1-size: var(--size-32); --mk-h1-lh: var(--line-height-40); --mk-h1-ls: var(--tracking-tight-048);
+    --mk-h2-size: var(--size-24); --mk-h2-lh: var(--line-height-32); --mk-h2-ls: var(--tracking-tight-024);
+    --mk-h3-size: var(--size-20); --mk-h3-lh: var(--line-height-28); --mk-h3-ls: var(--tracking-tight-010);
+    --mk-h4-size: var(--size-18); --mk-h4-lh: var(--line-height-24); --mk-h4-ls: var(--tracking-tight-010);
+    --mk-body-lh: var(--line-height-24);
+  }
+}
+[data-mk-mode="mobile"] {
+  --mk-gap-sections: var(--space-between-sections-mobile);
+  --mk-gap-header: var(--space-between-header-mobile);
+  --mk-gap-images: var(--space-between-images-mobile);
+  --mk-margin: var(--margins-margin-mobile);
+  --mk-radius-image: var(--image-border-radius-mobile);
+  --mk-h1-size: var(--size-32); --mk-h1-lh: var(--line-height-40); --mk-h1-ls: var(--tracking-tight-048);
+  --mk-h2-size: var(--size-24); --mk-h2-lh: var(--line-height-32); --mk-h2-ls: var(--tracking-tight-024);
+  --mk-h3-size: var(--size-20); --mk-h3-lh: var(--line-height-28); --mk-h3-ls: var(--tracking-tight-010);
+  --mk-h4-size: var(--size-18); --mk-h4-lh: var(--line-height-24); --mk-h4-ls: var(--tracking-tight-010);
+  --mk-body-lh: var(--line-height-24);
+}
+
+/* ---------- Base ---------- */
+body { margin: 0; background: var(--colors-white); color: var(--colors-body-text-dark-grey); font-family: var(--font-inter); font-size: var(--size-16); line-height: var(--mk-body-lh); -webkit-font-smoothing: antialiased; }
+.mk-root, .mk-root * { box-sizing: border-box; }
+.mk-root { font-family: var(--font-inter); color: var(--colors-body-text-dark-grey); }
+.mk-root :focus-visible { outline: 2px solid var(--colors-black); outline-offset: 2px; }
+.mk-root a { color: inherit; }
+.mk-root img, .mk-root video { display: block; max-width: 100%; }
+
+/* ---------- Type roles (Type / Tokens) ---------- */
+.mk-h1, .mk-h2, .mk-h3, .mk-h4, .mk-body, .mk-caps, .mk-tag-text { margin: 0; font-family: var(--font-inter); overflow-wrap: break-word; }
+.mk-h1 { font-size: var(--mk-h1-size); line-height: var(--mk-h1-lh); letter-spacing: var(--mk-h1-ls); font-weight: var(--weight-semibold); color: var(--black); }
+.mk-h2 { font-size: var(--mk-h2-size); line-height: var(--mk-h2-lh); letter-spacing: var(--mk-h2-ls); font-weight: var(--weight-medium); color: var(--colors-black); }
+.mk-h3 { font-size: var(--mk-h3-size); line-height: var(--mk-h3-lh); letter-spacing: var(--mk-h3-ls); font-weight: var(--weight-medium); color: var(--colors-black); }
+.mk-h4 { font-size: var(--mk-h4-size); line-height: var(--mk-h4-lh); letter-spacing: var(--mk-h4-ls); font-weight: var(--weight-medium); color: var(--black); }
+.mk-body { font-size: var(--size-16); line-height: var(--mk-body-lh); letter-spacing: var(--tracking-none); font-weight: var(--weight-regular); color: var(--colors-body-text-dark-grey); }
+.mk-caps { font-size: var(--size-12); line-height: var(--line-height-16); letter-spacing: var(--tracking-wide-048); font-weight: var(--weight-semibold); text-transform: uppercase; color: var(--grey); }
+.mk-tag-text { font-size: var(--size-14); line-height: var(--line-height-20); letter-spacing: var(--tracking-none); font-weight: var(--weight-regular); }
+
+/* ---------- Stacks: the Space-Between tokens as vertical rhythm ---------- */
+.mk-stack-label, .mk-stack-text, .mk-stack-images, .mk-stack-header, .mk-stack-sections { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; min-width: 0; }
+.mk-stack-label { gap: var(--space-between-label-caps); }
+.mk-stack-text { gap: var(--space-between-text); }
+.mk-stack-images { gap: var(--mk-gap-images); }
+.mk-stack-header { gap: var(--mk-gap-header); }
+.mk-stack-sections { gap: var(--mk-gap-sections); }
+.mk-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-between-text); }
+
+/* ---------- Brand: Logo, Icon ---------- */
+.mk-logo { display: block; flex: none; color: var(--black); }
+.mk-icon { display: block; flex: none; }
+
+/* ---------- Button ---------- */
+.mk-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: var(--button-padding-left-right); border: 0; border-radius: var(--button-padding-left-right); font-family: var(--font-inter); font-size: var(--size-14); line-height: var(--line-height-20); letter-spacing: var(--tracking-none); font-weight: var(--weight-regular); white-space: nowrap; text-decoration: none; cursor: pointer; }
+.mk-btn--dark { background: var(--black); color: var(--colors-white); }
+.mk-root a.mk-btn--dark { color: var(--colors-white); }
+.mk-btn--light { background: var(--colors-white); color: var(--black); box-shadow: inset 0 0 0 1px var(--colors-f4); }
+.mk-btn--muted { background: var(--colors-ed); color: var(--colors-body-text-dark-grey); }
+.mk-btn .mk-icon { width: 20px; height: 20px; }
+
+/* ---------- Tag ----------
+   Label/Tag (label-tag): Inter 14/20, regular, no tracking. Pill carries the same five lines. */
+.mk-tag { display: inline-flex; align-items: center; justify-content: center; padding: 4px 12px; border-radius: 12px; background: var(--colors-f4); color: var(--colors-body-text-dark-grey); font-family: var(--font-inter); font-size: var(--size-14); line-height: var(--line-height-20); letter-spacing: var(--tracking-none); font-weight: var(--weight-regular); white-space: nowrap; }
+.mk-tag--motion { background: var(--grey); color: var(--colors-white); }
+.mk-tags { display: flex; flex-wrap: wrap; gap: var(--space-between-text); }
+
+/* ---------- Segmented control ---------- */
+.mk-seg { position: relative; isolation: isolate; display: inline-flex; align-items: center; padding: 4px; border-radius: var(--button-padding-left-right); background: var(--colors-ed); max-width: 100%; }
+.mk-seg__item { position: relative; z-index: 1; flex: 1 0 0; min-width: 100px; padding: var(--button-padding-top-bottom) var(--button-padding-left-right); border: 0; border-radius: var(--button-padding-left-right); background: none; color: var(--colors-body-text-dark-grey); font-family: var(--font-inter); font-size: var(--size-14); line-height: var(--line-height-20); font-weight: var(--weight-regular); text-align: center; white-space: nowrap; cursor: pointer; transition: color 200ms ease; }
+.mk-seg__item[aria-checked="true"] { color: var(--colors-white); }
+/* The selected fill is one thumb that slides between the equal-width segments.
+   Motion (from the device-switcher prototype, not in the Figma file): 360ms, ease-out cubic-bezier(0.16, 1, 0.3, 1); labels crossfade over 200ms. */
+.mk-seg__thumb { position: absolute; z-index: 0; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px) / var(--mk-seg-count, 3)); border-radius: var(--button-padding-left-right); background: var(--colors-black); transform: translateX(calc(100% * var(--mk-seg-index, 0))); transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .mk-seg__thumb, .mk-seg__item { transition: none; } }
+[data-mk-mode="mobile"] .mk-seg__item { min-width: 0; }
+@media (max-width: 359px) { .mk-seg__item { min-width: 0; } }
+
+/* ---------- Nav ---------- */
+.mk-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px var(--mk-margin); background: var(--colors-white); }
+.mk-nav__home { display: block; border-radius: 50%; }
+.mk-nav__links { display: flex; align-items: flex-start; justify-content: flex-end; gap: 40px; margin: 0; padding: 0; list-style: none; }
+.mk-nav__links a { font-size: var(--size-24); line-height: var(--line-height-32); letter-spacing: var(--tracking-tight-024); font-weight: var(--weight-medium); color: var(--colors-body-text-dark-grey); text-decoration: none; white-space: nowrap; }
+.mk-nav__menu { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; width: 80px; height: 80px; padding: 4px; border: 0; background: var(--colors-white); cursor: pointer; }
+.mk-nav__menu span { display: block; width: 48px; height: 4px; background: #d9d9d9; }
+.mk-nav--mobile .mk-nav__links { display: none; }
+.mk-nav--mobile .mk-nav__menu { display: flex; }
+@media (max-width: 767px) {
+  .mk-nav--auto .mk-nav__links { display: none; }
+  .mk-nav--auto .mk-nav__menu { display: flex; }
+}
+
+/* ---------- Feature mark (has and not has) ---------- */
+.mk-mark { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; color: var(--colors-white); }
+.mk-mark--has { background: var(--colors-green); }
+.mk-mark--has-not { background: var(--colors-red); }
+.mk-mark .mk-icon { width: 20px; height: 20px; }
+
+/* ---------- Case study / Media placeholder ---------- */
+.mk-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 400px; padding: 32px 40px; border: 2px dashed #785cff; border-radius: 16px; background: #f6f4ff; text-align: center; }
+.mk-placeholder__type { margin: 0; font-size: var(--size-14); line-height: 17px; letter-spacing: 1.12px; font-weight: var(--weight-semibold); color: #6b4df2; }
+.mk-placeholder__content { margin: 0; font-size: var(--size-16); line-height: var(--line-height-24); color: #403866; }
+
+/* ---------- Label + sub-heading ---------- */
+.mk-labelhead { display: flex; flex-direction: column; gap: var(--space-between-label-caps); }
+.mk-labelhead .mk-caps { color: var(--colors-body-text-dark-grey); }
+
+/* ---------- Section header ---------- */
+.mk-shead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.mk-shead__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+
+/* ---------- Pill ----------
+   Label/Tag (label-tag), like Tag. .mk-pills is a set of pills: 12px apart, wrapping. */
+.mk-pill { display: inline-flex; align-items: flex-start; padding: 8px 16px; border-radius: 100px; background: var(--colors-ed); color: var(--colors-body-text-dark-grey); font-family: var(--font-inter); font-size: var(--size-14); line-height: var(--line-height-20); letter-spacing: var(--tracking-none); font-weight: var(--weight-regular); white-space: nowrap; }
+.mk-pills { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; margin: 0; padding: 0; list-style: none; }
+
+/* ---------- Device placeholder (added from the device-switcher prototypes; not in the Figma file) ----------
+   Colours are tokens; the bezel widths and corner radii are drawn values, like the other components' distances. */
+.mk-device { display: flex; flex-direction: column; flex: none; max-width: 100%; overflow: hidden; background: var(--colors-white); }
+.mk-device--desktop { aspect-ratio: 16 / 10; border-radius: var(--mk-radius-image); }
+.mk-device--tablet { aspect-ratio: 3 / 4; border: 10px solid var(--colors-black); border-radius: 28px; }
+.mk-device--mobile { aspect-ratio: 9 / 19; border: 8px solid var(--colors-black); border-radius: 34px; }
+.mk-device__bar { flex: none; height: 28px; border-bottom: 1px solid var(--colors-ed); }
+.mk-device__screen { flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.mk-device__label { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: var(--space-between-text); text-align: center; }
+.mk-device__title { margin: 0; font-family: var(--font-inter); font-size: var(--size-14); line-height: var(--line-height-20); font-weight: var(--weight-medium); color: var(--colors-black); }
+.mk-device__file { margin: 0; font-family: var(--font-inter); font-size: var(--size-12); line-height: var(--line-height-16); font-weight: var(--weight-regular); color: var(--grey); }
+.mk-device__media { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Media panel, Before / after ---------- */
+.mk-panel { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; min-width: 0; padding: 24px; border-radius: var(--mk-radius-image); background: var(--colors-ed); }
+.mk-panel--row { flex-direction: row; }
+.mk-panel--roomy { gap: var(--mk-gap-header); padding: var(--mk-gap-header); }
+.mk-panel .mk-caps { color: var(--colors-black); text-align: center; }
+.mk-panel img, .mk-panel video { border-radius: var(--mk-radius-image); }
+.mk-ba { display: flex; align-items: stretch; gap: var(--space-between-text); }
+.mk-ba > .mk-panel { flex: 1 0 0; }
+[data-mk-mode="mobile"] .mk-ba, [data-mk-mode="mobile"] .mk-panel--row { flex-direction: column; }
+@media (max-width: 767px) { .mk-ba, .mk-panel--row { flex-direction: column; } }
+
+/* ---------- Preview frame (component previews in this system) ---------- */
+.mk-preview { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 24px; }
+.mk-preview--col { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.mk-preview--body { display: grid; grid-template-columns: minmax(0, 904px); align-items: start; }

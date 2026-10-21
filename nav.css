@@ -284,7 +284,8 @@ input[type=checkbox] {
 
     /* Links: large, generously spaced — grouped by space, not a divider line. */
     #menu-wrapper #menu li a {
-        display: block;
+        display: inline-block;      /* shrink to the text so the hover underline matches desktop */
+        position: relative;
         padding: 16px 0;
         color: var(--colors-black);
         font-size: var(--size-24);
@@ -297,18 +298,25 @@ input[type=checkbox] {
                     transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* The desktop underline-on-hover has no place in the sheet. */
+    /* Same hover animation as desktop: the underline slides in under the link.
+       Drawn just under the text (16px padding - 5px offset, as on desktop). */
     #menu-wrapper #menu li a.middle:before {
-        content: none;
+        bottom: 11px;
+    }
+
+    #menu-wrapper #menu li a.middle:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
     }
 
     #menu-wrapper #menu li a:hover {
         color: var(--colors-black);
     }
 
-    /* Current page. */
+    /* No active/current-page state on mobile: every link looks and behaves alike,
+       including the current page's (.active-nav gets no special colour here). */
     #menu-wrapper #menu li a.active-nav {
-        color: var(--colors-toybox-orange);
+        color: var(--colors-black);
     }
 
     /* Open: drop the sheet, then reveal the links with a short stagger. */

@@ -25,11 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-$(document).ready(function(){
-    /*Fades in page on load */
-    $('body, .about-me-wrapper').css('display', 'none');
-    $('body, .about-me-wrapper').fadeIn(1000);
-  });
+// Pages without jQuery (e.g. product.html) skip the fade-in instead of crashing
+  // the rest of this file.
+  if (window.jQuery) {
+    $(document).ready(function(){
+      /*Fades in page on load */
+      $('body, .about-me-wrapper').css('display', 'none');
+      $('body, .about-me-wrapper').fadeIn(1000);
+    });
+  }
   
   // Image - Fullscreen on click
   window.onload = () => {
@@ -40,10 +44,12 @@ $(document).ready(function(){
     if (images.length > 0) {
       for (let x of images) {
         x.onclick = (e) => {
-          // Prevent fullscreen for images in nav or footer, or with logo ids
+          if (!fullscreen) return;
+          // Prevent fullscreen for images in nav, footer or the journey panels, or with logo ids
           if (
             x.closest('nav') ||
             x.closest('#footer-content') ||
+            x.closest('.jr') ||
             x.id === 'logo' ||
             x.id === 'logo-white'
           ) {
@@ -58,9 +64,11 @@ $(document).ready(function(){
       }
     }
   
-    fullscreen.onclick = () => {
-      fullscreen.className = "";
-    };
+    if (fullscreen) {
+      fullscreen.onclick = () => {
+        fullscreen.className = "";
+      };
+    }
   };
   
   
@@ -109,4 +117,5 @@ $(document).ready(function(){
   
   // Display year at bottom of nav
   const year = new Date().getFullYear();
-  document.getElementById("year").innerHTML = year;
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.innerHTML = year;

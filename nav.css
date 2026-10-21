@@ -1,3 +1,19 @@
+/* ==========================================================================
+   NAV - this site's own navbar, as it was before the design-system pass.
+   Only the values changed: colours and type read the design tokens of the
+   same value (tokens.css), and the mobile breakpoint is the system's (under 768px).
+   ========================================================================== */
+
+/* The navbar keeps its own text metrics, whatever the page's body style is:
+   Inter Display, default leading and default font smoothing, as before. */
+nav {
+    font-family: "InterDisplay", sans-serif;
+    line-height: normal;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: auto;
+}
+
 /* Lock page scroll when mobile menu is open – apply to both html and body */
 /* html.disable-scroll {
     overflow: hidden !important;
@@ -55,14 +71,14 @@ nav ul {
 nav li{
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 500;
+    font-size: var(--size-18);
+    line-height: var(--line-height-24);
+    font-weight: var(--weight-medium);
 }
 
 a #logo {
     /* color: black; */
-    color: #595959;
+    color: var(--grey);
     padding-left: 48px;
     max-width: 60px;
     height: auto;
@@ -78,7 +94,7 @@ a #logo {
 } */
 
 #nav-links a {
-    color: #595959;
+    color: var(--grey);
     text-decoration: none;
 }
 
@@ -96,7 +112,7 @@ a #logo {
   bottom: 0;
   left: 0;
   bottom: -5px;
-  background-color: #000000;
+  background-color: var(--black);
   /* background-color: #18A0FB; */
   visibility: hidden;
   transform: scaleX(0);
@@ -107,7 +123,7 @@ a #logo {
 #nav-links a.middle:hover:before {
   visibility: visible;
   transform: scaleX(1);
-  color: #595959;
+  color: var(--grey);
 }
 
 /* Menu elements - work, about, resume */
@@ -123,148 +139,215 @@ a #logo {
 
 #menu-wrapper #menu  li a:hover {
     /* color: #18A0FB; */
-    color: #000000;
+    color: var(--black);
     border-radius: 5px;
 }
 
 
-/* Checkbox hack */
-input[type=checkbox]{
-    display: none;
-} 
+/* ==========================================================================
+   MOBILE HAMBURGER MENU
+   A checkbox-only (no-JS) menu, so it works on every page from this shared
+   stylesheet with no markup change. The trigger is a three-bar icon drawn in
+   CSS that morphs into an X; the panel is an elevated white sheet that slides
+   down from the nav with staggered links. Motion and values follow the design
+   system: ease-out cubic-bezier(0.16, 1, 0.3, 1) and the tokens in tokens.css.
+   ========================================================================== */
 
-/*Hamburger*/
-#hamburger, #close{
-    /* border: solid 2px red; */
+/* The checkbox only holds open/closed state; it is never shown. */
+input[type=checkbox] {
+    display: none;
+}
+
+/* Trigger + legacy close label are hidden on desktop. */
+#hamburger,
+#close {
+    display: none;
     box-sizing: border-box;
-    display: none;
-    font-size: 48px;
     user-select: none;
-    color: #595959;
+    color: var(--grey);
 }
 
-#close{
-    z-index: 5;
-    display: none;
-    position: absolute;
-    top: 12px; 
-    color: #595959;
-
-    /* box-sizing: border-box;
-    border: solid 2px blue; */
-}
-
-#logo-white{
-    z-index: 6;
-    display: none;
-    margin-left: 0;
-    position: absolute;
-    
-    top: 15px;
-    left: 0px;
-    padding-left: 48px;
-    max-width: 60px;
-    height: auto;
+/* The in-panel white logo is unused by the light sheet, on every breakpoint. */
+#logo-white {
+    display: none !important;
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
-    a #logo{
-        padding-left:24px;
+    /* Standard mobile app-bar height, with a compact logo. */
+    nav {
+        height: 64px;
+    }
+
+    a #logo {
+        padding-left: var(--mobile-margin-left-right);
+        max-width: 48px;
     }
 
     nav ul {
-        padding-right: 24px;
+        padding-right: var(--mobile-margin-left-right);
     }
 
-    /* Slide-down panel: sits below nav, height auto, left-aligned */
+    /* ---- Trigger: 44px tap target, three CSS bars that morph into an X.
+       Middle bar is the element's own background line; the outer two are the
+       ::before / ::after, so no extra markup is needed. ---- */
+    #hamburger {
+        display: block;
+        position: relative;
+        z-index: 6;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        padding: 0;
+        font-size: 0;                 /* hides the ☰ glyph; bars drawn below */
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        background: linear-gradient(currentColor, currentColor) no-repeat
+                    center / 22px 2px;
+        transition: background-size 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #hamburger::before,
+    #hamburger::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 22px;
+        height: 2px;
+        border-radius: 2px;
+        background: currentColor;
+        transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #hamburger::before {
+        transform: translate(-50%, calc(-50% - 7px));
+    }
+
+    #hamburger::after {
+        transform: translate(-50%, calc(-50% + 7px));
+    }
+
+    /* Open: the middle bar collapses to the centre, the outer two cross. */
+    input[type=checkbox]:checked ~ #hamburger {
+        background-size: 0 2px;
+    }
+
+    input[type=checkbox]:checked ~ #hamburger::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    input[type=checkbox]:checked ~ #hamburger::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    /* The morphing icon is the close affordance, so the glyph label stays off. */
+    #close {
+        display: none !important;
+    }
+
+    /* ---- Panel: an elevated white sheet sliding down from under the nav. ---- */
     #menu-wrapper {
         display: block;
         position: absolute;
-        background-color: white;
-        /* background-color: black; */
-        right: 0;
+        top: 64px;
         left: 0;
-        top: 90px;
+        right: 0;
         width: 100%;
         max-height: 0;
         overflow: hidden;
-        text-align: left;
+        background-color: var(--colors-white);
         box-sizing: border-box;
-        transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-
-        /* transition: max-height 1s cubic-bezier(0.42,0.00,0.58,1.00); */
+        box-shadow: 0 16px 32px -12px rgba(28, 31, 35, 0.14);
+        transition: max-height 420ms cubic-bezier(0.16, 1, 0.3, 1);
         will-change: max-height;
     }
 
     #menu-wrapper #menu {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
+        align-items: stretch;
         gap: 0;
-        padding-bottom: 12px;
-        padding: 0px 24px ;
-        border-bottom: 2px solid #f4f4f4;
+        padding: 8px var(--mobile-margin-left-right)
+                 calc(16px + env(safe-area-inset-bottom));
     }
 
-    #menu-wrapper #menu li{
-        padding: 12px 0;
+    /* The sheet's own logo link is not shown; the nav logo stays in place. */
+    #menu-wrapper #menu > a {
+        display: none;
     }
 
+    #menu-wrapper #menu li {
+        padding: 0;
+    }
+
+    /* Links: large, generously spaced — grouped by space, not a divider line. */
     #menu-wrapper #menu li a {
-        /* color: white; */
-        color: black;
+        display: inline-block;      /* shrink to the text so the hover underline matches desktop */
+        position: relative;
+        padding: 16px 0;
+        color: var(--colors-black);
+        font-size: var(--size-24);
+        line-height: var(--line-height-32);
+        letter-spacing: var(--tracking-tight-024);
+        font-weight: var(--weight-medium);
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 320ms ease,
+                    transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    #hamburger {
-        display: block;
-        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        /* transition: transform 0.3s ease; */
+    /* Same hover animation as desktop: the underline slides in under the link.
+       Drawn just under the text (16px padding - 5px offset, as on desktop). */
+    #menu-wrapper #menu li a.middle:before {
+        bottom: 11px;
     }
 
-    /* When menu open: hamburger rotates 90deg (no separate close icon) */
-    input[type=checkbox]:checked ~ #hamburger {
-        transform: rotate(90deg);
+    #menu-wrapper #menu li a.middle:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
     }
 
-    #logo-white{
-        padding-left: 24px;
-        /* display: block; */
+    #menu-wrapper #menu li a:hover {
+        color: var(--colors-black);
     }
 
-    /* Hides the blue hover on desktop */
-    #nav-links a.middle:before {
-        /* background-color: white; */
-        background-color: black;
-    }
-    
-    #menu-wrapper #menu  li a:hover {
-        /* color: white; */
-        color: black;
+    /* No active/current-page state on mobile: every link looks and behaves alike,
+       including the current page's (.active-nav gets no special colour here). */
+    #menu-wrapper #menu li a.active-nav {
+        color: var(--colors-black);
     }
 
-    /* When hamburger clicked – slide down from under nav, height fits content */
+    /* Open: drop the sheet, then reveal the links with a short stagger. */
     input[type=checkbox]:checked ~ #menu-wrapper {
         max-height: 80vh;
     }
-    
-    input[type=checkbox]:checked ~ #menu-wrapper #menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+
+    input[type=checkbox]:checked ~ #menu-wrapper #menu li a {
+        opacity: 1;
+        transform: translateY(0);
     }
 
+    input[type=checkbox]:checked ~ #menu-wrapper #menu li:nth-of-type(1) a { transition-delay: 80ms; }
+    input[type=checkbox]:checked ~ #menu-wrapper #menu li:nth-of-type(2) a { transition-delay: 140ms; }
+    input[type=checkbox]:checked ~ #menu-wrapper #menu li:nth-of-type(3) a { transition-delay: 200ms; }
+    input[type=checkbox]:checked ~ #menu-wrapper #menu li:nth-of-type(4) a { transition-delay: 260ms; }
 
-    /* Keep #close hidden on mobile – hamburger rotates instead */
-    #close {
-        display: none !important;
-    }
+    @media (prefers-reduced-motion: reduce) {
+        #menu-wrapper,
+        #hamburger,
+        #hamburger::before,
+        #hamburger::after,
+        #menu-wrapper #menu li a {
+            transition: none;
+        }
 
-    /* White logo  */
-    input[type=checkbox]:checked ~ #logo-white{
-        display: block;
+        #menu-wrapper #menu li a {
+            opacity: 1;
+            transform: none;
+            transition-delay: 0ms;
+        }
     }
 }
 

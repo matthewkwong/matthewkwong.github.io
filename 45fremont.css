@@ -1,102 +1,54 @@
-
-
-.content-wrapper a {
-    color: #373764;
+/* 45 Fremont – project accent: navy. The side nav's active text and dot use it too. */
+:root {
+    --accent: var(--colors-45-fremont-navy);
+    --accent-nav: var(--colors-45-fremont-navy);
+    --accent-marker: var(--colors-45-fremont-navy);
 }
 
-.callout{
-    background-color: #373764;
-}
-
-
-#title{
-        color: white;
-        background-image: linear-gradient(rgb(55, 55, 100, 0.9),
-        rgb(55, 55, 100, 0.9)),
+#title {
+    color: var(--colors-white);
+    background-image: linear-gradient(color-mix(in srgb, var(--colors-45-fremont-navy) 90%, transparent),
+        color-mix(in srgb, var(--colors-45-fremont-navy) 90%, transparent)),
         url("img/45fremont/ibm-wireframes.jpg");
-   
- }
+}
 
-
-.full-screen{
+.full-screen {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    /* max-width: 1080px; */
     max-width: 100%;
     height: 10vh;
-    color: white;
-    background-color: #373764;
+    color: var(--colors-white);
+    background-color: var(--colors-45-fremont-navy);
 }
 
-.full-screen h1{
+.full-screen h1 {
     text-align: center;
-    font-size: 36px;
+    color: var(--colors-white);
 }
-
 
 #project-preview {
     max-height: 100% !important;
     height: auto;
 }
 
-.section-image > video{
+.section-image > video {
     width: 90%;
 }
 
-a{
-    color: #373764;
-}
-
-a:visited{
-    color: #373764;
-}
-
-/* WIDTH is less than 900 */
-/* @media only screen and (max-width: 900px) {
-    .preview > video{
-        display: none;
-    }
-} */
-
-/* Sidebar colors */
-.sidebar-menu a:hover {
-    color: #373764;
-}
-
-.sidebar-menu a.active {
-    color: #373764;
-}
-
-.sidebar-menu a.active::before {
-    background-color: #FED499;
-}
-
-.sidebar-menu a:hover::before {
-    background-color: #FED499;
-}
-
-
 @media only screen and (max-width: 500px) {
-    .final-prototype{
+    .final-prototype {
         display: none;
     }
-
-    .full-screen h1{
-        text-align: center;
-        font-size: 24px;
-    }
 }
-
 
 @media only screen and (max-width: 834px) {
-    .section-image{
+    .section-image {
         height: 50vh;
     }
 
-    .preview img{
+    .preview img {
         max-width: 100%;
     }
 }
-

@@ -1,88 +1,42 @@
-a{
-    color: #0966C2;
+/* LinkedIn Circles – project accent: LinkedIn blue */
+:root {
+    --accent: var(--colors-linkedin-blue);
 }
 
-a:visited{
-    color: #0966C2;
-}
-
-.callout{
-    background-color: #0966C2;
-}
-
-/* Circles */
-/* .circle{
-    background: #0966C2;
-    box-shadow: 0px 0px 100px #0966C2;
-} */
-
-.content-wrapper > #project-preview{
+.content-wrapper > #project-preview {
     height: 50vh;
     width: 100%;
-    background-image:url("img/linkedin-circles/banner.jpg");
+    background-image: url("img/linkedin-circles/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
-#title{
-    color: white;
-
-    background-image: linear-gradient(rgb(0, 119, 181, 0.8), 
-    rgba(0, 119, 181, 0.8)), 
-    url("img/linkedin-circles/banner.jpg");
+#title {
+    color: var(--colors-white);
+    background-image: linear-gradient(color-mix(in srgb, var(--colors-linkedin-blue) 80%, transparent),
+        color-mix(in srgb, var(--colors-linkedin-blue) 80%, transparent)),
+        url("img/linkedin-circles/banner.jpg");
 }
 
-
-#title-content-wrapper h1{
-    font-size: 40px;
-}
-
-#project-preview{
+#project-preview {
     width: auto;
     max-height: 80%;
 }
 
-.research-callout{
+.research-callout {
     align-items: flex-start;
 }
 
-/* .section-image > video{
-    width: 1080px;
-} */
-
-ul li{
-    font-size: 14px
+/* Footer links are smaller on this page, as before */
+footer li {
+    font-size: var(--size-14);
 }
 
-/* Sidebar colors */
-.sidebar-menu a:hover {
-    color: #0966C2;
-}
-
-.sidebar-menu a.active {
-    color: #0966C2;
-}
-
-.sidebar-menu a.active::before {
-    background-color: #0966C2;
-}
-
-.sidebar-menu a:hover::before {
-    background-color: #0966C2;
-}
-
-/* Less than 768px */
-@media only screen and (max-width: 768px) {
-    .preview{
+/* Mobile mode: under 768px */
+@media only screen and (max-width: 767px) {
+    .preview {
         height: auto;
-        padding:  50px 0px;
+        padding: var(--space-between-header) 0;
     }
 }
-
-/* video{
-    box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 10px 1px 39px 0px rgba(0,0,0,0.3);
-} */

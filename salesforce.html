@@ -7,6 +7,8 @@
         <meta property="og:image" content="img/meta/salesforce.jpg">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="tokens.css">
+        <link rel="stylesheet" href="design-system.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="inter/inter.css">
         <link rel="stylesheet" href="case-study.css">
@@ -21,7 +23,7 @@
         <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
         <!-- JQuery -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </head>
+</head>
     <body>
         <!-- Fullscreen Image -->
         <div id="fullscreen"></div>
@@ -55,7 +57,7 @@
         </ul>
     </nav>
 
-    <section class = "section-image preview" id = "title" style="background-color: #f4f4f4;"> 
+    <section class = "section-image preview" id = "title"> 
     </section>
       <!-- <section id = "title">
         </section> -->
@@ -63,7 +65,12 @@
 
       <section class = "content-wrapper" id = "case-study-wrapper">
           <!-- Sidebar Menu -->
-          <div class="sidebar-menu left">
+          <div class="left">
+              <a class="side-nav__back" href="product.html">
+                <svg class="mk-icon" width="24" height="24" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.29289 3.4038L2.6967 8L7.29289 12.5962M2.6967 8H13.3033" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+            </a>
+              <div class="sidebar-menu">
               <ul>
                   <li><a href="#overview">Overview</a></li>
                   <li><a href="#problem">Problem</a></li>
@@ -72,6 +79,7 @@
                   <li><a href="#results">Results</a></li>
                   <li><a href="#challenges">Challenges</a></li>
               </ul>
+              </div>
           </div>
 
           <!-- Main Content -->
@@ -106,17 +114,17 @@
                         <p>Design Systems, Visual Design</p>
                     </div>   
 
-                    <div>
+                    <!-- <div>
                         <h4>Platforms:</h4>
                         <p>Mobile, Desktop</p>
-                    </div>                 
+                    </div>                  -->
                  </div>
               </section>
 
               <!-- Overview Section -->
-              <section class="section-content" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
+              <section class="section-content overview" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                    <h3>Overview</h3>
+                    <h4>Overview</h4>
                     <h2>The live site and design system are not 1:1</h2>
 
                     <p>The previous design system did not provide the most recent components being used on the website, causing confusion and errors for the design team.</p>
@@ -132,7 +140,7 @@
               <!-- Problem Section -->
               <section class="section-content problem" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                    <h3>Problem</h3>
+                    <h4>Problem</h4>
                     <h2>How can we create a more effective design system that is up-to-date and easy to edit?</h2>
                     <p>To ensure that there wouldn't be problems in the future, the new Salesforce Customer Success design system was revised to reduce confusion and maximize efficiency.</p>
                 
@@ -148,7 +156,7 @@
               <!-- Design Process Section -->
               <section class="section-content design-process" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                      <h3>Design Process</h3>
+                      <h4>Design Process</h4>
                       <h2>Capturing the Live Site</h2>
                       <p>To ensure we were creating the latest and greatest components in our new design system, I screen-captured every existing page type into Figma. This included multiple screen-captures of the different types of page styles if a user was logged-out, logged-in, or a signature/premier member and the entire user flow of registering for an event.</p>                            
                       <img src = "img/salesforce/screenshots.jpg" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
@@ -157,7 +165,7 @@
 
               <!-- <section class="section-content design-process" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                      <h3>Design Process</h3>
+                      <h4>Design Process</h4>
                       <h2>Building Components</h2>
                       <p>Although some of the component designs had already been created and could be imported into our new system, many had lacked editability. 
                           For example, changing the text would require the designer to recreate the component entirely as it would overflow or incorrectly resize the component.</p>
@@ -168,7 +176,7 @@
 
               <section class="section-content design-process" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                      <h3>Design Process</h3>
+                      <h4>Design Process</h4>
                       <h2>Building reliable components</h2>
                       <p>Many existing design components lacked editability and responsiveness that would require the designer to recreate the component entirely. </p>
                       <p>I created efficient components utilizing a combination of Figma's auto-layout, constraints, and variants features. Using these techniques helped create flexible components that were both easy to scale and change.</p>
@@ -188,7 +196,7 @@
 
               <section class="section-content design-process" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                      <h3>Design Process</h3>
+                      <h4>Design Process</h4>
                       <h2>Events Registration Form</h2>
                       <p>A large component feature I worked on was the Events Registration Form. I created a flexible component that allows the data entries to be changed through Figma component variants. Designs for default, invalid, and valid states are all accounted for and can easily be changed with a few clicks.</p>
                       <video playsinline autoplay muted loop data-src="img/salesforce/registration-form.mp4" type="video/mp4">
@@ -200,7 +208,7 @@
               <!-- Results Section -->
               <section class="section-content results" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                    <h3>Results</h3>
+                    <h4>Results</h4>
                     <h2>A cross-platform design system</h2>
                     <p>In the end, we completed an up to date design system for both desktop and mobile devices.</p>
                     <p>To ensure that the components were easily editable, large components like as cards are interlaced with smaller components such as icons or tags that are reused in multiple other components. </p>
@@ -219,7 +227,7 @@
               <!-- Implementation Section -->
               <!-- <section class="section-content implementation" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200">
                   <div>
-                      <h3>Implementation</h3>
+                      <h4>Implementation</h4>
                       <p>Once the new components were approved, we recreated the page builds I originally screen-capped. 
                         These were then handed off to the development team for production.</p>
                   </div>
@@ -228,7 +236,7 @@
               <!-- Challenges Section -->
               <section class="section-content challenges" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-300">
                   <div>
-                    <h3>Challenges</h3>
+                    <h4>Challenges</h4>
                     <h2>Intimidation is your biggest weakness</h2>
                     <p>The biggest challenge I had while working on this project was the intimidation of tackling this from ground zero. 
                         Other challenges included the tediousness of screen-capturing every page type and its user flow as it required a lot of attention, 
@@ -239,7 +247,7 @@
               <!-- Takeaways Section -->
               <!-- <section class="section-content takeaways" data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="bottom-center" data-aos-offset="-400">
                   <div>
-                      <h3>Takeaways</h3>
+                      <h4>Takeaways</h4>
                       <p>Though this was a very large project to take on, I'm extremely proud and happy with the work I've contributed to the Salesforce Customer Success Events design system. It allowed me to work on my skills of attention to detail and human-centered design thinking.</p>
                   </div>
               </section> -->
@@ -289,7 +297,7 @@
     </div>
 </footer>
       
-      <script src="video-loader.js  "></script>
+      <script src="video-loader.js"></script>
       <script src="script.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>

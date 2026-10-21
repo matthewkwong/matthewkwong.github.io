@@ -7,6 +7,8 @@
         <meta property="og:image" content="img/meta/playtest.jpg">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="tokens.css">
+        <link rel="stylesheet" href="design-system.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="inter/inter.css">
         <link rel="stylesheet" href="case-study.css">
@@ -21,7 +23,6 @@
         <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
         <!-- JQuery -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
     </head>
     
     <body>
@@ -94,7 +95,12 @@
 
         <section class = "content-wrapper" id = "case-study-wrapper">
             <!-- Sidebar Menu -->
-            <div class="sidebar-menu left">
+            <div class="left">
+                <a class="side-nav__back" href="product.html">
+                <svg class="mk-icon" width="24" height="24" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.29289 3.4038L2.6967 8L7.29289 12.5962M2.6967 8H13.3033" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+            </a>
+                <div class="sidebar-menu">
                 <ul>
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#research">Research</a></li>
@@ -106,6 +112,7 @@
                     <li><a href="#high-fidelity">High Fidelity</a></li>
                     <li><a href="#reflection">Reflection</a></li>
                 </ul>
+                </div>
             </div>
 
             <!-- Project Details -->
@@ -121,30 +128,23 @@
                     <!-- Project Details -->
                     <div id="project-details-list">
                         <div>
-                            <h3>My Role:</h3>
+                            <h4>My Role:</h4>
                             <p>Product Designer</p>
                         </div>
                         
                         <div>
-                            <h3>Duration:</h3>
+                            <h4>Duration:</h4>
                             <p>6 Weeks</p>
                         </div>
   
                         <div>
-                            <h3>Skills:</h3>
-                            <p>User Research</p>
-                            <p>UX Design</p>
-                            <p>Interaction Design</p>
-                            <p>Visual Design</p>
-                            <p>Prototyping</p>
+                            <h4>Skills:</h4>
+                            <p>User Research, UX Design, Interaction Design, Visual Design, Prototyping</p>
                         </div>
 
                         <div>
-                            <h3>Team:</h3>
-                            <p>Jamie C</p>
-                            <p>Rochelle D</p> 
-                            <p>Joanna L</p>
-                            <p>Michelle L</p>
+                            <h4>Team:</h4>
+                            <p>Jamie C, Rochelle D, Joanna L, Michelle L</p>
                         </div>
                     </div>
                 </section>
@@ -152,7 +152,7 @@
                 <!-- Overview -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class="section-content overview">
                     <div>
-                        <h3>Overview</h3>  
+                        <h4>Overview</h4>  
                         <h2>PlayTest is a learning platform designed to make learning fun by gamifying the experience.</h2>                
                         <p>Our client, PlayTest pitched to us with a broad idea of the student learning platform for STEM students, which we broadened to an online learning tool for high school students to learn and engage with content and their peers in a fun and exciting way, while facilitating healthy competition and good study habits.
                         </p>                
@@ -163,7 +163,7 @@
                 <!-- Research -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class="section-content research">
                     <div>
-                        <h3>Research</h3>
+                        <h4>Research</h4>
                         <!-- Competitive Analysis -->
                         <h2>Competitive Analysis:</h2>
                         <p>To collect data to brainstorm potential ideas for our client's product, we conducted competitive analyses of two online study platforms- Quizlet and Duolingo, surveyed 58 high school students, and conducted 5 user interviews.</p>
@@ -178,7 +178,7 @@
 
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class="section-content">
                     <div>
-                        <h3>Research</h3>
+                        <h4>Research</h4>
                         <h2>Surveys</h2>
                         <p>After surveying 58 students, we found that students:</p>
                         <ul>
@@ -193,7 +193,7 @@
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class="section-content">
                     <!-- User Interviews -->
                     <div>
-                        <h3>Research</h3>
+                        <h4>Research</h4>
                         <h2>User Interviews</h2>
                         <p>To get a more in-depth and personal insight into our users' pain points and needs, we conducted 5 interviews via Zoom with high school students.</p>
                     
@@ -209,7 +209,7 @@
                 <!-- Synthesis + Ideation -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" style = "overflow-x: hidden;" class="section-content synthesis">
                     <div>
-                        <h3>Synthesis + Ideation</h3>
+                        <h4>Synthesis + Ideation</h4>
                         <h2>Affinity Mapping</h2>
                         
                         <div>                                    
@@ -241,7 +241,7 @@
                  <!-- Problem Statement -->        
                  <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" style = "overflow-x: hidden;" class="section-content problem-statement">
                     <div>
-                        <h3>Problem</h3>
+                        <h4>Problem</h4>
                         <!-- <p>Once we agreed on the most important aspects and goals, we asked the question:</p> -->
                         <h2>
                         "How might we accommodate multiple types of learning in a collaborative and engaging way for students?"</h2>
@@ -252,7 +252,7 @@
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" style = "overflow-x: hidden;" class="section-content solution-sketches">
                     <div>
             
-                        <h3>Solution Sketches</h3>
+                        <h4>Solution Sketches</h4>
                         <h2>Creating a userflow of the product based on our problem statement</h2>
 
                         <div>
@@ -279,7 +279,7 @@
                 <!-- Low-Fidelity -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" style = "overflow-x: hidden;" class="section-content mid-fidelity">
                    <div>
-                        <h3>Mid-Fidelity</h3>
+                        <h4>Mid-Fidelity</h4>
                         <h2>Home screen, Notes to flashcards, and fill in the blank game</h2>
                             
                         <img src = "img/playtest/mid-fidelity.jpg" width="1080" alt = "Mid-Fidelity Sketches" >
@@ -295,7 +295,7 @@
                 <!-- User Testing -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-200" class="section-content user-testing">
                     <div>
-                        <h3>User Testing</h3>
+                        <h4>User Testing</h4>
                         <h2>Usability testing with stakeholders and target audience</h2>
                     
                         <div>
@@ -317,7 +317,7 @@
                 <!-- High Fidelity -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" class = "high-fidelity section-content high-fidelity">
                     <div>
-                        <h3>High Fidelity</h3>
+                        <h4>High Fidelity</h4>
                         <h2>Introducing PlayTest!</h2>
                         <!-- Final Product Video -->
                         <video autoplay muted loop>
@@ -330,7 +330,7 @@
                 <!-- Home Screen -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" class = "high-fidelity section-content high-fidelity">
                     <div>            
-                        <h3>High Fidelity</h3>                
+                        <h4>High Fidelity</h4>                
                         <h2>Home Screen</h2>
                         <!-- Video -->
                         <video width="1080" playsinline autoplay muted loop class="'vid">
@@ -352,7 +352,7 @@
                 <!-- Notes to Flashcards -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" class = "high-fidelity section-content high-fidelity">
                     <div>   
-                        <h3>High Fidelity</h3>
+                        <h4>High Fidelity</h4>
                         <h2>Notes to Flashcards</h2>
 
                         <p>To achieve our goal of making flashcards more effective for different studying methods and needs, we implemented notes to flashcards function.</p>
@@ -377,7 +377,7 @@
                         <!-- Game Lobby -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" class = "high-fidelity section-content high-fidelity">
                     <div>  
-                        <h3>High Fidelity</h3>
+                        <h4>High Fidelity</h4>
                         <h2>Game Lobby</h2>
 
                         <p>To put the Play in PlayTest and encourage students to apply their learning material rather than memorization, we turned students' notes such as diagrams from the flashcards sets into games.</p>
@@ -395,7 +395,7 @@
                 <!-- Reflection -->
                 <section data-aos="fade-up" data-aos-mirror="true" data-aos-anchor-placement="top-center" data-aos-offset="-100" class="section-content reflection">
                     <div>
-                        <h3>Reflection</h3>
+                        <h4>Reflection</h4>
                         <h2>Looking back on the last 6 weeks</h2>
                         <p>Due to the six-week time constraint and being a remote team, we learned to focus on the core concept of the product to maximize efficiency.</p> 
                         <p>The hardest part of this project was finding the perfect balance of adapting both client and user needs. Instead of creating multiple features to cater to each user's needs, we adapted one feature to fit multiple needs.</p>
@@ -457,5 +457,6 @@
         <script>
             AOS.init();
         </script>
+    <script src="video-loader.js"></script>
     </body>
 </html>

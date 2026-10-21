@@ -1,97 +1,41 @@
-a{
-    /* text-decoration: none; */
-    color: #7988FD;
-}
-
-a:visited{
-    color: #7988FD;
-}
-
-.callout{
-    background-color: #7988FD;
-    color:white;
+/* Find My COVID Test – project accent: purple for links and callouts, red in the side nav */
+:root {
+    --accent: var(--colors-covid-purple);
+    --accent-nav: var(--colors-covid-red);
 }
 
 /* Circles */
-.circle{
-    background: #E63939;
-    box-shadow: 0px 0px 100px #E63939;
+.circle {
+    background: var(--colors-covid-red);
+    box-shadow: 0px 0px 100px var(--colors-covid-red);
 }
 
-/* Sets the COVID Test image larger to fill the title screen ~100vh */
-/* #title-image {
-    padding: 100px 0;
-} */
-
-
-.preview img{
+.preview img {
     max-width: 70%;
 }
 
-/* @media only screen and (max-width: 768px) {
-    .content-wrapper{
-        margin:50px;
-    }
-} */
-
 #title {
-    color: white;
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), 
-    rgba(0, 0, 0, 0.8)), 
-    url("img/covid/desktopPrototypeBanner.png");
+    color: var(--colors-white);
+    background-image: linear-gradient(color-mix(in srgb, var(--black) 80%, transparent),
+        color-mix(in srgb, var(--black) 80%, transparent)),
+        url("img/covid/desktopPrototypeBanner.png");
 }
 
-
-.project-preview{
+.project-preview {
     width: auto;
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
-
-/* #desktop-iterations-banner{
-    background-image:url("img/covid/desktopPrototypeBanner.png");
-}
-
-
-#mobile-iterations-banner{
-    background-image:url("img/covid/mobilePrototypeBanner.png");
-} */
-
-
-/* Sidebar colors */
-.sidebar-menu a:hover {
-    color: #E63939;
-}
-
-.sidebar-menu a.active {
-    color: #E63939;
-}
-
-.sidebar-menu a.active::before {
-    background-color: #E63939;
-}
-
-.sidebar-menu a:hover::before {
-    background-color: #E63939;
-}
-
-
-.sidebar-menu a:visited{
-    color: black;
-}
-
-@media only screen and (max-width: 768px) {
-    .preview > video{
-        /* display: none; */
+/* Mobile mode: under 768px */
+@media only screen and (max-width: 767px) {
+    .preview > video {
         height: auto;
     }
 
-    .preview{
+    .preview {
         height: auto;
     }
 }

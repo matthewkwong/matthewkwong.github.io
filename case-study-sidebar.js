@@ -29,12 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(step);
     }
 
-    // Set initial active state to Overview
-    const overviewLink = document.querySelector('.sidebar-menu a[href="#overview"]');
-    if (overviewLink) {
+    // The first link (Overview) starts active, on every page
+    if (navLinks.length) {
         navLinks.forEach(link => link.classList.remove('active'));
-        overviewLink.classList.add('active');
+        navLinks[0].classList.add('active');
     }
+
+    // While a click is scrolling the page to its section, scroll-tracking waits
+    let lockUntil = 0;
+    let lockTimer = null;
 
     // Smooth scroll for menu items
     navLinks.forEach(link => {
@@ -62,80 +65,72 @@ document.addEventListener('DOMContentLoaded', function() {
                     smoothScrollToTop(targetTop, 700);
                 }
                 
-                // Set active state on click
+                // Set active state on click, and hold it while the page scrolls there
+                lockUntil = performance.now() + 1500;
+                clearTimeout(lockTimer);
+                lockTimer = setTimeout(updateActiveSection, 1550);
                 navLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
             }
         });
     });
 
-    // Update active menu item on scroll
+    // Follow the page: the link of the section being read is the active one
     function updateActiveSection() {
-        const triggerOffset = scrollOffset; // Use the same offset for consistency
+        if (performance.now() < lockUntil) return;
+
+        const triggerOffset = scrollOffset;
         let current = '';
 
-        // Check if we're at the bottom of the page
+        // At the bottom of the page the last section is the current one
         const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
-        
+
+        const matchFor = section => Array.from(section.classList).find(cls =>
+            Array.from(navLinks).some(link => link.getAttribute('href') === `#${cls}`)
+        );
+
         if (isAtBottom) {
-            // Get the last section's class
-            const lastSection = sections[sections.length - 1];
-            const lastSectionClasses = Array.from(lastSection.classList);
-            const lastMatchingClass = lastSectionClasses.find(cls => {
-                return Array.from(navLinks).some(link => 
-                    link.getAttribute('href') === `#${cls}`
-                );
-            });
-            
-            if (lastMatchingClass) {
-                current = lastMatchingClass;
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const match = matchFor(sections[i]);
+                if (match) { current = match; break; }
             }
         } else {
             sections.forEach(section => {
-                // Get all classes of the section
-                const sectionClasses = Array.from(section.classList);
-                
-                // Find the first class that matches a menu href
-                const matchingClass = sectionClasses.find(cls => {
-                    return Array.from(navLinks).some(link => 
-                        link.getAttribute('href') === `#${cls}`
-                    );
-                });
-                
-                if (!matchingClass) return;
+                const match = matchFor(section);
+                if (!match) return;
 
                 const rect = section.getBoundingClientRect();
-                const sectionTop = rect.top;
-                const sectionBottom = rect.bottom;
-                
-                // Check if section is in the trigger zone
-                if (sectionTop <= triggerOffset && sectionBottom >= triggerOffset) {
-                    current = matchingClass;
+                if (rect.top <= triggerOffset && rect.bottom >= triggerOffset) {
+                    current = match;
                 }
             });
         }
 
-        // Update active state if we found a current section
+        // Above the first section, the first link stays active
+        if (!current && navLinks.length) {
+            current = navLinks[0].getAttribute('href').substring(1);
+            if (window.scrollY > 0 && sections.length && sections[0].getBoundingClientRect().top <= triggerOffset) {
+                return; // between sections: keep whatever is active
+            }
+        }
+
         if (current) {
             navLinks.forEach(link => {
-                const isActive = link.getAttribute('href').substring(1) === current;
-                link.classList.toggle('active', isActive);
+                link.classList.toggle('active', link.getAttribute('href').substring(1) === current);
             });
         }
     }
 
-    // Throttle scroll events for better performance
     let ticking = false;
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(function() {
+            window.requestAnimationFrame(function () {
                 updateActiveSection();
                 ticking = false;
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 
-    // Update on load
     updateActiveSection();
 });

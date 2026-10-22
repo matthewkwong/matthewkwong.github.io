@@ -586,9 +586,10 @@
     flex: none;
     width: 40px;
     height: 40px;
-    border-radius: var(--mk-radius-image);
+    border-radius: 4px;
     background: #d9d9d9;
     object-fit: cover;
+    cursor: default; /* logos don't open fullscreen */
 }
 
 /* Comparison table: outlined, creme header, caps row labels */

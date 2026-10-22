@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             x.closest('nav') ||
             x.closest('#footer-content') ||
             x.closest('.jr') ||
+            x.classList.contains('findings__logo') ||
             x.id === 'logo' ||
             x.id === 'logo-white'
           ) {
